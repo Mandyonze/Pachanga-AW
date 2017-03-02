@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Index</title>
+</head>
+<body>
+
+<h1>Pachanga.es</h1>
+
+<p>
+
+Se trata de una aplicación creada para poner en contacto deportistas con gustos y habilidades similares
+cuyo objetivo es fomentar el deporte y facilitar su práctica. <br><br>
+
+Las funcionalidades son:<br>
+<ul>
+	<li> Partidos unicos: en los cuáles, los usuarios, podrán inscribirse
+	en dichos partidos y el creador del evento tendrá la potestad de aceptar o rechazarlos.
+	De un partido almacenaremos: idpartido, deporte, num participantes, fecha y hora, lugar(cp), participantes (dni), ganador
+	Ambas partes terminan el partido y luego se les obliga a marcar ganador y ya si queires es eleccion propia hacer
+	una valoracion de los otros jugadores
+	(Posibilidad de registrar equipos? lio?)</li> 
+
+	Registrar los partidos de los torneos como partidos en si, de modo que estarían ya implicitos
+	el horario, los equipos que participan, se podría registrar quien gana cada partido y con ello subir o boajar
+	el nivel medio de habilidad de cada equipo
+
+Respecto a los usuarios, cuando se den de alta pondrán sus datos iniciales (dni, nombre, apellidos, deportes*,
+habilidad**, (equipos***)). El apartado deportes se podrá modificar en cualquier momento y añadir (o quitar?) deportes 
+y además según vaya jugando, con la puntuación que le pongan los rivales y si se van gaando o perdiendo aprtidos, el atributo habilidad relacionado con
+cada deporte irá modificandose.
+	*-> Atributo multivalor (sería entidad débil de usuario junto con la habilidad del usuario en dicho deporte?)
+	**-> Atributo entero de valor único que va relacionado con un deporte y un jugador (iría con deporte?)
+	***-> Entidad débil de jugador el cual recoge usuario, nombre equipo, deporte (un usuario puede estar varias 
+		veces en un mismo deporte)
+
+En cuanto a los equipos: se registrará el deporte o en el que participa, los componentes (solo dni?), y el nivel 
+medio del equipo (se calcularía cada vez que se quiera saber el dato con la media de los jugadores que componen el
+equipo). (Los equipos solo se pueden registrar en torneos pero no en partidos? de modo que solo usuarios se puedan
+registrar en partidos?).
+
+En la pantalla de busqueda mostraremos: 
+	- Un navegador: elegir entre: deporte, fecha, lugar
+	- Un lista con los eventos mas cercanos
+	- Una barra superior con las diferentes opciones y el Inicio o registro de sesión
+
+Tabla aparte con dni, deporte, nivel 
+Restriccion de jugar partido de un deporte que tenags dado de alta
+
+</ul>
+
+</body>
+</html>
