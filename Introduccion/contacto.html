@@ -3,7 +3,7 @@
 <html>
 <head>
 
-	<title>Index</title>
+	<title>Contacto</title>
 	<html lang="es">
 
 	<!--Metadatos-->
@@ -40,26 +40,46 @@
 </nav>
 
 <br /><br />
-
 <hr>
-
-
 <br /><br />
 
 <main>
 
-<img src="img/logoPachanga.png" alt="Logo Pachanga" style="width: 300px; height: 300px;">
+  <form action="MAILTO:borjalor@ucm.es" method="post" enctype="text/plain">
+    <fieldset>
+    <legend>Contacta con nosotros:</legend>
+
+    <br />Nombre:<br />
+    <input type="text" name="name" value="Nombre Completo" size="60"><br>
+    <br />E-mail:<br />
+    <input type="text" name="mail" value="Email de contacto" size="60"><br>
+
+    <br />Tipo de consulta:<br />
+    <input type="radio" name="consulta" value="evaluacion"/> Evaluación <br />
+    <input type="radio" name="consulta" value="sugerencias"/> Sugerencias <br />
+    <input type="radio" name="consulta" value="criticas"/> Críticas <br />
+
+
+
+    <br />Consulta<br />
+    <input type="text" name="comment" value="Escriba aquí su consulta."size="100"><br /><br />
+
+    <input name="java" type="checkbox" value="on"/> Marque esta casilla para verificar que ha leído
+    nuestros términos y condiciones del servicio.  <br /><br />
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Borrar">
+    </fieldset>
+  </form>
 
 <p>
-	¿Qué es Pachanga? </br> </br>
-	Es un página web creada para poner en contacto a deportistas con gustos semejantes con el
-	objetivo de fomentar el deporte y facilitar su práctica.
+
 </p>
 
 </main>
 
 <footer>
-	<br /><br /><br /><br /><br /><br />
+	<br /><br /><br />
 	<hr>
 	Pachanga <br /><br />
 	Proyecto presentado por:

@@ -1,49 +1,108 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Index</title>
+
+	<title>Detalles</title>
+	<html lang="es">
+
+	<!--Metadatos-->
+	<meta name="author" content="Grupo 08: Borja Lorenzo, Guillermo Rius, Andrés Herránz y Axel Junestrand">
+	<meta name="description" content="Descripción detallada del proyecto 'Pachanga'">
+	<meta charset="UTF-8" >
+
+	<!--Links-->
+	<link rel="icon" href="img/logoPachanga.ico" type = "image/x-icon">
+
 </head>
+
+
 <body>
 
-<h1>Pachanga.es</h1>
+<header>
+	<p>
+		Proyecto de Aplicaciones Web: Pachanga
+		<hr>
+	</p>
+</header>
 
-<p>
+<br /><br />
 
-Se trata de una aplicación creada para poner en contacto deportistas con gustos y habilidades similares
-cuyo objetivo es fomentar el deporte y facilitar su práctica. <br><br>
+<nav>
+  <ul>
+    <li><a href="index.html">Index</a></li>
+    <li><a href="detalles.html">Detalles</a></li>
+    <li><a href="bocetos.html">Bocetos</a></li>
+		<li><a href="miembros.html">Miembros</a></li>
+		<li><a href="planificacion.html">Planificación</a></li>
+		<li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
 
-Las funcionalidades son:<br>
+<br /><br />
+<hr>
+<br /><br />
+
+<main>
+
 <ul>
-	<li> Partidos unicos: en los cuáles, los usuarios, podrán inscribirse
-	en dichos partidos y el creador del evento tendrá la potestad de aceptar o rechazarlos.
-	De un partido almacenaremos: idpartido, deporte, num participantes, fecha y hora, lugar(cp), participantes (dni), ganador
-	Ambas partes terminan el partido y luego se les obliga a marcar ganador y ya si queires es eleccion propia hacer
-	una valoracion de los otros jugadores
-	</li> 
+	<li> Introducción</li>
+	<ul>
+		<li>¿Qué es Pachanga?</li><br />
+		Se trata de una aplicación creada por deportistas para deportistas. <br />
+		Nuestro objetivo es facilitar el contacto entre deportistas de todo Madrid y brindarles la posibilidad
+		de practicar sus deportes favoritos como padel, fútbol, baloncesto, tenis...
+		<br /><br />
+		<li>¿Por qué elegir Pachanga?</li><br />
+		Ofrecemos una oportunidad para desconectar de la rutina, del trabajo, del estrés... además de practicar
+		deportes que te apasionan, mantenerte en forma y disfrutar de la vida de otra forma diferente.
+		<br /><br />
+		<li>¿Qué la hace única?</li><br />
+		No solamente nos centramos en fomentar el deporte y la vida sana sino que también conectamos gente,
+		intentamos crear una red de amigos unidos por algo que les apasiona.
+		<br /><br />
+		<li>¿Para quién va dirigida?</li><br />
+		Nuestra página web esta dirigida a todo tipo de gente, todas las edades y niveles. Sólo tienen que tener una cosa en
+		común: Actitud, ganas de aprender, ganas de participar y que les apasione el deporte y conocer a gente.
+		<br /><br />
+	</ul>
+	<li> Funcionalidades</li>
+		<ul>
+			<li>¿Qué puedes hacer en Pachanga?</li><br />
+			Tienes un buscador principal donde podrás encontrar los partidos introduciendo el distrito más cercano, la fecha,
+			el deporte y el nivel. Esto te permitirá conocer los partidos disponibles que hay por la zona que elijas. Si eres un usuario
+			registrado puedes unirte a ellos y poder participar. <br />
+			Si no encuentras un partido que se adapte a tus posibilidades puedes crear uno, para que la demás gente pueda
+			solicitar jugar contigo teniendo la potestad de aceptarles o no hasta llenar las plazas disponibles. <br />
+			<br /><br />
+			<li>¿Y si quiero jugar con mi equipos?</li><br />
+			<li>¿Torneos?</li><br />
+			<li>¿Rankigs?</li><br />
+		</ul>
 
-Respecto a los usuarios, cuando se den de alta pondrán sus datos iniciales (dni, nombre, apellidos, deportes*,
-habilidad**, equipos***, correo, zona, comentarios y valoración). El apartado deportes se podrá modificar en cualquier momento y añadir (o quitar?) deportes 
-y además según vaya jugando, con la puntuación que le pongan los rivales y si se van gaando o perdiendo aprtidos, el atributo habilidad relacionado con
-cada deporte irá modificandose.
-	*-> Atributo multivalor (sería entidad débil de usuario junto con la habilidad del usuario en dicho deporte?)
-	**-> Atributo entero de valor único que va relacionado con un deporte y un jugador (iría con deporte?)
-	***-> Entidad débil de jugador el cual recoge usuario, nombre equipo, deporte (un usuario puede estar varias 
-		veces en un mismo deporte)
-
-	En cuanto a los equipos: se registrará el deporte, los componentes (solo dni), número de componentes, logo, zona y nivel
-	medio del equipo (se calcularía cada vez que se quiera saber el dato con la media de los jugadores que componen el
-	equipo).
-
-En la pantalla de busqueda mostraremos: 
-	- Un navegador: elegir entre: deporte, fecha, lugar
-	- Un lista con los eventos mas cercanos
-	- Una barra superior con las diferentes opciones y el Inicio o registro de sesión
-
-Tabla aparte con dni, deporte, nivel 
-Restriccion de jugar partido de un deporte que tenags dado de alta
-
+	<li> Tipos de usuario</li>
+		<ul>
+			<li>Usuario</li>
+			Aquó podriamos meter toda la información de los deportes y tal.
+			<li>Editor</li>
+			<li>Administrador</li>
+		</ul>
 </ul>
+</main>
+
+<footer>
+	<br /><br /><br /><br /><br /><br />
+	<hr>
+	Pachanga <br /><br />
+	Proyecto presentado por:
+	<ul>
+		<li>Andrés Herranz González</li>
+		<li>Axel Junestrand Leal</li>
+		<li>Borja Lorenzo Fernández</li>
+		<li>Guillermo Rius García</li>
+	</ul>
+
+</footer>
 
 </body>
 </html>
