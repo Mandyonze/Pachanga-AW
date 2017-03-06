@@ -12,7 +12,7 @@
 	<meta charset="UTF-8" >
 
 	<!--Links-->
-	<link rel="icon" href="img/logos/logoPachanga.ico" type = "image/x-icon">
+	<link rel="icon" href="img/logos/logo2.png" type = "image/x-icon">
 
 </head>
 
@@ -33,85 +33,168 @@
     <li><a href="index.html">Index</a></li>
     <li><a href="detalles.html">Detalles</a></li>
     <li><a href="bocetos.html">Bocetos</a></li>
-		<li><a href="miembros.html">Miembros</a></li>
-		<li><a href="planificacion.html">Planificación</a></li>
-		<li><a href="contacto.html">Contacto</a></li>
+	<li><a href="miembros.html">Miembros</a></li>
+	<li><a href="planificacion.html">Planificación</a></li>
+	<li><a href="contacto.html">Contacto</a></li>
   </ul>
 </nav>
 
 <br /><br />
 <hr>
-<br /><br />
+<br>
 
 <main>
-
+<a name="arbol">
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    	<ul>
+	    	<li><a href="#login">Login</a></li>
+	    		<ul>
+	    			<li><a href="#signUp">Signup</a></li>
+	    		</ul>
+			<li><a href="#hamburgerMenu">Menu Hamburger</a></li>
+			<ul>
+				<li><a href="#crearPartido">Crear Partido</a></li>
+				<li><a href="#crearEquipo">Crear Equipo</a></li>
+				<li>Mis partidos</li>
+				<ul>
+					<li><a href="#partidosJugadosr">Jugados</a></li>
+					<li>Pendientes</li>
+				</ul>
+				<li><a href="#partidos">Partidos cercanos</a></li>
+				<li><a href="#ranking">Mejores jugadores</a></li>
+			</ul>
+			<li><a href="#notificaciones">Notificaciones</a></li>
+			<li><a href="#profile">Perfil</a></li>
+			<li>Resultado búsqueda jugadores</li>
+			<ul>
+				<li>Lista jugadores</li>
+				<ul>
+					<li><a href="#perfilOtrosUsuarios">Perfil Jugador</a></li>
+				</ul>
+			</ul>
+			<li>Resultado búsqueda partidos</li>
+			<ul>
+				<li><a href="#partidos">Lista de partidos</a></li>
+			</ul>
+		</ul>
+  </ul>
+</nav>
+<br>
+<hr>
+</a>
 <p>
+<a name="home">
 	La página de inicio de la aplicación consiste en una barra de búsqueda de partidos,
 	con filtrado por tipo de deporte, fecha y zona. Además, incluye un buscador de jugadores,
 	un botón de notificaciones, y un botón de inicio de sesión.
+</a>
 </p>
 	<img src="img/mockups/home.jpg" alt="Home" style="width: 750px; height: 500px;" border="3">
+	<br>
+	<a href="#arbol">Volver</a>
+
 <p>
+<a name="login">
 	La página de login será un formulario a completar por el usuario, con nombre de usuario y contraseña.
 	De momento ignoramos la opción de recuperar la contraseña.
 	Si el usuario no tiene cuenta, se le da la opción de crearla.
+</a>
 </p>
 	<img src="img/mockups/login.jpg" alt="Iniciar Sesión" style="width: 750px; height: 500px;" border="3">
+	<br>
+	<a href="#arbol">Volver</a>
 <p>
+<a name="signUp">
 	La página de registro también consistirá en un formulario,
 	con el nombre de usuario (Se informará con un mensaje tipo "pop-up" si el nombre ya está registrado),
 	la dirección de correo electrónico, el código postal (Que nos permitirá determinar la zona a la que
 	pertenece el usuario) y la contraseña (Que opcionalmente tendrá determinados requisitos,
 	como una longitud mínima y una mezcla de caracteres alfanuméricos).
+</a>
 </p>
 	<img src="img/mockups/signUp.jpg" alt="Registrarse" style="width: 750px; height: 500px;" border="3">
+	<br>
+	<a href="#arbol">Volver</a>
 <p>
+<a name="hamburgerMenu">
 	El "hamburger menu" de la parte izquierda de la página despliega varias opciones.
 	Este menú solo estará activo cuando el usuario tenga la sesión iniciada .
+</a>
 </p>
 	<img src="img/mockups/hamburgerMenu.jpg" alt="Hamburger Menu" style="width: 750px; height: 500px;" border="3">
+	<br>
+	<a href="#arbol">Volver</a>
 <p>
+<a name="crearPartido">
 	La primera opción del menú nos permite crear un partido. Podemos seleccionar el deporte,
 	el número de participantes, la fecha y la hora en las que se quiere jugar y la zona en la que se jugará el partido
 	(Más adelante se podrá especificar también el lugar en concreto, y de ahí se sacará la zona).
+</a>
 </p>
 	<img src="img/mockups/crearPartido.jpg" alt="Crear Partido" style="width: 750px; height: 500px;" border="3">
+	<br>
+	<a href="#arbol">Volver</a>
 <p>
+<a name="crearEquipo">
 	La segunda opción del menú nos permite crear un equipo. Será necesario especificar el nombre,
 	el deporte al que está relacionado, el número de jugadores que habrá en el equipo y la zona a la que pertenece.
 	También se podrá adjuntar un logo del mismo.
+</a>
 </p>
+
 	<img src="img/mockups/crearEquipo.jpg" alt="Crear Equipo" style="width: 750px; height: 500px;" border="3">
+	<br>
+	<a href="#arbol">Volver</a>
 <p>
+<a name="partidosJugados">
 	La tercera opción del menú ("Mis partidos") nos permitirá ver los partidos que hemos jugado
 	y los partidos en los que estamos registrados (En dos pestañas diferentes), especificando el deporte,
 	y la zona y fecha en las que se jugó.
 	Podremos seleccionar cada uno de los partidos de la lista y ver los datos de los mismos.
+</a>
 </p>
 	<img src="img/mockups/partidosJugados.jpg" alt="Partidos Jugados" style="width: 750px; height: 500px;" border="3">
+	<br>
+	<a href="#arbol">Volver</a>
 <p>
+<a name="datosPartido">
 	En la página de datos del partido se podrá ver el resultado (Ganado o perdido) y los participantes
 	(Indicando el resultado de cada uno de ellos, su skill en el partido y la valoración general que recibieron).
 	Se podrá seleccionar a los participantes y ver su perfil.
+</a>
 </p>
 	<img src="img/mockups/datosPartido.jpg" alt="Datos Partido" style="width: 750px; height: 500px;" border="3">
+	<br>
+	<a href="#arbol">Volver</a>
 <p>
+<a name="perfilOtrosUsuarios">
 	El perfil de otros usuarios consistirá en su nombre, su zona, su foto,
 	los deportes que practica (incluyendo su skill en cada uno de ellos),
 	la valoración general del jugador y los comentarios recibidos.
 	El usuario puede realizar comentarios en el perfil de otros jugadores.
+</a>
 </p>
 	<img src="img/mockups/perfilOtrosUsuarios.jpg" alt="Perfil Otros Usuarios" style="width: 750px; height: 500px;" border="3">
+	<br>
+	<a href="#arbol">Volver</a>
 <p>
+<a name="profile">
 	El perfil del usuario logeado consistirá en su nombre, su correo electrónico,
 	su zona, su foto, los deportes que practica (incluyendo su skill en cada uno de ellos),
 	la valoración general recibida, y los comentarios recibidos de otros usuarios.
+</a>
 </p>
 	<img src="img/mockups/profile.jpg" alt="Perfil" style="width: 750px; height: 500px;" border="3">
+	<br>
+	<a href="#arbol">Volver</a>
 <p>
+<a name="partidos">
 	Tanto si buscamos en la barra de búsqueda de la página principal,
 	como si seleccionamos la opción "Partidos cercanos" del menú,
 	se mostrará una lista de partidos a los que el usuario se puede unir.
+</a>
 </p>
 <p>
 	Para cada partido, se mostrará el deporte, los jugadores que ya se han apuntado,
@@ -124,52 +207,73 @@
 	se enviará la solicitud y, en caso contrario, permanecerá en la página de partidos.
 </p>
 	<img src="img/mockups/partidos.jpg" alt="Partidos" style="width: 750px; height: 500px;" border="3">
+	<br>
+	<a href="#arbol">Volver</a>
 <p>
+<a name="ranking">
 	Si se selecciona la opción "Mejores jugadores" del menú,
 	se mostrará una lista de los mejores jugadores de la zona registrada por el usuario.
 	Sólo se mostrarán los jugadores de los deportes practicados por el mismo.
+</a>
 </p>
 	<img src="img/mockups/ranking.jpg" alt="Ranking" style="width: 750px; height: 500px;" border="3">
+	<br>
+	<a href="#arbol">Volver</a>
 <p>
+<a name="notificaciones">
 	El botón de notificaciones de la parte superior derecha de la página será un pequeño menú "dropdown"
 	con los mensajes importantes para el usuario (Nuevos comentarios en el perfil,
 	peticiones de otros jugadores para unirse a uno de sus equipos,
 	peticiones para unirse a partidos creados por el usuario, partidos finalizados, etc.).
 	Si el usuario selecciona una de las notificaciones, esta le llevará a la página correspondiente.
+</a>
 </p>
 	<img src="img/mockups/notificaciones.jpg" alt="Notificaciones" style="width: 750px; height: 500px;" border="3">
+	<br>
+	<a href="#arbol">Volver</a>
 <p>
+<a name="aceptarJugador">
 	Cuando al usuario hace click en una notificación para aceptar a un jugador,
 	ya sea en uno de sus equipos o en uno de los partidos que ha creado,
 	aparecerá una página en la que se pregunta si se quiere aceptar al jugador,
 	con un pequeño "combo-box" con "Si" o "No",
 	y un botón para ver el perfil del jugador antes de aceptarle o rechazarle.
+</a>
 </p>
 <p>
 	Cuando el usuario da a "Enviar", se acepta o se rechaza al jugador y
 	se le envía una notificación a este con el mensaje correspondiente.
 </p>
 	<img src="img/mockups/aceptarJugador.jpg" alt="Aceptar Jugador" style="width: 750px; height: 500px;" border="3">
+	<br>
+	<a href="#arbol">Volver</a>
 <p>
 	Cuando el usuario ha terminado un partido (Esto se controla mediante una duración del partido al crearlo),
 	recibe una notificación de partido terminado, y pasa a una página para apuntar el resultado del partido,
 	en la que podrá seleccionar si ha ganado o perdido.
 </p>
 <p>
+<a name="resultadoPartido">
 	En Pachanga creemos en la honestidad de las personas,
 	por lo que si no se selecciona el resultado correcto (Si hay más jugadores que han ganado
 	que los que han perdido o viceversa), el partido no se registrará como jugado
 	y no aparecerá en la lista de partidos del usuario.
+</a>
 </p>
 	<img src="img/mockups/resultadoPartido.jpg" alt="Resultado Partido" style="width: 750px; height: 500px;" border="3">
+	<br>
+	<a href="#arbol">Volver</a>
 <p>
+<a name="valoracionJugadores">
 	Cuando se ha determinado el resultado del partido,
 	el usuario pasará a la página de valoración de los participantes.
 	Esta consistirá en un formulario en el que para cada jugador se determina el skill que ha demostrado
 	y si ha sido agradable jugar con él.
+</a>
 </p>
 	<img src="img/mockups/valoracionJugadores.jpg" alt="Valoracion Jugadores" style="width: 750px; height: 500px;" border="3">
-
+	<br>
+	<a href="#arbol">Volver</a>
 
 </main>
 
