@@ -11,4 +11,5 @@ table {
 th, td {
   padding: 8px;
   width: 25%;
+  text-align: center;
 }
