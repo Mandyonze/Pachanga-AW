@@ -15,12 +15,14 @@
 <body>
 <header style="background-color: orange; padding: 20px;">
 	<div class="row">
-	
-	<div class="col-md-2" style="margin-top: 10px; margin-left: 20px; padding-right: 0px;">
-	  <div class="panel-group">
-	    <div class="panel panel-default">
-	      <div class="panel-heading">
-	        <h4 class="panel-title" style="text-align: center;">
+	<div  class="col-md-2" style="padding-right: 0px;">
+		<img class="img-responsive" src="img/logos/Logo-naranja.png" width="250" height="60" >
+	</div>
+	<div class="col-md-2" style="margin-top: 10px; padding-left: 0px;">
+	  <div class="panel-group" style="background-color: orange;">
+	    <div class="panel panel-default" style="border: 0px;">
+	      <div class="panel-heading" style="background-color: orange;">
+	        <h4 class="panel-title" style="background-color: orange;">
 	          <a data-toggle="collapse" href="#collapse1"><i class="fa fa-bars" style="width: auto; height: auto;"></i></a>
 	        </h4>
 	      </div>
@@ -31,21 +33,26 @@
 	    </div>
 	  </div>
 	</div>
-	<div  class="col-md-3" style="padding-left: 0px;">
-		<img src="img/logos/Logo-Naranja.png" width="250" height="60">
-	</div>
-	
-	<div class="col-md-5" style="margin-top: 10px; text-align: right;">
-		<button type="button" class="btn btn-default" style="float: right;">
-      		<span class="glyphicon glyphicon-search"></span> Search
-    	</button>
+	<div class="col-md-4"></div>
+	<div class="col-md-2" style="margin-top: 10px; text-align: right; padding: 0px;">
 		<div style="float: right;">
-		<form>
-		    <div class="form-group">
-		      <input type="text" class="form-control" id="usr" placeholder="Buscar un usuario">
-		    </div>
-		  </form>
-		  </div>
+			<button type="button" class="btn btn-default">
+	      		<span class="glyphicon glyphicon-search"></span> Search
+	    	</button>
+    	</div>
+		<div style="float: right;">
+			<form>
+			    <div class="form-group">
+				      <input type="text" class="form-control" id="usr" placeholder="Buscar un usuario">
+				</div>
+			</form>
+	  </div>
+	</div>
+	<div class="col-md-2" style="margin-top: 10px;">
+		<ul class="nav navbar-nav navbar-right">
+	      <li><a href="#"><span class="glyphicon glyphicon-user" style="color: white;"></span> Sign Up</a></li>
+	      <li><a href="#"><span class="glyphicon glyphicon-log-in" style="color: white;"></span> Login</a></li>
+	    </ul>
 	</div>
 	</div>
 </header>
