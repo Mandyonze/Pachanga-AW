@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Registro</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  	<meta charset="utf-8">
+
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header style="background-color: orange; padding: 20px;">
+	<div class="row">
+	<div  class="col-md-2" style="padding-right: 0px;">
+		<img class="img-responsive" src="img/logos/Logo-naranja.png" width="250" height="60" >
+	</div>
+	<div class="col-md-2" style="margin-top: 10px; padding-left: 0px;">
+	  <div class="panel-group" style="background-color: orange;">
+	    <div class="panel panel-default" style="border: 0px;">
+	      <div class="panel-heading" style="background-color: orange;">
+	        <h4 class="panel-title" style="background-color: orange;">
+	          <a data-toggle="collapse" href="#collapse1"><i class="fa fa-bars" style="width: auto; height: auto;"></i></a>
+	        </h4>
+	      </div>
+	      <div id="collapse1" class="panel-collapse collapse">
+	        <div class="panel-body">Panel Body</div>
+	        <div class="panel-footer">Panel Footer</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="col-md-4"></div>
+	<div class="col-md-2" style="margin-top: 10px; text-align: right; padding: 0px;">
+		<div style="float: right;">
+			<button type="button" class="btn btn-default">
+	      		<span class="glyphicon glyphicon-search"></span> Search
+	    	</button>
+    	</div>
+		<div style="float: right;">
+			<form>
+			    <div class="form-group">
+				      <input type="text" class="form-control" id="usr" placeholder="Buscar un usuario">
+				</div>
+			</form>
+	  </div>
+	</div>
+	<div class="col-md-2" style="margin-top: 10px;">
+		<ul class="nav navbar-nav navbar-right">
+	    </ul>
+	</div>
+	</div>
+</header>
+<div class="container">
+  <div class="login">
+    <h1>Registro</h1>
+    <div class="inputs">
+      <input type="text" placeholder="Correo electrónico"/>
+			<input type="password" placeholder="Contraseña"/>
+			<select name="distrito">
+				<option selected="selected" value="null" disabled>Distrito</option>
+				<option value="arganzuela">Arganzuela</option>
+				<option value="barajas">Barajas</option>
+				<option value="carabanchel">Carabanchel</option>
+				<option value="centro">Centro</option>
+				<option value="chamartin">Chamartín</option>
+				<option value="chamberi">Chamberí</option>
+				<option value="ciudadLineal">Ciudad Lineal</option>
+				<option value="fuencarral">Fuencarral-El Pardo</option>
+				<option value="hortaleza">Hortaleza</option>
+				<option value="latina">Latina</option>
+				<option value="moncloa">Moncloa-Aravaca</option>
+				<option value="moratalaz">Moratalaz</option>
+				<option value="puenteVallecas">Puente de Vallecas</option>
+				<option value="retiro">Retiro</option>
+				<option value="salamanca">Barrio de Salamanca</option>
+				<option value="sanblas">San Blas</option>
+				<option value="tetuan">Tetuán</option>
+				<option value="usera">Usera</option>
+				<option value="vicalvaro">Vicálvaro</option>
+				<option value="villaVallecas">Villa de Vallecas</option>
+				<option value="villaverde">Villaverde</option>
+			</select>
+			<br>
+			<br>
+      <input type="submit" value="Crear cuenta"/>
+      <br />
+      </div>
+    <div>
+  </div>
+</div>
+</body>
+</html>
