@@ -62,7 +62,22 @@ body {
   margin-right: 25%;
   font-size: .8em;
 }
-.login a {
-  color: #0063bf;
-  opacity: .6;
+.districts{
+  margin: .5em 25%;
+  padding:0 0 0 .5em;
+}
+select{
+  margin: .5em 25%;
+  height: 2.5em;
+  line-height: 2.5em;
+  padding:0 0 0 .5em;
+  width: 50%;
+  border: 1px solid #e0e0e0;
+}
+select option:first-child{
+  color:  #e0e0e0;
+}
+option{
+  margin: .5em 25%;
+  padding:0 0 0 .5em;
 }
