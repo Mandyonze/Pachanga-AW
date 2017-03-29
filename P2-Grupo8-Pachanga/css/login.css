@@ -23,20 +23,12 @@ h3{
   border-radius:.2em;
 }
 .input-group{
-  width: 50%;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-right: 25%;
-  margin-left: 25%;
-}
-.input-group-addon{
-
 }
 .links{
   text-align: right;
   margin-top: 1em;
-  margin-right: 25%;
-  margin-left: 25%;
 }
 .enviar{
   color: #fff;
@@ -44,13 +36,7 @@ h3{
   background-color: #ff8910;
   padding-top: 1em;
   padding-bottom: 1em;
-  width: 50%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 25%;
-  margin-left: 25%;
 }
-
 .enviar:hover,
 .enviar:focus,
 .enviar:active,
@@ -58,4 +44,41 @@ h3{
 .open .dropdown-toggle.enviar {
   color: #fff;
   background-color: #e56a03;
+}
+/*Large devices*/
+@media (min-width: @screen-lg-min){
+  .input_group{
+
+  }
+  .enviar{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #e56a03;
+  }
+  .links{
+
+  }
+}
+/*Medium devices*/
+@media (min-width: @screen-md-min){
+  .input_group{
+
+  }
+  .enviar{
+  }
+  .links{
+
+  }
+}
+/*Small devices*/
+@media (min-width: @screen-sm-min){
+  .input_group{
+
+  }
+  .enviar{
+
+  }
+  .links{
+
+  }
 }
