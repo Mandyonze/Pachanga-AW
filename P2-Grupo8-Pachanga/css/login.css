@@ -1,83 +1,61 @@
 body {
   background: #a3a3a3;
 }
-.container {
-  margin-top: 100px;
-  background: #a3a3a3;
-  padding:5em 0;
-}
-.login {
-  background: #f7f7f7;
-  font-family: Sans-serif;
-  width: 50%;
-  height: 400px;
-  margin: 0 auto;
-  border: 1px solid #a3a3a3;
-  border-radius:.4em;
-}
-.login h1 {
-  font-size:1.5em;
+h3{
+  color: #fff;
+  background-color: #ff8910;
   text-align: center;
-  color: #efefef;
-  background: #ff8910;
-  height: 2em;
-  line-height: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   margin-top: 0;
   margin-bottom: 2em;
-  border-radius:.2em .2em 0 0;
+  border-radius: .2em .2em 0 0;
 }
-.login .hr {
-  margin: 1em 0;
-  border: 0;
-  height: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+.container .jumbotron{
+  padding-right: 0;
+  padding-left: 0;
 }
-.login .inputs{
-  margin-top: 13%;
+.jumbotron{
+  margin-top: 150px;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius:.2em;
 }
-.login input[type="text"],.login input[type="password"] {
-  margin: .5em 25%;
-  height: 2.5em;
-  line-height: 2.5em;
-  padding:0 0 0 .5em;
+.input-group{
   width: 50%;
-  border: 1px solid #e0e0e0;
-}
-.login input[type="submit"] {
-  background: #ff8910;
-  margin-left: 25%;
-  margin-top: .5em;
-  margin-bottom: 1em;
-  color: #e0e0e0;
-  font-size: 120%;
-  border: 0;
-  padding:0 0 0 .5em;
-  height: 3em;
-  width: 50%;
-}
-.login .links {
-  text-align: right;
-  margin-left: 25%;
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-right: 25%;
-  font-size: .8em;
+  margin-left: 25%;
 }
-.districts{
-  margin: .5em 25%;
-  padding:0 0 0 .5em;
+.input-group-addon{
+
 }
-select{
-  margin: .5em 25%;
-  height: 2.5em;
-  line-height: 2.5em;
-  padding:0 0 0 .5em;
+.links{
+  text-align: right;
+  margin-top: 1em;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+.enviar{
+  color: #fff;
+  font-size: 130%;
+  background-color: #ff8910;
+  padding-top: 1em;
+  padding-bottom: 1em;
   width: 50%;
-  border: 1px solid #e0e0e0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 25%;
+  margin-left: 25%;
 }
-select option:first-child{
-  color:  #e0e0e0;
-}
-option{
-  margin: .5em 25%;
-  padding:0 0 0 .5em;
+
+.enviar:hover,
+.enviar:focus,
+.enviar:active,
+.enviar.active,
+.open .dropdown-toggle.enviar {
+  color: #fff;
+  background-color: #e56a03;
 }
