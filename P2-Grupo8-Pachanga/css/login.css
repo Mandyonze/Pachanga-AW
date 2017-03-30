@@ -44,16 +44,23 @@ h3{
 }
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
+  body{
+    background-image: url("../img/backgrounds/login.jpg");
+    background-position: bottom;
+  }
   .login{
     width:30%;
+    margin-left: 25%;
   }
   .input_group{
-
+    margin-top: 1em;
+    margin-left: 30px;
+    margin-right: 30px;
   }
   .enviar{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #e56a03;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
   }
   .links{
 
@@ -66,9 +73,14 @@ h3{
 
   }
   .input_group{
-
+    margin-top: 1em;
+    margin-left: 30px;
+    margin-right: 30px;
   }
   .enviar{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
   }
   .links{
 
