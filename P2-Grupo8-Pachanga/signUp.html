@@ -92,5 +92,38 @@
     <div>
   </div>
 </div>
+<div class="container">
+	 <form action="#" method="POST">
+		<br/>
+		<div class="jumbotron login">
+			<h3>Registro</h3>
+			<div class="input-group">
+				<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+				<input type="text" class="form-control" name="username" placeholder="Nombre de usuario" onchange="checkUser()">
+	  	</div>
+	  	<span id="usernameError"></span>
+			<div class="input-group">
+				<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+				<input type="text" class="form-control" name="email" placeholder="Correo electrónico" onchange="checkEmail()">
+	  	</div>
+			<div class="input-group">
+				<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+				<input type="text" class="form-control" name="district" placeholder="Distrito">
+	  	</div>
+			<div class="input-group">
+				<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+				<input type="password" class="form-control" name="password" placeholder="Contraseña" onchange="checkPassword()">
+			</div>
+			<span id="passwordError"></span>
+			<div class="g-recaptcha" data-sitekey="6LdVVRsUAAAAAJ51aHWOVGeTwQ7_TzJIU_bi-fjo"></div>
+			<br>
+			<div class="links">
+				Todavía no eres miembro?<br>
+				<a href="signUp.html">Regístrate ahora</a>
+			</div>
+			<input type="submit" value="Crear cuenta" class="btn btn-default enviar">
+		</div>
+	</form>
+</div>
 </body>
 </html>
