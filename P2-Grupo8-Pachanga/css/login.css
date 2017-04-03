@@ -148,3 +148,9 @@ h3{
     padding-right: 30px;
   }
 }
+
+#usernameError{
+  color: white;
+  background-color: red;
+  width: 15px;
+}

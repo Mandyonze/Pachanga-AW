@@ -5,9 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/login.css">
+  	<link rel="stylesheet" href="css/login.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   	<script src="js/bootstrap.min.js"></script>
+  	<script src="js/login.js"></script>
+  	<script src='https://www.google.com/recaptcha/api.js'></script>
   	<meta charset="utf-8">
 
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -51,22 +53,29 @@
 	</div>
 </header>
 <div class="container">
-	<div class="jumbotron login">
-		<h3>Inicia Sesión</h3>
-		<div class="input-group">
-			<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-			<input type="text" class="form-control" placeholder="Nombre de usuario">
-	  </div>
-		<div class="input-group">
-			<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-			<input type="text" class="form-control" placeholder="Contraseña">
+	 <form action="signUp.html" method="POST">
+		<br/>
+		<div class="jumbotron login">
+			<h3>Inicia Sesión</h3>
+			<div class="input-group">
+				<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+				<input type="text" class="form-control" name="username" placeholder="Nombre de usuario" onchange="checkUser()">
+		  	</div>
+		  	<span id="usernameError"></span>
+			<div class="input-group">
+				<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+				<input type="password" class="form-control" name="password" placeholder="Contraseña" onchange="checkPassword()">
+			</div>
+			<span id="passwordError"></span>
+			<div class="g-recaptcha" data-sitekey="6LdVVRsUAAAAAJ51aHWOVGeTwQ7_TzJIU_bi-fjo"></div>
+			<br>
+			<div class="links">
+				Todavía no eres miembro?<br>
+				<a href="signUp.html">Regístrate ahora</a>
+			</div>
+			<input type="submit" value="Entrar" class="btn btn-default enviar">
 		</div>
-		<div class="links">
-			Todavía no eres miembro?<br>
-			<a href="signUp.html">Regístrate ahora</a>
-		</div>
-		<a href="#" class="btn btn-default enviar">Entrar</a>
-	</div>
+	</form>
 </div>
 </body>
 </html>
