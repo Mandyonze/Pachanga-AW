@@ -66,12 +66,24 @@ h3{
   color: #fff;
   background-color: #e56a03;
 }
+
 .g-recaptcha{
   margin-left: 65px;
   width: 70%;
 }
-#usernameError{
+
+/*#usernameError{
   color: white;
   background-color: red;
   width: 15px;
+}*/
+
+.form-control-ok {
+  border: 1px solid green;
+}
+
+.img-ok{
+  width: 30px;
+  float: right;
+  margin-right: 30px;
 }

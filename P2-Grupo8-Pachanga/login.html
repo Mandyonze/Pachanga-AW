@@ -6,76 +6,55 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/login.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/login.js"></script>
+
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src='https://www.google.com/recaptcha/api.js'></script>
+
+
 </head>
 <body>
-<header style="background-color: orange; padding: 20px;">
-	<div class="row">
-	<div  class="col-md-2" style="padding-right: 0px;">
-		<img class="img-responsive" src="img/logos/Logo-naranja.png" width="250" height="60" >
-	</div>
-	<div class="col-md-2" style="margin-top: 10px; padding-left: 0px;">
-	  <div class="panel-group" style="background-color: orange;">
-	    <div class="panel panel-default" style="border: 0px;">
-	      <div class="panel-heading" style="background-color: orange;">
-	        <h4 class="panel-title" style="background-color: orange;">
-	          <a data-toggle="collapse" href="#collapse1"><i class="fa fa-bars" style="width: auto; height: auto;"></i></a>
-	        </h4>
-	      </div>
-	      <div id="collapse1" class="panel-collapse collapse">
-	        <div class="panel-body">Panel Body</div>
-	        <div class="panel-footer">Panel Footer</div>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-	<div class="col-md-4"></div>
-	<div class="col-md-2" style="margin-top: 10px; text-align: right; padding: 0px;">
-		<div style="float: right;">
-			<button type="button" class="btn btn-default">
-	      		<span class="glyphicon glyphicon-search"></span> Search
-	    	</button>
-    	</div>
-		<div style="float: right;">
-			<form>
-			    <div class="form-group">
-				      <input type="text" class="form-control" id="usr" placeholder="Buscar un usuario">
-				</div>
-			</form>
-	  </div>
-	</div>
-	</div>
-</header>
+
 <div class="container">
 	<br/>
 	<div class="jumbotron login">
 		<h3>Inicia Sesión</h3>
 		<form action="processCaptcha.php" method="POST" class="login-form">
+
+
+
+			<img class = "img-ok" id="usernameError">
+
 			<div class="input-group">
 				<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-				<input type="text" class="form-control" name="username" placeholder="Nombre de usuario" onchange="checkUser()">
-		  	</div>
-		  	<span id="usernameError"></span>
+				<input type="text" class="form-control" id ="username" placeholder="Nombre de usuario" onchange="checkUser()">
+			</div>
+
+
+			<img class = "img-ok" id="passError">
+
 			<div class="input-group">
 				<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-				<input type="password" class="form-control" name="password" placeholder="Contraseña" onchange="checkPassword()">
+				<input type="password" class="form-control" id ="pass" placeholder="Contraseña" onchange="checkPass()">
 			</div>
 			<span id="passwordError"></span>
+
 			<div class="g-recaptcha" data-sitekey="6LdLhxsUAAAAAGKP4We-p1QlE9S7Wpf1eUc9UDa2"></div>
-			<script src="https://www.google.com/recaptcha/api/siteverify"></script>
+
 			<br>
+
 			<div class="links">
-				Todavía no eres miembro?<br>
-				<a href="signUp.html">Regístrate ahora</a>
+				Todavía no eres miembro?<br><a href="signUp.html">Regístrate ahora</a>
 			</div>
+
 			<input type="submit" value="Entrar" class="btn btn-default enviar">
 		</form>
 	</div>
 </div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/login.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+
 </body>
 </html>
