@@ -1,22 +1,25 @@
-//Checks if user field is empty
 function checkUser(){
-	var user=document.getElementById("username");
-	if(document.form.username.value == "")
-		document.getElementById("usernameError").innerHTML = "Debes introducir un nombre de usuario";
-	else
+	var x = document.getElementById("username");
+
+	if (x.value.length < 5) {
+		document.getElementById("usernameError").innerHTML = "Debes introducir tu nombre de USUARIO correcto";
+		x.classList.add('form-control-error')
+	} else {
+		document.getElementById("usernameError").innerHTML = "";
+		x.classList.remove('form-control-error')
+	}
+
 }
 
-//Checks if email field is empty
-function checkEmail(){
-	var user=document.getElementById("email");
-	if(document.form.username.value == "")
-		document.getElementById("usernameError").innerHTML = "Debes introducir un correo electrónico";
-	else
-}
-
-//Checks if password field is empty
 function checkPassword(){
-	var pass=document.getElementById("password");
-	if(document.form.password.value == "")
-		document.getElementById("passwordError").innerHTML = "Debes introducir una contraseña";
+	var x = document.getElementById("pasword");
+
+	if (x.value.length < 5) {
+		document.getElementById("passwordError").innerHTML = "Debes introducir tu nombre de USUARIO correcto";
+		x.classList.add('form-control-error')
+	} else {
+		document.getElementById("passwordError").innerHTML = "";
+		x.classList.remove('form-control-error')
+	}
+
 }

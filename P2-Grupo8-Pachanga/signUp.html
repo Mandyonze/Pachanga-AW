@@ -55,61 +55,23 @@
 	</div>
 </header>
 <div class="container">
-  <div class="login">
-    <h1>Registro</h1>
-    <div class="inputs">
-      <input type="text" placeholder="Correo electrónico"/>
-			<input type="password" placeholder="Contraseña"/>
-			<select name="distrito">
-				<option selected="selected" value="null" disabled>Distrito</option>
-				<option value="arganzuela">Arganzuela</option>
-				<option value="barajas">Barajas</option>
-				<option value="carabanchel">Carabanchel</option>
-				<option value="centro">Centro</option>
-				<option value="chamartin">Chamartín</option>
-				<option value="chamberi">Chamberí</option>
-				<option value="ciudadLineal">Ciudad Lineal</option>
-				<option value="fuencarral">Fuencarral-El Pardo</option>
-				<option value="hortaleza">Hortaleza</option>
-				<option value="latina">Latina</option>
-				<option value="moncloa">Moncloa-Aravaca</option>
-				<option value="moratalaz">Moratalaz</option>
-				<option value="puenteVallecas">Puente de Vallecas</option>
-				<option value="retiro">Retiro</option>
-				<option value="salamanca">Barrio de Salamanca</option>
-				<option value="sanblas">San Blas</option>
-				<option value="tetuan">Tetuán</option>
-				<option value="usera">Usera</option>
-				<option value="vicalvaro">Vicálvaro</option>
-				<option value="villaVallecas">Villa de Vallecas</option>
-				<option value="villaverde">Villaverde</option>
-			</select>
-			<br>
-			<br>
-      <input type="submit" value="Crear cuenta"/>
-      <br />
-      </div>
-    <div>
-  </div>
-</div>
-<div class="container">
-	 <form action="#" method="POST">
-		<br/>
-		<div class="jumbotron login">
-			<h3>Registro</h3>
+	<br/>
+	<div class="jumbotron login">
+		<h3>Registro</h3
+		<form action="#" method="POST">
 			<div class="input-group">
 				<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
 				<input type="text" class="form-control" name="username" placeholder="Nombre de usuario" onchange="checkUser()">
 	  	</div>
 	  	<span id="usernameError"></span>
 			<div class="input-group">
-				<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+				<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
 				<input type="text" class="form-control" name="email" placeholder="Correo electrónico" onchange="checkEmail()">
 	  	</div>
 			<div class="input-group">
-				<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-				<input type="text" class="form-control" name="district" placeholder="Distrito">
-	  	</div>
+				<span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
+				<input type="text" class="form-control" name="distrito" placeholder="Distrito" onchange="checkDistrict()">
+			</div>
 			<div class="input-group">
 				<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
 				<input type="password" class="form-control" name="password" placeholder="Contraseña" onchange="checkPassword()">
@@ -117,13 +79,9 @@
 			<span id="passwordError"></span>
 			<div class="g-recaptcha" data-sitekey="6LdVVRsUAAAAAJ51aHWOVGeTwQ7_TzJIU_bi-fjo"></div>
 			<br>
-			<div class="links">
-				Todavía no eres miembro?<br>
-				<a href="signUp.html">Regístrate ahora</a>
-			</div>
 			<input type="submit" value="Crear cuenta" class="btn btn-default enviar">
-		</div>
-	</form>
+		</form>
+	</div>
 </div>
 </body>
 </html>
