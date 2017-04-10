@@ -1,0 +1,113 @@
+body{
+  background: url("../img/backgrounds/login.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+}
+.topnav {
+    background-color: #E76003;
+    border: none;
+    font-size: 14px;
+    min-height: 40px;
+}
+
+.nav-aux{
+  float: left;
+  width: 226.7px;
+  height: 59.4px;
+  margin-top: -13px;
+  margin-bottom: -10px
+}
+
+.nav-aux-icon{
+  float: left;
+  width: 37.2px;
+  height: 42.24px;
+  /*margin-top: -13px;
+  margin-bottom: -10px*/
+  margin-left: -17px;
+}
+
+
+/*.color1 {
+  border: 1px solid red;
+}
+
+.color2 {
+  border: 1px solid blue;
+}*/
+
+
+.navbar-toggle-aux {
+  position: right;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  /*border: 1px solid transparent;
+  border-radius: 4px;*/
+}
+.navbar-toggle-aux:focus {
+  outline: 0;
+}
+.navbar-toggle-aux .icon-bar {
+  display: block;
+  width: 30px;
+  height: 2px;
+  border-radius: 13px;
+
+}
+.navbar-toggle-aux .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+
+
+.navbar-default .navbar-toggle-aux {
+  border-color: #ddd;
+}
+.navbar-default .navbar-toggle-aux:hover,
+.navbar-default .navbar-toggle-aux:focus {
+  background-color: #ddd;
+}
+.navbar-default .navbar-toggle-aux .icon-bar {
+  background-color: #ffffff;
+}
+
+.searchBar{
+
+  margin-top: 75px;
+}
+
+.sin_borde{
+
+  border:none;
+}
+
+.boton_nar{
+
+    background-color: #E76003;
+    border-bottom-right-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+.redondear{
+
+  border-bottom-left-radius: 13px;
+  border-top-left-radius: 13px;
+}
+
+.alto-bar{
+
+  height: 60px;
+}
+
+.glyphicon_tam{
+    font-size: 35px;
+    text-align: center;
+}
+
+.fondo_blanco{
+  background-color: white;
+}

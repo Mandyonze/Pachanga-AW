@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+  <title>Barra Busqueda</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/barraBusqueda.css">
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+      <div class="container-fluid color1 ">
+        <!-- <div class="navbar-header color1"> -->
+
+        <div class=" col-lg-2 col-md-3  col-sm-3  hidden-xs col-lg-offset-2 color2">
+          <a href="#"><img src="img/logos/Logo-blanco.png" alt="" class=" nav-aux "> </a>
+        </div>
+        <div class=" visible-xs col-xs-3 color2">
+          <a href="#"><img src="img/logos/Icono-Blanco.png" alt="" class=" nav-aux-icon "> </a>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+<div class="row searchBar">
+	<div class="col-md-8 col-md-offset-2 form row">
+
+	<input class="col-md-4 sin_borde redondear alto-bar" type="number" name="distrito">
+
+	<div class="col-md-1 alto-bar fondo_blanco">
+		<span class="glyphicon glyphicon-map-marker glyphicon_tam"></span>
+	</div>
+
+	<input class="col-md-4 sin_borde alto-bar" type="date" name="fecha">
+
+
+	<div class="col-md-1 alto-bar fondo_blanco">
+		<button type="button" class="btn btn-default btn-sm sin_borde">
+	       <span class="glyphicon glyphicon-calendar glyphicon_tam"></span> 
+	    </button>
+	</div>
+		
+	<input class="col-md-2 sin_borde boton_nar alto-bar" type="submit" value="Buscar Partido">
+
+	</div>
+</div>
+
+
+
+
+
+
+
+    <!--js -->
+    <script src="js/index.js"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
