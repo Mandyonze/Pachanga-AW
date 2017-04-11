@@ -8,6 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/barraBusqueda.css">
+  <link rel="stylesheet" href="css/datepicker.css">
+
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 
@@ -27,19 +32,23 @@
       </div>
     </nav>
 
-
+<br><br><br>
+<div id="datepicker" class="input-group date" data-date-format="dd-mm-yyyy">
+      <input class="form-control" type="text"  />
+      <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+  </div>
 
 
 <div class="row searchBar">
 	<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 form row">
 
-	<input class="col-xs-4 col-sm-4 col-md-4 sin_borde redondear alto-bar" type="number" maxlength="5" oninput="maxLengthCheck(this)" name="distrito" placeholder="Codigo Postal" >
+	<input class="col-xs-4 col-sm-4 col-md-4 sin_borde redondear alto-bar" type="text" maxlength="5" oninput="maxLengthCheck(this)" name="distrito" placeholder="Codigo Postal" >
 
 	<div class="col-xs-1 col-sm-1 col-md-1 alto-bar fondo_blanco sin_pading">
 		 <a><img src="img/iconos/location.png" class=" glyphicon_tam "></a>
 	</div>
 
-	<input class="col-xs-5 col-sm-4 col-md-4 sin_borde alto-bar" type="text" name="fecha">
+  <input class="col-xs-5 col-sm-4 col-md-4 sin_borde alto-bar" type="text" name="fecha">
 
 	<div class="col-xs-1 col-sm-1 col-md-1 alto-bar fondo_blanco">
 		<a><img src="img/iconos/calendar.png" class=" glyphicon_tam "></a>
@@ -53,18 +62,23 @@
 
 
 
+
+
 	<!-- js -->
     <script src="js/index.js"></script>
+    <script src="js/datepicker.js"></script>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+<!--     <script src="js/jquery.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
- 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ 	  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
     <script src="js/barraBusqueda.js"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
 
 </body>
 
