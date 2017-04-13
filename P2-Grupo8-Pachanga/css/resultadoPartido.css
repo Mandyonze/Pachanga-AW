@@ -1,0 +1,21 @@
+.input-group{
+  width: 170px;
+}
+.resultado{
+  width: 70%;
+  padding: 40px;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+.enviar{
+  color: #fff;
+  font-size: 130%;
+  background-color: #ff8910;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 150px;
+}
+.enviar:hover{
+  color: #fff;
+  background-color: #e56a03;
+}
