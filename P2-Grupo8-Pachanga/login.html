@@ -10,7 +10,7 @@
 	<meta charset="utf-8">
 </head>
 <body>
-	<!-- Navigation -->
+	<!-- Header -->
 	<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
 		<div class="container-fluid color1 ">
 			<!-- <div class="navbar-header color1"> -->
@@ -48,32 +48,38 @@
 
 		</div>
 	</nav>
-<div class="container">
-	<br/>
-	<div class="jumbotron login">
-		<h3>Inicia Sesión</h3>
-		<form action="processCaptcha.php" method="POST" class="login-form">
-			<img class = "img-ok" id="usernameError">
-			<div class="input-group">
-				<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-				<input type="text" class="form-control" id ="username" placeholder="Nombre de usuario" onchange="checkUser()">
-			</div>
-			<img class = "img-ok" id="passError">
-			<div class="input-group">
-				<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-				<input type="password" class="form-control" id ="pass" placeholder="Contraseña" onchange="checkPass()">
-			</div>
-			<span id="passwordError"></span>
-			<div class="g-recaptcha" data-sitekey="6LdLhxsUAAAAAGKP4We-p1QlE9S7Wpf1eUc9UDa2"></div>
-			<br>
-			<div class="links">
-				Todavía no eres miembro?<br><a href="signUp.html">Regístrate ahora</a>
-			</div>
-			<input type="submit" value="Entrar" class="btn btn-default enviar">
-		</form>
-	</div>
-</div>
 
+	<!-- Content -->
+	<div class="container">
+		<br/>
+		<div class="jumbotron login">
+			<h3>Inicia Sesión</h3>
+			<form action="processCaptcha.php" method="POST" class="login-form">
+				<img class = "img-ok" id="usernameError">
+				<div class="input-group">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+					<input type="text" class="form-control" id ="username" placeholder="Nombre de usuario" onchange="checkUser()">
+				</div>
+				<img class = "img-ok" id="passError">
+				<div class="input-group">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+					<input type="password" class="form-control" id ="pass" placeholder="Contraseña" onchange="checkPass()">
+				</div>
+				<span id="passwordError"></span>
+				<div class="g-recaptcha" data-sitekey="6LdLhxsUAAAAAGKP4We-p1QlE9S7Wpf1eUc9UDa2"></div>
+				<br>
+				<div class="links">
+					Todavía no eres miembro?<br><a href="signUp.html">Regístrate ahora</a>
+				</div>
+				<input type="submit" value="Entrar" class="btn btn-default enviar">
+			</form>
+		</div>
+	</div>
+
+	<!-- Footer -->
+		<!-- ... -->
+
+	<!-- Scripts -->
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/login.js"></script>
