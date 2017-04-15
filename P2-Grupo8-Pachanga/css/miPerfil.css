@@ -1,0 +1,38 @@
+
+.grey{
+	color: grey
+}
+
+
+.back-orange{
+	background-color: orange;
+	border-color: orange;
+}
+
+.back-orange2{
+	background-color: #FF4500;
+	border-color: #FF4500;
+}
+
+
+.profile{
+  width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.profile-container{
+
+	background: url("../img/backgrounds/login-desktop.jpg") ;
+	margin-bottom: 25px;
+}
+
+.profile-name{
+	color: #FF4500;
+}
+
+.img-circle{
+
+	margin-top: 20px;
+}
