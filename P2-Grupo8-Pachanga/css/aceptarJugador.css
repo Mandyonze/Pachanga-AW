@@ -1,22 +1,17 @@
-.input-group{
-  width: 150px;
-}
-.resultado{
+.jumbotron{
   width: 70%;
   padding: 40px;
   margin: 0 auto;
   margin-top: 100px;
   border-radius: .2em .2em .2em .2em
 }
-.enviar{
+.boton{
   color: #fff;
-  font-size: 130%;
   background-color: #ff8910;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  width: 150px;
+  border-color: #ff8910;
 }
-.enviar:hover{
+.boton:hover{
   color: #fff;
   background-color: #e56a03;
+  border-color: #e56a03;
 }
