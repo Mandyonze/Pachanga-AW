@@ -98,6 +98,11 @@ body{
   border-top-left-radius: 13px;
 }
 
+.sin_redondear{
+
+  border-radius: 0px;
+}
+
 .alto-bar{
 
   height: 60px;
@@ -123,5 +128,18 @@ body{
 .sin_pading{
 
   padding: 0px;
+}
+
+.pading_gly{
+
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.sin_margen{
+
+  margin: 0px;
 }
 
