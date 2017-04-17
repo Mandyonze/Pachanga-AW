@@ -90,12 +90,18 @@ body{
     background-color: #E76003;
     border-bottom-right-radius: 13px;
     border-top-right-radius: 13px;
+    border-bottom-left-radius: 0px;
 }
 
 .redondear{
 
   border-bottom-left-radius: 13px;
   border-top-left-radius: 13px;
+  border-top-right-radius: 0px;
+}
+
+.redondear-glyph{
+  border-top-right-radius: 0px;
 }
 
 .sin_redondear{
@@ -143,3 +149,71 @@ body{
   margin: 0px;
 }
 
+.noFloat {
+  float: left !important;
+}
+
+.width_mod_right{
+  float: right; 
+  width: 20%;
+}
+
+.width_mod_left{ 
+  width: 80%;
+}
+
+@media (max-width: 1100px) {
+.width_mod_right{
+  float: right; 
+  width: 30%;
+}
+
+.width_mod_left{ 
+  width: 70%;
+}
+}
+
+@media (max-width: 767px) {
+
+.redondear{
+
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 0px;
+}
+
+.boton_nar{
+
+    background-color: #E76003;
+    border-bottom-right-radius: 13px;
+    border-bottom-left-radius: 13px;
+    border-top-right-radius: 0px;
+}
+
+.redondear-glyph{
+  border-top-right-radius: 13px;
+}
+
+.width_mod_right{ 
+  width: 15%;
+}
+
+.width_mod_left{ 
+  width: 85%;
+}
+}
+
+@media (max-width: 360px) {
+
+.width_mod_right{ 
+  width: 20%;
+}
+
+.width_mod_left{ 
+  width: 80%;
+}
+}
+
+.padding_mod{
+  padding-left: 15px;
+}

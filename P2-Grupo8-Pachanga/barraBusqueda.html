@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
 
-  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  
   <link href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -43,18 +43,25 @@
 <div class="row searchBar">
 	<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 form row">
 
-	<input class="col-xs-4 col-sm-4 col-md-4 sin_borde redondear alto-bar" type="text" maxlength="5" oninput="maxLengthCheck(this)" name="distrito" placeholder="Codigo Postal" >
+	<!-- <input class="col-xs-11 col-sm-3 col-md-4 sin_borde redondear alto-bar" type="text" maxlength="5" oninput="maxLengthCheck(this)" name="distrito" placeholder="Codigo Postal" >
 
-	<div class="col-xs-1 col-sm-1 col-md-1 alto-bar fondo_blanco pading_gly">
+	<div class="col-xs-1 col-sm-1 col-md-1 alto-bar fondo_blanco pading_gly redondear-glyph">
 		 <span> <img src="img/iconos/location.png" class=" glyphicon_tam sin_margen"></span>
-	</div>
+	</div> -->
 
- 	<div id="datepicker" class="input-group date col-xs-5 col-sm-4 col-md-4 alto-bar sin_margen" data-date-format="dd-mm-yyyy">
+  <div class="col-xs-12 col-sm-4 col-md-5 sin_borde redondear alto-bar sin_pading">
+      <input class=" sin_borde redondear alto-bar padding_mod_left width_mod_left padding_mod" type="text" maxlength="5" oninput="maxLengthCheck(this)" name="distrito" placeholder="Codigo Postal">
+      <div class="alto-bar fondo_blanco pading_gly redondear-glyph width_mod_right">
+         <span> <img src="img/iconos/location.png" class=" glyphicon_tam sin_margen"></span>
+      </div>
+  </div>
+
+ 	<div id="datepicker" class="input-group noFloat date col-xs-12 col-sm-5 col-md-5 alto-bar sin_margen" data-date-format="dd-mm-yyyy">
       <input class="form-control sin_borde alto-bar sin_redondear" type="text"  />
       <span class="input-group-addon alto-bar sin_redondear sin_borde fondo_blanco"><img src="img/iconos/calendar.png" class=" glyphicon_tam sin_margen"></span>
   	</div>
 		
-	<input class="col-xs-1 col-sm-2 col-md-2 sin_borde boton_nar alto-bar" type="submit" value="Buscar Partido">
+	<input class="col-xs-12 col-sm-3 col-md-2 sin_borde boton_nar alto-bar" type="submit" value="Buscar Partido">
 
 	</div>
 </div>
@@ -75,10 +82,12 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/barraBusqueda.js"></script>
+    
 
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+    <script src="js/barraBusqueda.js"></script>
 
 
 </body>
