@@ -5,13 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/datosPartido.css">
 
 	<meta charset="utf-8">
 </head>
 <body>
 	<!-- Header -->
 	<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-		<div class="container-fluid color1 ">
+		<div class="container-fluid">
 			<!-- <div class="navbar-header color1"> -->
 
 			<div class=" col-lg-2 col-md-3  col-sm-3  hidden-xs col-lg-offset-2 color2">
@@ -20,38 +21,89 @@
 			<div class=" visible-xs col-xs-3 color2">
 				<a href="#"><img src="img/logos/Icono-Blanco.png" alt="" class=" nav-aux-icon "> </a>
 			</div>
-
-			<!-- <div class=" col-lg-2 col-md-3 col-sm-3  col-xs-3 color1">
-					Nada <br> Nada
-			</div>
-			<div class=" col-lg-2  col-md-3 col-sm-3  col-xs-3 color2">
-				Nada <br> Nada
-			</div>
-			<div class=" col-lg-2 col-md-3 col-sm-3  col-xs-3 color1">
-					Nada <br> Nada
-			</div> -->
-
-
-
-			<!-- <div class="col-lg-1 color2">
-				<button type="button" class="navbar-toggle-aux">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-				</button>
-			</div> -->
-
-			<!-- </div> -->
-
-
 		</div>
 	</nav>
 
-  <!-- Content -->
+<br><br><br><br><br><br>
 
-  <!-- Footer -->
-		<!-- ... -->
+
+
+
+	<div class="container">
+		<center>
+			<p class="size_title">Detalles partido</p>
+		</center>
+		<div class=" row margen_top_title">
+			<div class="col-md-4" >
+			    <div class="col-xs-6 col-md-6 cuadro_naranja">Zona</div>
+			    <div class="col-xs-6 col-md-6 cuadro_negro">Fuencarral - El Pardo</div>
+			</div>
+			<div class="col-md-4" >
+			    <div class="col-xs-6 col-md-6 cuadro_naranja">Fecha</div>
+			    <div class="col-xs-6 col-md-6 cuadro_negro">25-04-2017</div>
+			</div>
+			<div class="col-md-4">
+			    <div class="col-xs-6 col-md-6 cuadro_naranja">Creador</div>
+			    <div class="col-xs-6 col-md-6 cuadro_negro">Leonardo</div>
+			</div>
+		</div>
+		<table class="table table-condensed margen_top_title">
+			<thead>
+				<tr>
+					<th>Equipo 1</th>
+					<th>Equipo 2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>John</td>
+					<td>Doe</td>
+				</tr>
+				<tr>
+					<td>Mary</td>
+					<td>Moe</td>
+				</tr>
+				<tr>
+					<td>July</td>
+					<td>Dooley</td>
+				</tr>
+				<tr>
+					<td>John</td>
+					<td>Doe</td>
+				</tr>
+				<tr>
+					<td>Mary</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div id="map"></div>
+
+
+
+
+<script>
+	function myMap() {
+	  var mapCanvas = document.getElementById("map");
+	  var mapOptions = {
+	    center: new google.maps.LatLng(40.450718, -3.728554), zoom: 16
+	  };
+	  var map = new google.maps.Map(mapCanvas, mapOptions);
+	}
+	</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdlCBgVVNZ6xTNY1PzLw8CGtfE1bbON4E&callback=myMap"></script>
+
 
 	<!-- Scripts -->
 	<script src="js/jquery.js"></script>
