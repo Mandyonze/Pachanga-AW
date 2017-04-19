@@ -1,7 +1,4 @@
 .jumbotron{
-  width: 70%;
-  padding: 40px;
-  margin: 0 auto;
   margin-top: 100px;
   border-radius: .2em .2em .2em .2em
 }
@@ -11,7 +8,7 @@
   background-color: #ff8910;
   border-color: #ff8910;
 }
-.boton:hover{
+.boton:hover, .boton:active, .boton:focus{
   color: #fff;
   background-color: #e56a03;
   border-color: #e56a03;
