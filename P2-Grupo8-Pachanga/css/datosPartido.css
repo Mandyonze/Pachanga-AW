@@ -46,3 +46,53 @@ body{
 .margen_top_title{
   margin-top: 30px;
 }
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    max-height: 300px;
+    width:100%;
+    position:absolute;
+}
+
+.button-ver{
+  float: right; 
+  width: 90px; 
+  background-color: orange; 
+  border-color: orange;
+}
+
+.back-orange{
+  background-color: orange;
+  border-color: orange;
+}
+
+.back-orange2{
+  background-color: #FF4500;
+  border-color: #FF4500;
+}
+
+.mouse-over{}
+
+.mouse-over:hover{
+  background-color: #FF4500;
+  border-color: #FF4500;
+}
+
+.mouse-over:active{
+  background-color: #FF4500;
+  border-color: #FF4500;
+}
+
+
+.mouse-over:focus{
+  background-color: #FF4500;
+  border-color: #FF4500;
+}
