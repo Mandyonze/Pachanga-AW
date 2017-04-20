@@ -46,28 +46,27 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
                 <li>
-                  <button type="button" class="btn btn-default btn-header btn-register">Registrarse</button>
+                  <button id = "register1" type="button" onclick="changeFormulario('signUp')" class="btn btn-default btn-header btn-register">Registrarse</button>
                 </li>
                 <li>
-                  <button type="button" class="btn btn-default btn-header btn-login">Iniciar Sesión</button>
+                  <button type="button" onclick="changeFormulario('login')" class="btn btn-default btn-header btn-login">Iniciar Sesión</button>
                 </li>
               </ul>
           </div>
 
         <!-- div container  -->
         </div>
-
       </nav>
     </header>
 
-    <div id = "cabecera" >
 
+    <div id = "cabecera" >
     </div>
+
 
     <div id = "contenedor">
 
       <div id = "sombra" class="container">
-
       <!-- contendor/sombra -->
       </div>
 
@@ -97,50 +96,6 @@
           </div>
         <!-- container-fluid 1 -->
         </div>
-
-
-        <br><br>
-        <center><h1>Deportes</h1></center>
-        <hr>
-
-        <div class="container-fluid">
-
-          <div class="deportes">
-            <div class="deportes-text">
-              <h1>Fútbol 11</h1>
-              <!-- <button>Ver Partidos</button> -->
-            </div>
-          </div>
-
-          <br>
-
-          <div class="deportes">
-            <div class="deportes-text">
-              <h1>Fútbol Sala</h1>
-              <!-- <button>Ver Partidos</button> -->
-            </div>
-          </div>
-
-          <br>
-
-          <div class="deportes">
-            <div class="deportes-text">
-              <h1>Padel</h1>
-              <!-- <button>Ver Partidos</button> -->
-            </div>
-          </div>
-
-          <br>
-
-          <div class="deportes">
-            <div class="deportes-text">
-              <h1>Tenis</h1>
-              <!-- <button>Ver Partidos</button> -->
-            </div>
-          </div>
-        <!-- container-fluid 2 -->
-        </div>
-
 
 
         <br><br>
@@ -209,7 +164,139 @@
         <!-- body -->
       </div>
 
-    <!-- ******************************************footer******************************************-->
+
+  <!-- ******************************************LOGIN******************************************-->
+
+  <!-- <div id = "login" class="backgroundFormulario"> -->
+    <div  id = "login" class="container backgroundFormulario">
+        <div class="formulario formulario-container animateFormulario">
+          <div class="header-formulario">
+            <center><a href="index.html"><img id = "logo-formulario" src="img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a></center>
+                  <span onclick="changeFormulario('login')" class="closeFormulario" title="Close">&times;</span>
+          </div>
+
+          <div class="body-formulario">
+            <legend><center><h3>Iniciar Sesión</h3></center></legend>
+
+            <form>
+
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                  <input type="text" class="form-control " id ="username" placeholder="Username" onchange="checkUser()">
+                  <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
+                  <span id="usernameError" class="glyphicon glyphicon-remove"></span>
+                </div>
+
+                <br>
+
+
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                  <input type="password" class="form-control" id ="pass" placeholder="Contraseña" onchange="checkPass()">
+                  <span id="passSucces" class="glyphicon glyphicon-ok"></span>
+                  <span id="passError" class="glyphicon glyphicon-remove"></span>
+                </div>
+
+                <br>
+
+                <div class="g-recaptcha" data-sitekey="6LdLhxsUAAAAAGKP4We-p1QlE9S7Wpf1eUc9UDa2"></div>
+
+                <br>
+
+                <div class="links">
+                    ¿Todavía no eres miembro?<br><a onclick="changeFormulario('signUp')">Regístrate ahora</a>
+                </div>
+
+                <br>
+
+                <center><button onclick="changeFormulario('login')" type="button" class="btn-formulario cancelbtn">Cancel</button>
+                <button type="submit" class="btn-formulario sendbtn"> Entrar </button></center>
+            </form>
+          <!-- formulario-container -->
+          </div>
+        <!-- login formulario-container -->
+        </div>
+    <!-- container -->
+    </div>
+  <!-- </div> -->
+
+
+
+
+        <div  id = "signUp" class="container backgroundFormulario">
+            <div class="formulario formulario-container animateFormulario">
+              <div class="header-formulario">
+                <center><a href="index.html"><img id = "logo-formulario" src="img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a></center>
+                <span onclick="changeFormulario('signUp')" class ="closeFormulario" title="Close">&times;</span>
+              </div>
+
+              <div class="body-formulario">
+                <legend><center><h3>Registrarse</h3></center></legend>
+
+                <form >
+
+                    <div class="input-group">
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                      <input type="text" class="form-control " id ="username" placeholder="Username" onchange="checkUser()">
+                      <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
+                      <span id="usernameError" class="glyphicon glyphicon-remove"></span>
+                    </div>
+
+                    <br>
+
+                    <div class="input-group">
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                      <input type="text" class="form-control" id ="email" placeholder="Correo electrónico" onchange="checkEmail()">
+                      <span id="emailSucces" class="glyphicon glyphicon-ok"></span>
+                      <span id="emailError" class="glyphicon glyphicon-remove"></span>
+                    </div>
+
+                    <br>
+
+                    <!-- distrito -->
+
+          					<div class="input-group">
+          						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+          						<input type="password" class="form-control" name = "pass" id ="pass" placeholder="Contraseña" onchange="checkPass()">
+                      <span id="passSucces" class="glyphicon glyphicon-ok"></span>
+                      <span id="passError" class="glyphicon glyphicon-remove"></span>
+                    </div>
+
+                    <br>
+
+          					<div class="input-group">
+          						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+          						<input type="password" class="form-control" name = "pass" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2()">
+                      <span id="pass2Succes" class="glyphicon glyphicon-ok"></span>
+                      <span id="pass2Error" class="glyphicon glyphicon-remove"></span>
+                    </div>
+
+                    <br>
+
+                    <div class="g-recaptcha" data-sitekey="6LdLhxsUAAAAAGKP4We-p1QlE9S7Wpf1eUc9UDa2"></div>
+
+                    <br>
+
+                    <div class="links">
+                        ¿Ya tienes cuenta?<br><a onclick="changeFormulario('login')"> Iniciar Sesión</a>
+                    </div>
+
+                    <br>
+
+                    <center><button  onclick="changeFormulario('signUp')" type="button" class="btn-formulario cancelbtn">Cancel</button>
+                    <button type="submit" class="btn-formulario sendbtn"> Entrar </button></center>
+                </form>
+              <!-- formulario-container -->
+              </div>
+            <!-- register formulario-container -->
+            </div>
+        <!-- container -->
+  </div>
+
+
+
+
+  <!-- ******************************************footer******************************************-->
     <footer >
       <br><br>
       <div class="container">
@@ -217,9 +304,9 @@
           <div class="col-sm-4">
             <center><b>Join us</b></center>
             <hr>
-            Registrare
+            <a onclick="changeFormulario('signUp')">Registrase</a>
             <br>
-            Login
+            <a onclick="changeFormulario('login')">Login</a>
           </div>
           <div class="col-sm-4">
             <center><b>Sobre Pachanga</b></center>
@@ -250,19 +337,21 @@
         </div>
       </div>
 
+
+
+
       <br><br><br><br><br><br>
     </footer>
 
     <!--*********************************JAVASCRIPT*********************************-->
 
-
-
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-    <script src='js/index.js'></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.js"></script>
+
+    <script src='js/pachanga.js'></script>
 
   </body>
 
