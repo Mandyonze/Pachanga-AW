@@ -2,67 +2,430 @@
 <html lang="es">
 
 
-<head>
-  <title>Index</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/index.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
 
 
-<body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-      <div class="container-fluid color1 ">
-        <!-- <div class="navbar-header color1"> -->
+    <!--Metadatos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Grupo 08: Borja Lorenzo, Guillermo Rius, Andrés Herranz y Axel Junestrand">
+    <meta name="description" content="Proyecto 'Pachanga'">
 
-        <div class=" col-lg-2 col-md-3  col-sm-3  hidden-xs col-lg-offset-2 color2">
-          <a href="#"><img src="img/logos/Logo-blanco.png" alt="" class=" nav-aux "> </a>
+    <!--Links-->
+    <!-- FavIcon -->
+    <link rel="icon" href="img/logos/Icono-Naranja.png" type="image/x-icon"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+
+  <body>
+
+    <header>
+      <nav id = 'nav' class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container">
+          <div class="navbar-header ">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <img src="img/iconos/user.png" class="img-responsive" alt="">
+            </button>
+            <ul class="nav navbar-nav navbar-left">
+              <li>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle hamburger" type="button" id="burgerMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="burgerMenu">
+                    <a class="dropdown-item" href="#">Crear partido</a>
+                    <a class="dropdown-item" href="listaPartidos.html">Mis partidos</a>
+                    <a class="dropdown-item" href="listaPartidos.html">Partidos cercanos</a>
+                    <a class="dropdown-item" href="ranking.html">Mejores jugadores</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#"><img id = "logo" src="img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a>
+              </li>
+            </ul>
+          <!-- div navbar-header  -->
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle notifications" type="button" id="notificationMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="glyphicon glyphicon-bell"></span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="notificationMenu">
+                      <a class="dropdown-item" href="aceptarJugador.html">Un jugador se quiere unir a tu partido</a>
+                      <a class="dropdown-item" href="resultadoPartido.html">Has terminado un partido. Envía el resultado</a>
+                      <a class="dropdown-item" href="valoracionJugadores.html">Valora a los jugadores del partido</a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <button id = "register1" type="button" onclick="changeFormulario('signUp')" class="btn btn-default btn-header btn-register">Registrarse</button>
+                </li>
+                <li>
+                  <button type="button" onclick="changeFormulario('login')" class="btn btn-default btn-header btn-login">Iniciar Sesión</button>
+                </li>
+              </ul>
+          </div>
+
+        <!-- div container  -->
         </div>
-        <div class=" visible-xs col-xs-3 color2">
-          <a href="#"><img src="img/logos/Icono-Blanco.png" alt="" class=" nav-aux-icon "> </a>
-        </div>
-
-        <!-- <div class=" col-lg-2 col-md-3 col-sm-3  col-xs-3 color1">
-            Nada <br> Nada
-        </div>
-        <div class=" col-lg-2  col-md-3 col-sm-3  col-xs-3 color2">
-          Nada <br> Nada
-        </div>
-        <div class=" col-lg-2 col-md-3 col-sm-3  col-xs-3 color1">
-            Nada <br> Nada
-        </div> -->
+      </nav>
+    </header>
 
 
-
-        <!-- <div class="col-lg-1 color2">
-          <button type="button" class="navbar-toggle-aux">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
-        </div> -->
-
-        <!-- </div> -->
+    <div id = "cabecera" >
+    </div>
 
 
+    <div id = "contenedor">
+
+      <div id = "sombra" class="container">
+      <!-- contendor/sombra -->
       </div>
-    </nav>
+
+      <div id ="body" class="container">
+        <div class="container-fluid">
+          <div id="carousel-home" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-home" data-slide-to="1"></li>
+              <li data-target="#carousel-home" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+              <div class="item active">
+                <img class="d-block img-fluid" src="./img/carousel/1.jpg" alt="...">
+                <div class="carousel-caption">
+                  <h3>Pachanga es una aplicación para amantes del fútbol, que permite jugar partidos con otras personas.</h3>
+                </div>
+              </div>
+              <div class="item">
+                <img class="d-block img-fluid" src="./img/carousel/2.jpg" alt="...">
+                <div class="carousel-caption">
+                  <h3>Pachanga participa en proyectos para reducir la obesidad infantil mediante el deporte.</h3>
+                </div>
+              </div>
+              <div class="item">
+                <img class="d-block img-fluid" src="./img/carousel/3.jpg" alt="...">
+                <div class="carousel-caption">
+                  <h3>Realiza una donación para la construcción de canchas de fútbol en los barrios más pobres de Myanmar, Tailandia, Vietnam y Camboya.</h3>
+                </div>
+              </div>
+              <a name="info"></a>
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-home" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-home" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>
+          </div> <!-- Carousel -->
+        </div>
+        <center><h1>¿Qué es Pachanga?</h1></center>
+        <hr>
+
+        <div class="container-fluid">
+          <div class="row ">
+            <div class="col-sm-6 col-md-3 col-lg-3 ">
+              <img src="img/info/campo.png"  class="img-responsive imagen" alt="">
+              <br>
+              Es una manera divertida de organizar pachangas de fútbol y conocer gente nueva.
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+              <img src="img/info/heart.png"  class="img-responsive imagen" alt="">
+              <br>
+              Te mantiene en forma practicando tu deporte favorito.
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+              <img src="img/info/friends.png"  class="img-responsive imagen" alt="">
+              <br>
+              Es una buenísima forma de pasártelo bien con tus amigos.
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+              <img src="img/info/ball.png"  class="img-responsive imagen" alt="">
+              <br>
+              Te permite mejorar como jugador y como persona, con un sistema de rating de usuarios.
+            </div>
+          <!-- row -->
+          </div>
+          <a name="miembros"></a>
+        <!-- container-fluid 1 -->
+        </div>
+
+
+        <br><br>
+        <center><h1>Sobre Nosotros</h1></center>
+        <hr><br>
+
+        <div class="container-fluid">
+          <div class="row ">
+            <div class="col-sm-6 col-md-3 col-lg-3 ">
+              <img src="img/miembros/andres.jpg"  class="img-responsive img-circle imagen" alt=""> <br>
+              Apasionado de la seguridad informática y el pentesting, obsesionado con la seguridad:
+              ¡Nos están vigilando!. Me gustan los juegos de mesa y los juegos de rol.
+              En mis ratos libres juego al baloncesto. Me gusta ayudar a la gente.
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+              <img src="img/miembros/axel.jpg"  class="img-responsive img-circle imagen" alt=""> <br>
+              Me gusta recorrer el mundo en barco, he visitado más de 100 paises diferentes.
+              Me gusta conocer gente y descubir culturas. Me apasiona la programación web sobre todo el diseño front end
+              y el desarrollo de aplicaciones web y móvil.
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+              <img src="img/miembros/borja.jpg"  class="img-responsive img-circle imagen" alt=""> <br>
+              Agregado diseñador gráfico, apasionado por la programación en todo tipo de lenguajes, me encanta diseñar
+              y arreglar mis propias cosas. En mi tiempo libres me dedico a aprender, investigar y leer.
+              Me encanta viajar, conocer gente y hacer nuevos amigos.
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+              <img src="img/miembros/guille.jpg"  class="img-responsive img-circle imagen" alt=""> <br>
+              Interesado en la BIG DATA y el machine learning, dedico mis horas al desarrollo de algoritmos inteligentes,
+              me gusta el internet de las cosas (IOT) sobretodo si la puedo relacionar con los coches: Mi gran pasión.
+              Amante de la velocidad y los coches rápidos.
+            </div>
+          <!-- row -->
+          </div>
+        </div>
+
+
+        <br><br>
+        <a name="contacto"></a>
+        <center><h1>Contacto</h1></center>
+        <hr>
+
+        <div class="container-fluid">
+          <form action="MAILTO:borjalor@ucm.es" method="post" enctype="text/plain">
+            <fieldset>
+            <!-- <legend>Contacta con nosotros:</legend> -->
+
+            <br />Nombre:<br />
+            <input type="text" name="name" value="Nombre Completo" size="30"><br>
+            <br />E-mail:<br />
+            <input type="text" name="mail" value="Email de contacto" size="30"><br>
+
+            <br />Tipo de consulta:<br />
+            <input type="radio" name="consulta" value="evaluacion"/> Evaluación <br />
+            <input type="radio" name="consulta" value="sugerencias"/> Sugerencias <br />
+            <input type="radio" name="consulta" value="criticas"/> Críticas <br />
 
 
 
-    <!--js -->
-    <script src="js/index.js"></script>
+            <br />Consulta<br />
+            <input type="text" name="comment" value="Escriba aquí su consulta."size="30"><br /><br />
+
+            <input name="java" type="checkbox" value="on"/> Marque esta casilla para verificar que ha leído
+            nuestros términos y condiciones del servicio.  <br /><br />
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+            </fieldset>
+          </form>
+        </div>
+
+
+
+        <br>
+        <!-- body -->
+      </div>
+
+  <!-- ******************************************LOGIN******************************************-->
+
+  <!-- <div id = "login" class="backgroundFormulario"> -->
+    <div  id = "login" class="container backgroundFormulario">
+        <div class="formulario formulario-container animateFormulario">
+          <div class="header-formulario">
+            <center><a href="index.html"><img id = "logo-formulario" src="img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a></center>
+                  <span onclick="changeFormulario('login')" class="closeFormulario" title="Close">&times;</span>
+          </div>
+
+          <div class="body-formulario">
+            <legend><center><h3>Iniciar Sesión</h3></center></legend>
+
+            <form>
+
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                  <input type="text" class="form-control " id ="username" placeholder="Username" onchange="checkUser()">
+                  <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
+                  <span id="usernameError" class="glyphicon glyphicon-remove"></span>
+                </div>
+
+                <br>
+
+
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                  <input type="password" class="form-control" id ="pass" placeholder="Contraseña" onchange="checkPass()">
+                  <span id="passSucces" class="glyphicon glyphicon-ok"></span>
+                  <span id="passError" class="glyphicon glyphicon-remove"></span>
+                </div>
+
+                <br>
+
+                <div class="g-recaptcha" data-sitekey="6LdLhxsUAAAAAGKP4We-p1QlE9S7Wpf1eUc9UDa2"></div>
+
+                <br>
+
+                <div class="links">
+                    ¿Todavía no eres miembro?<br><a onclick="changeFormulario('signUp')">Regístrate ahora</a>
+                </div>
+
+                <br>
+
+                <center><button onclick="changeFormulario('login')" type="button" class="btn-formulario cancelbtn">Cancel</button>
+                <button type="submit" class="btn-formulario sendbtn"> Entrar </button></center>
+            </form>
+          <!-- formulario-container -->
+          </div>
+        <!-- login formulario-container -->
+        </div>
+    <!-- container -->
+    </div>
+  <!-- </div> -->
+
+
+
+
+  <div  id = "signUp" class="container backgroundFormulario">
+      <div class="formulario formulario-container animateFormulario">
+        <div class="header-formulario">
+          <center><a href="index.html"><img id = "logo-formulario" src="img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a></center>
+          <span onclick="changeFormulario('signUp')" class ="closeFormulario" title="Close">&times;</span>
+        </div>
+
+        <div class="body-formulario">
+          <legend><center><h3>Registrarse</h3></center></legend>
+
+          <form>
+
+              <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                <input type="text" class="form-control " id ="username" placeholder="Username" onchange="checkUser()">
+                <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
+                <span id="usernameError" class="glyphicon glyphicon-remove"></span>
+              </div>
+
+              <br>
+
+              <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                <input type="text" class="form-control" id ="email" placeholder="Correo electrónico" onchange="checkEmail()">
+                <span id="emailSucces" class="glyphicon glyphicon-ok"></span>
+                <span id="emailError" class="glyphicon glyphicon-remove"></span>
+              </div>
+
+              <br>
+
+              <!-- distrito -->
+
+    					<div class="input-group">
+    						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+    						<input type="password" class="form-control" name = "pass" id ="pass" placeholder="Contraseña" onchange="checkPass()">
+                <span id="passSucces" class="glyphicon glyphicon-ok"></span>
+                <span id="passError" class="glyphicon glyphicon-remove"></span>
+              </div>
+
+              <br>
+
+    					<div class="input-group">
+    						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+    						<input type="password" class="form-control" name = "pass" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2()">
+                <span id="pass2Succes" class="glyphicon glyphicon-ok"></span>
+                <span id="pass2Error" class="glyphicon glyphicon-remove"></span>
+              </div>
+
+              <br>
+
+              <div class="g-recaptcha" data-sitekey="6LdLhxsUAAAAAGKP4We-p1QlE9S7Wpf1eUc9UDa2"></div>
+
+              <br>
+
+              <div class="links">
+                  ¿Ya tienes cuenta?<br><a onclick="changeFormulario('login')"> Iniciar Sesión</a>
+              </div>
+
+              <br>
+
+              <center><button  onclick="changeFormulario('signUp')" type="button" class="btn-formulario cancelbtn">Cancel</button>
+              <button type="submit" class="btn-formulario sendbtn"> Entrar </button></center>
+          </form>
+        <!-- formulario-container -->
+        </div>
+      <!-- register formulario-container -->
+      </div>
+  <!-- container -->
+  </div>
+
+  <!-- ******************************************footer******************************************-->
+    <footer >
+      <br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <center><b>Join us</b></center>
+            <hr>
+            <a onclick="changeFormulario('signUp')">Registrase</a>
+            <br>
+            <a onclick="changeFormulario('login')">Login</a>
+          </div>
+          <div class="col-sm-4">
+            <center><b>Sobre Pachanga</b></center>
+            <hr>
+            <a href="#info">¿Qué es Pachanga?</a>
+            <br>
+            Preguntas Frecuentes
+            <br>
+            Aviso Legal
+          </div>
+
+          <div class="col-sm-4">
+            <center><b>¿Quiénes somos?</b></center>
+            <hr>
+            <a href="#miembros">Sobre Nosotros</a>
+            <br>
+            <a href="#contacto">Contacto</a>
+            <br><br>
+            <a href="#" class="fa fa-facebook"></a> &nbsp;
+            <a href="#" class="fa fa-twitter"></a> &nbsp;
+
+          </div>
+
+        <!-- row -->
+        </div>
+      </div>
+
+
+
+
+      <br><br><br><br><br><br>
+    </footer>
+
+    <!--*********************************JAVASCRIPT*********************************-->
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 
-</body>
+    <script src='js/pachanga.js'></script>
+
+  </body>
 
 </html>

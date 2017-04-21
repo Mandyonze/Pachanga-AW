@@ -1,107 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<title>Registro</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/index.css">
-		<link rel="stylesheet" href="css/login.css">
 
-		<meta charset="utf-8">
-	</head>
-	<body>
-		<!-- Header -->
-		<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-			<div class="container-fluid color1 ">
-				<!-- <div class="navbar-header color1"> -->
+<html>
 
-				<div class=" col-lg-2 col-md-3  col-sm-3  hidden-xs col-lg-offset-2 color2">
-					<a href="#"><img src="img/logos/Logo-blanco.png" alt="" class=" nav-aux "> </a>
-				</div>
-				<div class=" visible-xs col-xs-3 color2">
-					<a href="#"><img src="img/logos/Icono-Blanco.png" alt="" class=" nav-aux-icon "> </a>
-				</div>
+  <head>
+    <meta charset="utf-8">
+    <title>Registro</title>
 
-				<!-- <div class=" col-lg-2 col-md-3 col-sm-3  col-xs-3 color1">
-						Nada <br> Nada
-				</div>
-				<div class=" col-lg-2  col-md-3 col-sm-3  col-xs-3 color2">
-					Nada <br> Nada
-				</div>
-				<div class=" col-lg-2 col-md-3 col-sm-3  col-xs-3 color1">
-						Nada <br> Nada
-				</div> -->
+    <!--Metadatos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Grupo 08: Borja Lorenzo, Guillermo Rius, Andrés Herranz y Axel Junestrand">
+    <meta name="description" content="Proyecto 'Pachanga'">
+
+    <!--Links-->
+    <!-- FavIcon -->
+    <link rel="icon" href="img/logos/Icono-Naranja.png" type="image/x-icon"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body class="back">
+
+    <div class="container">
+        <div class="formulario formulario-container">
+          <div class="header-formulario">
+            <center><a href="index.html"><img id = "logo-formulario" src="img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a></center>
+          </div>
+
+          <div class="body-formulario">
+            <legend><center><h3>Registrarse</h3></center></legend>
+
+            <form>
+
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                  <input type="text" class="form-control " id ="username" placeholder="Username" onchange="checkUser()">
+                  <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
+                  <span id="usernameError" class="glyphicon glyphicon-remove"></span>
+                </div>
+
+                <br>
+
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                  <input type="text" class="form-control" id ="email" placeholder="Correo electrónico" onchange="checkEmail()">
+                  <span id="emailSucces" class="glyphicon glyphicon-ok"></span>
+                  <span id="emailError" class="glyphicon glyphicon-remove"></span>
+                </div>
+
+                <br>
+
+                <!-- distrito -->
+
+      					<div class="input-group">
+      						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+      						<input type="password" class="form-control" name = "pass" id ="pass" placeholder="Contraseña" onchange="checkPass()">
+                  <span id="passSucces" class="glyphicon glyphicon-ok"></span>
+                  <span id="passError" class="glyphicon glyphicon-remove"></span>
+                </div>
+
+                <br>
+
+      					<div class="input-group">
+      						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+      						<input type="password" class="form-control" name = "pass" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2()">
+                  <span id="pass2Succes" class="glyphicon glyphicon-ok"></span>
+                  <span id="pass2Error" class="glyphicon glyphicon-remove"></span>
+                </div>
+
+                <br>
+
+                <div class="g-recaptcha" data-sitekey="6LdLhxsUAAAAAGKP4We-p1QlE9S7Wpf1eUc9UDa2"></div>
+
+                <br>
+
+                <div class="links">
+                    ¿Ya tienes cuenta?<br><a href="index.html"> Iniciar Sesión</a>
+                </div>
+
+                <br>
+
+                <center><a href="index.html"><button type="button" class="btn-formulario cancelbtn">Cancel</button> </a>
+                <button type="submit" class="btn-formulario sendbtn"> Entrar </button></center>
+            </form>
+          <!-- formulario-container -->
+          </div>
+        <!-- register formulario-container -->
+        </div>
+    <!-- container -->
+    </div>
 
 
 
-				<!-- <div class="col-lg-1 color2">
-					<button type="button" class="navbar-toggle-aux">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-					</button>
-				</div> -->
+    <!--*********************************JAVASCRIPT*********************************-->
 
-				<!-- </div> -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.js"></script>
 
-			</div>
-		</nav>
-
-		<!-- Content -->
-		<div class="container">
-			<br/>
-			<div class="jumbotron login">
-				<h3>Registro</h3
-				<form action="#" method="POST">
-
-					<img class = "img-ok" id="usernameError">
-					<div class="input-group">
-						<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-						<input type="text" class="form-control" id ="username" placeholder="Nombre de usuario" onchange="checkUser()">
-			  	</div>
-
-					<img class = "img-ok" id="emailError">
-					<div class="input-group">
-						<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-						<input type="text" class="form-control" id ="email" placeholder="Correo electrónico" onchange="checkEmail()">
-			  	</div>
-
-					<img class = "img-ok" id="distritoError">
-					<div class="input-group">
-						<span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
-						<input type="text" class="form-control" id ="distrito" placeholder="Distrito" onchange="checkDistrict()">
-					</div>
-
-					<img class = "img-ok" id="passError">
-					<div class="input-group">
-						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-						<input type="password" class="form-control" name = "pass" id ="pass" placeholder="Contraseña" onchange="checkPass()">
-					</div>
-
-					<img class = "img-ok" id="pass2Error">
-					<div class="input-group">
-						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-						<input type="password" class="form-control" name = "pass" id ="pass2" placeholder="Contraseña" onchange="checkPass2()">
-					</div>
-
-					<div class="g-recaptcha" data-sitekey="6LdVVRsUAAAAAJ51aHWOVGeTwQ7_TzJIU_bi-fjo"></div>
-					<br>
-					<input type="submit" value="Crear cuenta" class="btn btn-default enviar">
-				</form>
-			</div>
-		</div>
-
-		<!-- Footer -->
-			<!-- ... -->
-
-		<!-- Scripts -->
-		<script src="js/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/signup.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src='https://www.google.com/recaptcha/api.js'></script>
-
-	</body>
+    <script src='js/pachanga.js'></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+  </body>
 </html>

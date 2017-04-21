@@ -213,8 +213,18 @@
         <br>
         <!-- body -->
       </div>
-
-
+  <!-- ******************************************NOTIFICATIONS******************************************-->
+  <div  id = "notifications" class="container backgroundFormulario">
+      <div class="formulario formulario-container animateFormulario">
+        <div class="header-formulario">
+          <center><a href="index.html"><img id = "logo-formulario" src="img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a></center>
+                <span onclick="changeFormulario('login')" class="closeFormulario" title="Close">&times;</span>
+        </div>
+        <div class="body-formulario">
+          <span class="glyphicon glyphicon-bell"></span>
+        </div>
+      </div>
+  </div>
   <!-- ******************************************LOGIN******************************************-->
 
   <!-- <div id = "login" class="backgroundFormulario"> -->
@@ -273,74 +283,74 @@
 
 
 
-        <div  id = "signUp" class="container backgroundFormulario">
-            <div class="formulario formulario-container animateFormulario">
-              <div class="header-formulario">
-                <center><a href="index.html"><img id = "logo-formulario" src="img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a></center>
-                <span onclick="changeFormulario('signUp')" class ="closeFormulario" title="Close">&times;</span>
+  <div  id = "signUp" class="container backgroundFormulario">
+      <div class="formulario formulario-container animateFormulario">
+        <div class="header-formulario">
+          <center><a href="index.html"><img id = "logo-formulario" src="img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a></center>
+          <span onclick="changeFormulario('signUp')" class ="closeFormulario" title="Close">&times;</span>
+        </div>
+
+        <div class="body-formulario">
+          <legend><center><h3>Registrarse</h3></center></legend>
+
+          <form>
+
+              <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                <input type="text" class="form-control " id ="username" placeholder="Username" onchange="checkUser()">
+                <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
+                <span id="usernameError" class="glyphicon glyphicon-remove"></span>
               </div>
 
-              <div class="body-formulario">
-                <legend><center><h3>Registrarse</h3></center></legend>
+              <br>
 
-                <form >
-
-                    <div class="input-group">
-                      <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                      <input type="text" class="form-control " id ="username" placeholder="Username" onchange="checkUser()">
-                      <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
-                      <span id="usernameError" class="glyphicon glyphicon-remove"></span>
-                    </div>
-
-                    <br>
-
-                    <div class="input-group">
-                      <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                      <input type="text" class="form-control" id ="email" placeholder="Correo electrónico" onchange="checkEmail()">
-                      <span id="emailSucces" class="glyphicon glyphicon-ok"></span>
-                      <span id="emailError" class="glyphicon glyphicon-remove"></span>
-                    </div>
-
-                    <br>
-
-                    <!-- distrito -->
-
-          					<div class="input-group">
-          						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-          						<input type="password" class="form-control" name = "pass" id ="pass" placeholder="Contraseña" onchange="checkPass()">
-                      <span id="passSucces" class="glyphicon glyphicon-ok"></span>
-                      <span id="passError" class="glyphicon glyphicon-remove"></span>
-                    </div>
-
-                    <br>
-
-          					<div class="input-group">
-          						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-          						<input type="password" class="form-control" name = "pass" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2()">
-                      <span id="pass2Succes" class="glyphicon glyphicon-ok"></span>
-                      <span id="pass2Error" class="glyphicon glyphicon-remove"></span>
-                    </div>
-
-                    <br>
-
-                    <div class="g-recaptcha" data-sitekey="6LdLhxsUAAAAAGKP4We-p1QlE9S7Wpf1eUc9UDa2"></div>
-
-                    <br>
-
-                    <div class="links">
-                        ¿Ya tienes cuenta?<br><a onclick="changeFormulario('login')"> Iniciar Sesión</a>
-                    </div>
-
-                    <br>
-
-                    <center><button  onclick="changeFormulario('signUp')" type="button" class="btn-formulario cancelbtn">Cancel</button>
-                    <button type="submit" class="btn-formulario sendbtn"> Entrar </button></center>
-                </form>
-              <!-- formulario-container -->
+              <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                <input type="text" class="form-control" id ="email" placeholder="Correo electrónico" onchange="checkEmail()">
+                <span id="emailSucces" class="glyphicon glyphicon-ok"></span>
+                <span id="emailError" class="glyphicon glyphicon-remove"></span>
               </div>
-            <!-- register formulario-container -->
-            </div>
-        <!-- container -->
+
+              <br>
+
+              <!-- distrito -->
+
+    					<div class="input-group">
+    						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+    						<input type="password" class="form-control" name = "pass" id ="pass" placeholder="Contraseña" onchange="checkPass()">
+                <span id="passSucces" class="glyphicon glyphicon-ok"></span>
+                <span id="passError" class="glyphicon glyphicon-remove"></span>
+              </div>
+
+              <br>
+
+    					<div class="input-group">
+    						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+    						<input type="password" class="form-control" name = "pass" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2()">
+                <span id="pass2Succes" class="glyphicon glyphicon-ok"></span>
+                <span id="pass2Error" class="glyphicon glyphicon-remove"></span>
+              </div>
+
+              <br>
+
+              <div class="g-recaptcha" data-sitekey="6LdLhxsUAAAAAGKP4We-p1QlE9S7Wpf1eUc9UDa2"></div>
+
+              <br>
+
+              <div class="links">
+                  ¿Ya tienes cuenta?<br><a onclick="changeFormulario('login')"> Iniciar Sesión</a>
+              </div>
+
+              <br>
+
+              <center><button  onclick="changeFormulario('signUp')" type="button" class="btn-formulario cancelbtn">Cancel</button>
+              <button type="submit" class="btn-formulario sendbtn"> Entrar </button></center>
+          </form>
+        <!-- formulario-container -->
+        </div>
+      <!-- register formulario-container -->
+      </div>
+  <!-- container -->
   </div>
 
 

@@ -1,78 +1,342 @@
-body {
-  background-color: #252525;
 
+@import "login.css";
+
+/***************************************************************************************************************************
+  Reset html, body and *.
+****************************************************************************************************************************/
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body, html {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+/***************************************************************************************************************************
+  Colors for test.
+****************************************************************************************************************************/
+.color1{
+  border: 1px solid green;
+}
+.color2{
+    border: 1px solid blue;
+}
+.color3{
+    border: 1px solid red;
+}
+
+
+/***************************************************************************************************************************
+  Header fixed.
+****************************************************************************************************************************/
+div#cabecera{
+  width: 100%;
+  height: 198px;
+  /*background-image: url(../img/backgrounds/login.jpg);*/
+  background-image: url(../img/backgrounds/1.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+
+
+}
+
+@media (min-width: 1900px) {
+  div#cabecera{
+    background-size: contain;
+  }
 }
 
 
 .topnav {
-    background-color: #E76003;
-    border: none;
-    font-size: 14px;
-    min-height: 40px;
-}
-
-.nav-aux{
-  float: left;
-  width: 226.7px;
-  height: 59.4px;
-  margin-top: -13px;
-  margin-bottom: -10px
-}
-
-.nav-aux-icon{
-  float: left;
-  width: 37.2px;
-  height: 42.24px;
-  /*margin-top: -13px;
-  margin-bottom: -10px*/
-  margin-left: -17px;
-}
-
-
-/*.color1 {
-  border: 1px solid red;
-}
-
-.color2 {
-  border: 1px solid blue;
-}*/
-
-
-.navbar-toggle-aux {
-  position: right;
-  float: right;
-  padding: 9px 10px;
-  margin-top: 10px;
-  margin-right: 15px;
-  margin-bottom: 8px;
+  /*background-color: #E76003;*/
   background-color: transparent;
-  background-image: none;
   border: none;
-  /*border: 1px solid transparent;
-  border-radius: 4px;*/
-}
-.navbar-toggle-aux:focus {
-  outline: 0;
-}
-.navbar-toggle-aux .icon-bar {
-  display: block;
-  width: 30px;
-  height: 2px;
-  border-radius: 13px;
+  font-size: 14px;
+  min-height: 40px;
 
-}
-.navbar-toggle-aux .icon-bar + .icon-bar {
-  margin-top: 4px;
+  /*z-index: 2;*/
 }
 
+#nav{
+  -webkit-transition : background-color .2s;
+}
 
-.navbar-default .navbar-toggle-aux {
-  border-color: #ddd;
+/***************************************************************************************************************************
+  Imagen of PACHANGA from header.
+****************************************************************************************************************************/
+img#logo{
+  float: left;
+  width: 184.92px; /*1541x0.12*/
+  height: 42.24px; /*352x0.12*/
+  margin-top: 3px;
 }
-.navbar-default .navbar-toggle-aux:hover,
-.navbar-default .navbar-toggle-aux:focus {
-  background-color: #ddd;
+
+/***************************************************************************************************************************
+  Hamburger from the header.
+****************************************************************************************************************************/
+.hamburger{
+  margin: 10px;
+  margin-top: 12px;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  padding-top: 2px;
+  padding-left: 2px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
 }
-.navbar-default .navbar-toggle-aux .icon-bar {
-  background-color: #ffffff;
+.glyphicon-menu-hamburger{
+  color: white;
+  font-size: 30px;
+}
+/***************************************************************************************************************************
+  Notifications button from the header.
+****************************************************************************************************************************/
+.notifications{
+  margin: 10px;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+.glyphicon-bell{
+  color: white;
+  font-size: 20px;
+}
+/***************************************************************************************************************************
+  Register and login buttons from the header.
+****************************************************************************************************************************/
+.btn-header{
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  color: white;
+  border: 1px solid white;
+  margin-left: 25px;
+  margin-top: 22px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+
+}
+
+.btn-login{
+  background-color: rgba(255, 187, 0, 0.1);
+}
+
+.btn-register{
+  padding-right: 38px;
+}
+
+/***************************************************************************************************************************
+  Navbar toggle for button responsive.
+****************************************************************************************************************************/
+.navbar-toggle{
+  height: 42.24px;
+  padding: 3px;
+  margin: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+
+}
+.navbar-toggle img{
+  height: 30px;
+
+}
+
+.collapsing, .collapse.in{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.collapsing .btn-header , .collapse.in .btn-header{
+
+  width: 300px;
+  margin: 10px;
+}
+
+.collapsing .btn-login , .collapse.in .btn-login{
+  background-color: #E76003;
+}
+
+
+/***************************************************************************************************************************
+  Main contains.
+****************************************************************************************************************************/
+/* Carousel */
+.carousel{
+  margin-top: 30px;
+  width: 100%;
+  height: 80vh;
+}
+
+.carousel .item img {
+  width: 100%; /*img width*/
+  margin: 0;
+}
+
+@media (max-width: 450px) {
+  .carousel h3{
+    font-size: 15px;
+        font-weight: bold;
+  }
+}
+
+div#contendor{
+  float: right;
+  width: 100%;
+  /*height: 1000px;*/
+  background-color: white;
+}
+
+div#sombra{
+  margin-top: -50px;
+  background-color: white;
+  height: 200px;
+
+  -webkit-box-shadow: 0px -16px 9px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px -16px 9px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -16px 9px 4px rgba(0, 0, 0, 0.2);
+}
+
+div#body{
+  margin-top: -200px;
+}
+
+div#body .imagen{
+  width: 170px;
+  height: 170px;
+  margin: 0 auto;
+}
+
+
+/***************************************************************************************************************************
+  Footer.
+****************************************************************************************************************************/
+
+footer{
+  background-color: #252525;
+  color: white;
+}
+
+footer a, footer a:hover  {
+  color : white;
+}
+
+/***************************************************************************************************************************
+  Social Media buttons.
+****************************************************************************************************************************/
+
+
+/* Style all font awesome icons */
+.fa {
+   font: normal normal normal 40px/1 FontAwesome;
+   padding: 20px;
+   font-size: 30px;
+      height: 50px;
+   width: 50px;
+   text-align: center;
+   text-decoration: none;
+   border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+   opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  font-size: 300px;
+  color: white;
+}
+
+
+/* Twitter */
+.fa-twitter {
+   background: #55ACEE;
+   font-size: 300px;
+   color: white;
+}
+
+
+/***************************************************************************************************************************
+  Formulario
+****************************************************************************************************************************/
+
+.backgroundFormulario {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 4; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/***************************************************************************************************************************
+  Formulario
+****************************************************************************************************************************/
+
+.closeFormulario{
+  /*position: absolute;*/
+  float: right;
+  /*margin-left: 150px;*/
+  margin: 5px;
+  margin-top: -60px;
+
+color: white;
+font-size: 35px;
+font-weight: bold;
+}
+
+.closeFormulario:hover,
+.closeFormulario:focus {
+    color: #ff5d5d;
+    cursor: pointer;
+
+}
+
+/***************************************************************************************************************************
+  Animate for the login and register.
+****************************************************************************************************************************/
+
+
+.animateFormulario {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
 }
