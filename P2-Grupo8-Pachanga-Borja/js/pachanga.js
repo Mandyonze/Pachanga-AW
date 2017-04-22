@@ -7,6 +7,7 @@
 
 $(document).ready(function(){
 
+
   var flag = false;
   var scroll;
 
