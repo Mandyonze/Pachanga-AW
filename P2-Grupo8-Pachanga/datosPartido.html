@@ -4,25 +4,25 @@
 	<title>Datos Partido</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/index.css">	
 	<link rel="stylesheet" href="css/datosPartido.css">
 
 	<meta charset="utf-8">
 </head>
 <body>
 	<!-- Header -->
-	<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+<!-- 	<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
 		<div class="container-fluid">
-			<!-- <div class="navbar-header color1"> -->
+			<!- <div class="navbar-header color1"> -->
 
-			<div class=" col-lg-2 col-md-3  col-sm-3  hidden-xs col-lg-offset-2 color2">
+<!--			<div class=" col-lg-2 col-md-3  col-sm-3  hidden-xs col-lg-offset-2 color2">
 				<a href="#"><img src="img/logos/Logo-blanco.png" alt="" class=" nav-aux "> </a>
 			</div>
 			<div class=" visible-xs col-xs-3 color2">
 				<a href="#"><img src="img/logos/Icono-Blanco.png" alt="" class=" nav-aux-icon "> </a>
 			</div>
 		</div>
-	</nav>
+	</nav> -->
 
 <br><br><br><br><br><br>
 
@@ -36,7 +36,7 @@
 		<div class=" row margen_top_title">
 			<div class="col-md-4" >
 			    <div class="col-xs-6 col-md-6 cuadro_naranja">Zona</div>
-			    <div class="col-xs-6 col-md-6 cuadro_negro">Fuencarral - El Pardo</div>
+			    <div class="col-xs-6 col-md-6 cuadro_negro">Moncloa-Aravaca</div>
 			</div>
 			<div class="col-md-4" >
 			    <div class="col-xs-6 col-md-6 cuadro_naranja">Fecha</div>
@@ -88,7 +88,7 @@
 
 		<div class="container margen_top_title">
 			<div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info button-ver mouse-over" role="button">Inscribirse</a></div>
-	    	<div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info back-orange mouse-over" role="button">Compartir</a></div>
+	    	<div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info back-orange mouse-over" onclick="changeFormulario('compartir')" role="button">Compartir</a></div>
 		</div>
 
 		<div class="map-responsive margen_top_title">
@@ -96,28 +96,69 @@
 		</div>
 	</div>
 
-<!-- 	<div id="map"></div>
+	<div id="login"></div>
+	<div id="signUp"></div>
+
+	  <!-- <div id = "login" class="backgroundFormulario"> -->
+    <div  id = "compartir" class="container backgroundFormulario">
+        <div class="formulario formulario-container animateFormulario">
+          <div class="header-formulario">
+            <center><a href="index.html"><img id = "logo-formulario" src="img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a></center>
+                  <span onclick="changeFormulario('login')" class="closeFormulario" title="Close">&times;</span>
+          </div>
+
+          <div class="body-formulario">
+            <legend><center><h3>Iniciar Sesión</h3></center></legend>
+
+            <form>
+
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                  <input type="text" class="form-control " id ="username" placeholder="Username" onchange="checkUser()">
+                  <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
+                  <span id="usernameError" class="glyphicon glyphicon-remove"></span>
+                </div>
+
+                <br>
 
 
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                  <input type="password" class="form-control" id ="pass" placeholder="Contraseña" onchange="checkPass()">
+                  <span id="passSucces" class="glyphicon glyphicon-ok"></span>
+                  <span id="passError" class="glyphicon glyphicon-remove"></span>
+                </div>
 
+                <br>
 
-<script>
-	function myMap() {
-	  var mapCanvas = document.getElementById("map");
-	  var mapOptions = {
-	    center: new google.maps.LatLng(40.450718, -3.728554), zoom: 16
-	  };
-	  var map = new google.maps.Map(mapCanvas, mapOptions);
-	}
-	</script>
+                <div class="g-recaptcha" data-sitekey="6LdLhxsUAAAAAGKP4We-p1QlE9S7Wpf1eUc9UDa2"></div>
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdlCBgVVNZ6xTNY1PzLw8CGtfE1bbON4E&callback=myMap"></script> -->
+                <br>
 
+                <div class="links">
+                    ¿Todavía no eres miembro?<br><a onclick="changeFormulario('signUp')">Regístrate ahora</a>
+                </div>
+
+                <br>
+
+                <center><button onclick="changeFormulario('login')" type="button" class="btn-formulario cancelbtn">Cancel</button>
+                <button type="submit" class="btn-formulario sendbtn"> Entrar </button></center>
+            </form>
+          <!-- formulario-container -->
+          </div>
+        <!-- login formulario-container -->
+        </div>
+    <!-- container -->
+    </div>
+  <!-- </div> -->
 
 	<!-- Scripts -->
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<script src="js/login.js"></script>
+	<script src='js/pachanga.js'></script>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 
