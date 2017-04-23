@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Datos Partido</title>
+  <title>Inscripción Partido</title>
 
 
 
@@ -17,7 +17,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/inicio.css">
-  <link rel="stylesheet" href="css/datosPartido.css">
+  <link rel="stylesheet" href="css/inscribirsePartido.css">
 
   <!-- Add icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -125,105 +125,40 @@
 </header>
 
   <div id = "contenidoPagina" class="container ">
-
-    <center>
-      <p class="size_title">Detalles partido</p>
-    </center>
-    <div class=" row margen_top_title">
-      <div class="col-md-4" >
-          <div class="col-xs-6 col-md-6 cuadro_naranja">Zona</div>
-          <div class="col-xs-6 col-md-6 cuadro_negro">Moncloa-Aravaca</div>
-      </div>
-      <div class="col-md-4" >
-          <div class="col-xs-6 col-md-6 cuadro_naranja">Fecha</div>
-          <div class="col-xs-6 col-md-6 cuadro_negro">25-04-2017</div>
-      </div>
-      <div class="col-md-4">
-          <div class="col-xs-6 col-md-6 cuadro_naranja">Creador</div>
-          <div class="col-xs-6 col-md-6 cuadro_negro">Leonardo</div>
-      </div>
-    </div>
-    <table class="table table-condensed margen_top_title">
-      <thead>
-        <tr>
-          <th>Equipo 1</th>
-          <th>Equipo 2</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>John</td>
-          <td>Doe</td>
-        </tr>
-        <tr>
-          <td>Mary</td>
-          <td>Moe</td>
-        </tr>
-        <tr>
-          <td>July</td>
-          <td>Dooley</td>
-        </tr>
-        <tr>
-          <td>John</td>
-          <td>Doe</td>
-        </tr>
-        <tr>
-          <td>Mary</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>-</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>-</td>
-          <td>-</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="container margen_top_title">
-      <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info button-ver mouse-over" role="button">Inscribirse</a></div>
-        <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info back-orange mouse-over" onclick="changeCompartir('compartir')" role="button">Compartir</a></div>
-    </div>
-
-    <div class="map-responsive margen_top_title">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24293.014895944812!2d-3.7907224354894837!3d40.439260629191914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4187ba902ea801%3A0x2efcb6589fe8a8a1!2sMoncloa+-+Aravaca%2C+Madrid!5e0!3m2!1ses!2ses!4v1492720869057" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
-
-  </div>
-
-  <div  id = "compartir" class="container backgroundFormulario">
-        <div class="formulario formulario-container animateFormulario">
-          <div class="header-formulario">
-            <center><a href="index.html"><img id = "logo-formulario" src="img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a></center>
-                  <span onclick="changeCompartir('compartir')" class="closeFormulario" title="Close">&times;</span>
+    <br><br>
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-4">
+          <div class="jumbotron">
+            <h3>INSCRIPCIÓN</h3>
+            <br>
+            <p>
+              Estás a punto de inscribirte en el partido del día 15-04-2017 a las 15:30 en el distrito 28001.
+            </p>
+                        <div class="row justify-content-center">
+                            <div class="col-xs-6 col-md-3 col-md-offset-3 cuadro_naranja">Seleciona equipo:</div>
+                            <select class="col-xs-6 col-md-3 cuadro_negro">
+                              <option value="volvo">Equipo 1</option>
+                              <option value="saab">Equipo 2</option>
+                            </select>
+                        </div>
+                        <!-- <div class="col-md-3 col-md-offset-4 col-sm-10 col-sm-offset-1">
+                            <div class="col-xs-6 col-md-6 cuadro_naranja">Seleciona equipo:</div>
+                            <select class="col-xs-6 col-md-6 cuadro_negro">
+                              <option value="volvo">Equipo 1</option>
+                              <option value="saab">Equipo 2</option>
+                            </select>
+                        </div> -->
+            
+                        <div class="btn-group">
+              <button type="button" class="btn btn-primary btn-lg boton" href="#">Aceptar</button>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary btn-lg boton" href="#">Cancelar</button>
+            </div>
           </div>
-
-          <div class="body-formulario">
-            <legend><center><h3>Compartir</h3></center></legend>
-
-            <form>
-
-                <div class="input-group">
-                  <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                  <input type="text" class="form-control " id ="username" placeholder="Username" onchange="checkUser()">
-                  <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
-                  <span id="usernameError" class="glyphicon glyphicon-remove"></span>
-                </div>
-
-                <br>
-
-                <center><button onclick="changeCompartir('compartir')" type="button" class="btn-formulario cancelbtn">Cancel</button>
-                <button type="submit" class="btn-formulario sendbtn"> Entrar </button></center>
-            </form>
-          <!-- formulario-container -->
-          </div>
-        <!-- login formulario-container -->
         </div>
-    <!-- container -->
-    </div>
-  <!-- </div> -->
+      </div>
+  </div>
 
     <!-- ******************************************footer******************************************-->
 <footer >
@@ -249,7 +184,7 @@
 
           <div class="col-sm-4">
             <center><b>¿Quiénes somos?</b></center>
-            <hr>z
+            <hr>
             <a href="#miembros">Sobre Nosotros</a>
             <br>
             <a href="#contacto">Contacto</a>
@@ -275,8 +210,6 @@
 
       <!-- Bootstrap Core JavaScript -->
       <script src="js/bootstrap.js"></script>
-
-      <script src='js/compartir.js'></script>
 
       <!-- <script src='js/pachanga-inicio.js'></script> -->
 
