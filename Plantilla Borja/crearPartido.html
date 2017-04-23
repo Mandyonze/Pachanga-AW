@@ -129,18 +129,21 @@
       <div class="col-md-1"></div>
         <form class="form col-xs-12 col-sm-6  col-md-4 " id="form1">
 
+       	  <p class="nombre">
+            <input name="nombre" type="text" class="validate[required,custom[nombre]] feedback-input" id="nombre" placeholder="Nombre Partido" />
+          </p>
+
           <p class="n_players">
             <input name="n_players" type="text" minlength="1" maxlength="2" oninput="maxLengthCheck(this)" class="validate[required,custom[n_players]] feedback-input" id="n_players" placeholder="NºParticipantes" />
           </p>
 
            <p class="largo"  >
-              <div class='input-group date buscar-partido-date ' id='datepicker' data-date-format="dd-mm-yyyy">
-                   <input type='text' class="form-control" placeholder="Fecha" />
-                   <span class="input-group-addon">
+              <div class='input-group date buscar-partido-date' id='datepicker' data-date-format="dd-mm-yyyy">
+                   <input type='text' class="form-control feedback-input feedback-input-cal" placeholder="Fecha" />
+                   <span class="input-group-addon feedback-input-gly">
                        <span class="glyphicon glyphicon-calendar"></span>
                    </span>
                </div>
-              
           </p>
 
           <p class="hora">
@@ -151,16 +154,13 @@
             <input name="zona" type="text" minlength="5" maxlength="5" oninput="maxLengthCheck(this)" class="validate[required,custom[zona]] feedback-input" id="zona" placeholder="Codigo Postal" />
           </p>
 
+          <br>
+
+	    	<div><button class="button-mod" type="submit">Crear</button></div>		 
+
         </form>
   </div>
 
-  <div class="row" > <!-- style="margin-top: 40px" -->
-
-    <div class="col-md-1"></div>
-    <div class="col-md-5">
-      <div><button class="button-mod" type="submit">Crear</button></div>
-    </div>
-  </div>
   <br>
   </div>
 
