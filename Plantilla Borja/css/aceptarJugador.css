@@ -1,0 +1,14 @@
+.jumbotron{
+  border-radius: .2em .2em .2em .2em
+}
+.boton{
+  margin: 5px;
+  color: #fff;
+  background-color: #ff8910;
+  border-color: #ff8910;
+}
+.boton:hover, .boton:active, .boton:focus{
+  color: #fff;
+  background-color: #e56a03;
+  border-color: #e56a03;
+}
