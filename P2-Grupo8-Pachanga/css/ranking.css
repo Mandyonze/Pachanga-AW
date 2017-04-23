@@ -1,74 +1,49 @@
-.bars {
-  cursor: pointer;
-  width: 24px;
+
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom: 30.25%;
+    position:relative;
+    height:0;
 }
-.bar {
-  background: #333;
-  height: 4px;
-  margin-bottom: 4px;
-  width: 24px;
-  -webkit-transition: all 300ms ease-out;
-  -moz-transition: all 300ms ease-out;
-  -ms-transition: all 300ms ease-out;
-  -o-transition: all 300ms ease-out;
-  transition: all 300ms ease-out;
-}
-.bars:hover .bar {
-  background: #666;
-  -webkit-transition: all 300ms ease-out;
-  -moz-transition: all 300ms ease-out;
-  -ms-transition: all 300ms ease-out;
-  -o-transition: all 300ms ease-out;
-  transition: all 300ms ease-out;
-}
-
-
-
-#map{
-
-    height: 390px;
-    width:  100%;
-    border: 3px solid orange;
-}
-
-
-button {
-  cursor: pointer;
-  height: 40px;
-  width: 130px;
-  text-align: center;
-  background: orange;
-  border: 3px  orange;
-  color: black;
-}
-
-#form label {
-  font-size: 80px;
-  margin: auto;
-}
-
-input[type="radio"] {
-  display: none;
-}
-
-label {
-  color: grey;
-  font-size: 25px;
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    max-height: 300px;
+    width:100%;
+    position:absolute;
 }
 
 .flotante_izq{
   float: left;
 }
-.clasificacion {
-  direction: rtl;
-  unicode-bidi: bidi-override;
+
+.grey{
+  color: grey
 }
 
-label:hover,
-label:hover ~ label {
-  color: orange;
+.button-ver{
+  float: right; 
+  width: 90px; 
+  background-color: orange; 
+  border-color: orange;
 }
 
-input[type="radio"]:checked ~ label {
-  color: orange;
+.mouse-over{}
+
+.mouse-over:hover{
+  background-color: #FF4500;
+  border-color: #FF4500;
+}
+
+.mouse-over:active{
+  background-color: #FF4500;
+  border-color: #FF4500;
+}
+
+
+.mouse-over:focus{
+  background-color: #FF4500;
+  border-color: #FF4500;
 }
