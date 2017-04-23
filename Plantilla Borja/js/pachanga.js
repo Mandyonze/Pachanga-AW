@@ -55,6 +55,21 @@ function changeFormulario(id){
   }
 
 }
+
+/***************************************************************************************************************************
+  Change the visibility of share form.
+****************************************************************************************************************************/
+function changeCompartir(id){
+
+  if (document.getElementById(id).style.display == "block") {
+    document.getElementById(id).style.display = "none";
+  }else{
+    document.getElementById(id).style.display = "block"
+    cerrar(id);
+  }
+
+}
+
 /***************************************************************************************************************************
   When the user clicks anywhere outside of the login/register, close it
 ****************************************************************************************************************************/

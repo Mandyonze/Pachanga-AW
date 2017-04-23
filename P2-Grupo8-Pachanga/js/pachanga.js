@@ -35,34 +35,12 @@ $(document).ready(function(){
 /***************************************************************************************************************************
   Change the visibility of formulario according to the action.
 ****************************************************************************************************************************/
-// function changeFormulario(id){
-
-//   if (id == "login") {
-//     document.getElementById("signUp").style.display = "none";
-//   } else {
-//     document.getElementById("login").style.display = "none";
-//   }
-
-//   if (document.getElementById(id).style.display == "block") {
-//     document.getElementById(id).style.display = "none";
-//   }else{
-//     document.getElementById(id).style.display = "block"
-//     cerrar(id);
-//   }
-
-// }
-
 function changeFormulario(id){
 
   if (id == "login") {
     document.getElementById("signUp").style.display = "none";
-    document.getElementById("compartir").style.display = "none";
-  } else if(id == "signUp") {
-    document.getElementById("login").style.display = "none";
-    document.getElementById("compartir").style.display = "none";
   } else {
     document.getElementById("login").style.display = "none";
-    document.getElementById("signUp").style.display = "none";
   }
 
   if (document.getElementById(id).style.display == "block") {
@@ -71,6 +49,21 @@ function changeFormulario(id){
     document.getElementById(id).style.display = "block"
     cerrar(id);
   }
+
+}
+
+/***************************************************************************************************************************
+  Change the visibility of share form.
+****************************************************************************************************************************/
+function changeCompartir(id){
+
+  if (document.getElementById(id).style.display == "block") {
+    document.getElementById(id).style.display = "none";
+  }else{
+    document.getElementById(id).style.display = "block"
+    cerrar(id);
+  }
+
 }
 
 /***************************************************************************************************************************
