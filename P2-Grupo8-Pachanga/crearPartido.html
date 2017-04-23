@@ -15,22 +15,22 @@
   <link rel="stylesheet" href="css/crearPartido.css">
 </head>
 <body>
-<header style="background-color: orange; padding: 30px;">
-	<div class="bars">
-	  <div class="bar"></div>
-	  <div class="bar"></div>
-	  <div class="bar"></div>
 
-	</div>
+<div class="container color1">
+  <div class="row">
+   <form class="color2" >   <!--action="index.html" method="post">  -->
+     <input name="n_players" type="text" minlength="1" maxlength="2" oninput="maxLengthCheck(this)" class="validate[required,custom[n_players]] feedback-input" id="n_players" placeholder="NºParticipantes" />
 
-</header>
+    </form>
+  </div>
+</div>
 
 
-<div class="container-fluid">
+<div class="container-fluid color2">
 
 	<div class="row">
 			<div class="col-md-1"></div>
-		    <form class="form col-xs-12 col-sm-6  col-md-4" id="form1">
+		    <form class="form col-xs-12 col-sm-6  col-md-4 color2" id="form1">
 
 		      <p class="n_players">
 		        <input name="n_players" type="text" minlength="1" maxlength="2" oninput="maxLengthCheck(this)" class="validate[required,custom[n_players]] feedback-input" id="n_players" placeholder="NºParticipantes" />
@@ -42,7 +42,7 @@
 		      </p>
 
 		      <p class="hora">
-		        <input name="hora" type="text" class="validate[required,custom[hora]] feedback-input" id="hora" placeholder="Hora" />
+		        <input name="hora" type="time" class="validate[required,custom[hora]] feedback-input" id="hora" placeholder="Hora" />
 		      </p>
 
 		      <p class="zona">
@@ -52,13 +52,13 @@
 		    </form>
 	</div>
 
-	<div class="row" style="margin-top: 40px">
+	<div class="row" > <!-- style="margin-top: 40px" -->
 
 		<div class="col-md-1"></div>
 		<div class="col-md-5">
 			<div><button type="submit">Crear</button></div>
 		</div>
-	</div>    	
+	</div>
 
 </div>
 

@@ -3,21 +3,16 @@ body{
   -webkit-background-size: cover;
 }
 
-.bars {
-  cursor: pointer;
-  width: 24px;
+
+.color1 {
+  border: 1px solid green;
 }
-.bar {
-  background: #333;
-  height: 4px;
-  margin-bottom: 4px;
-  width: 24px;
-  -webkit-transition: all 300ms ease-out;
-  -moz-transition: all 300ms ease-out;
-  -ms-transition: all 300ms ease-out;
-  -o-transition: all 300ms ease-out;
-  transition: all 300ms ease-out;
+
+.color2 {
+  border: 1px solid red;
 }
+
+
 
 
 button {
