@@ -259,9 +259,9 @@
 
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                  <input type="text" class="form-control " id ="username" placeholder="Username" onchange="checkUser()">
-                  <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
-                  <span id="usernameError" class="glyphicon glyphicon-remove"></span>
+                  <input type="text" class="form-control " placeholder="Username" onchange="checkUser(this, 'login')">
+                  <span id="usernameSuccesLogin" class="glyphicon glyphicon-ok"></span>
+                  <span id="usernameErrorLogin" class="glyphicon glyphicon-remove"></span>
                 </div>
 
                 <br>
@@ -269,9 +269,9 @@
 
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                  <input type="password" class="form-control" id ="pass" placeholder="Contraseña" onchange="checkPass()">
-                  <span id="passSucces" class="glyphicon glyphicon-ok"></span>
-                  <span id="passError" class="glyphicon glyphicon-remove"></span>
+                  <input type="password" class="form-control" placeholder="Contraseña" onchange="checkPass(this, 'login')">
+                  <span id="passSuccesLogin" class="glyphicon glyphicon-ok"></span>
+                  <span id="passErrorLogin" class="glyphicon glyphicon-remove"></span>
                 </div>
 
                 <br>
@@ -322,9 +322,9 @@
 
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                      <input type="text" class="form-control " id ="username" placeholder="Username" onchange="checkUser()">
-                      <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
-                      <span id="usernameError" class="glyphicon glyphicon-remove"></span>
+                      <input type="text" class="form-control" placeholder="Username" onchange="checkUser(this, 'Register')">
+                      <span id="usernameSuccesRegister" class="glyphicon glyphicon-ok"></span>
+                      <span id="usernameErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
 
                     <br>
@@ -342,9 +342,9 @@
 
           					<div class="input-group">
           						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-          						<input type="password" class="form-control" name = "pass" id ="pass" placeholder="Contraseña" onchange="checkPass()">
-                      <span id="passSucces" class="glyphicon glyphicon-ok"></span>
-                      <span id="passError" class="glyphicon glyphicon-remove"></span>
+          						<input type="password" class="form-control" name = "pass" id = "pass" placeholder="Contraseña" onchange="checkPass(this, 'Register')">
+                      <span id="passSuccesRegister" class="glyphicon glyphicon-ok"></span>
+                      <span id="passErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
 
                     <br>

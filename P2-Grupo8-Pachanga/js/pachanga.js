@@ -90,43 +90,69 @@ function cerrar(id) {
   Login
 ****************************************************************************************************************************/
 
-function checkUser(){
-	var x = document.getElementById("username");
+function checkUser(x, aux){
+	// var x = document.getElementById("username");
 
-
-
-	if (x.value.length < 5) {
-		$("#usernameError").css({"display" : "inline"});
-		$("#usernameSucces").css({"display" : "none"});
+if (aux == "login") {
+  if (x.value.length < 5) {
+		$("#usernameErrorLogin").css({"display" : "inline"});
+		$("#usernameSuccesLogin").css({"display" : "none"});
 		x.classList.remove('form-control-ok');
 		x.classList.add('form-control-error')
 	} else {
-		$("#usernameError").css({"display" : "none"});
-		$("#usernameSucces").css({"display" : "inline"});
+		$("#usernameErrorLogin").css({"display" : "none"});
+		$("#usernameSuccesLogin").css({"display" : "inline"});
 		x.classList.remove('form-control-error');
 		x.classList.add('form-control-ok');
 	}
+} else {
+  if (x.value.length < 5) {
+    $("#usernameErrorRegister").css({"display" : "inline"});
+    $("#usernameSuccesRegister").css({"display" : "none"});
+    x.classList.remove('form-control-ok');
+    x.classList.add('form-control-error')
+  } else {
+    $("#usernameErrorRegister").css({"display" : "none"});
+    $("#usernameSuccesRegister").css({"display" : "inline"});
+    x.classList.remove('form-control-error');
+    x.classList.add('form-control-ok');
+  }
+}
+
 
 }
 
 
 
-function checkPass(){
+function checkPass(x, aux){
 
-	var x = document.getElementById("pass");
+	// var x = document.getElementById("pass");
 
-	if (x.value.length < 5) {
-		$("#passError").css({"display" : "inline"});
-		$("#passSucces").css({"display" : "none"});
-		x.classList.remove('form-control-ok');
-		x.classList.add('form-control-error')
-	} else {
-
-		$("#passSucces").css({"display" : "inline"});
-		$("#passError").css({"display" : "none"});
-		x.classList.remove('form-control-error');
-		x.classList.add('form-control-ok');
-	}
+  if (aux == "login") {
+    if (x.value.length < 5) {
+  		$("#passErrorLogin").css({"display" : "inline"});
+  		$("#passSuccesLogin").css({"display" : "none"});
+  		x.classList.remove('form-control-ok');
+  		x.classList.add('form-control-error')
+  	} else {
+  		$("#passErrorLogin").css({"display" : "none"});
+  		$("#passSuccesLogin").css({"display" : "inline"});
+  		x.classList.remove('form-control-error');
+  		x.classList.add('form-control-ok');
+  	}
+  } else {
+    if (x.value.length < 5) {
+      $("#passErrorRegister").css({"display" : "inline"});
+      $("#passSuccesRegister").css({"display" : "none"});
+      x.classList.remove('form-control-ok');
+      x.classList.add('form-control-error')
+    } else {
+      $("#passErrorRegister").css({"display" : "none"});
+      $("#passSuccesRegister").css({"display" : "inline"});
+      x.classList.remove('form-control-error');
+      x.classList.add('form-control-ok');
+    }
+  }
 
 }
 

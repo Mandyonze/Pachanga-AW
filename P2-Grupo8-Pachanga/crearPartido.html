@@ -62,12 +62,12 @@
                          <!-- SIDEBAR MENU -->
                          <div class="profile-usermenu">
                            <ul class="nav">
-                             <li class="active">
+                             <li>
                                <a href="#">
                                <i class="glyphicon glyphicon-home"></i>
                                Inicio </a>
                              </li>
-                             <li>
+                             <li class="active">
                                <a href="crearPartido.html">
                                <i class="glyphicon glyphicon-plus"></i>
                                Crear Partido </a>
@@ -126,19 +126,21 @@
         <form class="form" id="form1">
 
             <input name="nombre" type="text" class="validate[required,custom[nombre]] feedback-input" id="nombre" placeholder="Nombre Partido" />
+            <br><br>
             <input name="n_players" type="text" minlength="1" maxlength="2" oninput="maxLengthCheck(this)" class="validate[required,custom[n_players]] feedback-input" id="n_players" placeholder="NºParticipantes" />
-
+            <br><br>
             <div class='input-group date buscar-partido-date' id='datepicker' data-date-format="dd-mm-yyyy">
               <input type='text' class="form-control feedback-input feedback-input-cal" placeholder="Fecha" />
                 <span class="input-group-addon feedback-input-gly">
                 <span class="glyphicon glyphicon-calendar"></span>
               </span>
             </div>
-
+            <br>
             <input name="hora" type="text" class="validate[required,custom[hora]] feedback-input" id="hora" placeholder="Hora" />
+            <br><br>
             <input name="zona" type="text" minlength="5" maxlength="5" oninput="maxLengthCheck(this)" class="validate[required,custom[zona]] feedback-input" id="zona" placeholder="Codigo Postal" />
 
-          <br>
+          <br><br>
 
 	    	<div><button class="button-mod" type="submit">Crear</button></div>
 
