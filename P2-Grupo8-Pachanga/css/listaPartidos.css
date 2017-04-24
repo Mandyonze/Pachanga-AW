@@ -4,9 +4,9 @@
 }
 
 .button-ver{
-	float: right; 
-	width: 90px; 
-	background-color: orange; 
+	float: right;
+	width: 90px;
+	background-color: orange;
 	border-color: orange;
 }
 
@@ -26,10 +26,14 @@
 }
 
 .back-orange2 > .panel-heading{
-	background-color: orange; 
+	background-color: orange;
 	border: 1px solid orange;
 }
 
 .white{
 	color: white;
+}
+
+.back-white{
+	background-color: white;
 }
