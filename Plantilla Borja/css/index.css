@@ -347,3 +347,13 @@ input[type="text"] {
     width: 100%;
 
 }
+
+
+.centrar{
+  text-align:center;
+  margin: 0 auto;
+}
+
+.jutificar {
+  text-align: justify;
+}

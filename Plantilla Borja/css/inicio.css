@@ -264,3 +264,11 @@ img#logo{
   margin-top: 100px;
   margin-bottom: 50px;
 }
+
+
+
+
+.centrar{
+  text-align:center;
+  margin: 0 auto;
+}
