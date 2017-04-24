@@ -4,7 +4,7 @@
 .jumbotron{
   border-radius: .2em .2em .2em .2em
 }
-.enviar{
+/*.enviar{
   color: #fff;
   font-size: 130%;
   background-color: #ff8910;
@@ -15,4 +15,15 @@
 .enviar:hover{
   color: #fff;
   background-color: #e56a03;
+}*/
+
+.button-ver{
+  width: 90px; 
+  background-color: orange; 
+  border-color: orange;
+}
+
+.mouse-over:active, .mouse-over:focus, .mouse-over:hover{
+  background-color: #FF4500;
+  border-color: #FF4500;
 }

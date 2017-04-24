@@ -79,21 +79,8 @@ body{
   border-color: #FF4500;
 }
 
-.mouse-over{}
 
-.mouse-over:hover{
+.mouse-over:active, .mouse-over:focus, .mouse-over:hover{
   background-color: #FF4500;
   border-color: #FF4500;
 }
-
-.mouse-over:active{
-  background-color: #FF4500;
-  border-color: #FF4500;
-}
-
-
-.mouse-over:focus{
-  background-color: #FF4500;
-  border-color: #FF4500;
-}
-

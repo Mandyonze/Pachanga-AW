@@ -9,6 +9,6 @@
 }
 .boton:hover, .boton:active, .boton:focus{
   color: #fff;
-  background-color: #e56a03;
-  border-color: #e56a03;
+  background-color: #FF4500;
+  border-color: #FF4500;
 }
