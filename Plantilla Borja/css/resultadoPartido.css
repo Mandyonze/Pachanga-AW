@@ -1,0 +1,18 @@
+.input-group{
+  width: 150px;
+}
+.jumbotron{
+  border-radius: .2em .2em .2em .2em
+}
+.enviar{
+  color: #fff;
+  font-size: 130%;
+  background-color: #ff8910;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 150px;
+}
+.enviar:hover{
+  color: #fff;
+  background-color: #e56a03;
+}

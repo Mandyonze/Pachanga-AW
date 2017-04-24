@@ -1,0 +1,49 @@
+.jumbotron{
+  border-radius: .2em .2em .2em .2em
+}
+.boton{
+  margin: 5px;
+  color: #fff;
+  background-color: #ff8910;
+  border-color: #ff8910;
+}
+.boton:hover{
+  color: #fff;
+  background-color: #e56a03;
+  border-color: #e56a03;
+}
+.selectpicker{
+  margin: 5px;
+}
+@media screen and (max-width: 359px){
+  .selectpicker{
+    margin: 5px;
+    width: 90%;
+  }
+}
+.star-group{
+  border-radius: 1em;
+  width: 120px;
+  background-color: #bababa;
+  padding: 10px 10px 10px 17px;
+  margin: 0;
+}
+.love-group{
+  border-radius: 1em;
+  width: 120px;
+  background-color: #bababa;
+  padding: 10px 10px 10px 17px;
+  margin: 0;
+}
+.enviar{
+  color: #fff;
+  font-size: 130%;
+  background-color: #ff8910;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 150px;
+}
+.enviar:hover{
+  color: #fff;
+  background-color: #e56a03;
+}
