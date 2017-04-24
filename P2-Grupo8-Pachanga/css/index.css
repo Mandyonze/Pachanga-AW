@@ -59,7 +59,7 @@ div#cabecera{
   font-size: 14px;
   min-height: 40px;
 
-  z-index: 14;
+  z-index: 1500;
 }
 
 #nav{
@@ -235,7 +235,7 @@ footer a, footer a:hover  {
 .backgroundFormulario {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 16; /* Sit on top */
+    z-index:2000; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
