@@ -1,5 +1,5 @@
 .jumbotron{
-  margin-top: 100px;
+  background-color: #fff;
   border-radius: .2em .2em .2em .2em
 }
 .boton{
@@ -47,4 +47,22 @@
 .enviar:hover{
   color: #fff;
   background-color: #e56a03;
+}
+
+
+.button-ver{
+  color: #fff;
+  width: 90px;
+  background-color: orange;
+  border-color: orange;
+}
+
+.mouse-over:active, .mouse-over:focus, .mouse-over:hover{
+  color: #fff;
+  background-color: #FF4500;
+  border-color: #FF4500;
+}
+
+.terminar{
+  float: right;
 }

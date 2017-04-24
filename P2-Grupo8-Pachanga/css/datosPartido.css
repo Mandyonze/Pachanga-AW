@@ -3,10 +3,6 @@
   padding: 0px;
 }
 
-body{
-  background-color: white;
-}
-
 .color1{
   border: 1px solid pink;
 
@@ -49,7 +45,7 @@ body{
 
 .map-responsive{
     overflow:hidden;
-    padding-bottom:56.25%;
+    padding-bottom: 30.25%;
     position:relative;
     height:0;
 }
@@ -79,21 +75,8 @@ body{
   border-color: #FF4500;
 }
 
-.mouse-over{}
 
-.mouse-over:hover{
+.mouse-over:active, .mouse-over:focus, .mouse-over:hover{
   background-color: #FF4500;
   border-color: #FF4500;
 }
-
-.mouse-over:active{
-  background-color: #FF4500;
-  border-color: #FF4500;
-}
-
-
-.mouse-over:focus{
-  background-color: #FF4500;
-  border-color: #FF4500;
-}
-

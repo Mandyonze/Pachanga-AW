@@ -4,6 +4,9 @@
 	padding: 0px;
 }
 
+
+
+
 .sin_pading_lat{
 
 padding: 0px;
@@ -20,34 +23,21 @@ padding: 0px;
 }
 
 .back-orange2{
-	background-color: #FF4500;
-	border-color: #FF4500;
+	background-color: orange;
+	border: 1px solid orange;
 }
 
 
 .button-ver{
-	float: right; 
-	width: 90px; 
-	background-color: orange; 
+	float: right;
+	width: 90px;
+	background-color: orange;
 	border-color: orange;
 }
 
-.mouse-over{}
-
-.mouse-over:hover{
-	background-color: #FF4500;
-	border-color: #FF4500;
-}
-
-.mouse-over:active{
-	background-color: #FF4500;
-	border-color: #FF4500;
-}
-
-
-.mouse-over:focus{
-	background-color: #FF4500;
-	border-color: #FF4500;
+.mouse-over:active, .mouse-over:focus, .mouse-over:hover{
+  background-color: #FF4500;
+  border-color: #FF4500;
 }
 
 
@@ -59,8 +49,9 @@ padding: 0px;
 }
 
 .profile-container{
-  	width: 100%;
-	background: url("../img/backgrounds/login-desktop.jpg") ;
+  width: 100%;
+	background: url("../img/backgrounds/login.jpg") no-repeat ;
+	background-size:cover;
 	margin-bottom: 25px;
 }
 
@@ -68,8 +59,9 @@ padding: 0px;
 	color: #FF4500;
 }
 
-.img-circle{
-
+.profile-container > .profile > .img-circle{
+	width: 150px;
+	height: 150px;
 	margin-top: 20px;
 }
 
@@ -110,7 +102,7 @@ padding: 0px;
 .cuadro_negro{
 	height: 50px;
 	border: 3px solid black;
-	border-left: none; 
+	border-left: none;
 	border-bottom-right-radius: 10px;
   	border-top-right-radius: 10px;
   	margin-bottom: 15px;
@@ -155,7 +147,7 @@ padding: 0px;
 .cuadro_negro{
 	height: 50px;
 	border: 3px solid black;
-	border-left: none; 
+	border-left: none;
 	border-bottom-right-radius: 10px;
   	border-top-right-radius: 10px;
   	text-align: center;
@@ -164,4 +156,13 @@ padding: 0px;
 
 	padding-top: 0px;
 }
+}
+
+.back-orange2 > .panel-heading{
+	background-color: orange;
+	border: 1px solid orange;
+}
+
+.white{
+	color: white;
 }

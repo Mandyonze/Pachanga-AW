@@ -12,8 +12,8 @@
 body, html {
   margin: 0px;
   padding: 0px;
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 /***************************************************************************************************************************
@@ -59,7 +59,7 @@ div#cabecera{
   font-size: 14px;
   min-height: 40px;
 
-  /*z-index: 2;*/
+  z-index: 14;
 }
 
 #nav{
@@ -76,47 +76,7 @@ img#logo{
   margin-top: 3px;
 }
 
-/***************************************************************************************************************************
-  Hamburger from the header.
-****************************************************************************************************************************/
-.hamburger{
-  margin: 10px;
-  margin-top: 12px;
-  height: 50px;
-  width: 50px;
-  padding: 0;
-  padding-top: 2px;
-  padding-left: 2px;
-  background-color: Transparent;
-  background-repeat:no-repeat;
-  border: none;
-  cursor:pointer;
-  overflow: hidden;
-  outline:none;
-}
-.glyphicon-menu-hamburger{
-  color: white;
-  font-size: 30px;
-}
-/***************************************************************************************************************************
-  Notifications button from the header.
-****************************************************************************************************************************/
-.notifications{
-  margin: 10px;
-  height: 50px;
-  width: 50px;
-  padding: 0;
-  background-color: Transparent;
-  background-repeat:no-repeat;
-  border: none;
-  cursor:pointer;
-  overflow: hidden;
-  outline:none;
-}
-.glyphicon-bell{
-  color: white;
-  font-size: 20px;
-}
+
 /***************************************************************************************************************************
   Register and login buttons from the header.
 ****************************************************************************************************************************/
@@ -130,7 +90,7 @@ img#logo{
   color: white;
   border: 1px solid white;
   margin-left: 25px;
-  margin-top: 22px;
+  margin-top: 10px;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 3px;
@@ -180,24 +140,7 @@ img#logo{
 /***************************************************************************************************************************
   Main contains.
 ****************************************************************************************************************************/
-/* Carousel */
-.carousel{
-  margin-top: 30px;
-  width: 100%;
-  height: 80vh;
-}
 
-.carousel .item img {
-  width: 100%; /*img width*/
-  margin: 0;
-}
-
-@media (max-width: 450px) {
-  .carousel h3{
-    font-size: 15px;
-        font-weight: bold;
-  }
-}
 
 div#contendor{
   float: right;
@@ -226,6 +169,11 @@ div#body .imagen{
   margin: 0 auto;
 }
 
+div#body .imagen-info{
+  width: 119px;
+  height: 119px;
+  margin: 0 auto;
+}
 
 /***************************************************************************************************************************
   Footer.
@@ -287,7 +235,7 @@ footer a, footer a:hover  {
 .backgroundFormulario {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 4; /* Sit on top */
+    z-index: 16; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -339,4 +287,73 @@ font-weight: bold;
 @keyframes animatezoom {
     from {transform: scale(0)}
     to {transform: scale(1)}
+}
+
+
+/***************************************************************************************************************************
+  Carrousel.
+****************************************************************************************************************************/
+
+.carousel{
+  margin-top: 30px;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.carousel > .carousel-indicators {
+  padding: 10px;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  max-width: none;
+  background-color: black;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  top: 0px;
+  margin-top: 150px;
+}
+
+.carousel > .carousel-inner > .item > .carousel-caption {
+  top: 15%;
+
+}
+
+.carousel > .carousel-inner > .item > .carousel-caption > h3{
+
+  text-shadow: 2px 2px 6px black;
+  text-decoration-color: red;
+}
+
+@media (max-width: 600px) {
+  .carousel > .carousel-inner > .item > .carousel-caption > h3{
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
+
+/***************************************************************************************************************************
+  Contact us
+****************************************************************************************************************************/
+
+.form-contacto{
+  padding: 10px;
+  border: 1px solid orange;
+}
+
+input[type="text"] {
+    width: 100%;
+
+}
+
+
+.centrar{
+  text-align:center;
+  margin: 0 auto;
+}
+
+.jutificar {
+  text-align: justify;
 }

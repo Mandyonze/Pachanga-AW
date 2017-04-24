@@ -55,8 +55,8 @@
                          <!-- END SIDEBAR USER TITLE -->
                          <!-- SIDEBAR BUTTONS -->
                          <div class="profile-userbuttons">
-                           <button type="button" class="btn btn-success btn-sm">Mi perfil</button>
-                           <button type="button" class="btn btn-danger btn-sm">Logout</button>
+                           <button type="button" class="btn btn-success btn-sm" onclick="window.location.href='miPerfil.html'">Mi perfil</button>
+                           <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='index.html'">Logout</button>
                          </div>
                          <!-- END SIDEBAR BUTTONS -->
                          <!-- SIDEBAR MENU -->
@@ -68,7 +68,7 @@
                                Inicio </a>
                              </li>
                              <li>
-                               <a href="inicio2.html">
+                               <a href="crearPartido.html">
                                <i class="glyphicon glyphicon-plus"></i>
                                Crear Partido </a>
                              </li>
@@ -78,17 +78,17 @@
                                Mis partidos </a>
                              </li> -->
                               <li>
-                                <a href="#">
+                                <a href="listaPartidos.html">
                                 <i class="glyphicon glyphicon-ok-circle"></i>
                                 Mis partidos </a>
                               </li>
                              <li>
-                               <a href="#">
+                               <a href="partidosJugados.html">
                                <i class="glyphicon glyphicon-fire"></i>
                                Partidos Recientes </a>
                              </li>
                               <li>
-                                <a href="#">
+                                <a href="ranking.html">
                                 <i class="glyphicon glyphicon-heart-empty"></i>
                                 Mejores Jugadores </a>
                               </li>
@@ -109,13 +109,9 @@
           </button>
 
           <ul class="dropdown-menu dropdown-menu-right">
-            <!-- <div class="container color1"> -->
-              <!-- <ul> -->
-                <li class="unir"><a href="">Un jugador se quiere unir a tu partido</a></li>
-                <li><a href="">Has terminado un partido. Envía el resultado</a></li>
-                <li><a href="">Valora a los jugadores del partido</a></li>
-              <!-- </ul> -->
-            <!-- </div> -->
+                <li class="unir"><a href="aceptarJugador.html">Un jugador se quiere unir a tu partido</a></li>
+                <li><a href="resultadoPartido.html">Has terminado un partido. Envía el resultado</a></li>
+                <li><a href="valoracionJugadores.html">Valora a los jugadores del partido</a></li>
           </ul>
       <!-- div alertas menu -->
       </div>
@@ -202,7 +198,6 @@
         <div class="panel-body">
           <div class="row">
             <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info button-ver mouse-over" role="button">Ver</a></div>
-            <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info back-orange mouse-over" onclick="changeCompartir('compartir')" role="button">Compartir</a></div>
           </div>
         </div>
       </div>
@@ -231,7 +226,6 @@
         <div class="panel-body">
         <div class="row">
             <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info button-ver mouse-over" role="button">Ver</a></div>
-            <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info back-orange mouse-over" onclick="changeCompartir('compartir')" role="button">Compartir</a></div>
           </div>
         </div>
       </div>
@@ -260,7 +254,6 @@
         <div class="panel-body">
         <div class="row">
             <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info button-ver mouse-over" role="button">Ver</a></div>
-            <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info back-orange mouse-over" onclick="changeCompartir('compartir')" role="button">Compartir</a></div>
           </div>
         </div>
       </div>
@@ -289,7 +282,6 @@
         <div class="panel-body">
         <div class="row">
             <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info button-ver mouse-over" role="button">Ver</a></div>
-            <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info back-orange mouse-over" onclick="changeCompartir('compartir')" role="button">Compartir</a></div>
           </div>
         </div>
       </div>
@@ -318,7 +310,6 @@
         <div class="panel-body">
         <div class="row">
             <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info button-ver mouse-over" role="button">Ver</a></div>
-            <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info back-orange mouse-over" onclick="changeCompartir('compartir')" role="button">Compartir</a></div>
           </div>
         </div>
       </div>
@@ -347,7 +338,6 @@
         <div class="panel-body">
         <div class="row">
             <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info button-ver mouse-over" role="button">Ver</a></div>
-            <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info back-orange mouse-over" onclick="changeCompartir('compartir')" role="button">Compartir</a></div>
           </div>
         </div>
       </div>
@@ -376,7 +366,6 @@
         <div class="panel-body">
         <div class="row">
             <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info button-ver mouse-over" role="button">Ver</a></div>
-            <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info back-orange mouse-over" onclick="changeCompartir('compartir')" role="button">Compartir</a></div>
           </div>
         </div>
       </div>
@@ -405,7 +394,6 @@
         <div class="panel-body">
         <div class="row">
             <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info button-ver mouse-over" role="button">Ver</a></div>
-            <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-info back-orange mouse-over" onclick="changeCompartir('compartir')" role="button">Compartir</a></div>
           </div>
         </div>
       </div>
@@ -442,44 +430,6 @@
 
   </div>
   </div>
-
-    <div  id = "compartir" class="container backgroundFormulario">
-        <div class="formulario formulario-container animateFormulario">
-          <div class="header-formulario">
-            <div class="centrar">
-              <a href="index.html"><img class = "logo-formulario" src="img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a>
-            </div>
-                  <span onclick="changeCompartir('compartir')" class="closeFormulario" title="Close">&times;</span>
-          </div>
-
-          <div class="body-formulario">
-          <br>
-          <h3 class="centrar">Compartir</h3>
-          <br>
-
-            <form>
-
-                <div class="input-group">
-                  <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                  <input type="text" class="form-control " id ="username" placeholder="Username" onchange="checkUser()">
-                  <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
-                  <span id="usernameError" class="glyphicon glyphicon-remove"></span>
-                </div>
-
-                <br>
-
-                <div class="centrar">
-                  <button onclick="changeCompartir('compartir')" type="button" class="btn-formulario cancelbtn ">Cancel</button>
-                  <button type="submit" class="btn-formulario sendbtn "> Entrar </button>
-                </div>
-            </form>
-          <!-- formulario-container -->
-          </div>
-        <!-- login formulario-container -->
-        </div>
-    <!-- container -->
-    </div>
-  <!-- </div> -->
 
     <!-- ******************************************footer******************************************-->
     <footer >
@@ -533,7 +483,6 @@
       <script src="js/bootstrap.js"></script>
 
       <script src='js/datepicker.js'></script>
-      <script src='js/compartir.js'></script>
 
       <!-- <script src='js/pachanga-inicio.js'></script> -->
 

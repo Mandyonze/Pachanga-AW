@@ -16,25 +16,20 @@
 }
 
 .back-orange2{
-	background-color: #FF4500;
-	border-color: #FF4500;
+	background-color: orange;
+	border: 1px solid orange;
 }
 
-.mouse-over{}
-
-.mouse-over:hover{
-	background-color: #FF4500;
-	border-color: #FF4500;
+.mouse-over:active, .mouse-over:focus, .mouse-over:hover{
+  background-color: #FF4500;
+  border-color: #FF4500;
 }
 
-.mouse-over:active{
-	background-color: #FF4500;
-	border-color: #FF4500;
+.back-orange2 > .panel-heading{
+	background-color: orange; 
+	border: 1px solid orange;
 }
 
-
-.mouse-over:focus{
-	background-color: #FF4500;
-	border-color: #FF4500;
+.white{
+	color: white;
 }
-
