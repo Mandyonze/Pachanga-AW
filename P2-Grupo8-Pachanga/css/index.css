@@ -123,13 +123,15 @@ img#logo{
 
 }
 
+
 .collapsing, .collapse.in{
   background-color: rgba(0, 0, 0, 0.5);
-}
-.collapsing .btn-header , .collapse.in .btn-header{
 
-  width: 300px;
-  margin: 10px;
+}
+
+.collapsing .btn-header ,.collapse.in .btn-header{
+  width: 250px;
+  margin-right: 10%;
 }
 
 .collapsing .btn-login , .collapse.in .btn-login{
