@@ -1,4 +1,4 @@
-![alt text](https://github.com/borjalor/ProyectoAW/blob/master/Logo-naranja.png)
+![alt tag](https://github.com/borjalor/ProyectoAW/blob/master/Logo-naranja.png)
 
 # Proyecto para la asignatura de Aplicaciones Web desarrollado por: #
 * ### Borja Lorenzo ###
