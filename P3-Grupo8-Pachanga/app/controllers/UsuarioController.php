@@ -1,7 +1,7 @@
 <?php
   require_once(BASE_PATH . '/app/models/EntityBase.php');
 
-  class usuarioController extends BaseController{
+  class UsuarioController extends BaseController{
 
       private $usuario;
       private $entity;
