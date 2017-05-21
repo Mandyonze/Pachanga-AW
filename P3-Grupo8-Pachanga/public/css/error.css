@@ -1,0 +1,9 @@
+@import "index.css";
+
+.jumbotron{
+  margin: 30px;
+}
+
+.img-error{
+  width: 100%;
+}

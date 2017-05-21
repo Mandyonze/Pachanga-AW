@@ -1,0 +1,32 @@
+.input-group{
+  width: 150px;
+}
+.jumbotron{
+  background-color: #fff;
+  border-radius: .2em .2em .2em .2em
+}
+/*.enviar{
+  color: #fff;
+  font-size: 130%;
+  background-color: #ff8910;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 150px;
+}
+.enviar:hover{
+  color: #fff;
+  background-color: #e56a03;
+}*/
+
+.button-ver{
+  color: #fff;
+  width: 90px;
+  background-color: orange;
+  border-color: orange;
+}
+
+.mouse-over:active, .mouse-over:focus, .mouse-over:hover{
+  color: #fff;
+  background-color: #FF4500;
+  border-color: #FF4500;
+}

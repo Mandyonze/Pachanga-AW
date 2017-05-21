@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-05-2017 a las 17:56:53
+-- Tiempo de generación: 21-05-2017 a las 23:54:10
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 5.6.30
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `distritos` (
-  `Nombre` varchar(30) NOT NULL
+  `id` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -37,9 +37,9 @@ CREATE TABLE `distritos` (
 --
 
 CREATE TABLE `participantes` (
-  `Partido` int(20) NOT NULL,
-  `Usuario` varchar(20) NOT NULL,
-  `Equipo` int(10) NOT NULL
+  `partido` int(20) NOT NULL,
+  `usuario` varchar(20) NOT NULL,
+  `equipo` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -49,10 +49,10 @@ CREATE TABLE `participantes` (
 --
 
 CREATE TABLE `partidos` (
-  `Id` int(20) NOT NULL,
-  `Polideportivo` varchar(30) NOT NULL,
-  `Fecha` date NOT NULL,
-  `Creador` varchar(20) NOT NULL
+  `id` int(20) NOT NULL,
+  `polideportivo` varchar(20) NOT NULL,
+  `fecha` date NOT NULL,
+  `creador` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -62,8 +62,8 @@ CREATE TABLE `partidos` (
 --
 
 CREATE TABLE `polideportivos` (
-  `Nombre` varchar(30) NOT NULL,
-  `Distrito` varchar(30) NOT NULL
+  `id` varchar(20) NOT NULL,
+  `distrito` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -73,11 +73,12 @@ CREATE TABLE `polideportivos` (
 --
 
 CREATE TABLE `usuarios` (
-  `Nombre` varchar(20) NOT NULL,
-  `Distrito` varchar(30) NOT NULL,
-  `Correo` varchar(30) NOT NULL,
-  `Password` varchar(20) NOT NULL,
-  `Score` int(30) NOT NULL
+  `id` varchar(20) NOT NULL,
+  `password` int(20) NOT NULL,
+  `distrito` varchar(30) DEFAULT NULL,
+  `correo` varchar(30) DEFAULT NULL,
+  `skill` int(10) DEFAULT NULL,
+  `valoracion` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -88,36 +89,35 @@ CREATE TABLE `usuarios` (
 -- Indices de la tabla `distritos`
 --
 ALTER TABLE `distritos`
-  ADD PRIMARY KEY (`Nombre`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `participantes`
 --
 ALTER TABLE `participantes`
-  ADD KEY `Partido` (`Partido`),
-  ADD KEY `Usuario` (`Usuario`);
+  ADD KEY `partido` (`partido`),
+  ADD KEY `usuario` (`usuario`);
 
 --
 -- Indices de la tabla `partidos`
 --
 ALTER TABLE `partidos`
-  ADD PRIMARY KEY (`Id`),
-  ADD KEY `Polideportivo` (`Polideportivo`),
-  ADD KEY `Creador` (`Creador`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `polideportivo` (`polideportivo`);
 
 --
 -- Indices de la tabla `polideportivos`
 --
 ALTER TABLE `polideportivos`
-  ADD PRIMARY KEY (`Nombre`),
-  ADD KEY `Distrito` (`Distrito`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `distrito` (`distrito`);
 
 --
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`Nombre`),
-  ADD KEY `Distrito` (`Distrito`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `distrito` (`distrito`);
 
 --
 -- Restricciones para tablas volcadas
@@ -127,27 +127,26 @@ ALTER TABLE `usuarios`
 -- Filtros para la tabla `participantes`
 --
 ALTER TABLE `participantes`
-  ADD CONSTRAINT `participantes_ibfk_1` FOREIGN KEY (`Partido`) REFERENCES `partidos` (`Id`),
-  ADD CONSTRAINT `participantes_ibfk_2` FOREIGN KEY (`Usuario`) REFERENCES `usuarios` (`Nombre`);
+  ADD CONSTRAINT `participantes_ibfk_1` FOREIGN KEY (`partido`) REFERENCES `partidos` (`id`),
+  ADD CONSTRAINT `participantes_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`id`);
 
 --
 -- Filtros para la tabla `partidos`
 --
 ALTER TABLE `partidos`
-  ADD CONSTRAINT `partidos_ibfk_1` FOREIGN KEY (`Polideportivo`) REFERENCES `polideportivos` (`Nombre`),
-  ADD CONSTRAINT `partidos_ibfk_2` FOREIGN KEY (`Creador`) REFERENCES `usuarios` (`Nombre`);
+  ADD CONSTRAINT `partidos_ibfk_1` FOREIGN KEY (`polideportivo`) REFERENCES `polideportivos` (`id`);
 
 --
 -- Filtros para la tabla `polideportivos`
 --
 ALTER TABLE `polideportivos`
-  ADD CONSTRAINT `polideportivos_ibfk_1` FOREIGN KEY (`Distrito`) REFERENCES `distritos` (`Nombre`);
+  ADD CONSTRAINT `polideportivos_ibfk_1` FOREIGN KEY (`distrito`) REFERENCES `distritos` (`id`);
 
 --
 -- Filtros para la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`Distrito`) REFERENCES `distritos` (`Nombre`);
+  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`distrito`) REFERENCES `distritos` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
