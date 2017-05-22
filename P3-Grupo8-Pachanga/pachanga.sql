@@ -2,10 +2,10 @@
 -- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 21-05-2017 a las 23:54:10
--- Versión del servidor: 10.1.21-MariaDB
--- Versión de PHP: 5.6.30
+-- Host: localhost
+-- Generation Time: May 22, 2017 at 12:22 
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 7.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `pachanga`
+-- Database: `pachanga`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `distritos`
+-- Table structure for table `distritos`
 --
 
 CREATE TABLE `distritos` (
@@ -33,7 +33,7 @@ CREATE TABLE `distritos` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `participantes`
+-- Table structure for table `participantes`
 --
 
 CREATE TABLE `participantes` (
@@ -45,20 +45,22 @@ CREATE TABLE `participantes` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `partidos`
+-- Table structure for table `partidos`
 --
 
 CREATE TABLE `partidos` (
   `id` int(20) NOT NULL,
   `polideportivo` varchar(20) NOT NULL,
   `fecha` date NOT NULL,
-  `creador` varchar(20) NOT NULL
+  `creador` varchar(20) NOT NULL,
+  `GolesEquipo1` int(11) DEFAULT NULL,
+  `GolesEquipo2` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `polideportivos`
+-- Table structure for table `polideportivos`
 --
 
 CREATE TABLE `polideportivos` (
@@ -69,7 +71,7 @@ CREATE TABLE `polideportivos` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -82,68 +84,70 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `distritos`
+-- Indexes for table `distritos`
 --
 ALTER TABLE `distritos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `participantes`
+-- Indexes for table `participantes`
 --
 ALTER TABLE `participantes`
   ADD KEY `partido` (`partido`),
   ADD KEY `usuario` (`usuario`);
 
 --
--- Indices de la tabla `partidos`
+-- Indexes for table `partidos`
 --
 ALTER TABLE `partidos`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `polideportivo` (`polideportivo`);
+  ADD KEY `polideportivo` (`polideportivo`),
+  ADD KEY `creador` (`creador`);
 
 --
--- Indices de la tabla `polideportivos`
+-- Indexes for table `polideportivos`
 --
 ALTER TABLE `polideportivos`
   ADD PRIMARY KEY (`id`),
   ADD KEY `distrito` (`distrito`);
 
 --
--- Indices de la tabla `usuarios`
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
   ADD KEY `distrito` (`distrito`);
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `participantes`
+-- Constraints for table `participantes`
 --
 ALTER TABLE `participantes`
   ADD CONSTRAINT `participantes_ibfk_1` FOREIGN KEY (`partido`) REFERENCES `partidos` (`id`),
   ADD CONSTRAINT `participantes_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`id`);
 
 --
--- Filtros para la tabla `partidos`
+-- Constraints for table `partidos`
 --
 ALTER TABLE `partidos`
-  ADD CONSTRAINT `partidos_ibfk_1` FOREIGN KEY (`polideportivo`) REFERENCES `polideportivos` (`id`);
+  ADD CONSTRAINT `partidos_ibfk_1` FOREIGN KEY (`polideportivo`) REFERENCES `polideportivos` (`id`),
+  ADD CONSTRAINT `partidos_ibfk_2` FOREIGN KEY (`creador`) REFERENCES `usuarios` (`id`);
 
 --
--- Filtros para la tabla `polideportivos`
+-- Constraints for table `polideportivos`
 --
 ALTER TABLE `polideportivos`
   ADD CONSTRAINT `polideportivos_ibfk_1` FOREIGN KEY (`distrito`) REFERENCES `distritos` (`id`);
 
 --
--- Filtros para la tabla `usuarios`
+-- Constraints for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`distrito`) REFERENCES `distritos` (`id`);
