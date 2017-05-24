@@ -1,0 +1,283 @@
+
+@import "login.css";
+
+
+/***************************************************************************************************************************
+  Header fixed.
+****************************************************************************************************************************/
+div#cabecera{
+  width: 100%;
+  height: 198px;
+  /*background-image: url(../img/backgrounds/login.jpg);*/
+  background-image: url(../img/backgrounds/1.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+
+
+}
+
+@media (min-width: 1900px) {
+  div#cabecera{
+    background-size: contain;
+  }
+}
+
+
+.topnav {
+  /*background-color: #E76003;*/
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  min-height: 40px;
+
+  z-index: 1500;
+}
+
+#nav{
+  -webkit-transition : background-color .2s;
+}
+
+/***************************************************************************************************************************
+  Imagen of PACHANGA from header.
+****************************************************************************************************************************/
+img#logo{
+  float: left;
+  width: 184.92px; /*1541x0.12*/
+  height: 42.24px; /*352x0.12*/
+  margin-top: 3px;
+}
+
+
+/***************************************************************************************************************************
+  Register and login buttons from the header.
+****************************************************************************************************************************/
+.btn-header{
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  color: white;
+  border: 1px solid white;
+  margin-left: 25px;
+  margin-top: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+
+}
+
+.btn-login{
+  background-color: rgba(255, 187, 0, 0.1);
+}
+
+.btn-register{
+  padding-right: 38px;
+}
+
+/***************************************************************************************************************************
+  Navbar toggle for button responsive.
+****************************************************************************************************************************/
+.navbar-toggle{
+  height: 42.24px;
+  padding: 3px;
+  margin: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+
+}
+.navbar-toggle img{
+  height: 30px;
+
+}
+
+
+.collapsing, .collapse.in{
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.collapsing .btn-header ,.collapse.in .btn-header{
+  width: 250px;
+  margin-right: 10%;
+}
+
+.collapsing .btn-login , .collapse.in .btn-login{
+  background-color: #E76003;
+}
+
+
+/***************************************************************************************************************************
+  Main contains.
+****************************************************************************************************************************/
+
+
+div#contendor{
+  float: right;
+  width: 100%;
+  /*height: 1000px;*/
+  background-color: white;
+}
+
+div#sombra{
+  margin-top: -50px;
+  background-color: white;
+  height: 200px;
+
+  -webkit-box-shadow: 0px -16px 9px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px -16px 9px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -16px 9px 4px rgba(0, 0, 0, 0.2);
+}
+
+div#body{
+  margin-top: -200px;
+}
+
+div#body .imagen{
+  width: 170px;
+  height: 170px;
+  margin: 0 auto;
+}
+
+div#body .imagen-info{
+  width: 119px;
+  height: 119px;
+  margin: 0 auto;
+}
+
+
+
+
+/***************************************************************************************************************************
+  Formulario
+****************************************************************************************************************************/
+
+.backgroundFormulario {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index:2000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/***************************************************************************************************************************
+  Formulario
+****************************************************************************************************************************/
+
+.closeFormulario{
+  /*position: absolute;*/
+  float: right;
+  /*margin-left: 150px;*/
+  margin: 5px;
+  margin-top: -60px;
+
+color: white;
+font-size: 35px;
+font-weight: bold;
+}
+
+.closeFormulario:hover,
+.closeFormulario:focus {
+    color: #ff5d5d;
+    cursor: pointer;
+
+}
+
+/***************************************************************************************************************************
+  Animate for the login and register.
+****************************************************************************************************************************/
+
+
+.animateFormulario {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+
+/***************************************************************************************************************************
+  Carrousel.
+****************************************************************************************************************************/
+
+.carousel{
+  margin-top: 30px;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.carousel > .carousel-indicators {
+  padding: 10px;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  max-width: none;
+  background-color: black;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  top: 0px;
+  margin-top: 150px;
+}
+
+.carousel > .carousel-inner > .item > .carousel-caption {
+  top: 15%;
+
+}
+
+.carousel > .carousel-inner > .item > .carousel-caption > h3{
+
+  text-shadow: 2px 2px 6px black;
+  text-decoration-color: red;
+}
+
+@media (max-width: 600px) {
+  .carousel > .carousel-inner > .item > .carousel-caption > h3{
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
+
+/***************************************************************************************************************************
+  Contact us
+****************************************************************************************************************************/
+
+.form-contacto{
+  padding: 10px;
+  border: 1px solid orange;
+}
+
+input[type="text"] {
+    width: 100%;
+
+}
+
+
+.centrar{
+  text-align:center;
+  margin: 0 auto;
+}
+
+.jutificar {
+  text-align: justify;
+}
