@@ -33,7 +33,7 @@ public function create() {
 public function ckLogin($username, $password)
 {
 
-  $pruebas = $this->getById($username);
+  $pruebas = $this->getBy("id", $username);
 
   if (empty($pruebas) || $pruebas[0]->getPassword() != $password) {
     return 1;

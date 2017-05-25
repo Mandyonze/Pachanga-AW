@@ -7,12 +7,15 @@ class ViewController extends BaseController {
 
     private $entity;
     private $distrito;
+    private $usuarios;
 
     function __construct() {
         parent::__construct();
         $this->entity = "";
         require_once('models/distritos.php');
+        require_once('models/usuarios.php');
         $this->distrito = new Distritos();
+
     }
 
     public function alert($msg) {
@@ -53,11 +56,11 @@ class ViewController extends BaseController {
         ));
     }
 
-    public function inicio(){
-      $distritos = $this->distrito->getAll();
-
-      $this->view("inicio", $this->entity, array(
-        "distritos" => $distritos
-      ));
-    }
+    // public function inicio(){
+    //   $distritos = $this->distrito->getAll();
+    //
+    //   $this->view("inicio", $this->entity, array(
+    //     "distritos" => $distritos
+    //   ));
+    // }
 }

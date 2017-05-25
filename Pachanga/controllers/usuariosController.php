@@ -31,7 +31,7 @@ class UsuariosController extends BaseController{
       $ckLogin = $this->pc->ckLogin($username, $password);
 
       if ( $ckLogin == 0) {
-        header('Location:index.php?controller=View&action=inicio&success=' . $ckLogin );
+        header('Location:index.php?controller=Partidos&action=inicio&success=' . $ckLogin );
       } else {
         header('Location:index.php?controller=View&action=login');
       }
@@ -48,10 +48,22 @@ class UsuariosController extends BaseController{
       $ckRegister = $this->pc->ckRegister($username, $distrito, $mail, $password, $password2);
 
       if ( $ckRegister == 0) {
-        header('Location:index.php?controller=View&action=inicio&success=' . $ckRegister );
+        header('Location:index.php?controller=Partidos&action=inicio&success=' . $ckRegister );
       } else {
         header('Location:index.php?controller=View&action=register&error=' . $ckRegister);
       }
+
+    }
+
+    public function perfil() {
+      session_start();
+
+      $data = $this->pc->getBy("id", $_SESSION["username"]);
+
+      $this->view("perfil", $this->entity, array(
+          "data" => $data
+      ));
+
 
     }
 }

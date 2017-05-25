@@ -1,6 +1,5 @@
 @import "index.css";
 
-
 /***************************************************************************************************************************
   Body and topnav.
 ****************************************************************************************************************************/
@@ -9,18 +8,19 @@ body {
   background: #F1F3FA;
 }
 
-
 .topnav {
-  background-color : orange;
+  background-color: orange;
 }
 
-
-img#logo{
+img#logo {
   float: none;
-  width: 184.92px; /*1541x0.12*/
-  height: 42.24px; /*352x0.12*/
+  width: 184.92px;
+  /*1541x0.12*/
+  height: 42.24px;
+  /*352x0.12*/
   margin-top: 3px;
 }
+
 
 /***************************************************************************************************************************
   Pag division (@keenthemes)
@@ -32,11 +32,14 @@ img#logo{
 
 
 /* Profile container */
+
 .profile {
   margin: 20px 0;
 }
 
+
 /* Profile sidebar */
+
 .profile-sidebar {
   padding: 20px 0 10px 0;
   background: #fff;
@@ -126,13 +129,14 @@ img#logo{
   /*border-radius: 3px;*/
   background-color: #f6f9fb;
   border-left: 2px solid orange;
-    /*border-top: 2px solid orange;
+  /*border-top: 2px solid orange;
   border-bottom:   2px solid orange;*/
   margin-left: -5px;
-
 }
 
+
 /* Profile Content */
+
 .profile-content {
   padding: 20px;
   background: #fff;
@@ -140,34 +144,29 @@ img#logo{
 }
 
 
-
 /***************************************************************************************************************************
   Search bar.
 ****************************************************************************************************************************/
 
-.sin_pading{
+.sin_pading {
   padding: 0px;
 }
 
-
 .buscar-partido-nombre {
-    border-radius: 0px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+  border-radius: 0px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
-
 
 .buscar-partido-distrito {
   overflow: hidden;
-
   border-radius: 0px;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 }
 
-.buscar-partido-date > .form-control,
-.buscar-partido-date > .input-group-addon {
+.buscar-partido-date>.form-control, .buscar-partido-date>.input-group-addon {
   border-radius: 0px;
   /*margin-left: -11px;*/
 }
@@ -181,82 +180,76 @@ img#logo{
   width: 100%;
 }
 
-
-.buscar-partido-distrito:focus,
-.buscar-partido-date > .form-control:focus,
-.buscar-partido-nombre:focus {
+.buscar-partido-distrito:focus, .buscar-partido-date>.form-control:focus, .buscar-partido-nombre:focus {
   border-color: orange;
   outline: 0;
-  -webkit-box-shadow: none; /*inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 171, 44, 0.4);*/
-          box-shadow: none; /*inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 171, 44, 0.4);*/
+  -webkit-box-shadow: none;
+  /*inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 171, 44, 0.4);*/
+  box-shadow: none;
+  /*inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 171, 44, 0.4);*/
 }
 
-.buscar-partido-submit:hover,
-.buscar-partido-submit:focus,
-.buscar-partido-date > .input-group-addon:focus,
-.buscar-partido-date > .input-group-addon:hover {
-  cursor:pointer;
+.buscar-partido-submit:hover, .buscar-partido-submit:focus, .buscar-partido-date>.input-group-addon:focus, .buscar-partido-date>.input-group-addon:hover {
+  cursor: pointer;
   background-color: rgba(255, 171, 44, 0.4);
   border-color: orange;
   outline: 0;
-  -webkit-box-shadow: none; /*inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 171, 44, 0.4);*/
-          box-shadow: none; /*inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 171, 44, 0.4);*/
+  -webkit-box-shadow: none;
+  /*inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 171, 44, 0.4);*/
+  box-shadow: none;
+  /*inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 171, 44, 0.4);*/
 }
-
-
 
 
 /***************************************************************************************************************************
   burguer-menu changes.
 ****************************************************************************************************************************/
+
 .burguer-menu {
   float: left;
   /*display: none;*/
 }
 
-
-.burguer-menu > .dropdown-toggle {
+.burguer-menu>.dropdown-toggle {
   background-color: transparent;
   padding: 10px;
   padding-top: 0px;
   padding-bottom: 0px;
-
 }
 
-.burguer-menu > .dropdown-toggle > .glyphicon {
+.burguer-menu>.dropdown-toggle>.glyphicon {
   color: white;
   font-size: 25px;
   margin-top: 10px;
   margin-left: 3px;
 }
 
-.burguer-menu > .dropdown-menu > .container {
+.burguer-menu>.dropdown-menu>.container {
   width: 290px;
 }
+
 
 /***************************************************************************************************************************
   Notifications. (Alertas)
 ****************************************************************************************************************************/
 
-
 .alertas-menu {
   float: right;
 }
 
-.alertas-menu > .dropdown-toggle {
-    background-color: transparent;
-    padding: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+.alertas-menu>.dropdown-toggle {
+  background-color: transparent;
+  padding: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
-.alertas-menu > .dropdown-toggle > .glyphicon {
+.alertas-menu>.dropdown-toggle>.glyphicon {
   color: white;
   font-size: 25px;
   margin-top: 10px;
   margin-left: 3px;
 }
-
 
 #contenidoPagina {
   border-radius: 5px;
@@ -265,10 +258,7 @@ img#logo{
   margin-bottom: 50px;
 }
 
-
-
-
-.centrar{
-  text-align:center;
+.centrar {
+  text-align: center;
   margin: 0 auto;
 }
