@@ -13,25 +13,17 @@ class Usuarios extends EntityBase
     $this->table = "usuarios";
     $class = "Usuarios";
     parent::__construct($this->table, $class);
-}
+  }
 
 public function create() {
     $insert = $this->db()->prepare("INSERT INTO usuarios (id, password, distrito, correo, skill, valoracion) VALUES (?, ?, ?, ?, ?, ?)");
 
-    //Variables a insertar
-    $id = $this->getId();
-    $password = $this->getPassword();
-    $distrito = $this->getDistrito();
-    $correo = $this->getCorreo();
-    $skill = $this->getSkill();
-    $valoracion = $this->getValoracion();
-
-    $insert->bindParam(1, $id, PDO::PARAM_STR);
-    $insert->bindParam(2, $password, PDO::PARAM_STR);
-    $insert->bindParam(3, $distrito, PDO::PARAM_STR);
-    $insert->bindParam(4, $correo, PDO::PARAM_STR);
-    $insert->bindParam(5, $skill, PDO::PARAM_INT);
-    $insert->bindParam(6, $valoracion, PDO::PARAM_INT);
+    $insert->bindParam(1, $this->id);
+    $insert->bindParam(2, $this->password);
+    $insert->bindParam(3, $this->distrito);
+    $insert->bindParam(4, $this->correo);
+    $insert->bindParam(5, $this->skill);
+    $insert->bindParam(6, $this->valoracion);
 
     //Ejecutar la sentencia preparada
     $insert->execute();
@@ -55,6 +47,35 @@ public function ckLogin($username, $password)
 
    return 0;
 
+}
+
+public function ckRegister($username, $distrito, $mail, $password, $password2)
+{
+  $pruebas = $this->getBy("id", $username);
+
+  if (!empty($pruebas)) {
+    return 1;
+  }
+  elseif ($password != $password2) {
+    return 2;
+  }
+
+  $this->setId($username);
+  $this->setDistrito($distrito);
+  $this->setPassword($password);
+  $this->setCorreo($mail);
+  $this->setSkill(5);
+  $this->setValoracion(5);
+
+  $this->create();
+
+  session_start();
+   $_SESSION['loggedin'] = true;
+   $_SESSION['username'] = $username;
+   $_SESSION['start'] = time();
+
+
+   return 0;
 }
 
 /*Métodos get() y set()*/

@@ -218,11 +218,11 @@
                     <h3>Registrarse</h3>
                 </div>
 
-                <form >
+                <form action="<?php echo $helper->url('usuarios' , 'register') ?>" method="post">
 
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                      <input type="text" class="form-control" placeholder="Username" onchange="checkUser(this, 'Register')">
+                      <input type="text" class="form-control" name="username" placeholder="Username" onchange="checkUser(this, 'Register')" autofocus required>
                       <span id="usernameSuccesRegister" class="glyphicon glyphicon-ok"></span>
                       <span id="usernameErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
@@ -231,29 +231,15 @@
 
                     <div class="input-group ">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
-                      <select class="form-control buscar-partido-distrito">
-                        <option selected disabled hidden>Distrito</option>
-                        <option>Fuencarral-El Pardo</option>
-                        <option>Moncloa-Aravaca</option>
-                        <option>Tetuán</option>
-                        <option>Hortaleza</option>
-                        <option>Chamartín</option>
-                        <option>Ciudad Lineal</option>
-                        <option>Chamberí</option>
-                        <option>Barrio de Salamanca</option>
-                        <option>San Blas</option>
-                        <option>Barajas</option>
-                        <option>Centro</option>
-                        <option>Retiro</option>
-                        <option>Arganzuela</option>
-                        <option>Moratalaz</option>
-                        <option>Villaverde</option>
-                        <option>Usera</option>
-                        <option>Latina</option>
-                        <option>Carabanchel</option>
-                        <option>Vicálvaro</option>
-                        <option>Puente de Vallecas</option>
-                        <option>Villa de Vallecas</option>
+                      <select name="distrito" class="form-control buscar-partido-distrito" required>
+                        <option selected disabled hidden requiered>Distrito</option>
+                        <?php
+                          foreach ($distritos as $distrito) {
+                            echo "<option>";
+                            echo $distrito->getId();
+                            echo "</option>";
+                          }
+                         ?>
                       </select>
                     </div>
                     <br>
@@ -262,7 +248,7 @@
 
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                      <input type="text" class="form-control" id ="email" placeholder="Correo electrónico" onchange="checkEmail()" autofocus required>
+                      <input type="text" class="form-control" id ="email" name="mail" placeholder="Correo electrónico" onchange="checkEmail()" required>
                       <span id="emailSucces" class="glyphicon glyphicon-ok"></span>
                       <span id="emailError" class="glyphicon glyphicon-remove"></span>
                     </div>
@@ -271,7 +257,7 @@
 
           					<div class="input-group">
           						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-          						<input type="password" class="form-control" name = "pass" id = "pass" placeholder="Contraseña" onchange="checkPass(this, 'Register')" required>
+          						<input type="password" class="form-control" name = "password" id = "pass" placeholder="Contraseña" onchange="checkPass(this, 'Register')" required>
                       <span id="passSuccesRegister" class="glyphicon glyphicon-ok"></span>
                       <span id="passErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
@@ -280,7 +266,7 @@
 
           					<div class="input-group">
           						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-          						<input type="password" class="form-control" name = "pass" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2()">
+          						<input type="password" class="form-control" name = "password2" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2()">
                       <span id="pass2Succes" class="glyphicon glyphicon-ok"></span>
                       <span id="pass2Error" class="glyphicon glyphicon-remove"></span>
                     </div>
@@ -299,7 +285,7 @@
 
                     <div class="centrar">
                       <button  onclick="changeFormulario('signUp')" type="button" class="btn-formulario cancelbtn">Cancel</button>
-                      <button type = "button" onclick="window.location.href='inicio.html'" class="btn-formulario sendbtn"> Entrar </button>
+                      <button type = "submit" class="btn-formulario sendbtn"> Entrar </button>
                     </div>
 
                 </form>

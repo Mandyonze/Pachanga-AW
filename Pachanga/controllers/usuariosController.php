@@ -38,7 +38,22 @@ class UsuariosController extends BaseController{
 
     }
 
+    public function register()
+    {
+      $username = $_POST["username"];
+      $distrito = $_POST["distrito"];
+      $mail = $_POST["mail"];
+      $password = md5($_POST["password"]);
+      $password2 = md5($_POST["password2"]);
+      $ckRegister = $this->pc->ckRegister($username, $distrito, $mail, $password, $password2);
 
+      if ( $ckRegister == 0) {
+        header('Location:index.php?controller=View&action=inicio&success=' . $ckRegister );
+      } else {
+        header('Location:index.php?controller=View&action=register&error=' . $ckRegister);
+      }
+
+    }
 }
 
 ?>

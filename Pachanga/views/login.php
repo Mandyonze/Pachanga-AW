@@ -15,7 +15,7 @@
     <div class="container">
         <div class="formulario formulario-container">
           <div class="header-formulario">
-            <div class = "centrar"><a href="index.html"><img class = "logo-formulario" src="img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a></div>
+            <div class = "centrar"><a href="index.html"><img class = "logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a></div>
           </div>
 
           <div class="body-formulario">

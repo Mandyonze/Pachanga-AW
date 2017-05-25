@@ -6,11 +6,13 @@
 class ViewController extends BaseController {
 
     private $entity;
+    private $distrito;
 
     function __construct() {
         parent::__construct();
         $this->entity = "";
-
+        require_once('models/distritos.php');
+        $this->distrito = new Distritos();
     }
 
     public function alert($msg) {
@@ -20,7 +22,10 @@ class ViewController extends BaseController {
 
     public function home() {
 
+      $distritos = $this->distrito->getAll();
+
         $this->view("home", $this->entity, array(
+          "distritos" => $distritos
         ));
     }
 
@@ -29,6 +34,15 @@ class ViewController extends BaseController {
 
       $this->view("login", $this->entity, array(
         "error" => "User or password invalid"
+      ));
+    }
+
+    public function register() {
+
+      $distritos = $this->distrito->getAll();
+
+      $this->view("signUp", $this->entity, array(
+        "distritos" => $distritos
       ));
     }
 
