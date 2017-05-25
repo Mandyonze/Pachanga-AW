@@ -53,4 +53,11 @@ class ViewController extends BaseController {
         ));
     }
 
+    public function inicio(){
+      $distritos = $this->distrito->getAll();
+
+      $this->view("inicio", $this->entity, array(
+        "distritos" => $distritos
+      ));
+    }
 }
