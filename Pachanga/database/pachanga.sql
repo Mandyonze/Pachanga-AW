@@ -5,28 +5,28 @@ CREATE TABLE `pachanga`.`distritos` (
 
 ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
 
-INSERT INTO `distritos` (`id`) VALUES
-('Fuencarral-El Pardo'),
-('Moncloa-Aravaca'),
-('Tetuán'),
-('Hortaleza'),
-('Chamartín'),
-('Ciudad Lineal'),
-('Chamberí'),
-('Barrio de Salamanca'),
-('San Blas'),
-('Barajas'),
-('Centro'),
-('Retiro'),
-('Arganzuela'),
-('Moratalaz'),
-('Villaverde'),
-('Usera'),
-('Latina'),
-('Carabanchel'),
-('Vicálvaro'),
-('Puente de Vallecas'),
-('Villa de Vallecas');
+INSERT INTO `distritos` (`id` , `url`) VALUES
+('Fuencarral-El Pardo' , ''),
+('Moncloa-Aravaca' , ''),
+('Tetuán' , ''),
+('Hortaleza' , ''),
+('Chamartín' , ''),
+('Ciudad Lineal' , ''),
+('Chamberí' , ''),
+('Barrio de Salamanca' , ''),
+('San Blas' , ''),
+('Barajas' , ''),
+('Centro' , ''),
+('Retiro' , ''),
+('Arganzuela' , ''),
+('Moratalaz' , ''),
+('Villaverde' , ''),
+('Usera' , ''),
+('Latina' , ''),
+('Carabanchel' , ''),
+('Vicálvaro' , ''),
+('Puente de Vallecas' , ''),
+('Villa de Vallecas' , '');
 
 
 
@@ -42,8 +42,10 @@ CREATE TABLE `pachanga`.`usuarios` (
   , FOREIGN KEY (`distrito`) REFERENCES distritos(`id`) ON DELETE CASCADE
 ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
 
+
+
 CREATE TABLE `pachanga`.`polideportivos` (
-  `id` VARCHAR(40) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+  `id` VARCHAR(150) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
   , `distrito` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
   , `url` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
   , PRIMARY KEY (`id`)
@@ -58,7 +60,7 @@ INSERT INTO `polideportivos` (`id`, `distrito`, `url`) VALUES
 CREATE TABLE `pachanga`.`partidos` (
   `id` int(20) NOT NULL AUTO_INCREMENT
   , `nombre` VARCHAR(40) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-  , `polideportivo` VARCHAR(40) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+  , `polideportivo` VARCHAR(150) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
   , `fecha` DATETIME NOT NULL
   , `creador` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
   , `goles1` int(11) DEFAULT NULL
@@ -70,7 +72,8 @@ CREATE TABLE `pachanga`.`partidos` (
 )ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
 
 INSERT INTO `partidos` (`id`, `polideportivo`, `fecha`, `creador`, `goles1`, `goles2`) VALUES
-(NULL, 'Centro Deportivo Municipal Marqués de Sa', '2017-05-26 06:37:00', 'riusqui', NULL, NULL)
+(NULL, 'Centro Deportivo Municipal Marqués de Samaranch', '2017-05-26 06:37:00', 'riusqui', NULL, NULL),
+(NULL, 'Centro Deportivo Municipal Marqués de Samaranch', '2017-05-27 09:37:00', 'riusqui', NULL, NULL)
 ;
 CREATE TABLE `pachanga`.`participantes` (
   `partido` int(20) NOT NULL
