@@ -42,6 +42,30 @@ CREATE TABLE `pachanga`.`usuarios` (
   , FOREIGN KEY (`distrito`) REFERENCES distritos(`id`) ON DELETE CASCADE
 ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
 
+INSERT INTO `usuarios` (`id`, `password`, `nombre`, `distrito`, `correo`, `skill`, `valoracion`) VALUES
+('ancelotti', 'ancelotti', 'Carlo Ancelotti', 'Moncloa-Aravaca', 'cancelotti@bayern.de', 50, 50),
+('andy_H4X0R', 'andy', 'Andres', 'Chamberí', 'andy@pachanga.es', 200, 200),
+('axwell', 'axwell', 'Axel', 'Barrio de Salamanca', 'axwell@pachanga.es', 500, 500),
+('basti', '1234', 'Bastian Schweinsteiger', 'Centro', 'basti@sch.ge', 300, 300),
+('cr7', 'cr7', 'Cristiano Ronaldo', 'Moncloa-Aravaca', 'cr7@rmadrid.es', 800, 800),
+('fatspanishwaiter', 'benitez', 'Rafa Benitez', 'Tetuán', 'benitez@newcastle.uk', 0, 0),
+('gbale11', 'gbale11', 'Gareth', 'Moncloa-Aravaca', 'gbale11@rmadrid.es', 800, 800),
+('graciaskevinroldan', 'pique', 'Gerard Piqué', 'Centro', 'gpique@farsa.es', 400, 10),
+('ibra10', 'ibra10', 'Zlatan Ibrahimovic', 'Puente de Vallecas', 'zlatan', 1000, 1000),
+('jlpavon', 'jlpavon', 'Juan Luis', 'Fuencarral-El Pardo', 'jlpavon@ucm.es', 700, 700),
+('maclarensucks', 'falonso', 'Fernando Alonso', 'Latina', 'falonso@maclaren.com', 700, 800),
+('mandyCrew', 'mandyCrew', 'Borja', 'Latina', 'mandy@pachanga.es', 100, 100),
+('mcardenas', 'mcardenas', 'Marlon', 'Retiro', 'mcardenas@ucm.es', 500, 500),
+('messi10', 'messi10', 'Lionel Messi', 'Barrio de Salamanca', 'lmessi@fcb.es', 1000, 1000),
+('mmarquez', 'marquez', 'Marc Marquez', 'Barajas', 'mmarquez@honda.com', 400, 600),
+('mreus', 'mreus', 'Marco Reus', 'Usera', 'mreus@bvb.de', 400, 700),
+('paugasol', 'gasol', 'Pau Gasol', 'San Blas', 'paugasol@spurs.com', 200, 100),
+('ramos93', 'ramos', 'Sergio Ramos', 'Carabanchel', 'sramos4@rmadrid.es', 600, 600),
+('riusMiningMaster', 'rius', 'Guille', 'Retiro', 'rius@pachanga.es', 300, 300),
+('ronaldoelgordo', 'ronaldo', 'Ronaldo Luis Nazario de Lima', 'Arganzuela', 'ronaldomcdonald@brasil.es', 950, 950),
+('superguidetti', 'guidetti', 'John Guidetti', 'Barrio de Salamanca', 'guidetti@celta.es', 600, 1000),
+('thespecialone', 'mou', 'José Mourinho', 'Barrio de Salamanca', 'jmou@munited.uk', 780, 500),
+('xXxdimariaxXx', 'dimaria', 'Angel di Maria', 'Hortaleza', 'dimaria@psg.fr', 800, 800);
 
 
 CREATE TABLE `pachanga`.`polideportivos` (
@@ -122,9 +146,17 @@ CREATE TABLE `pachanga`.`partidos` (
 )ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
 
 INSERT INTO `partidos` (`id`, `polideportivo`, `fecha`, `creador`, `goles1`, `goles2`) VALUES
-(NULL, 'Centro Deportivo Municipal Marqués de Samaranch', '2017-05-26 06:37:00', 'riusqui', NULL, NULL),
-(NULL, 'Centro Deportivo Municipal Marqués de Samaranch', '2017-05-27 09:37:00', 'axwel', NULL, NULL)
-;
+(1, 'Losh amigosh de Crish', 'Club El Tejar De Somontes', '2017-05-17 10:24:33', 'cr7', NULL, NULL),
+(2, 'Axwell & co.', 'Centro Deportivo Municipal La Chopera', '2017-05-12 09:31:43', 'axwell', NULL, NULL),
+(3, 'Mou da la cara', 'Polideportivo Municipal Triángulo de Oro', '2017-05-27 16:30:00', 'thespecialone', NULL, NULL),
+(4, 'Los coleguitas del Rius', 'Centro Deportivo Municipal Fuente del Berro', '2017-06-17 16:00:00', 'riusMiningMaster', NULL, NULL),
+(5, 'Mandy vs. Andy', 'Polideportivo Municipal Triángulo de Oro', '2017-06-17 11:00:00', 'mandyCrew', NULL, NULL),
+(6, 'Partido Profesores', 'Pabellón Villa de Madrid', '2017-05-29 12:30:00', 'jlpavon', NULL, NULL),
+(7, 'Pishitas', 'Polideportivo Municipal el Espinillo de Madrid', '2017-06-23 14:00:00', 'ramos93', NULL, NULL),
+(8, 'F1 party crew', 'Centro Deportivo Municipal Fuente del Berro', '2017-06-16 20:00:00', 'maclarensucks', NULL, NULL),
+(9, 'En realidad lo que quiero es una birra', 'Centro Deportivo Municipal Concepción', '2017-06-17 13:30:00', 'ronaldoelgordo', NULL, NULL),
+(10, 'SuperGuidetti Fans', 'Polideportivo Jose Caballero', '2017-07-20 19:00:00', 'superguidetti', NULL, NULL),
+(11, 'Partido H4X0RS', 'Polideportivo Municipal La Bombilla', '2017-06-29 13:45:00', 'andy_H4X0R', NULL, NULL);
 
 CREATE TABLE `pachanga`.`participantes` (
   `partido` int(20) NOT NULL
@@ -136,6 +168,29 @@ CREATE TABLE `pachanga`.`participantes` (
 )ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
 
 INSERT INTO `participantes` (`partido`, `usuario`, `equipo`) VALUES
-('1', 'andres', '1'),
-('1', 'borja', '2')
-;
+(1, 'axwell', 2),
+(1, 'cr7', 1),
+(1, 'graciaskevinroldan', 1),
+(1, 'mandyCrew', 2),
+(1, 'mcardenas', 2),
+(1, 'mreus', 2),
+(1, 'paugasol', 1),
+(1, 'ramos93', 1),
+(1, 'xXxdimariaxXx', 1),
+(2, 'axwell', 1),
+(3, 'thespecialone', 1),
+(4, 'ancelotti', 2),
+(4, 'riusMiningMaster', 1),
+(5, 'andy_H4X0R', 1),
+(5, 'mandyCrew', 1),
+(6, 'jlpavon', 1),
+(7, 'basti', 2),
+(7, 'cr7', 1),
+(7, 'ramos93', 1),
+(8, 'maclarensucks', 1),
+(9, 'ronaldoelgordo', 1),
+(10, 'fatspanishwaiter', 2),
+(10, 'gbale11', 1),
+(10, 'riusMiningMaster', 2),
+(10, 'superguidetti', 1),
+(11, 'andy_H4X0R', 1);
