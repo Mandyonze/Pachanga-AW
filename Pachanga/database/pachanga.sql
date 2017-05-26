@@ -145,7 +145,7 @@ CREATE TABLE `pachanga`.`partidos` (
   , FOREIGN KEY (`polideportivo`) REFERENCES polideportivos(`id`) ON DELETE CASCADE
 )ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
 
-INSERT INTO `partidos` (`id`, `polideportivo`, `fecha`, `creador`, `goles1`, `goles2`) VALUES
+INSERT INTO `partidos` (`id`, `nombre`, `polideportivo`, `fecha`, `creador`, `goles1`, `goles2`) VALUES
 (1, 'Losh amigosh de Crish', 'Club El Tejar De Somontes', '2017-05-17 10:24:33', 'cr7', NULL, NULL),
 (2, 'Axwell & co.', 'Centro Deportivo Municipal La Chopera', '2017-05-12 09:31:43', 'axwell', NULL, NULL),
 (3, 'Mou da la cara', 'Polideportivo Municipal Triángulo de Oro', '2017-05-27 16:30:00', 'thespecialone', NULL, NULL),
