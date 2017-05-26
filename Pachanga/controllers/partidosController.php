@@ -7,14 +7,16 @@ class PartidosController extends BaseController {
 
     private $entity;
     private $distrito;
+    private $partido;
 
     function __construct() {
         parent::__construct();
         $this->entity = "Partidos";
         require_once('models/distritos.php');
         require_once('models/usuarios.php');
+        require_once('models/partidos.php');
         $this->distrito = new Distritos();
-
+        $this->partido = new Partidos();
     }
 
     public function inicio(){
@@ -31,8 +33,11 @@ class PartidosController extends BaseController {
       # code...
       session_start();
       $distritos = $this->distrito->getAll();
+      $partidos = $this->partido->getAll();
+
       $this->view("crear", $this->entity, array(
-        "distritos" => $distritos
+        "distritos" => $distritos,
+        "partidos" => $partidos
       ));
     }
 
