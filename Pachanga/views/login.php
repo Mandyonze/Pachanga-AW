@@ -28,38 +28,32 @@
             <div class = "centrar"><h3>Iniciar Sesión</h3></div>
 
               <form action="<?php echo $helper->url('usuarios' , 'login') ?>" method="post">
-
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                  <input type="text" name = "username" class="form-control " id ="username" placeholder="Username" onchange="checkUser()" autofocus required>
-                  <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
-                  <span id="usernameError" class="glyphicon glyphicon-remove"></span>
+                  <input type="text" name = "username" class="form-control " placeholder="Username" autofocus required>
+                  <span id="usernameSuccesLogin" class="glyphicon glyphicon-ok"></span>
+                  <span id="usernameErrorLogin" class="glyphicon glyphicon-remove"></span>
                 </div>
 
                 <br>
-
 
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                  <input type="password" name = "password" class="form-control" id ="pass" placeholder="Contraseña" onchange="checkPass()" required>
-                  <span id="passSucces" class="glyphicon glyphicon-ok"></span>
-                  <span id="passError" class="glyphicon glyphicon-remove"></span>
+                  <input type="password" name = "password" class="form-control" placeholder="Contraseña" required>
+                  <span id="passSuccesLogin" class="glyphicon glyphicon-ok"></span>
+                  <span id="passErrorLogin" class="glyphicon glyphicon-remove"></span>
                 </div>
-
                 <br>
-
-                <div class="g-recaptcha" data-sitekey="6LdLhxsUAAAAAGKP4We-p1QlE9S7Wpf1eUc9UDa2"></div>
-
-                <br>
-
                 <div class="links">
-                    ¿Todavía no eres miembro?<br><a href="signUp.html">Regístrate ahora</a>
+                    ¿Todavía no eres miembro?<br><a onclick="changeFormulario('signUp')">Regístrate ahora</a>
                 </div>
 
                 <br>
 
-                <div class = "centrar"><button type="button"  onclick="window.location.href='index.html'" class="btn-formulario cancelbtn">Cancel</button>
-                <button type="submit" class="btn-formulario sendbtn"> Entrar </button></div>
+                <div class="centrar">
+                  <button onclick="changeFormulario('login')" type="button" class="btn btn-danger">Cancel</button>
+                  <button type = "submit" id="submitLogin" class="btn btn-warning"> Entrar </button>
+                </div>
             </form>
           <!-- formulario-container -->
           </div>

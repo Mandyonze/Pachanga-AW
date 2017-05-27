@@ -164,7 +164,7 @@
 
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                  <input type="text" name = "username" class="form-control " placeholder="Username" onchange="checkUser(this, 'login')" autofocus required>
+                  <input type="text" name = "username" class="form-control " placeholder="Username" autofocus required>
                   <span id="usernameSuccesLogin" class="glyphicon glyphicon-ok"></span>
                   <span id="usernameErrorLogin" class="glyphicon glyphicon-remove"></span>
                 </div>
@@ -173,17 +173,11 @@
 
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                  <input type="password" name = "password" class="form-control" placeholder="Contraseña" onchange="checkPass(this, 'login')" required>
+                  <input type="password" name = "password" class="form-control" placeholder="Contraseña" required>
                   <span id="passSuccesLogin" class="glyphicon glyphicon-ok"></span>
                   <span id="passErrorLogin" class="glyphicon glyphicon-remove"></span>
                 </div>
-
                 <br>
-
-                <div class="g-recaptcha" data-sitekey="6LdLhxsUAAAAAGKP4We-p1QlE9S7Wpf1eUc9UDa2"></div>
-
-                <br>
-
                 <div class="links">
                     ¿Todavía no eres miembro?<br><a onclick="changeFormulario('signUp')">Regístrate ahora</a>
                 </div>
@@ -191,8 +185,8 @@
                 <br>
 
                 <div class="centrar">
-                  <button onclick="changeFormulario('login')" type="button" class="btn-formulario cancelbtn">Cancel</button>
-                  <button type = "submit" class="btn-formulario sendbtn"> Entrar </button>
+                  <button onclick="changeFormulario('login')" type="button" class="btn btn-danger">Cancel</button>
+                  <button type = "submit" class="btn btn-warning"> Entrar </button>
                 </div>
 
             </form>
@@ -226,9 +220,14 @@
                       <span id="usernameSuccesRegister" class="glyphicon glyphicon-ok"></span>
                       <span id="usernameErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
-
                     <br>
-
+                    <div class="input-group">
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-tag"></span></span>
+                      <input type="text" class="form-control" name="nombre" placeholder="Nombre Completo" onchange="checkNombre(this, 'Register')" required>
+                      <span id="nombreSuccesRegister" class="glyphicon glyphicon-ok"></span>
+                      <span id="nombreErrorRegister" class="glyphicon glyphicon-remove"></span>
+                    </div>
+                    <br>
                     <div class="input-group ">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
                       <select name="distrito" class="form-control buscar-partido-distrito" required>

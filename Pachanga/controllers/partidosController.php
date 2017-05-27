@@ -7,7 +7,8 @@ class PartidosController extends BaseController {
 
     private $entity;
     private $distrito;
-    private $partido;
+    private $usuario;
+    private $partidos;
 
     function __construct() {
         parent::__construct();
@@ -15,15 +16,23 @@ class PartidosController extends BaseController {
         require_once('models/distritos.php');
         require_once('models/usuarios.php');
         require_once('models/partidos.php');
+
         $this->distrito = new Distritos();
-        $this->partido = new Partidos();
+        $this->usuario = new Usuarios();
+        $this->partidos = new Partidos();
+
     }
 
     public function inicio(){
-      $distritos = $this->distrito->getAll();
+
       session_start();
+      $data = $this->usuario->getBy("id", $_SESSION["username"]);
+      $partidos = $this->partidos->getAll();
+      $distritos = $this->distrito->getAll();
       $this->view("inicio", "", array(
-        "distritos" => $distritos
+        "distritos" => $distritos,
+        "data" => $data,
+        "partidos" => $partidos
       ));
     }
 
@@ -32,12 +41,11 @@ class PartidosController extends BaseController {
     {
       # code...
       session_start();
+      $data = $this->usuario->getBy("id", $_SESSION["username"]);
       $distritos = $this->distrito->getAll();
-      $partidos = $this->partido->getAll();
-
       $this->view("crear", $this->entity, array(
         "distritos" => $distritos,
-        "partidos" => $partidos
+        "data" => $data
       ));
     }
 

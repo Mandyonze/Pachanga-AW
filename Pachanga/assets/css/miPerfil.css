@@ -1,10 +1,38 @@
+.details li {
+	list-style: none;
+}
+li {
+		margin-bottom:10px;
 
+}
 
+.details span {
+	/*width:50px;*/
+	color: orange;
+	font-weight: bold;
+	margin-bottom: 10px;
+	/*border-bottom: 1px solid orange;*/
+	/*padding: 10px;*/
+	margin-right: 10px;
+}
+
+.details-titulo {
+	border-bottom: 1px solid orange;
+	margin-bottom: 20px;
+}
+
+.details-text {
+	color: orange;
+}
+.miperfil-informacion {
+		overflow: hidden;
+}
 .miperfil {
 	background: url("../img/backgrounds/login.jpg") no-repeat ;
 	background-size:cover;
+	background-position: center;
 	/*background-attachment: fixed;*/
-	height: 100px;
+	height: 50px;
 	overflow: hidden;
 	/*padding: 40px;*/
 	margin: 0, auto;

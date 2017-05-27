@@ -90,22 +90,12 @@ function cerrar(id) {
   Login
 ****************************************************************************************************************************/
 
+var username = false;
+
+
 function checkUser(x, aux){
 	// var x = document.getElementById("username");
 
-if (aux == "login") {
-  if (x.value.length < 5) {
-		$("#usernameErrorLogin").css({"display" : "inline"});
-		$("#usernameSuccesLogin").css({"display" : "none"});
-		x.classList.remove('form-control-ok');
-		x.classList.add('form-control-error')
-	} else {
-		$("#usernameErrorLogin").css({"display" : "none"});
-		$("#usernameSuccesLogin").css({"display" : "inline"});
-		x.classList.remove('form-control-error');
-		x.classList.add('form-control-ok');
-	}
-} else {
   if (x.value.length < 5) {
     $("#usernameErrorRegister").css({"display" : "inline"});
     $("#usernameSuccesRegister").css({"display" : "none"});
@@ -117,42 +107,43 @@ if (aux == "login") {
     x.classList.remove('form-control-error');
     x.classList.add('form-control-ok');
   }
-}
-
 
 }
 
+function checkNombre(x, aux){
+	// var x = document.getElementById("username");
 
+  if (x.value.length < 5) {
+    $("#nombreErrorRegister").css({"display" : "inline"});
+    $("#nombreSuccesRegister").css({"display" : "none"});
+    x.classList.remove('form-control-ok');
+    x.classList.add('form-control-error')
+  } else {
+    $("#nombreErrorRegister").css({"display" : "none"});
+    $("#nombreSuccesRegister").css({"display" : "inline"});
+    x.classList.remove('form-control-error');
+    x.classList.add('form-control-ok');
+  }
+
+}
+
+var pass = false;
 
 function checkPass(x, aux){
 
-	// var x = document.getElementById("pass");
-
-  if (aux == "login") {
-    if (x.value.length < 5) {
-  		$("#passErrorLogin").css({"display" : "inline"});
-  		$("#passSuccesLogin").css({"display" : "none"});
-  		x.classList.remove('form-control-ok');
-  		x.classList.add('form-control-error')
-  	} else {
-  		$("#passErrorLogin").css({"display" : "none"});
-  		$("#passSuccesLogin").css({"display" : "inline"});
-  		x.classList.remove('form-control-error');
-  		x.classList.add('form-control-ok');
-  	}
-  } else {
     if (x.value.length < 5) {
       $("#passErrorRegister").css({"display" : "inline"});
       $("#passSuccesRegister").css({"display" : "none"});
       x.classList.remove('form-control-ok');
       x.classList.add('form-control-error')
-    } else {
+      pass = false;
+      } else {
       $("#passErrorRegister").css({"display" : "none"});
       $("#passSuccesRegister").css({"display" : "inline"});
       x.classList.remove('form-control-error');
       x.classList.add('form-control-ok');
+      pass = true;
     }
-  }
 
 }
 
@@ -166,7 +157,7 @@ function checkPass2(){
 	var x = document.getElementById("pass2");
   var y = document.getElementById("pass");
 
-	if (x.value != y.value) {
+	if (x.value != y.value || !pass) {
     $("#pass2Error").css({"display" : "inline"});
     $("#pass2Succes").css({"display" : "none"});
 

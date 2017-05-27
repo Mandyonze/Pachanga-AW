@@ -78,3 +78,12 @@ footer a, footer a:hover  {
    font-size: 300px;
    color: white;
 }
+
+
+
+
+
+.details-titulo {
+	border-bottom: 1px solid orange;
+	margin-bottom: 20px;
+}

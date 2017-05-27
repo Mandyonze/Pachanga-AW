@@ -7,8 +7,12 @@
   <!-- SIDEBAR USER TITLE -->
   <div class="profile-usertitle">
     <div class="profile-usertitle-name">
-      @<?php  echo $_SESSION["username"];?>
-      <div class="txtcls" id="anvent">&nbsp;</div>
+        <?php  echo $data[0]->getNombre();?>
+
+    </div>
+
+    <div class="profile-usertitle-username">
+      @<?php  echo $data[0]->getId();?>
     </div>
   </div>
   <!-- END SIDEBAR USER TITLE -->

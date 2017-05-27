@@ -8,7 +8,7 @@ class UsuariosController extends BaseController{
         parent::__construct();
         require_once('models/usuarios.php');
 
-        $this->pc = new Usuarios();
+        $this->usuario = new Usuarios();
         $this->entity = "Usuarios";
 
     }
@@ -28,7 +28,7 @@ class UsuariosController extends BaseController{
       # code...
       $username = $_POST["username"];
       $password = md5($_POST["password"]);
-      $ckLogin = $this->pc->ckLogin($username, $password);
+      $ckLogin = $this->usuario->ckLogin($username, $password);
 
       if ( $ckLogin == 0) {
         header('Location:index.php?controller=Partidos&action=inicio&success=' . $ckLogin );
@@ -41,11 +41,12 @@ class UsuariosController extends BaseController{
     public function register()
     {
       $username = $_POST["username"];
+      $nombre = $_POST["nombre"];
       $distrito = $_POST["distrito"];
       $mail = $_POST["mail"];
       $password = md5($_POST["password"]);
       $password2 = md5($_POST["password2"]);
-      $ckRegister = $this->pc->ckRegister($username, $distrito, $mail, $password, $password2);
+      $ckRegister = $this->usuario->ckRegister($username, $nombre, $distrito, $mail, $password, $password2);
 
       if ( $ckRegister == 0) {
         header('Location:index.php?controller=Partidos&action=inicio&success=' . $ckRegister );
@@ -58,7 +59,7 @@ class UsuariosController extends BaseController{
     public function perfil() {
       session_start();
 
-      $data = $this->pc->getBy("id", $_SESSION["username"]);
+      $data = $this->usuario->getBy("id", $_SESSION["username"]);
 
       $this->view("perfil", $this->entity, array(
           "data" => $data

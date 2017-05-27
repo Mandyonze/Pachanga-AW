@@ -43,29 +43,29 @@ CREATE TABLE `pachanga`.`usuarios` (
 ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
 
 INSERT INTO `usuarios` (`id`, `password`, `nombre`, `distrito`, `correo`, `skill`, `valoracion`) VALUES
-('ancelotti', 'ancelotti', 'Carlo Ancelotti', 'Moncloa-Aravaca', 'cancelotti@bayern.de', 50, 50),
-('andy_H4X0R', 'andy', 'Andres', 'Chamberí', 'andy@pachanga.es', 200, 200),
-('axwell', 'axwell', 'Axel', 'Barrio de Salamanca', 'axwell@pachanga.es', 500, 500),
-('basti', '1234', 'Bastian Schweinsteiger', 'Centro', 'basti@sch.ge', 300, 300),
-('cr7', 'cr7', 'Cristiano Ronaldo', 'Moncloa-Aravaca', 'cr7@rmadrid.es', 800, 800),
-('fatspanishwaiter', 'benitez', 'Rafa Benitez', 'Tetuán', 'benitez@newcastle.uk', 0, 0),
-('gbale11', 'gbale11', 'Gareth', 'Moncloa-Aravaca', 'gbale11@rmadrid.es', 800, 800),
-('graciaskevinroldan', 'pique', 'Gerard Piqué', 'Centro', 'gpique@farsa.es', 400, 10),
-('ibra10', 'ibra10', 'Zlatan Ibrahimovic', 'Puente de Vallecas', 'zlatan', 1000, 1000),
-('jlpavon', 'jlpavon', 'Juan Luis', 'Fuencarral-El Pardo', 'jlpavon@ucm.es', 700, 700),
-('maclarensucks', 'falonso', 'Fernando Alonso', 'Latina', 'falonso@maclaren.com', 700, 800),
-('mandyCrew', 'mandyCrew', 'Borja', 'Latina', 'mandy@pachanga.es', 100, 100),
-('mcardenas', 'mcardenas', 'Marlon', 'Retiro', 'mcardenas@ucm.es', 500, 500),
-('messi10', 'messi10', 'Lionel Messi', 'Barrio de Salamanca', 'lmessi@fcb.es', 1000, 1000),
-('mmarquez', 'marquez', 'Marc Marquez', 'Barajas', 'mmarquez@honda.com', 400, 600),
-('mreus', 'mreus', 'Marco Reus', 'Usera', 'mreus@bvb.de', 400, 700),
-('paugasol', 'gasol', 'Pau Gasol', 'San Blas', 'paugasol@spurs.com', 200, 100),
-('ramos93', 'ramos', 'Sergio Ramos', 'Carabanchel', 'sramos4@rmadrid.es', 600, 600),
-('riusMiningMaster', 'rius', 'Guille', 'Retiro', 'rius@pachanga.es', 300, 300),
-('ronaldoelgordo', 'ronaldo', 'Ronaldo Luis Nazario de Lima', 'Arganzuela', 'ronaldomcdonald@brasil.es', 950, 950),
-('superguidetti', 'guidetti', 'John Guidetti', 'Barrio de Salamanca', 'guidetti@celta.es', 600, 1000),
-('thespecialone', 'mou', 'José Mourinho', 'Barrio de Salamanca', 'jmou@munited.uk', 780, 500),
-('xXxdimariaxXx', 'dimaria', 'Angel di Maria', 'Hortaleza', 'dimaria@psg.fr', 800, 800);
+('ancelotti', '0983d13c42b654af26650f3ddd9b330f', 'Carlo Ancelotti', 'Moncloa-Aravaca', 'cancelotti@bayern.de', 50, 50),
+('andy', 'da41bceff97b1cf96078ffb249b3d66e', 'Andres', 'Chamberí', 'andy@pachanga.es', 200, 200),
+('axwell', '9291d9bb7771fd1ed391703b37a963f4', 'Axel', 'Barrio de Salamanca', 'axwell@pachanga.es', 500, 500),
+('basti', 'f28c104e3444f879ababcbe9ec11bfce', 'Bastian Schweinsteiger', 'Centro', 'basti@sch.ge', 300, 300),
+('cr7', 'c9178aa682eadb31aa6d77e85c8cd9c6', 'Cristiano Ronaldo', 'Moncloa-Aravaca', 'cr7@rmadrid.es', 800, 800),
+('fatspanishwaiter', 'b57d883a7bdce2171b5f9991f4d63856', 'Rafa Benitez', 'Tetuán', 'benitez@newcastle.uk', 0, 0),
+('gbale11', '674378ad505c49f92b070c0491227f00', 'Gareth', 'Moncloa-Aravaca', 'gbale11@rmadrid.es', 800, 800),
+('graciaskevinroldan', '009dfaa91eb617885670b6197244d503', 'Gerard Piqué', 'Centro', 'gpique@farsa.es', 400, 10),
+('ibra10', '2fe14b3674a79c0fe02b593d464ac491', 'Zlatan Ibrahimovic', 'Puente de Vallecas', 'zlatan', 1000, 1000),
+('jlpavon', 'f0a85976b63624b7c19f951403710db7', 'Juan Luis', 'Fuencarral-El Pardo', 'jlpavon@ucm.es', 700, 700),
+('maclarensucks', '70db751fbdc3237ce9de03cb4683983f', 'Fernando Alonso', 'Latina', 'falonso@maclaren.com', 700, 800),
+('mandyCrew', '36ac0b617686082d461a5fe7a8975ff5', 'Borja', 'Latina', 'mandy@pachanga.es', 100, 100),
+('mcardenas', '5f2db1c96ca2820e973a22f43cfdaf27', 'Marlon', 'Retiro', 'mcardenas@ucm.es', 500, 500),
+('messi10', '731c110542108947840060ad7d996c38', 'Lionel Messi', 'Barrio de Salamanca', 'lmessi@fcb.es', 1000, 1000),
+('mmarquez', 'dc322c124ebdbc6a3f1a41f34dd7e75e', 'Marc Marquez', 'Barajas', 'mmarquez@honda.com', 400, 600),
+('mreus', 'eaf3642977f2d7648fa9fe683d26b0d7', 'Marco Reus', 'Usera', 'mreus@bvb.de', 400, 700),
+('paugasol', '1d87d9f3df6d167e70b4da965a3ab0ff', 'Pau Gasol', 'San Blas', 'paugasol@spurs.com', 200, 100),
+('ramos93', 'a265db60bc1e4348fb1af44321af1318', 'Sergio Ramos', 'Carabanchel', 'sramos4@rmadrid.es', 600, 600),
+('riusMiningMaster', '1b2791b86f8fa59421e95c8e8b801c8a', 'Guille', 'Retiro', 'rius@pachanga.es', 300, 300),
+('ronaldoelgordo', 'ebb1b979363707042d1c448785b2f727', 'Ronaldo Luis Nazario de Lima', 'Arganzuela', 'ronaldomcdonald@brasil.es', 950, 950),
+('superguidetti', 'da396086c4151d6e720f3ef61ab69ea6', 'John Guidetti', 'Barrio de Salamanca', 'guidetti@celta.es', 600, 1000),
+('thespecialone', 'f1923392a08ebe5696034076c7f24975', 'José Mourinho', 'Barrio de Salamanca', 'jmou@munited.uk', 780, 500),
+('xXxdimariaxXx', '37af235e7ef65b208eb2d313f0d1f7eb', 'Angel di Maria', 'Hortaleza', 'dimaria@psg.fr', 800, 800);
 
 
 CREATE TABLE `pachanga`.`polideportivos` (
@@ -156,7 +156,7 @@ INSERT INTO `partidos` (`id`, `nombre`, `polideportivo`, `fecha`, `creador`, `go
 (8, 'F1 party crew', 'Centro Deportivo Municipal Fuente del Berro', '2017-06-16 20:00:00', 'maclarensucks', NULL, NULL),
 (9, 'En realidad lo que quiero es una birra', 'Centro Deportivo Municipal Concepción', '2017-06-17 13:30:00', 'ronaldoelgordo', NULL, NULL),
 (10, 'SuperGuidetti Fans', 'Polideportivo Jose Caballero', '2017-07-20 19:00:00', 'superguidetti', NULL, NULL),
-(11, 'Partido H4X0RS', 'Polideportivo Municipal La Bombilla', '2017-06-29 13:45:00', 'andy_H4X0R', NULL, NULL);
+(11, 'Partido H4X0RS', 'Polideportivo Municipal La Bombilla', '2017-06-29 13:45:00', 'andy', NULL, NULL);
 
 CREATE TABLE `pachanga`.`participantes` (
   `partido` int(20) NOT NULL
@@ -181,7 +181,7 @@ INSERT INTO `participantes` (`partido`, `usuario`, `equipo`) VALUES
 (3, 'thespecialone', 1),
 (4, 'ancelotti', 2),
 (4, 'riusMiningMaster', 1),
-(5, 'andy_H4X0R', 1),
+(5, 'andy', 1),
 (5, 'mandyCrew', 1),
 (6, 'jlpavon', 1),
 (7, 'basti', 2),
@@ -193,4 +193,4 @@ INSERT INTO `participantes` (`partido`, `usuario`, `equipo`) VALUES
 (10, 'gbale11', 1),
 (10, 'riusMiningMaster', 2),
 (10, 'superguidetti', 1),
-(11, 'andy_H4X0R', 1);
+(11, 'andy', 1);

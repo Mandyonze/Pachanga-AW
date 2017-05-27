@@ -41,9 +41,18 @@
 
                 <br>
 
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-tag"></span></span>
+                  <input type="text" class="form-control " name="username" id ="nombre" placeholder="Nombre Completo" onchange="checkUser()" disabled>
+                  <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
+                  <span id="usernameError" class="glyphicon glyphicon-remove"></span>
+                </div>
+
+                <br>
+
                 <div class="input-group ">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
-                  <select name="distrito" class="form-control buscar-partido-distrito" required>
+                  <select name="distrito" class="form-control buscar-partido-distrito" required disabled>
                     <option selected disabled hidden>Distrito</option>
                     <?php
                       foreach ($distritos as $distrito) {
@@ -61,7 +70,7 @@
 
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                  <input type="text" class="form-control" name="id" id ="email" placeholder="Correo electrónico" onchange="checkEmail()">
+                  <input type="text" class="form-control" name="id" id ="email" placeholder="Correo electrónico" onchange="checkEmail()" disabled>
                   <span id="emailSucces" class="glyphicon glyphicon-ok"></span>
                   <span id="emailError" class="glyphicon glyphicon-remove"></span>
                 </div>
@@ -71,7 +80,7 @@
 
       					<div class="input-group">
       						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-      						<input type="password" class="form-control" name = "password" id ="pass" placeholder="Contraseña" onchange="checkPass()">
+      						<input type="password" class="form-control" name = "password" id ="pass" placeholder="Contraseña" onchange="checkPass()" disabled>
                   <span id="passSucces" class="glyphicon glyphicon-ok"></span>
                   <span id="passError" class="glyphicon glyphicon-remove"></span>
                 </div>
@@ -80,7 +89,7 @@
 
       					<div class="input-group">
       						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-      						<input type="password" class="form-control" name = "password2" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2()">
+      						<input type="password" class="form-control" name = "password2" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2()" disabled>
                   <span id="pass2Succes" class="glyphicon glyphicon-ok"></span>
                   <span id="pass2Error" class="glyphicon glyphicon-remove"></span>
                 </div>
@@ -98,7 +107,7 @@
                 <br>
 
                 <div class = "centrar"><button type="button" onclick="window.location.href='index.html'" class="btn-formulario cancelbtn">Cancel</button>
-                <button type="button" onclick="window.location.href='inicio.html'" class="btn-formulario sendbtn"> Entrar </button></div>
+                <button type="button" onclick="window.location.href='inicio.html'" class="btn-formulario sendbtn" disabled> Entrar </button></div>
             </form>
           <!-- formulario-container -->
           </div>

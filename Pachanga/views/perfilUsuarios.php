@@ -39,45 +39,62 @@
           }
           ?>
 
+
+                    <!-- /********************************************************************/ -->
           <div class="container-fluid miperfil">
-                <h1 class="profile-name">@<?php echo $data[0]->getId(); ?></h1>
+
           </div>
+
+          <div class="container-fluid miperfil-informacion">
+            <!-- <div class="jumbotron"> -->
+              <div class="row">
+                  <div class="col-xs-12">
+                      <div class="container details-titulo" >
+                        <h2><?php echo $data[0]->getNombre(); ?></h2>
+                      </div>
+                        <!-- <hr> -->
+                      <ul class="container details">
+                        <li>
+                          <p>
+                            <span class="glyphicon glyphicon-user">
+                              Username
+                            </span>
+                            <?php echo $data[0]->getId(); ?>
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            <span class="glyphicon glyphicon-envelope">
+                              E-Mail
+                            </span>
+                          <?php echo $data[0]->getCorreo(); ?>
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            <span class="glyphicon glyphicon-map-marker">
+                            Distrito
+                            </span>
+                        <?php echo $data[0]->getDistrito(); ?>
+                          </p>
+                        </li>
+                      </ul>
+                  </div>
+                  <div class="col-xs-12">
+                      <div class="container details-titulo" >
+                        <h2> Mis partidos</h2>
+                      </div>
+                        <!-- <hr> -->
+                        <!-- //INSERTAR PARTIDOS -->
+                  </div>
+
+              </div>
+          </div>
+
+
 
           <!-- /********************************************************************/ -->
 
-          <br>
-          <div class="row ">
-            <div class="col-xs-offset-1 col-xs-5 col-md-offset-3 col-md-3 cuadro_naranja">Distrito</div>
-            <div class="col-xs-5 col-md-3 cuadro_negro"> Moncloa-Aravaca</div>
-          </div>
-
-          <div class="row ">
-            <div class="col-xs-offset-1 col-xs-5 col-md-offset-3 col-md-3 cuadro_naranja">Email</div>
-            <div class="col-xs-5 col-md-3 cuadro_negro"><?php echo $data[0]->getCorreo(); ?></div>
-          </div>
-
-          <div class="row ">
-            <div class="col-xs-offset-1 col-xs-5 col-md-offset-3 col-md-3 cuadro_naranja">Skill</div>
-            <div class="col-xs-5 col-md-3 cuadro_negro">
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star grey"></span>
-              <span class="glyphicon glyphicon-star grey"></span>
-              <span class="glyphicon glyphicon-star grey"></span>
-            </div>
-          </div>
-
-          <div class="row ">
-            <div class="col-xs-offset-1 col-xs-5 col-md-offset-3 col-md-3 cuadro_naranja ">Valoracion Media</div>
-            <div class="col-xs-5 col-md-3 cuadro_negro">
-              <span class="glyphicon glyphicon-heart"></span>
-              <span class="glyphicon glyphicon-heart"></span>
-              <span class="glyphicon glyphicon-heart"></span>
-              <span class="glyphicon glyphicon-heart"></span>
-              <span class="glyphicon glyphicon-heart grey"></span>
-            </div>
-          </div>
-          <!-- /********************************************************************/ -->
         </div>
       </div>
     </div>

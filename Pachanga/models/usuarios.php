@@ -3,6 +3,7 @@ class Usuarios extends EntityBase
 {
 
   private $id;
+  private $nombre;
   private $password;
   private $distrito;
   private $correo;
@@ -16,14 +17,15 @@ class Usuarios extends EntityBase
   }
 
 public function create() {
-    $insert = $this->db()->prepare("INSERT INTO usuarios (id, password, distrito, correo, skill, valoracion) VALUES (?, ?, ?, ?, ?, ?)");
+    $insert = $this->db()->prepare("INSERT INTO usuarios (id,  password, nombre, distrito, correo, skill, valoracion) VALUES (?, ?, ?, ?, ?, ?, ?)");
 
     $insert->bindParam(1, $this->id);
     $insert->bindParam(2, $this->password);
-    $insert->bindParam(3, $this->distrito);
-    $insert->bindParam(4, $this->correo);
-    $insert->bindParam(5, $this->skill);
-    $insert->bindParam(6, $this->valoracion);
+    $insert->bindParam(3, $this->nombre);
+    $insert->bindParam(4, $this->distrito);
+    $insert->bindParam(5, $this->correo);
+    $insert->bindParam(6, $this->skill);
+    $insert->bindParam(7, $this->valoracion);
 
     //Ejecutar la sentencia preparada
     $insert->execute();
@@ -49,7 +51,7 @@ public function ckLogin($username, $password)
 
 }
 
-public function ckRegister($username, $distrito, $mail, $password, $password2)
+public function ckRegister($username, $nombre,  $distrito, $mail, $password, $password2)
 {
   $pruebas = $this->getBy("id", $username);
 
@@ -61,11 +63,12 @@ public function ckRegister($username, $distrito, $mail, $password, $password2)
   }
 
   $this->setId($username);
+  $this->setNombre($nombre);
   $this->setDistrito($distrito);
   $this->setPassword($password);
   $this->setCorreo($mail);
-  $this->setSkill(5);
-  $this->setValoracion(5);
+  $this->setSkill(0);
+  $this->setValoracion(0);
 
   $this->create();
 
@@ -87,6 +90,15 @@ public function getId(){
 
 public function setId($id){
     $this->id = $id;
+}
+
+// Name
+public function getNombre(){
+    return $this->nombre;
+}
+
+public function setNombre($nombre){
+    $this->nombre = $nombre;
 }
 
 // Password
