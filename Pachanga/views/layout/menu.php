@@ -39,7 +39,7 @@
       Inicio </a>
       </li>
       <li <?php  echo  ($_GET["action"] == "crear") ? "class='active'" : ""; ?>>
-        <a href="<?php  echo $helper->url('partidos' , 'crear')?>">
+        <a href="<?php  echo $helper->url('partidos' , 'registrar')?>">
       <i class="glyphicon glyphicon-plus"></i>
       Crear Partido </a>
       </li>

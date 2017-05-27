@@ -28,14 +28,14 @@ class EntityBase{
 
     public function getById($id){
         $id = intval($id);
-        $req = $this->db()->prepare("SELECT * FROM $this->table  WHERE id = $id"); ////////////////////////////////////
+        $req = $this->db()->prepare("SELECT * FROM $this->table  WHERE id = :id");
         $req->execute(array('id' => $id));
         $result = $req->fetchAll(PDO::FETCH_CLASS, $this->class);
         return $result;
     }
 
     public function getBy($column, $value){
-        $req = $this->db()->prepare("SELECT * FROM $this->table WHERE $column = :value"); ///////////////////////////////////
+        $req = $this->db()->prepare("SELECT * FROM $this->table WHERE $column = :value");
         $req->execute(array('value' => $value));
         $result = $req->fetchAll(PDO::FETCH_CLASS, $this->class);
         return $result;
@@ -43,7 +43,8 @@ class EntityBase{
 
     public function deleteById($id){
         $id = intval($id);
-        $query=$this->db()->query("DELETE FROM $this->table WHERE id = $id");
+        $query=$this->db()->query("DELETE FROM $this->table WHERE id = :id");
+        $query->execute(array('id' => $id));
         return $query;
     }
 
