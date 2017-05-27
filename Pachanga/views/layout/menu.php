@@ -18,7 +18,8 @@
   <!-- END SIDEBAR USER TITLE -->
   <!-- SIDEBAR BUTTONS -->
   <div class="profile-userbuttons">
-    <button onclick="window.location.href='index.php?controller=usuarios&action=perfil'" type="button" class="btn btn-success btn-sm">Mi perfil</button>
+    <a role = "button" class="btn btn-success btn-sm" href="<?php  echo $helper->url('usuarios' , 'perfil')?>&id=<?php echo $data[0]->getId();?>">Mi perfil </a>
+    <!-- <button onclick="window.location.href='index.php?controller=usuarios&action=perfil'" type="button" class="btn btn-success btn-sm">Mi perfil</button> -->
     <button onclick="window.location.href='index.php?controller=partidos&action=inicio&logout=1'" type="button" class="btn btn-danger btn-sm">Logout</button>
 
     <?php
@@ -33,13 +34,13 @@
   <!-- SIDEBAR MENU -->
   <div class="profile-usermenu">
     <ul class="nav">
-      <li <?php  echo  ($_GET["action"] == "inicio") ? "class='active'" : ""; ?>>
+      <li <?php  echo  ($_GET["action"] == "inicio" || $_GET["action"] == "filtro") ? "class='active'" : ""; ?>>
         <a href="<?php  echo $helper->url('partidos' , 'inicio')?>">
       <i class="glyphicon glyphicon-home"></i>
       Inicio </a>
       </li>
       <li <?php  echo  ($_GET["action"] == "crear") ? "class='active'" : ""; ?>>
-        <a href="<?php  echo $helper->url('partidos' , 'registrar')?>">
+        <a href="<?php  echo $helper->url('partidos' , 'crear')?>">
       <i class="glyphicon glyphicon-plus"></i>
       Crear Partido </a>
       </li>
@@ -48,8 +49,8 @@
       <i class="glyphicon glyphicon-ok-circle"></i>
       Mis partidos </a>
       </li>
-      <li>
-        <a href="ranking.html">
+      <li <?php  echo  ($_GET["action"] == "mejores") ? "class='active'" : ""; ?>>
+        <a href="<?php  echo $helper->url('usuarios' , 'mejores')?>">
       <i class="glyphicon glyphicon-heart-empty"></i>
       Mejores Jugadores </a>
       </li>

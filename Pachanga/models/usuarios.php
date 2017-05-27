@@ -12,8 +12,8 @@ class Usuarios extends EntityBase
 
   public function __construct() {
     $this->table = "usuarios";
-    $class = "Usuarios";
-    parent::__construct($this->table, $class);
+    $this->class = "Usuarios";
+    parent::__construct($this->table, $this->class);
   }
 
 public function create() {
@@ -31,6 +31,12 @@ public function create() {
     $insert->execute();
 }
 
+public function mejores($distrito) {
+
+    $query=$this->db()->query("SELECT * FROM $this->table WHERE distrito = '$distrito' ORDER BY skill DESC"); //ORDER BY id DESC
+    $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
+    return $resultSet;
+}
 
 public function ckLogin($username, $password)
 {

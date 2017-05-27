@@ -3,12 +3,14 @@
 class UsuariosController extends BaseController{
 
     private $usuario;
+    private $distrito;
 
     public function __construct() {
         parent::__construct();
         require_once('models/usuarios.php');
-
+        require_once('models/distritos.php');
         $this->usuario = new Usuarios();
+        $this->distrito = new Distritos();
         $this->entity = "Usuarios";
 
     }
@@ -59,13 +61,29 @@ class UsuariosController extends BaseController{
     public function perfil() {
       session_start();
 
+      $usuario = $_GET["id"];
       $data = $this->usuario->getBy("id", $_SESSION["username"]);
+      $user = $this->usuario->getBy("id", $usuario);
 
       $this->view("perfil", $this->entity, array(
-          "data" => $data
+          "data" => $data,
+          "user" => $user
       ));
 
 
+    }
+
+    public function mejores(){
+      session_start();
+
+      $data = $this->usuario->getBy("id", $_SESSION["username"]);
+      $mejores = $this->usuario->mejores($data[0]->getDistrito());
+      $miDistrito = $this->distrito->getBy("id", $data[0]->getDistrito());
+      $this->view("mejores", $this->entity, array(
+          "data" => $data,
+          "miDistrito" => $miDistrito,
+          "mejores" => $mejores
+      ));
     }
 }
 

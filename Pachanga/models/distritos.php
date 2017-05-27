@@ -8,6 +8,7 @@ class Distritos extends EntityBase
 {
 
   private $id;
+  private $url;
 
   function __construct()
   {
@@ -28,6 +29,19 @@ class Distritos extends EntityBase
 
   public function setId($id) {
     $this->id = $id;
+  }
+
+  //GETTERS
+
+  public function getUrl() {
+    return $this->url;
+  }
+
+
+  //SETTERS
+
+  public function setUrl($url) {
+    $this->url = $url;
   }
 }
  ?>

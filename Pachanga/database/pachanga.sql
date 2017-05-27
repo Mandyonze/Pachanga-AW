@@ -139,24 +139,26 @@ CREATE TABLE `pachanga`.`partidos` (
   , `creador` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
   , `goles1` int(11) DEFAULT NULL
   , `goles2` int(11) DEFAULT NULL
+  , `participantes` int(11) DEFAULT 0
+  , `skill` int(11) DEFAULT 0
   , PRIMARY KEY (`id`)
   , UNIQUE (`nombre`)
   , FOREIGN KEY (`creador`) REFERENCES usuarios(`id`) ON DELETE CASCADE
   , FOREIGN KEY (`polideportivo`) REFERENCES polideportivos(`id`) ON DELETE CASCADE
 )ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
 
-INSERT INTO `partidos` (`id`, `nombre`, `polideportivo`, `fecha`, `creador`, `goles1`, `goles2`) VALUES
-(1, 'Losh amigosh de Crish', 'Club El Tejar De Somontes', '2017-05-17 10:24:33', 'cr7', NULL, NULL),
-(2, 'Axwell & co.', 'Centro Deportivo Municipal La Chopera', '2017-05-12 09:31:43', 'axwell', NULL, NULL),
-(3, 'Mou da la cara', 'Polideportivo Municipal Triángulo de Oro', '2017-05-27 16:30:00', 'thespecialone', NULL, NULL),
-(4, 'Los coleguitas del Rius', 'Centro Deportivo Municipal Fuente del Berro', '2017-06-17 16:00:00', 'riusMiningMaster', NULL, NULL),
-(5, 'Mandy vs. Andy', 'Polideportivo Municipal Triángulo de Oro', '2017-06-17 11:00:00', 'mandyCrew', NULL, NULL),
-(6, 'Partido Profesores', 'Pabellón Villa de Madrid', '2017-05-29 12:30:00', 'jlpavon', NULL, NULL),
-(7, 'Pishitas', 'Polideportivo Municipal el Espinillo de Madrid', '2017-06-23 14:00:00', 'ramos93', NULL, NULL),
-(8, 'F1 party crew', 'Centro Deportivo Municipal Fuente del Berro', '2017-06-16 20:00:00', 'maclarensucks', NULL, NULL),
-(9, 'En realidad lo que quiero es una birra', 'Centro Deportivo Municipal Concepción', '2017-06-17 13:30:00', 'ronaldoelgordo', NULL, NULL),
-(10, 'SuperGuidetti Fans', 'Polideportivo Jose Caballero', '2017-07-20 19:00:00', 'superguidetti', NULL, NULL),
-(11, 'Partido H4X0RS', 'Polideportivo Municipal La Bombilla', '2017-06-29 13:45:00', 'andy', NULL, NULL);
+INSERT INTO `partidos` (`id`, `nombre`, `polideportivo`, `fecha`, `creador`, `goles1`, `goles2`, `participantes`,  `skill`) VALUES
+(1, 'Losh amigosh de Crish', 'Club El Tejar De Somontes', '2017-05-17 10:24:33', 'cr7', NULL, NULL, 9 , 50),
+(2, 'Axwell & co.', 'Centro Deportivo Municipal La Chopera', '2017-05-12 09:31:43', 'axwell', NULL, NULL, 1 , 100),
+(3, 'Mou da la cara', 'Polideportivo Municipal Triángulo de Oro', '2017-05-27 16:30:00', 'thespecialone', NULL, NULL, 1 , 50),
+(4, 'Los coleguitas del Rius', 'Centro Deportivo Municipal Fuente del Berro', '2017-06-17 16:00:00', 'riusMiningMaster', NULL, NULL, 2 , 50),
+(5, 'Mandy vs. Andy', 'Polideportivo Municipal Triángulo de Oro', '2017-06-17 11:00:00', 'mandyCrew', NULL, NULL, 2 , 100),
+(6, 'Partido Profesores', 'Pabellón Villa de Madrid', '2017-05-29 12:30:00', 'jlpavon', NULL, NULL, 1 , 50),
+(7, 'Pishitas', 'Polideportivo Municipal el Espinillo de Madrid', '2017-06-23 14:00:00', 'ramos93', NULL, NULL, 3 , 50),
+(8, 'F1 party crew', 'Centro Deportivo Municipal Fuente del Berro', '2017-06-16 20:00:00', 'maclarensucks', NULL, NULL, 1 , 100),
+(9, 'En realidad lo que quiero es una birra', 'Centro Deportivo Municipal Concepción', '2017-06-17 13:30:00', 'ronaldoelgordo', NULL, NULL,1 , 50),
+(10, 'SuperGuidetti Fans', 'Polideportivo Jose Caballero', '2017-07-20 19:00:00', 'superguidetti', NULL, NULL,4 , 50),
+(11, 'Partido H4X0RS', 'Polideportivo Municipal La Bombilla', '2017-06-29 13:45:00', 'andy', NULL, NULL,1 , 100);
 
 CREATE TABLE `pachanga`.`participantes` (
   `partido` int(20) NOT NULL

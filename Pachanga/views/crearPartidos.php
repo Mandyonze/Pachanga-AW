@@ -21,28 +21,18 @@
       <div class="col-xs-12 col-sm-12 col-md-9">
         <div class="profile-content">
 
-          <?php if (isset($error)) {
+          <?php if (isset($info) && ($info == 1 || $info == 2)) {
             echo "<div class='alert alert-danger'>";
-            echo "<strong>ERROR!</strong> $error";
+            echo "<strong>ERROR!</strong> No se ha podido crear el partido.";
             echo "</div>";
           }
           ?>
-          <?php if (isset($_GET["success"])) {
+          <?php if (isset($info) && $info == 0) {
             echo "<div class='alert alert-success alert-dismissable' data-dismiss='alert'>";
             echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
-            if ($_GET["success"] == 0) {
-              echo "¡<strong>Bienvenido</strong>  a pachanga!";
-            }
+            echo "¡<strong>Enhorabuena</strong> Has creado un partido!";
             echo "</div>";
           }
-          ?>
-          <?php
-            if (isset($info)) {
-              echo "<div class='alert alert-success alert-dismissable' data-dismiss='alert'>";
-              echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
-              echo "<strong>$info</strong>";
-              echo "</div>";
-            }
           ?>
 
 
@@ -97,6 +87,12 @@
                 </select>
               </div>
 
+              <br>
+              <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-star"></span></span>
+                <input type="number" name="skill" min="0" class="form-control " placeholder="Skill minima" required>
+                <!-- <input  type="number" class="form-control "   required> -->
+              </div>
               <br>
               <div class="centrar">
                 <button type="reset" class="btn btn-danger"> Borrar </button>

@@ -48,7 +48,7 @@
           <div class="container-fluid crearpartido">
 
 
-            <form action="<?php echo $helper->url('partidos', 'crear') ?>" method="post">
+            <form action="<?php echo $helper->url('partidos', 'nuevoPartido') ?>" method="post">
               <div class="input-group ">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
                 <select name="polideportivo" class="form-control buscar-partido-distrito" required>
@@ -60,11 +60,11 @@
                       echo "</option>";
                     }
                    ?>
-                   <input name="nombre" value="<?php echo $nombre; ?>"  type="text" required hidden>
-                   <input name="fecha" value="<?php echo $fecha; ?>"  type="text" required hidden>
-                   <input name="hora" value="<?php echo $hora; ?>"  type="text" required hidden>
-                   <input name="minutos" value="<?php echo $minutos; ?>"  type="text" required hidden>
-                   <input name="distrito" value="<?php echo $distrito; ?>"  type="text" required hidden>
+                   <input name="nombre" value="<?php echo $_POST["nombre"]; ?>"  type="text" required hidden>
+                   <input name="fecha" value="<?php echo $_POST["fecha"]; ?>"  type="text" required hidden>
+                   <input name="hora" value="<?php echo $_POST["hora"]; ?>"  type="number" required hidden>
+                   <input name="minutos" value="<?php echo $_POST["minutos"]; ?>"  type="number" required hidden>
+                   <input name="skill" value="<?php echo $_POST["skill"]; ?>"  type="number" required hidden>
                 </select>
               </div>
               <br>

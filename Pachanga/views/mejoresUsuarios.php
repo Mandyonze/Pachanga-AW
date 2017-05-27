@@ -50,44 +50,42 @@
               <div class="row">
                   <div class="col-xs-12">
                       <div class="container details-titulo" >
-                        <h2><?php echo $user[0]->getNombre(); ?></h2>
+                        <h2>Mejores Jugadores de: <?php echo $miDistrito[0]->getId(); ?></h2>
                       </div>
-                        <!-- <hr> -->
-                      <ul class="container details">
-                        <li>
-                          <p>
-                            <span class="glyphicon glyphicon-user">
-                              Username
-                            </span>
-                            <?php echo $user[0]->getId(); ?>
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            <span class="glyphicon glyphicon-envelope">
-                              E-Mail
-                            </span>
-                          <?php echo $user[0]->getCorreo(); ?>
-                          </p>
-                        </li>
-                        <li>
-                          <p>
-                            <span class="glyphicon glyphicon-map-marker">
-                            Distrito
-                            </span>
-                        <?php echo $user[0]->getDistrito(); ?>
-                          </p>
-                        </li>
-                      </ul>
-                  </div>
-                  <div class="col-xs-12">
-                      <div class="container details-titulo" >
-                        <h2> Mis partidos</h2>
-                      </div>
-                        <!-- <hr> -->
-                        <!-- //INSERTAR PARTIDOS -->
-                  </div>
 
+                        <div class="panel panel-default back-orange2">
+                            <div class="panel-heading back-orange2">
+                              <div class="row white">
+                                  <div class="col-xs-3 col-md-4">Jugador</div>
+                                  <div class="col-xs-4 col-md-4">Skill</div>
+                        </div>
+                        </div>
+                      </div>
+
+                      <div class="panel-group">
+                        <?php foreach ($mejores as $mejor): ?>
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="row" >
+                                  <div class="col-xs-3 col-md-4"><?php echo $mejor->getId(); ?></div>
+                                  <div class="col-xs-4 col-md-4 ">
+                                    <div class="flotante_izq" >
+
+                                        <span class="glyphicon glyphicon-star"></span><?php echo $mejor->getSkill(); ?>
+                                 </div>
+                              </div>
+                              <div class="hidden-xs col-md-1"></div>
+                              <div class="col-xs-5 col-md-3"><a href="<?php  echo $helper->url('usuarios' , 'perfil')?>&id=<?php echo $mejor->getId();?>" class="btn button-ver mouse-over white" role="button">Ver Perfil</a></div>
+                                </div>
+                            </div>
+                          </div>
+                        <?php endforeach; ?>
+                      </div>
+
+                      <iframe src="<?php echo $miDistrito[0]->getUrl(); ?>" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <!-- <hr> -->
+
+                  </div>
               </div>
           </div>
 

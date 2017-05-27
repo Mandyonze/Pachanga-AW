@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <a href="inicio.html"><img id = "logo" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a>
+    <a href="<?php  echo $helper->url('partidos' , 'inicio')?>"><img id = "logo" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a>
 
     <div class="dropdown alertas-menu">
       <button class="btn btn-secondary dropdown-toggle notifications" type="button" data-toggle="dropdown">
