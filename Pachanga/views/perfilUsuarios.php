@@ -100,8 +100,102 @@
                       <div class="container details-titulo" >
                         <h2> Mis partidos</h2>
                       </div>
-                        <!-- <hr> -->
-                        <!-- //INSERTAR PARTIDOS -->
+
+                      <div class='panel panel-default'>
+                      <?php
+                      $aux = 1;
+                      foreach ($partidos as $partido) {
+
+                          echo "<div class='panel-heading'>";
+                            echo "<div class='panel-title'>";
+                              echo "<a data-toggle='collapse' data-parent='#accordion' href='#collapse$aux'>";
+                                echo "<div class='row'>";
+
+                                  echo "<div class='col-md-3'>";
+                                  echo "<p class = 'apartado'>";
+                                  echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-tag'>";
+                                  echo " ";
+                                  echo "</span>";
+                                  echo $partido->getNombre();
+                                  echo "</p>";
+                                  echo "</div>";
+
+                                  echo "<div class='col-md-3'>";
+                                  echo "<p class = 'apartado'>";
+                                  echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-map-marker'>";
+                                  echo " ";
+                                  echo "</span>";
+                                  echo $partido->getDistrito();
+                                  echo "</p>";
+                                  echo "</div>";
+
+                                  echo "<div class='col-md-2'>";
+                                  echo "<p class = 'apartado'>";
+                                  echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-time'>";
+                                  echo " ";
+                                  echo "</span>";
+                                  $fecha=date("H:i",strtotime($partido->getFecha()));
+                                  echo "$fecha";
+                                  echo "</p>";
+                                  echo "</div>";
+
+                                  echo "<div class='col-md-2'>";
+                                  echo "<p class = 'apartado'>";
+                                  echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-calendar'>";
+                                  echo " ";
+                                  echo "</span>";
+                                  $fecha=date("d-m-Y",strtotime($partido->getFecha()));
+                                  echo "$fecha";
+                                  echo "</p>";
+                                  echo "</div>";
+
+                                  echo "<div class='col-md-1'>";
+                                  echo "<p class = 'apartado'>";
+                                  echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-fire'>";
+                                  echo " ";
+                                  echo "</span>";
+                                  echo $partido->getSkill();
+                                  echo "</p>";
+                                  echo "</div>";
+
+                                  echo "<div class='col-md-1'>";
+                                  echo "<p class = 'apartado'>";
+                                  echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-user'>";
+                                  echo " ";
+                                  echo "</span>";
+                                  echo $partido->getParticipantes();
+                                  echo "/14";
+                                  echo "</p>";
+                                  echo "</div>";
+
+                                echo "</div>";
+                              echo "</a>";
+                            echo "</div>";
+                          echo "</div>";
+
+
+                          echo "<div id='collapse$aux' class='panel-collapse collapse'>";
+                            echo "<div class='panel-body back-white back-white'>";
+                              echo "<div class='row'>";
+                                $now = new DateTime();
+                                $fecha =  $now->format('Y-m-d H:i:s');
+                                if($partido->getFecha() < $fecha && $partido->getGoles1() == NULL){?>
+                                  <div class='col-xs-6 col-md-6'><a href='index.php?controller=partidos&action=datos&id=<?php echo $partido->getId(); ?>' class='btn btn-warning button-ver mouse-over' role='button'>Ver</a></div>
+                                  <div class='col-xs-6 col-md-6'><a href='<?php echo $helper->url('partidos', 'valorarPartido') . '&id=' . $partido->getId();?>' class='btn btn-warning back-orange mouse-over' onclick='changeCompartir('compartir')' role='button'>Puntuar</a></div>
+                                  <?php
+                                }
+                                else{?>
+                                  <div class='col-xs-12 col-md-12 centrar'><a href='index.php?controller=partidos&action=datos&id=<?php echo $partido->getId(); ?>' class='btn btn-warning button-ver-sin-float mouse-over centrar' role='button'>Ver</a></div>
+                                  <?php
+                                }
+                              echo "</div>";
+                            echo "</div>";
+                          echo "</div>";
+                          $aux++;
+
+                      }
+                     ?>
+                   </div>
                   </div>
 
               </div>

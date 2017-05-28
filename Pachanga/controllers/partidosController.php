@@ -76,6 +76,28 @@ class PartidosController extends BaseController {
         ));
       }
 
+      public function valorarPartido(){
+
+        if(isset($_GET['id'])){
+
+          session_start();
+          $id = $_GET['id'];
+          $data = $this->usuario->getBy("id", $_SESSION["username"]);
+          $partidos = $this->partido->getBy("id", $id);
+          $this->view("resultado", $this->entity, array(
+            "data" => $data,
+            "partidos" => $partidos
+          ));
+        }
+        else{
+          header('Location:index.php?controller=partidos&action=inicio');
+        }
+      }
+
+      public function puntuar(){
+
+        session_start();
+      }
 
       public function elegirPolideportivo(){
           session_start();

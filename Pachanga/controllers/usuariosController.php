@@ -4,13 +4,16 @@ class UsuariosController extends BaseController{
 
     private $usuario;
     private $distrito;
+    private $partido;
 
     public function __construct() {
         parent::__construct();
         require_once('models/usuarios.php');
         require_once('models/distritos.php');
+        require_once('models/partidos.php');
         $this->usuario = new Usuarios();
         $this->distrito = new Distritos();
+        $this->partido = new Partidos();
         $this->entity = "Usuarios";
 
     }
@@ -64,10 +67,12 @@ class UsuariosController extends BaseController{
       $usuario = $_GET["id"];
       $data = $this->usuario->getBy("id", $_SESSION["username"]);
       $user = $this->usuario->getBy("id", $usuario);
+      $partidos = $this->partido->misCreados();
 
       $this->view("perfil", $this->entity, array(
           "data" => $data,
-          "user" => $user
+          "user" => $user,
+          "partidos" => $partidos
       ));
 
 

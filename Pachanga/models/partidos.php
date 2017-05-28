@@ -59,8 +59,14 @@ public function addParticipantes($partido, $usuario, $equipo) {
 
       //Ejecutar la sentencia preparada
       $add->execute();
+}
 
+public function misCreados(){
 
+  $usuario = $_SESSION['username'];
+  $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito   FROM $this->table p inner join polideportivos d WHERE  p.polideportivo = d.id and  creador = '$usuario' ORDER BY fecha DESC"); //ORDER BY id DESC
+  $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
+  return $resultSet;
 }
 
 public function partidosActivos(){
@@ -76,7 +82,12 @@ public function partidosActivos(){
     return $resultSet;
 }
 
+public function valorar($id, $goles1, $goles2){
 
+  $sql = "UPDATE partidos SET goles1='$goles1' and goles2 = $goles2 WHERE id = '$id'";
+  $stmt =  $this->db()->prepare($sql);
+  $stmt->execute();
+}
 
 public function filtro($name, $distrito, $fecha){
 
@@ -97,10 +108,6 @@ public function filtro($name, $distrito, $fecha){
     $query=$this->db()->query("SELECT *  FROM $this->table p inner join polideportivos d WHERE  p.polideportivo = d.id and cast(fecha as date) >= '$fecha' ORDER BY fecha"); //ORDER BY id DESC
 
   }
-
-
-
-
 
   $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
   return $resultSet;
@@ -124,7 +131,6 @@ public function ckPartidos($nombre,$fecha,$hora,$minutos,$skill,$polideportivo, 
   if ($datetime < date('Y-m-d H:i:s')) {
     return 2;
   }
-
 
   $this->setNombre($nombre);
   $this->setPolideportivo($polideportivo);
