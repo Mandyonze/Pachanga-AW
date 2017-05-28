@@ -74,13 +74,13 @@
             </table>
 
             <div class="container-fluid margen_top_title">
-              <form class="" action="<?php $helper->url('participantes', 'insertParticipante'); ?>" method="post">
+              <form class="" action="<?php echo $helper->url('participantes', 'insertParticipante'); ?>" method="post">
                 <input name="partido" value="<?php echo $partidoobj[0]->getId(); ?>"  type="text" required hidden>
                 <input name="usuario" value="<?php echo $_SESSION['username']; ?>"  type="text" required hidden>
                 <input name="equipo" value="1" type="text" required hidden>
                 <div class="col-xs-6 col-md-6"><button type="submit" class="btn btn-warning back-orange flota-derecha"> Jugar equipo 1 </button></div>
               </form>
-              <form class="" action="<?php $helper->url('participantes', 'insertParticipante'); ?>" method="post">
+              <form class="" action="<?php echo $helper->url('participantes', 'insertParticipante'); ?>" method="post">
                 <input name="partido" value="<?php echo $partidoobj[0]->getId(); ?>"  type="text" required hidden>
                 <input name="usuario" value="<?php echo $_SESSION['username']; ?>"  type="text" required hidden>
                 <input name="equipo" value="2" type="text" required hidden>

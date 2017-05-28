@@ -20,7 +20,7 @@ class Participantes extends EntityBase
 
   public function create() {
 
-      $insert = $this->db()->prepare("INSERT INTO partidos (partido, usuario, equipo) VALUES (?, ?, ?)");
+      $insert = $this->db()->prepare("INSERT INTO participantes (partido, usuario, equipo) VALUES (?, ?, ?)");
 
       $insert->bindParam(1, $this->partido);
       $insert->bindParam(2, $this->usuario);

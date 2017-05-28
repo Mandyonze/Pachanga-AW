@@ -19,9 +19,22 @@ class ParticipantesController extends BaseController {
     public function insertParticipante(){
 
       session_start();
-      if(isset($_POST['partido']) && isset($_POST['usuario']) &&isset($_POST['equipo'])){
-        echo $_POST['partido'], $_POST['usuario'], $_POST['equipo'];
-        $this->participante->insertParticipante($_POST['partido'], $_POST['usuario'], $_POST['equipo']);
+      echo "caca";
+      if(isset($_POST['partido']) && isset($_POST['usuario']) && isset($_POST['equipo'])){
+
+        $partido = $_POST['partido'];
+        $usuario = $_POST['usuario'];
+        $equipo = $_POST['equipo'];
+
+
+        // echo "<br>";
+        // echo $partido;
+        // echo "<br>";
+        // echo $usuario;
+        // echo "<br>";
+        // echo $equipo;
+
+        $this->participante->insertParticipante($partido, $usuario, $equipo);
         header('Location:index.php?controller=partidos&action=datos&id='. $_POST['partido']);
       }
       else {
