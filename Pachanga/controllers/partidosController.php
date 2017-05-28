@@ -118,7 +118,7 @@ class PartidosController extends BaseController {
 
           $data = $this->usuario->getBy("id", $_SESSION["username"]);
           $misPartidosJugados = $this->partido->misPartidosJugados($_SESSION["username"]);
-          $misPartidosNoJugados =  $this->partido->misPartidosJugados($_SESSION["username"]);
+          $misPartidosNoJugados =  $this->partido->misPartidosNoJugados($_SESSION["username"]);
           $this->view("mis", $this->entity, array(
               "data" => $data,
               "misPartidosJugados" => $misPartidosJugados,

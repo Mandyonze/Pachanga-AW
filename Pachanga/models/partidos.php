@@ -131,14 +131,14 @@ public function ckPartidos($nombre,$fecha,$hora,$minutos,$skill,$polideportivo, 
 
 public function misPartidosJugados($usuario){
 
-    $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito  FROM partidos p inner join participantes m inner join polideportivos d on p.id = m.partido and p.polideportivo = d.id WHERE m.usuario = '$usuario' and p.goles1 is not null ORDER BY p.fecha");
+    $query=$this->db()->query("SELECT p.id, p.nombre, p.fecha, p.creador, p.participantes, p.skill,d.distrito FROM partidos p inner join participantes m inner join polideportivos d on p.id = m.partido and d.id = p.polideportivo  WHERE m.usuario = '$usuario' and p.goles1 is not null ORDER BY p.fecha");
     $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
     return $resultSet;
 }
 
 public function misPartidosNoJugados($usuario){
 
-    $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito  FROM partidos  inner join participantes  inner join polideportivos on p.id = m.partido and p.polideportivo = d.id WHERE m.usuario = '$usuario' and p.goles1 is null ORDER BY p.fecha");
+    $query=$this->db()->query("SELECT p.id, p.nombre, p.fecha, p.creador, p.participantes, p.skill, d.distrito FROM partidos p inner join participantes m inner join polideportivos d on p.id = m.partido and d.id = p.polideportivo  WHERE m.usuario = '$usuario' and p.goles1 is null ORDER BY p.fecha");
     $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
     return $resultSet;
 }
