@@ -38,10 +38,6 @@
           }
           ?>
 
-          <?php //print_r($misPartidosNoJugados)
-
-            ?>
-
 
             <!-- ************************************************************************************** -->
 
@@ -135,7 +131,7 @@
                                     echo " ";
                                     echo "</span>";
                                     echo $partido->getParticipantes();
-                                    echo "/10";
+                                    echo "/14";
                                     echo "</p>";
                                     echo "</div>";
 
@@ -192,7 +188,7 @@
                       <div class='panel panel-default'>
 
                       <?php
-                        
+
                         foreach ($misPartidosJugados as $partido) {
 
                             echo "<div class='panel-heading'>";
@@ -253,7 +249,7 @@
                                     echo " ";
                                     echo "</span>";
                                     echo $partido->getParticipantes();
-                                    echo "/10";
+                                    echo "/14";
                                     echo "</p>";
                                     echo "</div>";
 

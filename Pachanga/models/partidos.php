@@ -41,6 +41,14 @@ public function create() {
     $this->addParticipantes($id[0]->getId(), $this->creador, 1);
 }
 
+public function updateParticipantes($partido, $participantes)
+{
+  $sql = "UPDATE partidos SET participantes='$participantes' WHERE id = '$partido'";
+  $stmt =  $this->db()->prepare($sql);
+  $stmt->execute();
+}
+
+
 public function addParticipantes($partido, $usuario, $equipo) {
 
       $add = $this->db()->prepare("INSERT INTO participantes (partido, usuario, equipo) VALUES (?, ?, ?)");

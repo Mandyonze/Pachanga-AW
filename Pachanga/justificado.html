@@ -1,105 +1,299 @@
-<div id="contenidoPagina" class="container ">
+<!DOCTYPE html>
+<html lang="es">
 
-  <div class="centrar">
-    <p class="size_title">Detalles partido</p>
-  </div>
-  <div class=" row margen_top_title">
-    <div class="col-md-4">
-      <div class="col-xs-6 col-md-6 cuadro_naranja">Zona</div>
-      <div class="col-xs-6 col-md-6 cuadro_negro">Moncloa-Aravaca</div>
-    </div>
-    <div class="col-md-4">
-      <div class="col-xs-6 col-md-6 cuadro_naranja">Fecha</div>
-      <div class="col-xs-6 col-md-6 cuadro_negro">25-04-2017</div>
-    </div>
-    <div class="col-md-4">
-      <div class="col-xs-6 col-md-6 cuadro_naranja">Creador</div>
-      <div class="col-xs-6 col-md-6 cuadro_negro">Leonardo</div>
-    </div>
-  </div>
-  <table class="table table-condensed margen_top_title">
-    <thead>
-      <tr>
-        <th>Equipo 1</th>
-        <th>Equipo 2</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-      </tr>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-    </tbody>
-  </table>
+<head>
+  <?php require_once('layout/library.php'); ?>
+  <title> PACHANGA </title>
+  <link rel="stylesheet" href="assets/css/inicio.css">
+  <link rel="stylesheet" href="assets/css/listaPartidos.css">
+</head>
 
-  <div class="container margen_top_title">
-    <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-warning button-ver mouse-over" role="button">Inscribirse</a></div>
-    <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-warning back-orange mouse-over" onclick="changeCompartir('compartir')" role="button">Compartir</a></div>
-  </div>
+<body>
+  <header>
+    <?php require_once('layout/header.php'); ?>
+  </header>
 
-  <div class="map-responsive margen_top_title">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24293.014895944812!2d-3.7907224354894837!3d40.439260629191914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4187ba902ea801%3A0x2efcb6589fe8a8a1!2sMoncloa+-+Aravaca%2C+Madrid!5e0!3m2!1ses!2ses!4v1492720869057"
-      width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-  </div>
 
-</div>
-
-<div id="compartir" class="container backgroundFormulario">
-  <div class="formulario formulario-container animateFormulario">
-    <div class="header-formulario">
-      <div class="centrar">
-        <a href="index.html"><img class = "logo-formulario" src="img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a>
+  <div class="container  profile-container">
+    <div class="row profile">
+      <div class="hidden-xs hidden-sm col-md-3">
+        <?php include('layout/menu.php'); ?>
       </div>
-      <span onclick="changeCompartir('compartir')" class="closeFormulario" title="Close">&times;</span>
-    </div>
+      <div class = "col-xs-12 col-sm-12 col-md-9">
+        <div class="profile-content">
 
-    <div class="body-formulario">
-      <br>
-      <h3 class="centrar">Compartir</h3>
-      <br>
-      <form>
+          <?php if (isset($error)) {
+            echo "<div class='alert alert-danger'>";
+            echo "<strong>ERROR!</strong> $error";
+            echo "</div>";
+          }
+          ?>
+          <?php if (isset($_GET["success"])) {
+            echo "<div class='alert alert-success alert-dismissable' data-dismiss='alert'>";
+            echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
+            if ($_GET["success"] == 0) {
+              echo "¡<strong>Bienvenido</strong>  a pachanga!";
+            }
+            echo "</div>";
+          }
+          ?>
 
-        <div class="input-group">
-          <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-          <input type="text" class="form-control " id="username" placeholder="Username" onchange="checkUser()">
-          <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
-          <span id="usernameError" class="glyphicon glyphicon-remove"></span>
+          <?php //print_r($misPartidosNoJugados)
+
+            ?>
+
+
+            <!-- ************************************************************************************** -->
+
+
+                        <hr>
+                        <h3> Partidos no jugados </h3>
+                        <hr>
+
+
+                      <div class='panel panel-default back-orange2'>
+                        <div class='panel-heading back-orange2'>
+                          <div class='panel-title'>
+                            <div class='hidden-xs hidden-sm row white'>
+                              <div class='col-md-3'>Nombre</div>
+                              <div class='col-md-3'>Distrito</div>
+                              <div class='col-md-2'>Hora</div>
+                              <div class='col-md-2'>Fecha</div>
+                              <div class='col-md-1'><span class='glyphicon glyphicon-star'></span></div>
+                              <div class='col-md-1'><span class='glyphicon glyphicon-user'></span></div>
+                            </div>
+                            <div class='hidden-md hidden-lg hidden-xl row white'>
+                              <div class="centrar">
+                                Partidos
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class='panel panel-default'>
+
+                      <?php
+                        $aux = 1;
+                        foreach ($misPartidosNoJugados as $partido) {
+
+                            echo "<div class='panel-heading'>";
+                              echo "<div class='panel-title'>";
+                                echo "<a data-toggle='collapse' data-parent='#accordion' href='#collapse$aux'>";
+                                  echo "<div class='row'>";
+
+                                    echo "<div class='col-md-3'>";
+                                    echo "<p class = 'apartado'>";
+                                    echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-tag'>";
+                                    echo " ";
+                                    echo "</span>";
+                                    echo $partido->getNombre();
+                                    echo "</p>";
+                                    echo "</div>";
+
+                                    echo "<div class='col-md-3'>";
+                                    echo "<p class = 'apartado'>";
+                                    echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-map-marker'>";
+                                    echo " ";
+                                    echo "</span>";
+                                    echo $partido->getDistrito();
+                                    echo "</p>";
+                                    echo "</div>";
+
+                                    echo "<div class='col-md-2'>";
+                                    echo "<p class = 'apartado'>";
+                                    echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-time'>";
+                                    echo " ";
+                                    echo "</span>";
+                                    $fecha=date("H:i",strtotime($partido->getFecha()));
+                                    echo "$fecha";
+                                    echo "</p>";
+                                    echo "</div>";
+
+                                    echo "<div class='col-md-2'>";
+                                    echo "<p class = 'apartado'>";
+                                    echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-calendar'>";
+                                    echo " ";
+                                    echo "</span>";
+                                    $fecha=date("d-m-Y",strtotime($partido->getFecha()));
+                                    echo "$fecha";
+                                    echo "</p>";
+                                    echo "</div>";
+
+                                    echo "<div class='col-md-1'>";
+                                    echo "<p class = 'apartado'>";
+                                    echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-fire'>";
+                                    echo " ";
+                                    echo "</span>";
+                                    echo $partido->getSkill();
+                                    echo "</p>";
+                                    echo "</div>";
+
+                                    echo "<div class='col-md-1'>";
+                                    echo "<p class = 'apartado'>";
+                                    echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-user'>";
+                                    echo " ";
+                                    echo "</span>";
+                                    echo $partido->getParticipantes();
+                                    echo "/10";
+                                    echo "</p>";
+                                    echo "</div>";
+
+                                  echo "</div>";
+                                echo "</a>";
+                              echo "</div>";
+                            echo "</div>";
+
+
+                            echo "<div id='collapse$aux' class='panel-collapse collapse'>";
+                              echo "<div class='panel-body back-white back-white'>";
+                                echo "<div class='row'>";
+                                  echo "<div class='col-xs-6 col-md-6'><a href='' class='btn btn-warning button-ver mouse-over' role='button'>Ver</a></div>";
+                                  echo "<div class='col-xs-6 col-md-6'><a href='' class='btn btn-warning back-orange mouse-over' onclick='changeCompartir('compartir')' role='button'>Compartir</a></div>";
+                                echo "</div>";
+                              echo "</div>";
+                            echo "</div>";
+                            $aux++;
+
+                        }
+                       ?>
+
+                       </div>
+
+            <!-- ********************************************************************************* -->
+            <!-- ************************************************************************************** -->
+
+
+                        <hr>
+                        <h3> Partidos jugados </h3>
+                        <hr>
+
+
+                      <div class='panel panel-default back-orange2'>
+                        <div class='panel-heading back-orange2'>
+                          <div class='panel-title'>
+                            <div class='hidden-xs hidden-sm row white'>
+                              <div class='col-md-3'>Nombre</div>
+                              <div class='col-md-3'>Distrito</div>
+                              <div class='col-md-2'>Hora</div>
+                              <div class='col-md-2'>Fecha</div>
+                              <div class='col-md-1'><span class='glyphicon glyphicon-star'></span></div>
+                              <div class='col-md-1'><span class='glyphicon glyphicon-user'></span></div>
+                            </div>
+                            <div class='hidden-md hidden-lg hidden-xl row white'>
+                              <div class="centrar">
+                                Partidos
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class='panel panel-default'>
+
+                      <?php
+
+                        foreach ($misPartidosJugados as $partido) {
+
+                            echo "<div class='panel-heading'>";
+                              echo "<div class='panel-title'>";
+                                echo "<a data-toggle='collapse' data-parent='#accordion' href='#collapse$aux'>";
+                                  echo "<div class='row'>";
+
+                                    echo "<div class='col-md-3'>";
+                                    echo "<p class = 'apartado'>";
+                                    echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-tag'>";
+                                    echo " ";
+                                    echo "</span>";
+                                    echo $partido->getNombre();
+                                    echo "</p>";
+                                    echo "</div>";
+
+                                    echo "<div class='col-md-3'>";
+                                    echo "<p class = 'apartado'>";
+                                    echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-map-marker'>";
+                                    echo " ";
+                                    echo "</span>";
+                                    echo $partido->getDistrito();
+                                    echo "</p>";
+                                    echo "</div>";
+
+                                    echo "<div class='col-md-2'>";
+                                    echo "<p class = 'apartado'>";
+                                    echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-time'>";
+                                    echo " ";
+                                    echo "</span>";
+                                    $fecha=date("H:i",strtotime($partido->getFecha()));
+                                    echo "$fecha";
+                                    echo "</p>";
+                                    echo "</div>";
+
+                                    echo "<div class='col-md-2'>";
+                                    echo "<p class = 'apartado'>";
+                                    echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-calendar'>";
+                                    echo " ";
+                                    echo "</span>";
+                                    $fecha=date("d-m-Y",strtotime($partido->getFecha()));
+                                    echo "$fecha";
+                                    echo "</p>";
+                                    echo "</div>";
+
+                                    echo "<div class='col-md-1'>";
+                                    echo "<p class = 'apartado'>";
+                                    echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-fire'>";
+                                    echo " ";
+                                    echo "</span>";
+                                    echo $partido->getSkill();
+                                    echo "</p>";
+                                    echo "</div>";
+
+                                    echo "<div class='col-md-1'>";
+                                    echo "<p class = 'apartado'>";
+                                    echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-user'>";
+                                    echo " ";
+                                    echo "</span>";
+                                    echo $partido->getParticipantes();
+                                    echo "/10";
+                                    echo "</p>";
+                                    echo "</div>";
+
+                                  echo "</div>";
+                                echo "</a>";
+                              echo "</div>";
+                            echo "</div>";
+
+
+                            echo "<div id='collapse$aux' class='panel-collapse collapse'>";
+                              echo "<div class='panel-body back-white back-white'>";
+                                echo "<div class='row'>";
+                                  echo "<div class='col-xs-6 col-md-6'><a href='' class='btn btn-warning button-ver mouse-over' role='button'>Ver</a></div>";
+                                  echo "<div class='col-xs-6 col-md-6'><a href='' class='btn btn-warning back-orange mouse-over' onclick='changeCompartir('compartir')' role='button'>Compartir</a></div>";
+                                echo "</div>";
+                              echo "</div>";
+                            echo "</div>";
+                            $aux++;
+
+                        }
+                       ?>
+
+                       </div>
+
+            <!-- ********************************************************************************* -->
+
+
         </div>
-
-        <br>
-        <div class="centrar">
-          <button onclick="changeCompartir('compartir')" type="button" class="btn-formulario cancelbtn">Cancel</button>
-          <button type="submit" class="btn-formulario sendbtn"> Entrar </button>
-        </div>
-      </form>
-      <!-- formulario-container -->
+      </div>
     </div>
-    <!-- login formulario-container -->
   </div>
-  <!-- container -->
-</div>
-<!-- </div> -->
+
+
+
+  <?php require_once('layout/footer.php'); ?>
+  <?php require_once('layout/script.php'); ?>
+  <script src='assets/js/datepicker.js'></script>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+</body>
+
+</html>

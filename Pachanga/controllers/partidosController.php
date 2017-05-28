@@ -124,13 +124,14 @@ class PartidosController extends BaseController {
             $poli = $this->polideportivo->getBy("id", $ahora);
             $equipo1 = $this->participante->getEquipo1($obj);
             $equipo2 = $this->participante->getEquipo2($obj);
-
+            $miequipo = $this->participante->getInscrito($_SESSION["username"], $partidoobj[0]->getId());
             $this->view("datos", $this->entity, array(
               "data" => $data,
               "partidoobj" => $partidoobj,
               "poli" => $poli,
               "equipo1" => $equipo1,
-              "equipo2" => $equipo2
+              "equipo2" => $equipo2,
+              "miequipo" => $miequipo
             ));
           }
           else{

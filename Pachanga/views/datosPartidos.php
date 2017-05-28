@@ -5,7 +5,9 @@
   <?php require_once('layout/library.php'); ?>
   <title> PACHANGA </title>
   <link rel="stylesheet" href="assets/css/inicio.css">
+  <link rel="stylesheet" href="assets/css/miPerfil.css">
   <link rel="stylesheet" href="assets/css/datosPartido.css">
+
 </head>
 
 <body>
@@ -19,27 +21,100 @@
       <div class="hidden-xs hidden-sm col-md-3">
         <?php include('layout/menu.php'); ?>
       </div>
-      <div class = "col-xs-12 col-sm-12 col-md-9">
+      <div class="col-xs-12 col-sm-12 col-md-9">
         <div class="profile-content">
 
           <div class="container-fluid">
-            <div class="centrar">
-              <p class="size_title">Detalles partido: <?php echo $partidoobj[0]->getNombre(); ?></p>
+
+            <?php //echo $miequipo; ?>
+            <div class="container-fluid miperfil">
+
             </div>
-            <div class=" row margen_top_title">
-              <div class="col-md-4">
-                <div class="col-xs-6 col-md-6 cuadro_naranja">Zona</div>
-                <div class="col-xs-6 col-md-6 cuadro_negro"><?php echo $poli[0]->getDistrito(); ?></div>
-              </div>
-              <div class="col-md-4">
-                <div class="col-xs-6 col-md-6 cuadro_naranja">Fecha</div>
-                <div class="col-xs-6 col-md-6 cuadro_negro"><?php echo $partidoobj[0]->getFecha(); ?></div>
-              </div>
-              <div class="col-md-4">
-                <div class="col-xs-6 col-md-6 cuadro_naranja">Creador</div>
-                <div class="col-xs-6 col-md-6 cuadro_negro"><?php echo $partidoobj[0]->getCreador(); ?></div>
+
+            <div class="container-fluid miperfil-informacion">
+              <!-- <div class="jumbotron"> -->
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="container-fluid details-titulo">
+                    <h2>Detalles del partido: <?php echo $partidoobj[0]->getNombre(); ?></h2>
+                  </div>
+                  <!-- <hr> -->
+                  <ul class="container details">
+
+                    <li>
+                      <p>
+                        <span class="glyphicon glyphicon-user">
+                                Creador
+                              </span>
+                        <?php echo $partidoobj[0]->getCreador(); ?>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="glyphicon glyphicon-map-marker">
+                                Distrito
+
+                              </span>
+                        <?php echo $poli[0]->getDistrito(); ?>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="glyphicon glyphicon-map-marker">
+                                Polideportivo
+
+                              </span>
+                        <?php echo $poli[0]->getId(); ?>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="glyphicon glyphicon-star">
+                                Skill
+
+                              </span>
+                        <?php echo $partidoobj[0]->getSkill(); ?>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="glyphicon glyphicon-calendar">
+                                Fecha
+
+                              </span>
+                        <?php
+                              $fecha=date("d-m-Y",strtotime($partidoobj[0]->getFecha()));
+                              echo "$fecha";
+                              // echo ; ?>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="glyphicon glyphicon-time">
+                                Hora
+
+                              </span>
+                        <?php
+                              $fecha=date("H:i",strtotime($partidoobj[0]->getFecha()));
+                              echo "$fecha";
+                              // echo ; ?>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="glyphicon glyphicon-user">
+                                Participantes:
+
+                              </span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
               </div>
             </div>
+
+
             <table class="table table-condensed margen_top_title">
               <thead>
                 <tr>
@@ -75,22 +150,21 @@
 
             <div class="container-fluid margen_top_title">
               <form class="" action="<?php echo $helper->url('participantes', 'insertParticipante'); ?>" method="post">
-                <input name="partido" value="<?php echo $partidoobj[0]->getId(); ?>"  type="text" required hidden>
-                <input name="usuario" value="<?php echo $_SESSION['username']; ?>"  type="text" required hidden>
+                <input name="partido" value="<?php echo $partidoobj[0]->getId(); ?>" type="text" required hidden>
+                <input name="usuario" value="<?php echo $_SESSION['username']; ?>" type="text" required hidden>
                 <input name="equipo" value="1" type="text" required hidden>
-                <div class="col-xs-6 col-md-6"><button type="submit" class="btn btn-warning back-orange flota-derecha"> Jugar equipo 1 </button></div>
+                <div class="col-xs-6 col-md-6"><button type="submit" class="btn btn-warning back-orange flota-derecha" <?php  echo  ($miequipo != 0 || sizeof($equipo1) == 7) ? "disabled" : ""; ?>> Jugar equipo 1 </button></div>
               </form>
               <form class="" action="<?php echo $helper->url('participantes', 'insertParticipante'); ?>" method="post">
-                <input name="partido" value="<?php echo $partidoobj[0]->getId(); ?>"  type="text" required hidden>
-                <input name="usuario" value="<?php echo $_SESSION['username']; ?>"  type="text" required hidden>
+                <input name="partido" value="<?php echo $partidoobj[0]->getId(); ?>" type="text" required hidden>
+                <input name="usuario" value="<?php echo $_SESSION['username']; ?>" type="text" required hidden>
                 <input name="equipo" value="2" type="text" required hidden>
-                <div class="col-xs-6 col-md-6"><button type="submit" class="btn btn-warning back-orange"> Jugar equipo 2 </button></div>
+                <div class="col-xs-6 col-md-6"><button type="submit" class="btn btn-warning back-orange" <?php  echo  ($miequipo != 0 || sizeof($equipo2) == 7) ? "disabled" : ""; ?>> Jugar equipo 2 </button></div>
               </form>
               <!-- <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-warning back-orange mouse-over" onclick="changeCompartir('compartir')" role="button">Compartir</a></div> -->
             </div>
             <div class="map-responsive margen_top_title">
-              <iframe src="<?php echo $poli[0]->getUrl(); ?>"
-                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <iframe src="<?php echo $poli[0]->getUrl(); ?>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
           </div>
 

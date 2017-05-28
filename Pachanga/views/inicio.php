@@ -93,7 +93,7 @@
             <h3> Lista partidos </h3>
             <hr>
 
-            
+
           <div class='panel panel-default back-orange2'>
             <div class='panel-heading back-orange2'>
               <div class='panel-title'>
@@ -178,7 +178,7 @@
                         echo " ";
                         echo "</span>";
                         echo $partido->getParticipantes();
-                        echo "/10";
+                        echo "/14";
                         echo "</p>";
                         echo "</div>";
 

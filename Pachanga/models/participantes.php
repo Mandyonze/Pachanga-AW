@@ -37,7 +37,9 @@ class Participantes extends EntityBase
     $this->setEquipo($equipo);
 
     $this->create();
+
   }
+
 
   public function getEquipo1($id){
     $query=$this->db()->query("SELECT * FROM $this->table WHERE partido = '$id' and equipo = '1'"); //ORDER BY id DESC
@@ -49,6 +51,19 @@ class Participantes extends EntityBase
     $query=$this->db()->query("SELECT * FROM $this->table WHERE partido = '$id' and equipo = '2'"); //ORDER BY id DESC
     $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
     return $resultSet;
+  }
+
+  public function getInscrito($username, $equipo)
+  {
+    $query=$this->db()->query("SELECT * FROM $this->table WHERE partido = $equipo and usuario = '$username'"); //ORDER BY id DESC
+    $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
+
+    if (!empty($resultSet)) {
+      return $resultSet[0]->getEquipo();
+    } else {
+      return 0;
+    }
+    // return $resultSet;
   }
 
   //GETTERS
