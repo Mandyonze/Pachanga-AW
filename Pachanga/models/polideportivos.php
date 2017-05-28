@@ -8,6 +8,7 @@
 
     private $id;
     private $distrito;
+    private $url;
 
     /**
     * Constructor
@@ -37,6 +38,14 @@
 
     public function setId($id) {
       $this->id = $id;
+    }
+
+    public function getUrl() {
+      return $this->url;
+    }
+
+    public function setUrl($id) {
+      $this->url = $url;
     }
 
     public function getDistrito() {

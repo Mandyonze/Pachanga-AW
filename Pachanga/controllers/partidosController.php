@@ -10,6 +10,7 @@ class PartidosController extends BaseController {
     private $usuario;
     private $partido;
     private $polideportivo;
+    private $participante;
 
     function __construct() {
         parent::__construct();
@@ -18,12 +19,13 @@ class PartidosController extends BaseController {
         require_once('models/usuarios.php');
         require_once('models/partidos.php');
         require_once('models/polideportivos.php');
+        require_once('models/participantes.php');
 
         $this->distrito = new Distritos();
         $this->usuario = new Usuarios();
         $this->partido = new Partidos();
         $this->polideportivo = new Polideportivos();
-
+        $this->participante = new Participantes();
     }
 
     public function inicio(){
@@ -107,5 +109,36 @@ class PartidosController extends BaseController {
             "data" => $data,
             "info" => $ckPartidos
           ));
+        }
+
+        public function datos(){
+          session_start();
+          $data = $this->usuario->getBy("id", $_SESSION["username"]);
+
+          if(isset($_GET['id'])){
+            $obj = $_GET['id'];
+            $partidoobj = $this->partido->getById($obj);
+            $ahora= $partidoobj[0]->getPolideportivo();
+            $poli = $this->polideportivo->getBy("id", $ahora);
+            $equipo1 = $this->participante->getEquipo1($obj);
+            $equipo2 = $this->participante->getEquipo2($obj);
+
+            $this->view("datos", $this->entity, array(
+              "data" => $data,
+              "partidoobj" => $partidoobj,
+              "poli" => $poli,
+              "equipo1" => $equipo1,
+              "equipo2" => $equipo2
+            ));
+          }
+          else{
+            $partidos = $this->partido->partidosActivos();
+            $distritos = $this->distrito->getAll();
+            $this->view("inicio", "", array(
+              "distritos" => $distritos,
+              "data" => $data,
+              "partidos" => $partidos
+            ));
+          }
         }
 }

@@ -179,9 +179,9 @@
 
                 echo "<div id='collapse$aux' class='panel-collapse collapse'>";
                   echo "<div class='panel-body back-white back-white'>";
-                    echo "<div class='row'>";
-                      echo "<div class='col-xs-6 col-md-6'><a href='' class='btn btn-warning button-ver mouse-over' role='button'>Ver</a></div>";
-                      echo "<div class='col-xs-6 col-md-6'><a href='' class='btn btn-warning back-orange mouse-over' onclick='changeCompartir('compartir')' role='button'>Compartir</a></div>";
+                    echo "<div class='row'>"; ?>
+                      <div class='col-xs-6 col-md-6'><a href='index.php?controller=partidos&action=datos&id=<?php echo $partido->getId(); ?>' class='btn btn-warning button-ver mouse-over' role='button'>Ver</a></div>
+                      <?php echo "<div class='col-xs-6 col-md-6'><a href='' class='btn btn-warning back-orange mouse-over' onclick='changeCompartir('compartir')' role='button'>Compartir</a></div>";
                     echo "</div>";
                   echo "</div>";
                 echo "</div>";

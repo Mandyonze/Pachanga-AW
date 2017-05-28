@@ -11,7 +11,6 @@ class Partidos extends EntityBase
   private $goles2;
   private $participantes;
   private $skill;
-  private $distrito;
 
   public function __construct() {
     $this->table = "partidos";
@@ -21,14 +20,17 @@ class Partidos extends EntityBase
 
 public function create() {
 
-    $insert = $this->db()->prepare("INSERT INTO partidos (nombre, polideportivo, fecha, creador, skill) VALUES (?, ?, ?, ?,?)");
+    $insert = $this->db()->prepare("INSERT INTO partidos (id, nombre, polideportivo, fecha, creador, goles1, goles2, participantes, skill) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
-    $insert->bindParam(1, $this->nombre);
-    $insert->bindParam(2, $this->polideportivo);
-    $insert->bindParam(3, $this->fecha);
-    $insert->bindParam(4, $this->creador);
-    $insert->bindParam(5, $this->skill);
-
+    $insert->bindParam(1, $this->id);
+    $insert->bindParam(2, $this->nombre);
+    $insert->bindParam(3, $this->polideportivo);
+    $insert->bindParam(4, $this->fecha);
+    $insert->bindParam(5, $this->creador);
+    $insert->bindParam(6, $this->goles1);
+    $insert->bindParam(7, $this->goles2);
+    $insert->bindParam(8, $this->participantes);
+    $insert->bindParam(9, $this->skill);
 
     //Ejecutar la sentencia preparada
     $insert->execute();
@@ -42,7 +44,7 @@ public function partidosActivos(){
     // echo "$this->table";
     $fecha =  $now->format('Y-m-d H:i:s');
     // echo "$fecha";
-    $query=$this->db()->query("SELECT *  FROM $this->table p inner join polideportivos d WHERE  p.polideportivo = d.id and fecha > '$fecha' ORDER BY fecha"); //ORDER BY id DESC
+    $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito   FROM $this->table p inner join polideportivos d WHERE  p.polideportivo = d.id and fecha > '$fecha' ORDER BY fecha"); //ORDER BY id DESC
     $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
     return $resultSet;
 }

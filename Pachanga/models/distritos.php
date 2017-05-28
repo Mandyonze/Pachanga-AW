@@ -13,8 +13,8 @@ class Distritos extends EntityBase
   function __construct()
   {
     $this->table = 'distritos';
-    $class = "Distritos";
-    parent::__construct($this->table, $class);
+    $this->class = "Distritos";
+    parent::__construct($this->table, $this->class);
   }
 
 
