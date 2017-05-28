@@ -113,7 +113,6 @@ class PartidosController extends BaseController {
           ));
         }
 
-<<<<<<< HEAD
         public function datos(){
           session_start();
           $data = $this->usuario->getBy("id", $_SESSION["username"]);
@@ -143,7 +142,7 @@ class PartidosController extends BaseController {
               "partidos" => $partidos
             ));
           }
-=======
+        }
 
         public function mis()
         {
@@ -157,6 +156,5 @@ class PartidosController extends BaseController {
               "misPartidosJugados" => $misPartidosJugados,
               "misPartidosNoJugados" => $misPartidosNoJugados
           ));
->>>>>>> 2e99f31acfa7fe1db55dfd0b03dd8b3e85770635
         }
 }

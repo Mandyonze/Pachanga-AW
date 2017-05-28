@@ -74,8 +74,9 @@
             </table>
 
             <div class="container-fluid margen_top_title">
-              <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-warning button-ver mouse-over" role="button">Inscribirse</a></div>
-              <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-warning back-orange mouse-over" onclick="changeCompartir('compartir')" role="button">Compartir</a></div>
+              <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-warning back-orange mouse-over flota-derecha" role="button">Jugar equipo 1</a></div>
+              <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-warning back-orange mouse-over" role="button">Jugar equipo 2</a></div>
+              <!-- <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-warning back-orange mouse-over" onclick="changeCompartir('compartir')" role="button">Compartir</a></div> -->
             </div>
             <div class="map-responsive margen_top_title">
               <iframe src="<?php echo $poli[0]->getUrl(); ?>"
