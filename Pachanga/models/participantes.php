@@ -30,6 +30,15 @@ class Participantes extends EntityBase
       $insert->execute();
   }
 
+  public function insertParticipante($partido, $usuario, $equipo){
+
+    $this->setPartido($partido);
+    $this->setUsuario($usuario);
+    $this->setEquipo($equipo);
+
+    $this->create();
+  }
+
   public function getEquipo1($id){
     $query=$this->db()->query("SELECT * FROM $this->table WHERE partido = '$id' and equipo = '1'"); //ORDER BY id DESC
     $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
@@ -47,7 +56,7 @@ class Participantes extends EntityBase
     return $this->partido;
   }
   //SETTERS
-  public function setPartpartidoo($partido) {
+  public function setPartido($partido) {
     $this->partido = $partido;
   }
 
