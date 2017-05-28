@@ -4,7 +4,20 @@
 <head>
   <?php require_once('layout/library.php'); ?>
   <title>Preguntas Frecuentes</title>
-  <link rel="stylesheet" href="assets/css/index.css">
+
+
+    <?php
+      session_start();
+      // Mostramos distinto header si el usuario ha iniciado sesión
+      if(isset($_SESSION['loggedin'])){
+          echo "<link rel='stylesheet' href='assets/css/inicio.css'>";
+      }else{
+          echo "<link rel='stylesheet' href='assets/css/index.css'>";
+      }
+    ?>
+
+    <link rel='stylesheet' href='assets/css/aux.css'>
+¿
 </head>
 
 <body>
@@ -39,23 +52,23 @@
         <div class="container legal">
             <ul>
               <li>
-                <h3>Como creo una cuenta?</h3>
+                <h3>¿Cómo creo una cuenta?</h3>
                 <h4>Pulsando el botón "Registrarse" de la barra superior podrás crear una nueva cuenta.</h4>
               </li>
               <br>
               <li>
-                <h3>Cuando creo un partido paso a formar parte de uno de los equipos?</h3>
+                <h3>¿Cuándo creo un partido paso a formar parte de uno de los equipos?</h3>
                 <h4>Sí, cuando crees un equipo pasarás a formar parte del equipo 1.</h4>
               </li>
               <br>
 
               <li>
-                <h3>Cómo funciona el sistema de puntuación cuando juegas un partido?</h3>
+                <h3>¿Cómo funciona el sistema de puntuación cuando juegas un partido?</h3>
                 <h4>Cuando ganas recibes 10 monedangas y cuando pierdes, pierdes 10 monedangas.</h4>
               </li>
               <br>
               <li>
-                <h3>Cómo realizo las donaciones mencionadas en la página de inicio?</h3>
+                <h3>¿Cómo realizo las donaciones mencionadas en la página de inicio?</h3>
                 <h4>Contacta con nosotros mediante el formulario de contacto y te daremos las instrucciones necesarias</h4>
               </li>
               <br>

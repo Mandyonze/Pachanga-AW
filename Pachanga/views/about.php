@@ -4,7 +4,20 @@
 <head>
   <?php require_once('layout/library.php'); ?>
   <title>Sobre nosotros</title>
-  <link rel="stylesheet" href="assets/css/index.css">
+
+
+    <?php
+      session_start();
+      // Mostramos distinto header si el usuario ha iniciado sesión
+      if(isset($_SESSION['loggedin'])){
+          echo "<link rel='stylesheet' href='assets/css/inicio.css'>";
+      }else{
+          echo "<link rel='stylesheet' href='assets/css/index.css'>";
+      }
+    ?>
+
+    <link rel='stylesheet' href='assets/css/aux.css'>
+
 </head>
 
 <body>
