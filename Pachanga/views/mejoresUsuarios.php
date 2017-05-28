@@ -71,7 +71,15 @@
                                   <div class="col-xs-4 col-md-4 ">
                                     <div class="flotante_izq" >
 
-                                        <span class="glyphicon glyphicon-star"></span><?php echo $mejor->getSkill(); ?>
+                                        <?php $skill = $mejor->getSkill();
+                                        echo "<span class='glyphicon glyphicon-star'></span>";
+                                        if ($skill > 100 && $skill < 100) {
+                                          echo "<span class='glyphicon glyphicon-star'></span>";
+                                        } elseif ($skill >=500) {
+                                          echo "<span class='glyphicon glyphicon-star'></span>";
+                                          echo "<span class='glyphicon glyphicon-star'></span>";
+                                        }
+                                        echo $skill; ?>
                                  </div>
                               </div>
                               <div class="hidden-xs col-md-1"></div>

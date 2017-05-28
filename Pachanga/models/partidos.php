@@ -21,19 +21,37 @@ class Partidos extends EntityBase
 
 public function create() {
 
-    $insert = $this->db()->prepare("INSERT INTO partidos (nombre, polideportivo, fecha, creador, skill) VALUES (?, ?, ?, ?,?)");
+    $insert = $this->db()->prepare("INSERT INTO partidos (nombre, polideportivo, fecha, creador, skill, participantes) VALUES (?, ?, ?, ?, ?, ?)");
 
     $insert->bindParam(1, $this->nombre);
     $insert->bindParam(2, $this->polideportivo);
     $insert->bindParam(3, $this->fecha);
     $insert->bindParam(4, $this->creador);
     $insert->bindParam(5, $this->skill);
+    $insert->bindParam(6, $this->participantes);
 
 
     //Ejecutar la sentencia preparada
     $insert->execute();
+
+    $id = $this->getBy("nombre", $this->nombre);
+
+    $this->addParticipantes($id[0]->getId(), $this->creador, 1);
 }
 
+public function addParticipantes($partido, $usuario, $equipo) {
+
+      $add = $this->db()->prepare("INSERT INTO participantes (partido, usuario, equipo) VALUES (?, ?, ?)");
+
+      $add->bindParam(1, $partido);
+      $add->bindParam(2, $usuario);
+      $add->bindParam(3, $equipo);
+
+      //Ejecutar la sentencia preparada
+      $add->execute();
+
+
+}
 
 public function partidosActivos(){
 
@@ -42,7 +60,9 @@ public function partidosActivos(){
     // echo "$this->table";
     $fecha =  $now->format('Y-m-d H:i:s');
     // echo "$fecha";
-    $query=$this->db()->query("SELECT *  FROM $this->table p inner join polideportivos d WHERE  p.polideportivo = d.id and fecha > '$fecha' ORDER BY fecha"); //ORDER BY id DESC
+
+
+    $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito   FROM $this->table p inner join polideportivos d WHERE  p.polideportivo = d.id and fecha > '$fecha' ORDER BY fecha"); //ORDER BY id DESC
     $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
     return $resultSet;
 }
@@ -102,12 +122,27 @@ public function ckPartidos($nombre,$fecha,$hora,$minutos,$skill,$polideportivo, 
   $this->setFecha($datetime);
   $this->setCreador($creador);
   $this->setSkill($skill);
-
+  $this->setParticipantes(1);
 
   $this->create();
 
   return 0;
 }
+
+public function misPartidosJugados($usuario){
+
+    $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito  FROM partidos p inner join participantes m inner join polideportivos d on p.id = m.partido and p.polideportivo = d.id WHERE m.usuario = '$usuario' and p.goles1 is not null ORDER BY p.fecha");
+    $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
+    return $resultSet;
+}
+
+public function misPartidosNoJugados($usuario){
+
+    $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito  FROM partidos  inner join participantes  inner join polideportivos on p.id = m.partido and p.polideportivo = d.id WHERE m.usuario = '$usuario' and p.goles1 is null ORDER BY p.fecha");
+    $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
+    return $resultSet;
+}
+
 
 /*Métodos get() y set()*/
 

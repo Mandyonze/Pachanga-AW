@@ -44,8 +44,8 @@
       <i class="glyphicon glyphicon-plus"></i>
       Crear Partido </a>
       </li>
-      <li>
-        <a href="listaPartidos.html">
+      <li <?php  echo  ($_GET["action"] == "mis") ? "class='active'" : ""; ?>>
+        <a href="<?php  echo $helper->url('partidos' , 'mis')?>">
       <i class="glyphicon glyphicon-ok-circle"></i>
       Mis partidos </a>
       </li>

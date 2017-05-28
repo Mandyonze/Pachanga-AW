@@ -1,0 +1,21 @@
+
+
+PACHANGA TO DO LIST
+
+- Pestaña de mis partidos.
+  -Partidos inscrito que me quedan por jugar.
+  -Partidos inscrito que ya he jugado.
+- Detalles de partidos (Con mapa del polideportivo).
+  -
+- Cuando lo creas, vayas a los detalles del partido.
+
+- Que los jugadores se una a tu partido.
+
+
+
+
+PACHANGA DO LIST
+- 1, 2 ó 3 estrellas en mejores jugadores según la skill.
+- Elegir polideportivo mostrar el mapa del distrito.
+- En mi perfil hacer que aparezca la skill.
+- Autoregistro en los partidos cuando lo creas.

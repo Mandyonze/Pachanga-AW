@@ -68,6 +68,10 @@
                 </select>
               </div>
               <br>
+
+              <iframe src="<?php echo $distrito[0]->getUrl(); ?>" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
               <div class="centrar">
                 <button type="reset" class="btn btn-danger"> Borrar </button>
                 <button type="submit" class="btn btn-warning"> Crear </button></div>

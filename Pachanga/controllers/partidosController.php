@@ -80,10 +80,12 @@ class PartidosController extends BaseController {
           $data = $this->usuario->getBy("id", $_SESSION["username"]);
           $distrito = $_POST["distrito"];
           $polideportivos = $this->polideportivo->getByDistrito($distrito);
+          $distrito = $this->distrito->getBy("id", $distrito);
           //Llamada a la vista para elegir el polideportivo según el distrito
           $this->view("elegir", "Polideportivo", array(
             "polideportivos" => $polideportivos,
-            "data" => $data
+            "data" => $data,
+            "distrito" => $distrito
           ));
         }
 
@@ -106,6 +108,21 @@ class PartidosController extends BaseController {
             "distritos" => $distritos,
             "data" => $data,
             "info" => $ckPartidos
+          ));
+        }
+
+
+        public function mis()
+        {
+          session_start();
+
+          $data = $this->usuario->getBy("id", $_SESSION["username"]);
+          $misPartidosJugados = $this->partido->misPartidosJugados($_SESSION["username"]);
+          $misPartidosNoJugados =  $this->partido->misPartidosJugados($_SESSION["username"]);
+          $this->view("mis", $this->entity, array(
+              "data" => $data,
+              "misPartidosJugados" => $misPartidosJugados,
+              "misPartidosNoJugados" => $misPartidosNoJugados
           ));
         }
 }
