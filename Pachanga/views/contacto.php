@@ -3,15 +3,23 @@
 
 <head>
   <?php require_once('layout/library.php'); ?>
-  <title> PACHANGA </title>
+  <title> Contacto</title>
   <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
 <body>
 
-    <header>
-      <?php require_once('layout/headerIndex.php'); ?>
-    </header>
+  <header>
+    <?php
+      session_start();
+      // Mostramos distinto header si el usuario ha iniciado sesión
+      if(isset($_SESSION['loggedin'])){
+          require_once('layout/header.php');
+      }else{
+          require_once('layout/headerIndex.php');
+      }
+    ?>
+  </header>
 
 
     <!-- Used to define the background part -->
@@ -29,83 +37,49 @@
 
       <!-- Main container -->
       <div id ="body" class="container">
-
-        <div class="container-fluid">
-          <div id="carousel-home" class="carousel slide " data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-home" data-slide-to="1"></li>
-              <li data-target="#carousel-home" data-slide-to="2"></li>
-            </ol>
-
-            <div class="carousel-inner">
-              <div class="item active">
-                <img class="" src="./assets/img/carousel/1.jpg" alt="...">
-                <div class="carousel-caption">
-                  <h3>Pachanga es una aplicación para amantes del fútbol, que permite jugar partidos con otras personas.</h3>
-                </div>
-              </div>
-              <div class="item">
-                <img class="" src="./assets/img/carousel/2.jpg" alt="...">
-                <div class="carousel-caption">
-                  <h3>Pachanga participa en proyectos para reducir la obesidad infantil mediante el deporte.</h3>
-                </div>
-              </div>
-              <div class="item">
-                <img class="" src="./assets/img/carousel/3.jpg" alt="...">
-                <div class="carousel-caption">
-                  <h3>Realiza una donación para la construcción de canchas de fútbol en los barrios más pobres de Myanmar, Tailandia, Vietnam y Camboya.</h3>
-                </div>
-              </div>
-
-              <!-- Controls -->
-              <a class="left carousel-control" href="#carousel-home" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-              </a>
-              <a class="right carousel-control" href="#carousel-home" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-              </a>
-            </div>
-          </div> <!-- Carousel -->
-        </div>
-
-        <a id ="info"></a>
-        <br>
+        <a id ="contacto"></a>
+        <br><br>
         <div class="centrar">
-          <h1>¿Qué es Pachanga?</h1>
+          <h1>Contacto</h1>
         </div>
-        <hr><br>
-
+        <br>
         <div class="container-fluid">
-          <div class="row ">
-            <div class="col-sm-6 col-md-3 col-lg-3 ">
-              <img src="assets/img/info/campo.png"  class="img-responsive imagen-info" alt="">
-              <br>
-              Es una manera divertida de organizar pachangas de fútbol y conocer gente nueva.
+          <div class="row">
+            <div class="col-lg-offset-3 col-lg-6">
+              <form class="form-contacto" action="MAILTO:borjalor@ucm.es" method="post" enctype="text/plain">
+                <fieldset>
+
+
+                <br />Nombre:<br />
+                <input type="text" name="name" placeholder="Nombre Completo" required><br>
+                <br />E-mail:<br />
+                <input type="text" name="mail" placeholder="Email de contacto" required><br>
+
+                <br />Tipo de consulta:<br />
+                <input type="radio" name="consulta" value="evaluacion" required> Evaluación <br />
+                <input type="radio" name="consulta" value="sugerencias" required> Sugerencias <br />
+                <input type="radio" name="consulta" value="criticas" required> Críticas <br />
+
+
+
+                <br />Consulta<br />
+                <input type="text" name="comment" placeholder="Escriba aquí su consulta." ><br /><br />
+
+                <input name="java" type="checkbox" value="on" required> Marque esta casilla para verificar que ha leído
+                nuestros términos y condiciones del servicio.  <br /><br />
+
+                <div class="centrar">
+                  <input type="reset" class="btn-formulario cancelbtn" value="Borrar">
+                  <input type="submit" class="btn-formulario sendbtn" value="Enviar">
+                </div>
+
+                </fieldset>
+              </form>
             </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-              <img src="assets/img/info/heart.png"  class="img-responsive imagen-info " alt="">
-              <br>
-              Te mantiene en forma practicando tu deporte favorito.
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-              <img src="assets/img/info/friends.png"  class="img-responsive imagen-info" alt="">
-              <br>
-              Es una buenísima forma de pasártelo bien con tus amigos.
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-              <img src="assets/img/info/ball.png"  class="img-responsive imagen-info" alt="">
-              <br>
-              Te permite mejorar como jugador y como persona, con un sistema de rating de usuarios.
-            </div>
-          <!-- row -->
           </div>
-        <!-- container-fluid 1 -->
+
         </div>
-
-
-
-
+        <br><br>
 
         <br>
         <!-- body -->

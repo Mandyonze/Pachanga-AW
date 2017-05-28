@@ -3,22 +3,29 @@
 
 <head>
   <?php require_once('layout/library.php'); ?>
-  <title> PACHANGA </title>
+  <title>Preguntas Frecuentes</title>
   <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
 <body>
 
-    <header>
-      <?php require_once('layout/headerIndex.php'); ?>
-    </header>
+  <header>
+    <?php
+      session_start();
+      // Mostramos distinto header si el usuario ha iniciado sesión
+      if(isset($_SESSION['loggedin'])){
+          require_once('layout/header.php');
+      }else{
+          require_once('layout/headerIndex.php');
+      }
+    ?>
+  </header>
 
 
     <!-- Used to define the background part -->
     <div id = "cabecera" >
 
     </div>
-
 
     <div id = "contenedor">
 
@@ -29,84 +36,31 @@
 
       <!-- Main container -->
       <div id ="body" class="container">
+        <div class="container legal">
+            <ul>
+              <li>
+                <h3>Como creo una cuenta?</h3>
+                <h4>Pulsando el botón "Registrarse" de la barra superior podrás crear una nueva cuenta.</h4>
+              </li>
+              <br>
+              <li>
+                <h3>Cuando creo un partido paso a formar parte de uno de los equipos?</h3>
+                <h4>Sí, cuando crees un equipo pasarás a formar parte del equipo 1.</h4>
+              </li>
+              <br>
 
-        <div class="container-fluid">
-          <div id="carousel-home" class="carousel slide " data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-home" data-slide-to="1"></li>
-              <li data-target="#carousel-home" data-slide-to="2"></li>
-            </ol>
-
-            <div class="carousel-inner">
-              <div class="item active">
-                <img class="" src="./assets/img/carousel/1.jpg" alt="...">
-                <div class="carousel-caption">
-                  <h3>Pachanga es una aplicación para amantes del fútbol, que permite jugar partidos con otras personas.</h3>
-                </div>
-              </div>
-              <div class="item">
-                <img class="" src="./assets/img/carousel/2.jpg" alt="...">
-                <div class="carousel-caption">
-                  <h3>Pachanga participa en proyectos para reducir la obesidad infantil mediante el deporte.</h3>
-                </div>
-              </div>
-              <div class="item">
-                <img class="" src="./assets/img/carousel/3.jpg" alt="...">
-                <div class="carousel-caption">
-                  <h3>Realiza una donación para la construcción de canchas de fútbol en los barrios más pobres de Myanmar, Tailandia, Vietnam y Camboya.</h3>
-                </div>
-              </div>
-
-              <!-- Controls -->
-              <a class="left carousel-control" href="#carousel-home" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-              </a>
-              <a class="right carousel-control" href="#carousel-home" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-              </a>
-            </div>
-          </div> <!-- Carousel -->
+              <li>
+                <h3>Cómo funciona el sistema de puntuación cuando juegas un partido?</h3>
+                <h4>Cuando ganas recibes 10 monedangas y cuando pierdes, pierdes 10 monedangas.</h4>
+              </li>
+              <br>
+              <li>
+                <h3>Cómo realizo las donaciones mencionadas en la página de inicio?</h3>
+                <h4>Contacta con nosotros mediante el formulario de contacto y te daremos las instrucciones necesarias</h4>
+              </li>
+              <br>
+            </ul>
         </div>
-
-        <a id ="info"></a>
-        <br>
-        <div class="centrar">
-          <h1>¿Qué es Pachanga?</h1>
-        </div>
-        <hr><br>
-
-        <div class="container-fluid">
-          <div class="row ">
-            <div class="col-sm-6 col-md-3 col-lg-3 ">
-              <img src="assets/img/info/campo.png"  class="img-responsive imagen-info" alt="">
-              <br>
-              Es una manera divertida de organizar pachangas de fútbol y conocer gente nueva.
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-              <img src="assets/img/info/heart.png"  class="img-responsive imagen-info " alt="">
-              <br>
-              Te mantiene en forma practicando tu deporte favorito.
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-              <img src="assets/img/info/friends.png"  class="img-responsive imagen-info" alt="">
-              <br>
-              Es una buenísima forma de pasártelo bien con tus amigos.
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-              <img src="assets/img/info/ball.png"  class="img-responsive imagen-info" alt="">
-              <br>
-              Te permite mejorar como jugador y como persona, con un sistema de rating de usuarios.
-            </div>
-          <!-- row -->
-          </div>
-        <!-- container-fluid 1 -->
-        </div>
-
-
-
-
-
         <br>
         <!-- body -->
       </div>

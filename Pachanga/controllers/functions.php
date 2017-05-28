@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: mcardenas
- * Date: 11/05/17
- * Time: 0:23
- */
+
 function loadController($controller){
     $controlador = lcfirst($controller).'Controller';
     $strFileController = 'controllers/'.$controlador.'.php';

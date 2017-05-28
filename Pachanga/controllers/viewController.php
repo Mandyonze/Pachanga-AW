@@ -56,11 +56,23 @@ class ViewController extends BaseController {
         ));
     }
 
-    // public function inicio(){
-    //   $distritos = $this->distrito->getAll();
-    //
-    //   $this->view("inicio", $this->entity, array(
-    //     "distritos" => $distritos
-    //   ));
-    // }
+    public function contacto(){
+      $this->view("contacto", "", array(
+      ));
+    }
+
+    public function about(){
+      $this->view("about", "", array(
+      ));
+    }
+
+    public function faq(){
+      $this->view("faq", "", array(
+      ));
+    }
+
+    public function legal(){
+      $this->view("legal", "", array(
+      ));
+    }
 }

@@ -42,9 +42,7 @@ class PartidosController extends BaseController {
     }
 
 
-    public function crear()
-    {
-      # code...
+    public function crear(){
       session_start();
       $data = $this->usuario->getBy("id", $_SESSION["username"]);
       $distritos = $this->distrito->getAll();
@@ -56,18 +54,16 @@ class PartidosController extends BaseController {
 
 
     public function filtro() {
-        # code...
         session_start();
         $data = $this->usuario->getBy("id", $_SESSION["username"]);
         $distritos = $this->distrito->getAll();
-        //
+
         $name = isset($_POST['name']) ? $_POST['name'] : "";
         $distrito = isset($_POST['distrito']) ? $_POST['distrito'] : "";
         $fecha = isset($_POST['fecha']) ? $_POST['fecha'] : "";
 
         $partidos = $this->partido->filtro($name, $distrito, $fecha);
 
-        // print_r($partidos);
         $this->view("inicio", "", array(
             "data" => $data,
           "partidos" => $partidos,

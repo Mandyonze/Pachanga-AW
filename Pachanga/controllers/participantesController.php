@@ -32,7 +32,7 @@ class ParticipantesController extends BaseController {
         $partido = $this->partidos->getById($partido);
         $participantes = $partido[0]->getParticipantes() + 1;
         $this->partidos->updateParticipantes($partido[0]->getId() , $participantes);
-        // print_r($partido);
+
         header('Location:index.php?controller=partidos&action=datos&id='. $_POST['partido']);
       }
       else {
