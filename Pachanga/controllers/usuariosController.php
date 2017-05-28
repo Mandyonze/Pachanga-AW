@@ -85,6 +85,8 @@ class UsuariosController extends BaseController{
           "mejores" => $mejores
       ));
     }
+
+
 }
 
 ?>

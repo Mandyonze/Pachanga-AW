@@ -78,6 +78,22 @@
                         <?php echo $user[0]->getDistrito(); ?>
                           </p>
                         </li>
+                        <li>
+                          <p>
+                            <span class="glyphicon glyphicon-star">
+                            Skill
+                            </span>
+                        <?php echo $user[0]->getSkill(); ?>
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            <span class="glyphicon glyphicon-heart">
+                            Valoración
+                            </span>
+                        <?php echo $user[0]->getValoracion(); ?>
+                          </p>
+                        </li>
                       </ul>
                   </div>
                   <div class="col-xs-12">

@@ -93,13 +93,14 @@
             <h3> Lista partidos </h3>
             <hr>
 
-
+            
           <div class='panel panel-default back-orange2'>
             <div class='panel-heading back-orange2'>
               <div class='panel-title'>
                 <div class='hidden-xs hidden-sm row white'>
-                  <div class='col-md-4'>Nombre</div>
-                  <div class='col-md-4'>Distrito</div>
+                  <div class='col-md-3'>Nombre</div>
+                  <div class='col-md-3'>Distrito</div>
+                  <div class='col-md-2'>Hora</div>
                   <div class='col-md-2'>Fecha</div>
                   <div class='col-md-1'><span class='glyphicon glyphicon-star'></span></div>
                   <div class='col-md-1'><span class='glyphicon glyphicon-user'></span></div>
@@ -124,7 +125,7 @@
                     echo "<a data-toggle='collapse' data-parent='#accordion' href='#collapse$aux'>";
                       echo "<div class='row'>";
 
-                        echo "<div class='col-md-4'>";
+                        echo "<div class='col-md-3'>";
                         echo "<p class = 'apartado'>";
                         echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-tag'>";
                         echo " ";
@@ -133,12 +134,22 @@
                         echo "</p>";
                         echo "</div>";
 
-                        echo "<div class='col-md-4'>";
+                        echo "<div class='col-md-3'>";
                         echo "<p class = 'apartado'>";
                         echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-map-marker'>";
                         echo " ";
                         echo "</span>";
                         echo $partido->getDistrito();
+                        echo "</p>";
+                        echo "</div>";
+
+                        echo "<div class='col-md-2'>";
+                        echo "<p class = 'apartado'>";
+                        echo "<span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-time'>";
+                        echo " ";
+                        echo "</span>";
+                        $fecha=date("H:i",strtotime($partido->getFecha()));
+                        echo "$fecha";
                         echo "</p>";
                         echo "</div>";
 
