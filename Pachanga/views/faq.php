@@ -24,7 +24,6 @@
 
   <header>
     <?php
-      session_start();
       // Mostramos distinto header si el usuario ha iniciado sesión
       if(isset($_SESSION['loggedin'])){
           require_once('layout/header.php');
