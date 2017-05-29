@@ -75,7 +75,47 @@
           <h1>¿Qué es Pachanga?</h1>
         </div>
         <hr><br>
-
+        <div class="container-fluid">
+          <h4 class="centrar">
+            Pachanga es una red social para unir a la gente en el deporte, en especial el fútbol.
+            Los usuarios pueden crear partidos y jugar con otras personas.
+          </h4>
+          <br><br>
+          <h4 class="centrar">
+            La aplicación tiene registrados 52 polideportivos en los 21 distritos de Madrid.
+          </h4>
+          <br><br>
+          <div class="row">
+            <div class="col-lg-4 centrar">
+              <h4>Fuencarral-El Pardo</h4>
+              <h4>Moncloa-Aravaca</h4>
+              <h4>Tetuán</h4>
+              <h4>Hortaleza</h4>
+              <h4>Chamartín</h4>
+              <h4>Ciudad Lineal</h4>
+              <h4>Chamberí</h4>
+            </div>
+            <div class="col-lg-4 centrar">
+              <h4>Barrio de Salamanca</h4>
+              <h4>San Blas</h4>
+              <h4>Barajas</h4>
+              <h4>Centro</h4>
+              <h4>Retiro</h4>
+              <h4>Arganzuela</h4>
+              <h4>Moratalaz</h4>
+            </div>
+            <div class="col-lg-4 centrar">
+              <h4>Villaverde</h4>
+              <h4>Usera</h4>
+              <h4>Latina</h4>
+              <h4>Carabanchel</h4>
+              <h4>Vicálvaro</h4>
+              <h4>Puente de Vallecas</h4>
+              <h4>Villa de Vallecas</h4>
+            </div>
+          </div>
+          <br><br>
+        </div>
         <div class="container-fluid">
           <div class="row ">
             <div class="col-sm-6 col-md-3 col-lg-3 ">
@@ -102,6 +142,7 @@
           </div>
         <!-- container-fluid 1 -->
         </div>
+        <br><br>
 
 
 

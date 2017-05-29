@@ -26,9 +26,9 @@
     <?php
       // Mostramos distinto header si el usuario ha iniciado sesión
       if(isset($_SESSION['loggedin'])){
-          require_once('layout/header.php');
+          include('layout/header.php');
       }else{
-          require_once('layout/headerIndex.php');
+          include('layout/headerIndex.php');
       }
     ?>
   </header>
@@ -63,7 +63,7 @@
 
               <li>
                 <h3>¿Cómo funciona el sistema de puntuación cuando juegas un partido?</h3>
-                <h4>Cuando ganas recibes 10 monedangas y cuando pierdes, pierdes 10 monedangas.</h4>
+                <h4>Cuando ganas recibes 10 "pachanga points" y cuando pierdes, te desaparecen 10.</h4>
               </li>
               <br>
               <li>
