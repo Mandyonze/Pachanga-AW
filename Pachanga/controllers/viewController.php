@@ -34,7 +34,7 @@ class ViewController extends BaseController {
 
     public function login() {
 
-
+      session_start();
       $this->view("login", $this->entity, array(
         "error" => "User or password invalid"
       ));
@@ -42,6 +42,7 @@ class ViewController extends BaseController {
 
     public function register() {
 
+      session_start();
       $distritos = $this->distrito->getAll();
 
       $this->view("signUp", $this->entity, array(

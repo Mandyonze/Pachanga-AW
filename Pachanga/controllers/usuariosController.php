@@ -32,7 +32,7 @@ class UsuariosController extends BaseController{
     {
       # code...
       $username = $_POST["username"];
-      $password = md5($_POST["password"]);
+      $password = $_POST["password"];
       $ckLogin = $this->usuario->ckLogin($username, $password);
 
       if ( $ckLogin == 0) {
@@ -49,8 +49,14 @@ class UsuariosController extends BaseController{
       $nombre = $_POST["nombre"];
       $distrito = $_POST["distrito"];
       $mail = $_POST["mail"];
-      $password = md5($_POST["password"]);
-      $password2 = md5($_POST["password2"]);
+
+      $salt = substr(str_replace('+','.',base64_encode(md5(mt_rand(), true))),0,16);
+      $rounds = 10000;
+
+      $password = crypt($_POST["password"], sprintf('$5$rounds=%d$%s$', $rounds, $salt));;
+      $password2 = crypt($_POST["password2"], sprintf('$5$rounds=%d$%s$', $rounds, $salt));;
+
+
       $ckRegister = $this->usuario->ckRegister($username, $nombre, $distrito, $mail, $password, $password2);
 
       if ( $ckRegister == 0) {
@@ -67,7 +73,7 @@ class UsuariosController extends BaseController{
       $usuario = $_GET["id"];
       $data = $this->usuario->getBy("id", $_SESSION["username"]);
       $user = $this->usuario->getBy("id", $usuario);
-      $partidos = $this->partido->misCreados();
+      $partidos = $this->partido->misCreados($usuario);
 
       $this->view("perfil", $this->entity, array(
           "data" => $data,

@@ -179,13 +179,13 @@
                               echo "<div class='row'>";
                                 $now = new DateTime();
                                 $fecha =  $now->format('Y-m-d H:i:s');
-                                if($partido->getFecha() < $fecha && $partido->getGoles1() == NULL){?>
+                                if($partido->getFecha() < $fecha && $partido->getGoles1() == NULL && $partido->getCreador() == $_SESSION['username']){?>
                                   <div class='col-xs-6 col-md-6'><a href='index.php?controller=partidos&action=datos&id=<?php echo $partido->getId(); ?>' class='btn btn-warning button-ver mouse-over' role='button'>Ver</a></div>
                                   <div class='col-xs-6 col-md-6'><a href='<?php echo $helper->url('partidos', 'valorarPartido') . '&id=' . $partido->getId();?>' class='btn btn-warning back-orange mouse-over' onclick='changeCompartir('compartir')' role='button'>Puntuar</a></div>
                                   <?php
                                 }
                                 else{?>
-                                  <div class='col-xs-12 col-md-12 centrar'><a href='index.php?controller=partidos&action=datos&id=<?php echo $partido->getId(); ?>' class='btn btn-warning button-ver-sin-float mouse-over centrar' role='button'>Ver</a></div>
+                                  <div class='col-xs-12 col-md-12 centrar'><a href='index.php?controller=partidos&action=datos&id=<?php echo $partido->getId(); ?>' class='btn btn-warning button-ver-sin-float back-orange mouse-over centrar' role='button'>Ver</a></div>
                                   <?php
                                 }
                               echo "</div>";

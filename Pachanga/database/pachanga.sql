@@ -32,7 +32,7 @@ INSERT INTO `distritos` (`id` , `url`) VALUES
 
 CREATE TABLE `pachanga`.`usuarios` (
   `id` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-  , `password` CHAR(32) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+  , `password` CHAR(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
   , `nombre` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
   , `distrito` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
   , `correo` VARCHAR(60) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
@@ -43,29 +43,29 @@ CREATE TABLE `pachanga`.`usuarios` (
 ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
 
 INSERT INTO `usuarios` (`id`, `password`, `nombre`, `distrito`, `correo`, `skill`, `valoracion`) VALUES
-('ancelotti', '0983d13c42b654af26650f3ddd9b330f', 'Carlo Ancelotti', 'Moncloa-Aravaca', 'cancelotti@bayern.de', 50, 50),
-('andy', 'da41bceff97b1cf96078ffb249b3d66e', 'Andres', 'Chamberí', 'andy@pachanga.es', 200, 200),
-('axwell', '9291d9bb7771fd1ed391703b37a963f4', 'Axel', 'Barrio de Salamanca', 'axwell@pachanga.es', 500, 500),
-('basti', 'f28c104e3444f879ababcbe9ec11bfce', 'Bastian Schweinsteiger', 'Centro', 'basti@sch.ge', 300, 300),
-('cr7', 'c9178aa682eadb31aa6d77e85c8cd9c6', 'Cristiano Ronaldo', 'Moncloa-Aravaca', 'cr7@rmadrid.es', 800, 800),
-('fatspanishwaiter', 'b57d883a7bdce2171b5f9991f4d63856', 'Rafa Benitez', 'Tetuán', 'benitez@newcastle.uk', 0, 0),
-('gbale11', '674378ad505c49f92b070c0491227f00', 'Gareth', 'Moncloa-Aravaca', 'gbale11@rmadrid.es', 800, 800),
-('graciaskevinroldan', '009dfaa91eb617885670b6197244d503', 'Gerard Piqué', 'Centro', 'gpique@farsa.es', 400, 10),
-('ibra10', '2fe14b3674a79c0fe02b593d464ac491', 'Zlatan Ibrahimovic', 'Puente de Vallecas', 'zlatan', 1000, 1000),
-('jlpavon', 'f0a85976b63624b7c19f951403710db7', 'Juan Luis', 'Fuencarral-El Pardo', 'jlpavon@ucm.es', 700, 700),
-('maclarensucks', '70db751fbdc3237ce9de03cb4683983f', 'Fernando Alonso', 'Latina', 'falonso@maclaren.com', 700, 800),
-('mandyCrew', '36ac0b617686082d461a5fe7a8975ff5', 'Borja', 'Latina', 'mandy@pachanga.es', 100, 100),
-('mcardenas', '5f2db1c96ca2820e973a22f43cfdaf27', 'Marlon', 'Retiro', 'mcardenas@ucm.es', 500, 500),
-('messi10', '731c110542108947840060ad7d996c38', 'Lionel Messi', 'Barrio de Salamanca', 'lmessi@fcb.es', 1000, 1000),
-('mmarquez', 'dc322c124ebdbc6a3f1a41f34dd7e75e', 'Marc Marquez', 'Barajas', 'mmarquez@honda.com', 400, 600),
-('mreus', 'eaf3642977f2d7648fa9fe683d26b0d7', 'Marco Reus', 'Usera', 'mreus@bvb.de', 400, 700),
-('paugasol', '1d87d9f3df6d167e70b4da965a3ab0ff', 'Pau Gasol', 'San Blas', 'paugasol@spurs.com', 200, 100),
-('ramos93', 'a265db60bc1e4348fb1af44321af1318', 'Sergio Ramos', 'Carabanchel', 'sramos4@rmadrid.es', 600, 600),
-('riusMiningMaster', '1b2791b86f8fa59421e95c8e8b801c8a', 'Guille', 'Retiro', 'rius@pachanga.es', 300, 300),
-('ronaldoelgordo', 'ebb1b979363707042d1c448785b2f727', 'Ronaldo Luis Nazario de Lima', 'Arganzuela', 'ronaldomcdonald@brasil.es', 950, 950),
-('superguidetti', 'da396086c4151d6e720f3ef61ab69ea6', 'John Guidetti', 'Barrio de Salamanca', 'guidetti@celta.es', 600, 1000),
-('thespecialone', 'f1923392a08ebe5696034076c7f24975', 'José Mourinho', 'Barrio de Salamanca', 'jmou@munited.uk', 780, 500),
-('xXxdimariaxXx', '37af235e7ef65b208eb2d313f0d1f7eb', 'Angel di Maria', 'Hortaleza', 'dimaria@psg.fr', 800, 800);
+('ancelotti', '$5$rounds=10000$qPalhZCZsRDEnj9.$TbZbPB6hO2YvZGq8lvTIzgj05XOxRjvGYIUmxm0gJc3', 'Carlo Ancelotti', 'Moncloa-Aravaca', 'cancelotti@bayern.de', 50, 50),
+('andy', '$5$rounds=10000$ldK8fhEWzV.0DEha$Gy5hiX0S8JVDADCvLyPQ.Pu7vsotQo5R127/PBvqq5D', 'Andres', 'Chamberí', 'andy@pachanga.es', 200, 200),
+('axwell', ' $5$rounds=10000$xBYEPxZS0HJKg4iO$jx0BvymZX.BzHpAbv1G9O2zkx6tq0mzr8LLIWWBE1P7', 'Axel', 'Barrio de Salamanca', 'axwell@pachanga.es', 500, 500),
+('basti', ' $5$rounds=10000$YaZTtQoMVaMKaaem$7pd5dK0FnA28byoDNNzr9ixL9i0M6a/14Gzp6WrlgA4', 'Bastian Schweinsteiger', 'Centro', 'basti@sch.ge', 300, 300),
+('cr7', ' $5$rounds=10000$9cu2pSh0aLH0Sv06$u0RwU.julXNyOciJRnVo0PiNmbe90/7sm86jkkWZ.o5', 'Cristiano Ronaldo', 'Moncloa-Aravaca', 'cr7@rmadrid.es', 800, 800),
+('fatspanishwaiter', ' $5$rounds=10000$oGCDXLaxIZ/IZrVa$8dkFULWmbpp9BuXxo/435TxzN/rL8OZAy6UA7fwCfVD', 'Rafa Benitez', 'Tetuán', 'benitez@newcastle.uk', 0, 0),
+('gbale11', ' $5$rounds=10000$LlMEMxJxUL82vio3$d0LwboBnRctjbVrZvrxNY9sodQt2/kjjlF/VNFGoCtA', 'Gareth', 'Moncloa-Aravaca', 'gbale11@rmadrid.es', 800, 800),
+('graciaskevinroldan', ' $5$rounds=10000$0oztqbj6HenA8qjP$9rHoe5LigichJzIy7qz3XxmKXKh9JtVT/ueKP9K/ka2', 'Gerard Piqué', 'Centro', 'gpique@farsa.es', 400, 10),
+('ibra10', ' $5$rounds=10000$18wC0XOrX4UH4rXn$uaDFtgu9IF.ryBcWWF2HJgCdNP1.MtpV981rnquw/j4', 'Zlatan Ibrahimovic', 'Puente de Vallecas', 'zlatan', 1000, 1000),
+('jlpavon', ' $5$rounds=10000$0fLs4ZX8KXBTWOvj$nmFVOlGZ0cMsbpfGH0NoL.fzaIwBaLw3UiwC1VZwWd3', 'Juan Luis', 'Fuencarral-El Pardo', 'jlpavon@ucm.es', 700, 700),
+('maclarensucks', ' $5$rounds=10000$g9IKxkjI8pDbk3yT$O/sA0wT3T8o5Md63O/eXpVKtwBr74eBX0eKttThHQe6', 'Fernando Alonso', 'Latina', 'falonso@maclaren.com', 700, 800),
+('mandyCrew', ' $5$rounds=10000$/AL5icOeHceOhxXq$4nFY8jtWxjxHo8HRP65hijrPURLICRnfpmIodnYuGqA', 'Borja', 'Latina', 'mandy@pachanga.es', 100, 100),
+('mcardenas', ' $5$rounds=10000$l4se.Eo9Ty1oyBwI$otvIO0DitbR896XP28E0N.RwCl5DqV6POF2RFbMdY./', 'Marlon', 'Retiro', 'mcardenas@ucm.es', 500, 500),
+('messi10', ' $5$rounds=10000$40voDW1NnMvZ2pDb$KVCUvaKAo4IaCH4n0Y6eHLyBFWZnMpb8MEZ/IFe8OFB', 'Lionel Messi', 'Barrio de Salamanca', 'lmessi@fcb.es', 1000, 1000),
+('mmarquez', ' $5$rounds=10000$GrKfPxQ7kXVXqQWv$sPAbcSIqHcoIWyh.NII7pflMS2S22xcDJoWudgsHv/2', 'Marc Marquez', 'Barajas', 'mmarquez@honda.com', 400, 600),
+('mreus', ' $5$rounds=10000$ae6Vs3On7KwbVldR$C30IWpYic7Rj5aPbnyaeax6EKtA3quhXVCrOXsdWckC', 'Marco Reus', 'Usera', 'mreus@bvb.de', 400, 700),
+('paugasol', ' $5$rounds=10000$eHldF44NFpDWPmz2$daYTVMlyxUE0DvgNj13AULO3s1.FI5XkfRIuoEF8v34', 'Pau Gasol', 'San Blas', 'paugasol@spurs.com', 200, 100),
+('ramos93', ' $5$rounds=10000$/HPbTUuTS9/yBclY$YFb/jy1aL7NcpEPFKYk2tws18MP6yNWwofAO3f4BLlC', 'Sergio Ramos', 'Carabanchel', 'sramos4@rmadrid.es', 600, 600),
+('riusMiningMaster', ' $5$rounds=10000$Abez60PeO4TVuiXr$Zuqw/OgBOZ0D1Yn1QmpRirjJQ21EOQhxHnPveOL3HY2', 'Guille', 'Retiro', 'rius@pachanga.es', 300, 300),
+('ronaldoelgordo', ' $5$rounds=10000$SlT/0gnfKmltClVI$NZ980Z4LAzf61WQCQPT/PTXkKJbw5VvdO89TFM8ZJu2', 'Ronaldo Luis Nazario de Lima', 'Arganzuela', 'ronaldomcdonald@brasil.es', 950, 950),
+('superguidetti', ' $5$rounds=10000$i0I1TuMfaGr7Jc7K$HGVcHVqBuyuOuONpEhqR0ZRz3buS5AsQpED0/NryY97', 'John Guidetti', 'Barrio de Salamanca', 'guidetti@celta.es', 600, 1000),
+('thespecialone', ' $5$rounds=10000$8iwkg0x/DLxrnZK/$CwY4xSXGJbk6rzw/JZzPkSCLahs.9vCJvusTUEdMqFC', 'José Mourinho', 'Barrio de Salamanca', 'jmou@munited.uk', 780, 500),
+('xXxdimariaxXx', ' $5$rounds=10000$0i3ytfZcacuplqr0$IslYjA7rpUYTnun0PHVKudtejsFlmNVJgw4xu9/4sH1', 'Angel di Maria', 'Hortaleza', 'dimaria@psg.fr', 800, 800);
 
 
 CREATE TABLE `pachanga`.`polideportivos` (

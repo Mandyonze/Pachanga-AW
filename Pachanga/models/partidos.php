@@ -61,9 +61,9 @@ public function addParticipantes($partido, $usuario, $equipo) {
       $add->execute();
 }
 
-public function misCreados(){
+public function misCreados($usu){
 
-  $usuario = $_SESSION['username'];
+  $usuario = $usu;
   $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito   FROM $this->table p inner join polideportivos d WHERE  p.polideportivo = d.id and  creador = '$usuario' ORDER BY fecha DESC"); //ORDER BY id DESC
   $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
   return $resultSet;
@@ -93,20 +93,16 @@ public function filtro($name, $distrito, $fecha){
 
 
   if($name != "" && $distrito != "" && $fecha != ""){
-    $query=$this->db()->query("SELECT * FROM $this->table u inner join polideportivos p  WHERE u.polideportivo = p.id and nombre like '%$name%' and cast(fecha as date) >= '$fecha' and p.distrito = '$distrito' ORDER BY fecha");
+    $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito FROM $this->table p inner join polideportivos d  WHERE p.polideportivo = d.id and nombre like '%$name%' and cast(fecha as date) >= '$fecha' and d.distrito = '$distrito' ORDER BY fecha");
   }
   elseif($distrito != "" && $fecha != ""){
-    //$query=$this->db()->query("SELECT * FROM $this->table WHERE and fecha >= $fecha and distrito = '$distrito'"); //ORDER BY id DESC
-    $query=$this->db()->query("SELECT * FROM $this->table u inner join polideportivos p on u.polideportivo = p.id WHERE cast(fecha as date) >= '$fecha' and p.distrito = '$distrito'");
-    //$query->execute(array('name' => $name, 'distrito' => $distrito));
+    $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito FROM $this->table p inner join polideportivos d WHERE p.polideportivo = d.id and cast(fecha as date) >= '$fecha' and d.distrito = '$distrito'");
   }
   elseif($name != "" && $fecha != ""){
-    //$query=$this->db()->query("SELECT * FROM $this->table WHERE nombre like '%$name%' and fecha >= '$fecha'"); //ORDER BY id DESC
-    $query=$this->db()->query("SELECT * FROM $this->table u inner join polideportivos p on u.polideportivo = p.id WHERE nombre like '%$name%' and cast(fecha as date) >= '$fecha'");
+    $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito FROM $this->table p inner join polideportivos d WHERE p.polideportivo = d.id and nombre like '%$name%' and cast(fecha as date) >= '$fecha'");
   }
   else{
-    $query=$this->db()->query("SELECT *  FROM $this->table p inner join polideportivos d WHERE  p.polideportivo = d.id and cast(fecha as date) >= '$fecha' ORDER BY fecha"); //ORDER BY id DESC
-
+    $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito FROM $this->table p inner join polideportivos d WHERE p.polideportivo = d.id and fecha > '$fecha' ORDER BY fecha"); //ORDER BY id DESC
   }
 
   $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);

@@ -5,17 +5,18 @@
   <?php require_once('layout/library.php'); ?>
   <title> PACHANGA </title>
   <link rel="stylesheet" href="assets/css/login.css">
+  <link rel="stylesheet" href="assets/css/listaPartidos.css">
 </head>
 
   <body class="back">
 
 
-
+    <?php session_destroy() ?>
 
     <div class="container">
         <div class="formulario formulario-container">
           <div class="header-formulario">
-            <div class = "centrar"><a href="index.html"><img class = "logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a></div>
+            <div class = "centrar"><a href="<?php echo $helper->url('view', 'home'); ?>"><img class = "logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a></div>
           </div>
 
           <div class="body-formulario">
@@ -45,14 +46,14 @@
                 </div>
                 <br>
                 <div class="links">
-                    ¿Todavía no eres miembro?<br><a onclick="changeFormulario('signUp')">Regístrate ahora</a>
+                    ¿Todavía no eres miembro?<br><a href="<?php echo $helper->url('view', 'register'); ?>">Regístrate ahora</a>
                 </div>
 
                 <br>
 
                 <div class="centrar">
-                  <button onclick="changeFormulario('login')" type="button" class="btn btn-danger">Cancel</button>
-                  <button type = "submit" id="submitLogin" class="btn btn-warning"> Entrar </button>
+                  <a href="<?php echo $helper->url('view', 'home'); ?>" type="button" class="btn btn-danger button-ver-sin-float">Cancel</a>
+                  <button type = "submit" id="submitLogin" class="btn btn-warning button-ver-sin-float mouse-over"> Entrar </button>
                 </div>
             </form>
           <!-- formulario-container -->

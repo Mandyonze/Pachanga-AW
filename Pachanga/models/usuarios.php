@@ -42,7 +42,17 @@
 
       $pruebas = $this->getBy("id", $username);
 
-      if (empty($pruebas) || $pruebas[0]->getPassword() != $password) {
+      if (empty($pruebas)) {
+        return 1;
+      }
+
+      $pass = $pruebas[0]->getPassword();
+      $parts = explode('$', $pass);
+      $test_hash = crypt($password, sprintf('$%s$%s$%s$', $parts[1], $parts[2], $parts[3]));
+
+      echo $test_hash;
+
+      if ($pass != $test_hash) {
         return 1;
       }
 

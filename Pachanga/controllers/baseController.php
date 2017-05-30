@@ -12,6 +12,13 @@ class BaseController {
         foreach ($datos as $id_assoc => $valor) {
             ${$id_assoc} = $valor;
         }
+        if(isset($_GET['controller'])){
+          $contr = ucfirst($_GET['controller']);
+        }
+
+        if(isset($_GET['controller']) && $contr != 'View' && !isset($_SESSION['username'])){
+          header('Location:index.php?controller=View&action=home');
+        }
 
         require_once 'models/helperView.php';
 
