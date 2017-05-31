@@ -9,7 +9,9 @@
 
       <div class="dropdown-menu" aria-labelledby="burgerMenu">
         <div class="container ">
-          <?php include('layout/menu.php'); ?>
+          <?php
+            include('menu.php');
+          ?>
         </div>
       </div>
     </div>

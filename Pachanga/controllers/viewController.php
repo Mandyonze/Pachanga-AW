@@ -15,6 +15,7 @@ class ViewController extends BaseController {
         require_once('models/distritos.php');
         require_once('models/usuarios.php');
         $this->distrito = new Distritos();
+        $this->usuarios = new Usuarios();
 
     }
 
@@ -58,22 +59,74 @@ class ViewController extends BaseController {
     }
 
     public function contacto(){
-      $this->view("contacto", "", array(
-      ));
+      session_start();
+      if(isset($_SESSION['loggedin'])){
+        $usuario = $_SESSION['username'];
+        $data = $this->usuarios->getBy("id", $usuario);
+        $user = $this->usuarios->getBy("id", $usuario);
+
+        $this->view("contacto", "", array(
+            "data" => $data,
+            "user" => $user
+        ));
+      }
+      else{
+        $this->view("contacto", "", array(
+        ));
+      }
     }
 
     public function about(){
-      $this->view("about", "", array(
-      ));
+      session_start();
+      if(isset($_SESSION['loggedin'])){
+        $usuario = $_SESSION['username'];
+        $data = $this->usuarios->getBy("id", $usuario);
+        $user = $this->usuarios->getBy("id", $usuario);
+
+        $this->view("about", "", array(
+            "data" => $data,
+            "user" => $user
+        ));
+      }
+      else{
+        $this->view("about", "", array(
+        ));
+      }
     }
 
     public function faq(){
-      $this->view("faq", "", array(
-      ));
+      session_start();
+      if(isset($_SESSION['loggedin'])){
+        $usuario = $_SESSION['username'];
+        $data = $this->usuarios->getBy("id", $usuario);
+        $user = $this->usuarios->getBy("id", $usuario);
+
+        $this->view("faq", "", array(
+            "data" => $data,
+            "user" => $user
+        ));
+      }
+      else{
+        $this->view("faq", "", array(
+        ));
+      }
     }
 
     public function legal(){
-      $this->view("legal", "", array(
-      ));
+      session_start();
+      if(isset($_SESSION['loggedin'])){
+        $usuario = $_SESSION['username'];
+        $data = $this->usuarios->getBy("id", $usuario);
+        $user = $this->usuarios->getBy("id", $usuario);
+
+        $this->view("legal", "", array(
+            "data" => $data,
+            "user" => $user
+        ));
+      }
+      else{
+        $this->view("legal", "", array(
+        ));
+      }
     }
 }

@@ -7,7 +7,6 @@
 
 
   <?php
-    session_start();
     // Mostramos distinto header si el usuario ha iniciado sesión
     if(isset($_SESSION['loggedin'])){
         echo "<link rel='stylesheet' href='assets/css/inicio.css'>";

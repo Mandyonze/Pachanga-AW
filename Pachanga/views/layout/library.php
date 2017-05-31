@@ -10,7 +10,7 @@
 
 <!--Links-->
 <!-- FavIcon -->
-<link rel="icon" href="assets/assets/img/logos/Icono-Naranja.png" type="image/x-icon"/>
+<link rel="icon" href="assets/img/logos/Icono-Naranja.png" type="image/x-icon"/>
 <!-- CSS -->
 <link rel="stylesheet" href="assets/css/bootstrap.css">
 <link rel="stylesheet" href="assets/css/style.css">

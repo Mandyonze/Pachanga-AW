@@ -80,8 +80,6 @@ class UsuariosController extends BaseController{
           "user" => $user,
           "partidos" => $partidos
       ));
-
-
     }
 
     public function mejores(){

@@ -4,16 +4,25 @@
   <br><br>
   <div class="container">
     <div class="row">
-      <div class="col-sm-4">
-        <div class="centrar">
-          Join us
+        <?php
+          // Si el usuario ha iniciado sesión no le mostramos la opción de
+          // iniciar sesión o registrarse
+          if(isset($_SESSION['loggedin'])){
+            $columns = 6;
+          }else{
+            $columns = 4
+        ?>
+        <div class="col-sm-<?php echo $columns; ?>">
+          <div class="centrar">
+            Join us
+          </div>
+          <hr>
+          <a href="<?php echo $helper->url('view', 'register') ?>">Registrarse</a>
+          <br>
+          <a href="<?php echo $helper->url('view', 'login') ?>">Iniciar Sesión</a>
         </div>
-        <hr>
-        <a href="<?php echo $helper->url('view', 'register') ?>">Registrarse</a>
-        <br>
-        <a href="<?php echo $helper->url('view', 'login') ?>">Iniciar Sesión</a>
-      </div>
-      <div class="col-sm-4">
+      <?php } ?>
+      <div class="col-sm-<?php echo $columns; ?>">
         <div class="centrar">
           Sobre Pachanga
         </div>
@@ -21,9 +30,9 @@
         <a href="<?php echo $helper->url('view', 'faq') ?>">Preguntas Frecuentes</a>
         <br>
         <a href="<?php echo $helper->url('view', 'legal') ?>">Aviso Legal</a>
-</div>
+      </div>
 
-      <div class="col-sm-4">
+      <div class="col-sm-<?php echo $columns; ?>">
         <div class="centrar">
           ¿Quiénes somos?
         </div>
