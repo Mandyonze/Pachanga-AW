@@ -38,14 +38,6 @@
           }
           ?>
 
-          <?php //print_r($partidos)
-            // /$now = new DateTime();
-            // /$now = new DateTime();
-            // /echo $now->format('Y-m-d H:i:s');
-            // echo "$now";
-            ?>
-
-
             <!-- /********************************************************************************* -->
 
             <div class="container-fluid ">
