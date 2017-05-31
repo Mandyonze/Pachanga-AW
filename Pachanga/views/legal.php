@@ -15,7 +15,7 @@
       }
     ?>
 
-    <link rel='stylesheet' href='assets/css/aux.css'>
+    <link rel='stylesheet' href='assets/css/auxiliary.css'>
 
 </head>
 
