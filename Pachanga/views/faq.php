@@ -17,7 +17,6 @@
     ?>
 
     <link rel='stylesheet' href='assets/css/aux.css'>
-¿
 </head>
 
 <body>

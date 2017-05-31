@@ -197,3 +197,8 @@ function checkEmail(){
 
 
 /*******************************************/
+
+// Scroll to top of page when loading
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
