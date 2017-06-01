@@ -84,3 +84,13 @@
 .flota-derecha{
   float:right;
 }
+
+.tam{
+  font-size: 80px;
+    text-align: center;
+}
+
+.tam2{
+  font-size: 25px;
+  text-align: center;
+}
