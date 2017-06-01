@@ -78,7 +78,7 @@ class PartidosController extends BaseController {
         if(isset($_GET['id'])){
 
           session_start();
-          $id = $_GET['id'];
+          $id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
           $data = $this->usuario->getBy("id", $_SESSION["username"]);
           $partidos = $this->partido->getBy("id", $id);
           $this->view("resultado", $this->entity, array(
@@ -95,9 +95,9 @@ class PartidosController extends BaseController {
 
         session_start();
         if(isset($_GET['id']) && isset($_POST['goles1']) && isset($_POST['goles2'])){
-          $id = $_GET['id'];
-          $goles1 = $_POST['goles1'];
-          $goles2 = $_POST['goles2'];
+          $id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
+          $goles1 = filter_var($_POST['goles1'], FILTER_SANITIZE_NUMBER_INT);
+          $goles2 = filter_var($_POST['goles2'], FILTER_SANITIZE_NUMBER_INT);
 
           $this->partido->valorar($id, $goles1, $goles2);
           $equipo1 = $this->participante->getEquipo1($id);

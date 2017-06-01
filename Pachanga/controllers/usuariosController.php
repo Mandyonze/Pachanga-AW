@@ -38,7 +38,7 @@ class UsuariosController extends BaseController{
       if ( $ckLogin == 0) {
         header('Location:index.php?controller=Partidos&action=inicio&success=' . $ckLogin );
       } else {
-        header('Location:index.php?controller=View&action=login');
+        header('Location:index.php?controller=View&action=login&error=' . $ckLogin);
       }
 
     }

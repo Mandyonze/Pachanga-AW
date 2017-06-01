@@ -20,9 +20,9 @@
           </div>
 
           <div class="body-formulario">
-            <?php if (isset($error)) {
+            <?php if (isset($error) && $error[0] == 1) {
               echo "<div class='alert alert-danger'>";
-              echo "<strong> ERROR! </strong> $error";
+              echo "<strong> ERROR! </strong> Usuario o contraseña incorrecta";
               echo "</div>";
             }
             ?>

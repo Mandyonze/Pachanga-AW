@@ -36,8 +36,9 @@ class ViewController extends BaseController {
     public function login() {
 
       session_start();
+      $error = isset($_GET['error']) ? filter_var($_GET['error'], FILTER_SANITIZE_NUMBER_INT) : 0;
       $this->view("login", $this->entity, array(
-        "error" => "User or password invalid"
+        "error" => $error
       ));
     }
 
