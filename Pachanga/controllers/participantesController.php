@@ -24,9 +24,10 @@ class ParticipantesController extends BaseController {
 
       if(isset($_POST['partido']) && isset($_POST['usuario']) && isset($_POST['equipo'])){
 
-        $partido = $_POST['partido'];
-        $usuario = $_POST['usuario'];
-        $equipo = $_POST['equipo'];
+
+        $partido = filter_var($_POST['partido'], FILTER_SANITIZE_STRING);
+        $usuario = filter_var($_POST['usuario'], FILTER_SANITIZE_STRING);
+        $equipo = filter_var($_POST['equipo'], FILTER_SANITIZE_NUMBER_INT);
 
         $this->participante->insertParticipante($partido, $usuario, $equipo);
         $partido = $this->partidos->getById($partido);
