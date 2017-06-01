@@ -38,6 +38,27 @@
                   <div class="container-fluid details-titulo">
                     <h2>Detalles del partido: <?php echo $partidoobj[0]->getNombre(); ?></h2>
                   </div>
+
+                  <?php
+                  if($partidoobj[0]->getGoles1() != null){
+                   ?>
+                  <div class="container-fluid  tam">
+
+                    <?php
+                      $goles1 = $partidoobj[0]->getGoles1();
+                      $goles2 = $partidoobj[0]->getGoles2();
+                      echo"$goles1 - $goles2 <br>";
+                    ?>
+                  </div>
+
+                  <div class="container-fluid tam2">
+                    <?php
+                      echo"Partido Finalizado"
+                    ?>
+                    <br>
+                  </div>
+                <?php } ?>
+
                   <!-- <hr> -->
                   <ul class="container details">
 
@@ -113,7 +134,6 @@
 
               </div>
             </div>
-
 
             <table class="table table-condensed margen_top_title">
               <thead>
