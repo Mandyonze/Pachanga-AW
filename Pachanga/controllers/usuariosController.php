@@ -31,8 +31,8 @@ class UsuariosController extends BaseController{
     public function login()
     {
       # code...
-      $username = $_POST["username"];
-      $password = $_POST["password"];
+      $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+      $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
       $ckLogin = $this->usuario->ckLogin($username, $password);
 
       if ( $ckLogin == 0) {
@@ -45,16 +45,16 @@ class UsuariosController extends BaseController{
 
     public function register()
     {
-      $username = $_POST["username"];
-      $nombre = $_POST["nombre"];
-      $distrito = $_POST["distrito"];
-      $mail = $_POST["mail"];
+      $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+      $nombre = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
+      $distrito = filter_var($_POST['distrito'], FILTER_SANITIZE_STRING);
+      $mail = filter_var($_POST['mail'], FILTER_SANITIZE_STRING);
 
       $salt = substr(str_replace('+','.',base64_encode(md5(mt_rand(), true))),0,16);
       $rounds = 10000;
 
-      $password = crypt($_POST["password"], sprintf('$5$rounds=%d$%s$', $rounds, $salt));;
-      $password2 = crypt($_POST["password2"], sprintf('$5$rounds=%d$%s$', $rounds, $salt));;
+      $password = crypt(filter_var($_POST['password'], FILTER_SANITIZE_STRING), sprintf('$5$rounds=%d$%s$', $rounds, $salt));;
+      $password2 = crypt(filter_var($_POST['password2'], FILTER_SANITIZE_STRING), sprintf('$5$rounds=%d$%s$', $rounds, $salt));;
 
 
       $ckRegister = $this->usuario->ckRegister($username, $nombre, $distrito, $mail, $password, $password2);

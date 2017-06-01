@@ -58,8 +58,9 @@ class PartidosController extends BaseController {
         $data = $this->usuario->getBy("id", $_SESSION["username"]);
         $distritos = $this->distrito->getAll();
 
-        $name = isset($_POST['name']) ? $_POST['name'] : "";
-        $distrito = isset($_POST['distrito']) ? $_POST['distrito'] : "";
+
+        $name = isset($_POST['name']) ? filter_var($_POST['name'], FILTER_SANITIZE_STRING) : "";
+        $distrito = isset($_POST['distrito']) ? filter_var($_POST['distrito'], FILTER_SANITIZE_STRING) : "";
         $fecha = isset($_POST['fecha']) ? $_POST['fecha'] : "";
 
         $partidos = $this->partido->filtro($name, $distrito, $fecha);
@@ -127,7 +128,7 @@ class PartidosController extends BaseController {
       public function elegirPolideportivo(){
           session_start();
           $data = $this->usuario->getBy("id", $_SESSION["username"]);
-          $distrito = $_POST["distrito"];
+          $distrito = filter_var($_POST['distrito'], FILTER_SANITIZE_STRING);
           $polideportivos = $this->polideportivo->getByDistrito($distrito);
           $distrito = $this->distrito->getBy("id", $distrito);
           //Llamada a la vista para elegir el polideportivo según el distrito
@@ -140,13 +141,13 @@ class PartidosController extends BaseController {
 
         public function nuevoPartido() {
           session_start();
-          $nombre = $_POST["nombre"];
+          $nombre = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
           $fecha = $_POST["fecha"];
-          $hora = $_POST["hora"];
-          $minutos = $_POST["minutos"];
-          $skill = $_POST["skill"];
-          $polideportivo = $_POST["polideportivo"];
-          $creador = $_SESSION["username"];
+          $hora =  filter_var($_POST['hora'], FILTER_SANITIZE_NUMBER_INT);
+          $minutos =  filter_var($_POST['minutos'], FILTER_SANITIZE_NUMBER_INT);
+          $skill =  filter_var($_POST['skill'], FILTER_SANITIZE_NUMBER_INT);
+          $polideportivo = filter_var($_POST['polideportivo'], FILTER_SANITIZE_STRING);
+          $creador = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
 
           $ckPartidos = $this->partido->ckPartidos($nombre,$fecha,$hora,$minutos,$skill,$polideportivo, $creador);
           //'2017-05-17 10:24:33'
