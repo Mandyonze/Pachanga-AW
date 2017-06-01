@@ -93,6 +93,35 @@ class PartidosController extends BaseController {
       public function puntuar(){
 
         session_start();
+        if(isset($_GET['id']) && isset($_POST['goles1']) && isset($_POST['goles2'])){
+          $id = $_GET['id'];
+          $goles1 = $_POST['goles1'];
+          $goles2 = $_POST['goles2'];
+
+          $this->partido->valorar($id, $goles1, $goles2);
+          $equipo1 = $this->participante->getEquipo1($id);
+          $equipo2 = $this->participante->getEquipo2($id);
+          if($goles1 > $goles2){
+            $p1 = 10;
+            $p2 = -10;
+            foreach($equipo1 as $jugador){
+              $this->usuario->ajustePuntes($jugador->getUsuario(), $p1);
+            }
+            foreach($equipo2 as $jugador){
+              $this->usuario->ajustePuntes($jugador->getUsuario(), $p2);
+            }
+          }else {
+            $p1 = 10;
+            $p2 = -10;
+            foreach($equipo1 as $jugador){
+              $this->usuario->ajustePuntes($jugador->getUsuario(), $p2);
+            }
+            foreach($equipo2 as $jugador){
+              $this->usuario->ajustePuntes($jugador->getUsuario(), $p1);
+            }
+          }
+        }
+        header('Location:index.php?controller=partidos&action=inicio');
       }
 
       public function elegirPolideportivo(){

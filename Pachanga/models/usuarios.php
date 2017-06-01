@@ -30,6 +30,13 @@
         $insert->execute();
     }
 
+    public function ajustePuntes($jugador, $puntos){
+
+      $sql = "UPDATE usuarios SET skill = skill + '$puntos' WHERE id = '$jugador'";
+      $stmt =  $this->db()->prepare($sql);
+      $stmt->execute();
+    }
+
     public function mejores($distrito) {
 
         $query=$this->db()->query("SELECT * FROM $this->table WHERE distrito = '$distrito' ORDER BY skill DESC"); //ORDER BY id DESC
@@ -49,8 +56,6 @@
       $pass = $pruebas[0]->getPassword();
       $parts = explode('$', $pass);
       $test_hash = crypt($password, sprintf('$%s$%s$%s$', $parts[1], $parts[2], $parts[3]));
-
-      echo $test_hash;
 
       if ($pass != $test_hash) {
         return 1;

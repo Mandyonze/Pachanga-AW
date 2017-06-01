@@ -84,7 +84,7 @@ public function partidosActivos(){
 
 public function valorar($id, $goles1, $goles2){
 
-  $sql = "UPDATE partidos SET goles1='$goles1' and goles2 = $goles2 WHERE id = '$id'";
+  $sql = "UPDATE partidos SET goles1='$goles1', goles2 = $goles2 WHERE id = '$id'";
   $stmt =  $this->db()->prepare($sql);
   $stmt->execute();
 }

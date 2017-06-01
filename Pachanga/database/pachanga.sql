@@ -2,7 +2,6 @@ CREATE TABLE `pachanga`.`distritos` (
     `id` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
     , `url` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
     , PRIMARY KEY (`id`)
-
 ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
 
 INSERT INTO `distritos` (`id` , `url`) VALUES
@@ -27,8 +26,6 @@ INSERT INTO `distritos` (`id` , `url`) VALUES
 ('Vicálvaro' , 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24310.36114671582!2d-3.5914329855437916!3d40.39123267954929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42256914050a71%3A0x260340f4bc004bb1!2sVic%C3%A1lvaro%2C+Madrid!5e0!3m2!1ses!2ses!4v1495789194070'),
 ('Puente de Vallecas' , 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24313.155382943358!2d-3.673238435552542!3d40.38349162960723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4225d0994ed505%3A0x41cc0ff30381931!2sPuente+de+Vallecas%2C+Madrid!5e0!3m2!1ses!2ses!4v1495789258678'),
 ('Villa de Vallecas' , 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24324.723867201283!2d-3.6350960355887794!3d40.35142962984828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42248b9a3606b5%3A0x1801617181ceab09!2sVilla+de+Vallecas%2C+Madrid!5e0!3m2!1ses!2ses!4v1495789298050');
-
-
 
 CREATE TABLE `pachanga`.`usuarios` (
   `id` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
@@ -67,7 +64,6 @@ INSERT INTO `usuarios` (`id`, `password`, `nombre`, `distrito`, `correo`, `skill
 ('thespecialone', '$5$rounds=10000$8iwkg0x/DLxrnZK/$CwY4xSXGJbk6rzw/JZzPkSCLahs.9vCJvusTUEdMqFC', 'José Mourinho', 'Barrio de Salamanca', 'jmou@munited.uk', 780, 500),
 ('xXxdimariaxXx', '$5$rounds=10000$0i3ytfZcacuplqr0$IslYjA7rpUYTnun0PHVKudtejsFlmNVJgw4xu9/4sH1', 'Angel di Maria', 'Hortaleza', 'dimaria@psg.fr', 800, 800);
 
-
 CREATE TABLE `pachanga`.`polideportivos` (
   `id` VARCHAR(150) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
   , `distrito` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
@@ -75,7 +71,6 @@ CREATE TABLE `pachanga`.`polideportivos` (
   , PRIMARY KEY (`id`)
   , FOREIGN KEY (`distrito`) REFERENCES distritos(`id`) ON DELETE CASCADE
 )ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
-
 
 INSERT INTO `polideportivos` (`id`, `distrito`, `url`) VALUES
 ('Polideportivo Municipal de la Arganzuela', 'Arganzuela', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24307.53754664887!2d-3.7209421414903154!3d40.39905382948238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42264722274855%3A0x487d05d8b335a6b3!2sPolideportivo+Municipal+de+la+Arganzuela!5e0!3m2!1sen!2ses!4v1495739317595'),

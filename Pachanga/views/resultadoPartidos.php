@@ -35,7 +35,7 @@
 
                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-4 col-sm-10 col-sm-offset-1 col-xs-12">
 
-                  <form class="" action="index.html" method="post">
+                  <form class="" action="<?php echo $helper->url('partidos', 'puntuar') . '&id= ' . $_GET['id']; ?>" method="post">
                     <h3>Cuál ha sido el resultado del partido?</h3>
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-circle-arrow-right"></span></span>

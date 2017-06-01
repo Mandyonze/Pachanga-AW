@@ -153,13 +153,13 @@
                 <input name="partido" value="<?php echo $partidoobj[0]->getId(); ?>" type="text" required hidden>
                 <input name="usuario" value="<?php echo $_SESSION['username']; ?>" type="text" required hidden>
                 <input name="equipo" value="1" type="text" required hidden>
-                <div class="col-xs-6 col-md-6"><button type="submit" class="btn btn-warning back-orange flota-derecha" <?php  echo  ($miequipo != 0 || sizeof($equipo1) == 7) ? "disabled" : ""; ?>> Jugar equipo 1 </button></div>
+                <div class="col-xs-6 col-md-6"><button type="submit" class="btn btn-warning back-orange flota-derecha" <?php  echo  ($miequipo != 0 || sizeof($equipo1) == 7 || $partidoobj[0]->getGoles1() != NULL) ? "disabled" : ""; ?>> Jugar equipo 1 </button></div>
               </form>
               <form class="" action="<?php echo $helper->url('participantes', 'insertParticipante'); ?>" method="post">
                 <input name="partido" value="<?php echo $partidoobj[0]->getId(); ?>" type="text" required hidden>
                 <input name="usuario" value="<?php echo $_SESSION['username']; ?>" type="text" required hidden>
                 <input name="equipo" value="2" type="text" required hidden>
-                <div class="col-xs-6 col-md-6"><button type="submit" class="btn btn-warning back-orange" <?php  echo  ($miequipo != 0 || sizeof($equipo2) == 7) ? "disabled" : ""; ?>> Jugar equipo 2 </button></div>
+                <div class="col-xs-6 col-md-6"><button type="submit" class="btn btn-warning back-orange" <?php  echo  ($miequipo != 0 || sizeof($equipo2) == 7 || $partidoobj[0]->getGoles1() != NULL) ? "disabled" : ""; ?>> Jugar equipo 2 </button></div>
               </form>
               <!-- <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-warning back-orange mouse-over" onclick="changeCompartir('compartir')" role="button">Compartir</a></div> -->
             </div>

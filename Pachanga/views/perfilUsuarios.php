@@ -98,7 +98,14 @@
                   </div>
                   <div class="col-xs-12">
                       <div class="container details-titulo" >
-                        <h2> Mis partidos</h2>
+                        <?php
+                        if(isset($_GET['id']) && $_GET['id']==$_SESSION['username'])
+                          echo "<h2> Mis partidos</h2>";
+                        else {
+                          echo "<h2> Sus partidos</h2>";
+                        }
+                         ?>
+
                       </div>
 
                       <div class='panel panel-default'>
