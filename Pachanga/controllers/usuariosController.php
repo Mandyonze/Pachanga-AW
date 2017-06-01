@@ -5,15 +5,19 @@ class UsuariosController extends BaseController{
     private $usuario;
     private $distrito;
     private $partido;
+    private $notificacion;
 
     public function __construct() {
         parent::__construct();
         require_once('models/usuarios.php');
         require_once('models/distritos.php');
         require_once('models/partidos.php');
+        require_once('models/notificaciones.php');
+
         $this->usuario = new Usuarios();
         $this->distrito = new Distritos();
         $this->partido = new Partidos();
+        $this->notificacion = new Notificaciones();
         $this->entity = "Usuarios";
 
     }
@@ -36,6 +40,10 @@ class UsuariosController extends BaseController{
       $ckLogin = $this->usuario->ckLogin($username, $password);
 
       if ( $ckLogin == 0) {
+        $nuevos = $this->partido->comprobarNotificaciones($username);
+        foreach($nuevos as $nuevo){
+          $this->notificacion->insertNotificacion($nuevo->getId(), $username, 1);
+        }
         header('Location:index.php?controller=Partidos&action=inicio&success=' . $ckLogin );
       } else {
         header('Location:index.php?controller=View&action=login&error=' . $ckLogin);

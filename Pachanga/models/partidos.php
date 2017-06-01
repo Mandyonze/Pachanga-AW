@@ -140,6 +140,16 @@ public function ckPartidos($nombre,$fecha,$hora,$minutos,$skill,$polideportivo, 
   return 0;
 }
 
+public function comprobarNotificaciones($usuario){ //Tipo 1 son de partido finalizado
+
+  $now = new DateTime();
+  $fecha =  $now->format('Y-m-d H:i:s');
+
+  $query=$this->db()->query("SELECT * FROM partidos WHERE id NOT IN (SELECT partido FROM notificaciones WHERE tipo = '1') and creador = '$usuario' and fecha < '$fecha'");
+  $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
+  return $resultSet;
+}
+
 public function misPartidosJugados($usuario){
 
     $query=$this->db()->query("SELECT p.id, p.nombre, p.fecha, p.creador, p.participantes, p.skill,d.distrito FROM partidos p inner join participantes m inner join polideportivos d on p.id = m.partido and d.id = p.polideportivo  WHERE m.usuario = '$usuario' and p.goles1 is not null ORDER BY p.fecha");

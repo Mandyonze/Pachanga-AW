@@ -184,8 +184,8 @@
                   echo "<div class='panel-body back-white back-white'>";
                     echo "<div class='row'>"; ?>
                       <div class='col-xs-6 col-md-6'><a href='index.php?controller=partidos&action=datos&id=<?php echo $partido->getId(); ?>' class='btn btn-warning button-ver mouse-over' role='button'>Ver</a></div>
-                      <?php echo "<div class='col-xs-6 col-md-6'><a href='' class='btn btn-warning back-orange mouse-over' onclick='changeCompartir('compartir')' role='button'>Compartir</a></div>";
-                    echo "</div>";
+                       <div class='col-xs-6 col-md-6'><button onclick="changeCompartir('compartir')" type="submit" class="btn btn-warning back-orange mouse-over"> Compartir </button></div>
+                    <?php echo "</div>";
                   echo "</div>";
                 echo "</div>";
                 $aux++;
@@ -201,7 +201,40 @@
     </div>
   </div>
 
+  <div  id = "compartir" class="container backgroundFormulario">
+    <div class="formulario formulario-container animateFormulario">
+      <div class="header-formulario">
+        <div class="centrar">
+          <a href="index.html"><img class = "logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a>
+        </div>
+              <span onclick="changeCompartir('compartir')" class="closeFormulario" title="Close">&times;</span>
+      </div>
 
+      <div class="body-formulario">
+      <br>
+      <h3 class="centrar">Compartir</h3>
+      <br>
+
+        <form>
+
+            <div class="input-group">
+              <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+              <input type="text" class="form-control " id ="username" placeholder="Username" onchange="checkUser()">
+              <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
+              <span id="usernameError" class="glyphicon glyphicon-remove"></span>
+            </div>
+
+            <br>
+
+            <div class = "centrar"><button onclick="changeCompartir('compartir')" type="button" class="btn-formulario cancelbtn">Cancel</button>
+            <button onclick="changeCompartir('compartir')" type="submit" class="btn-formulario sendbtn"> Enviar </button></div>
+        </form>
+      <!-- formulario-container -->
+      </div>
+    <!-- login formulario-container -->
+    </div>
+<!-- container -->
+</div>
 
   <?php require_once('layout/footer.php'); ?>
   <?php require_once('layout/script.php'); ?>

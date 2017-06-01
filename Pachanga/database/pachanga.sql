@@ -153,7 +153,9 @@ INSERT INTO `partidos` (`id`, `nombre`, `polideportivo`, `fecha`, `creador`, `go
 (8, 'F1 party crew', 'Centro Deportivo Municipal Fuente del Berro', '2017-06-16 20:00:00', 'maclarensucks', NULL, NULL, 1 , 100),
 (9, 'En realidad lo que quiero es una birra', 'Centro Deportivo Municipal Concepción', '2017-06-17 13:30:00', 'ronaldoelgordo', NULL, NULL,1 , 50),
 (10, 'SuperGuidetti Fans', 'Polideportivo Jose Caballero', '2017-07-20 19:00:00', 'superguidetti', NULL, NULL,4 , 50),
-(11, 'Partido H4X0RS', 'Polideportivo Municipal La Bombilla', '2017-06-29 13:45:00', 'andy', NULL, NULL,1 , 100);
+(11, 'Partido H4X0RS', 'Polideportivo Municipal La Bombilla', '2017-06-29 13:45:00', 'andy', NULL, NULL,1 , 100),
+(12, 'Terminado notificado', 'Polideportivo Plata y Castañar', '2017-04-21 13:45:00', 'andy', NULL, NULL,1 , 80),
+(13, 'Terminado sin notificar', 'Pabellón Jesús Rollan', '2017-04-19 13:45:00', 'andy', NULL, NULL,1 , 150);
 
 CREATE TABLE `pachanga`.`participantes` (
   `partido` int(20) NOT NULL
@@ -190,4 +192,20 @@ INSERT INTO `participantes` (`partido`, `usuario`, `equipo`) VALUES
 (10, 'gbale11', 1),
 (10, 'riusMiningMaster', 2),
 (10, 'superguidetti', 1),
-(11, 'andy', 1);
+(11, 'andy', 1),
+(12, 'andy', 1),
+(13, 'andy', 1);
+
+CREATE TABLE `pachanga`.`notificaciones` (
+  `id` int(20) NOT NULL AUTO_INCREMENT
+  , `partido` int(20) NOT NULL
+  , `usuario` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+  , `tipo` int(20) NOT NULL
+  , PRIMARY KEY (`id`)
+  , FOREIGN KEY (`usuario`) REFERENCES usuarios(`id`) ON DELETE CASCADE
+  , FOREIGN KEY (`partido`) REFERENCES partidos(`id`) ON DELETE CASCADE
+)ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
+
+INSERT INTO `notificaciones` (`id`, `partido`, `usuario`, `tipo`) VALUES
+(1, 12, 'andy', 1),
+(2, 12, 'cr7', 2);
