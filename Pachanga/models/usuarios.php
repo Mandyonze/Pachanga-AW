@@ -32,7 +32,12 @@
 
     public function ajustePuntes($jugador, $puntos){
 
-      $sql = "UPDATE usuarios SET skill = skill + '$puntos' WHERE id = '$jugador'";
+      if($puntos < 0){
+        $sql = "UPDATE usuarios SET skill = skill + '$puntos' WHERE id = '$jugador' and skill >= 10";
+      }
+      else {
+        $sql = "UPDATE usuarios SET skill = skill + '$puntos' WHERE id = '$jugador'";
+      }
       $stmt =  $this->db()->prepare($sql);
       $stmt->execute();
     }

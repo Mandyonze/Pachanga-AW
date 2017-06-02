@@ -196,8 +196,8 @@
                 <br>
 
                 <div class="centrar">
-                  <button onclick="changeFormulario('login')" type="button" class="btn btn-danger">Cancel</button>
-                  <button type = "submit" class="btn btn-warning"> Entrar </button>
+                  <button onclick="changeFormulario('login')" type="button" class="btn btn-danger button-ver-sin-float">Cancel</button>
+                  <button type = "submit" class="btn btn-warning button-ver-sin-float"> Entrar </button>
                 </div>
 
             </form>
@@ -294,8 +294,8 @@
                     <br>
 
                     <div class="centrar">
-                      <button  onclick="changeFormulario('signUp')" type="button" class="btn-formulario cancelbtn">Cancel</button>
-                      <button type = "submit" class="btn-formulario sendbtn"> Entrar </button>
+                      <button  onclick="changeFormulario('signUp')" type="button" class="btn btn-danger button-ver-sin-float">Cancel</button>
+                      <button type = "submit" class="btn btn-warning button-ver-sin-float"> Entrar </button>
                     </div>
 
                 </form>

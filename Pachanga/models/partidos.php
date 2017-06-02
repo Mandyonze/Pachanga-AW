@@ -145,7 +145,7 @@ public function comprobarNotificaciones($usuario){ //Tipo 1 son de partido final
   $now = new DateTime();
   $fecha =  $now->format('Y-m-d H:i:s');
 
-  $query=$this->db()->query("SELECT * FROM partidos WHERE id NOT IN (SELECT partido FROM notificaciones WHERE tipo = '1') and creador = '$usuario' and fecha < '$fecha'");
+  $query=$this->db()->query("SELECT * FROM partidos WHERE id NOT IN (SELECT partido FROM notificaciones WHERE tipo = '1') and creador = '$usuario' and fecha < '$fecha' and goles1 is NULL");
   $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
   return $resultSet;
 }

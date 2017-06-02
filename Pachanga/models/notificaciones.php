@@ -9,8 +9,9 @@ class Notificaciones extends EntityBase
 
   private $id;
   private $partido;
-  private $usuario;
+  private $receptor;
   private $tipo;
+  private $emisor;
 
   function __construct()
   {
@@ -21,22 +22,24 @@ class Notificaciones extends EntityBase
 
   public function create() {
 
-      $insert = $this->db()->prepare("INSERT INTO notificaciones (id, partido, usuario, tipo) VALUES (?, ?, ?, ?)");
+      $insert = $this->db()->prepare("INSERT INTO notificaciones (id, partido, receptor, tipo, emisor) VALUES (?, ?, ?, ?, ?)");
 
       $insert->bindParam(1, $this->id);
       $insert->bindParam(2, $this->partido);
-      $insert->bindParam(3, $this->usuario);
+      $insert->bindParam(3, $this->receptor);
       $insert->bindParam(4, $this->tipo);
+      $insert->bindParam(5, $this->emisor);
 
       //Ejecutar la sentencia preparada
       $insert->execute();
   }
 
-  public function insertNotificacion($partido, $usuario, $tipo){
+  public function insertNotificacion($partido, $receptor, $tipo, $emisor){
 
     $this->setPartido($partido);
-    $this->setUsuario($usuario);
+    $this->setReceptor($receptor);
     $this->setTipo($tipo);
+    $this->setEmisor($emisor);
 
     $this->create();
   }
@@ -61,12 +64,21 @@ class Notificaciones extends EntityBase
   }
 
   //GETTERS
-  public function getUsuario() {
-    return $this->usuario;
+  public function getReceptor() {
+    return $this->receptor;
   }
   //SETTERS
-  public function setUsuario($usuario) {
-    $this->usuario = $usuario;
+  public function setReceptor($receptor) {
+    $this->receptor = $receptor;
+  }
+
+  //GETTERS
+  public function getEmisor() {
+    return $this->emisor;
+  }
+  //SETTERS
+  public function setEmisor($emisor) {
+    $this->emisor = $emisor;
   }
 
   //GETTERS

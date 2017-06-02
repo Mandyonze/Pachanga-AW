@@ -199,13 +199,15 @@ INSERT INTO `participantes` (`partido`, `usuario`, `equipo`) VALUES
 CREATE TABLE `pachanga`.`notificaciones` (
   `id` int(20) NOT NULL AUTO_INCREMENT
   , `partido` int(20) NOT NULL
-  , `usuario` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+  , `receptor` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
   , `tipo` int(20) NOT NULL
+  , `emisor` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL
+  , FOREIGN KEY (`emisor`) REFERENCES usuarios(`id`) ON DELETE CASCADE
   , PRIMARY KEY (`id`)
-  , FOREIGN KEY (`usuario`) REFERENCES usuarios(`id`) ON DELETE CASCADE
+  , FOREIGN KEY (`receptor`) REFERENCES usuarios(`id`) ON DELETE CASCADE
   , FOREIGN KEY (`partido`) REFERENCES partidos(`id`) ON DELETE CASCADE
 )ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
 
-INSERT INTO `notificaciones` (`id`, `partido`, `usuario`, `tipo`) VALUES
-(1, 12, 'andy', 1),
-(2, 12, 'cr7', 2);
+INSERT INTO `notificaciones` (`id`, `partido`, `receptor`, `tipo`, `emisor`) VALUES
+(1, 12, 'andy', 1, NULL),
+(2, 12, 'cr7', 2, 'andy');

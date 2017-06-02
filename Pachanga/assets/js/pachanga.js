@@ -59,11 +59,12 @@ function changeFormulario(id){
 /***************************************************************************************************************************
   Change the visibility of share form.
 ****************************************************************************************************************************/
-function changeCompartir(id){
+function changeCompartir(id, partido){
 
   if (document.getElementById(id).style.display == "block") {
     document.getElementById(id).style.display = "none";
   }else{
+    document.getElementById('idpar').value = partido;
     document.getElementById(id).style.display = "block"
     cerrar(id);
   }

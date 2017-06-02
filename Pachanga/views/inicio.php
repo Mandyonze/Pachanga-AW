@@ -184,7 +184,7 @@
                   echo "<div class='panel-body back-white back-white'>";
                     echo "<div class='row'>"; ?>
                       <div class='col-xs-6 col-md-6'><a href='index.php?controller=partidos&action=datos&id=<?php echo $partido->getId(); ?>' class='btn btn-warning button-ver mouse-over' role='button'>Ver</a></div>
-                       <div class='col-xs-6 col-md-6'><button onclick="changeCompartir('compartir')" type="submit" class="btn btn-warning back-orange mouse-over"> Compartir </button></div>
+                       <div class='col-xs-6 col-md-6'><button onclick="changeCompartir('compartir', <?php echo $partido->getId(); ?>)" type="submit" class="btn btn-warning back-orange mouse-over"> Compartir </button></div>
                     <?php echo "</div>";
                   echo "</div>";
                 echo "</div>";
@@ -215,19 +215,20 @@
       <h3 class="centrar">Compartir</h3>
       <br>
 
-        <form>
-
+        <form method="post" action="<?php echo $helper->url('notificaciones', 'partidoCompartido'); ?>">
             <div class="input-group">
               <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-              <input type="text" class="form-control " id ="username" placeholder="Username" onchange="checkUser()">
+              <input type="text" class="form-control" name="username" id ="username" placeholder="Username" onchange="checkUser()" required>
               <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
               <span id="usernameError" class="glyphicon glyphicon-remove"></span>
             </div>
-
+            <input type="text" name="idpar" id="idpar" value="" hidden>
             <br>
 
-            <div class = "centrar"><button onclick="changeCompartir('compartir')" type="button" class="btn-formulario cancelbtn">Cancel</button>
-            <button onclick="changeCompartir('compartir')" type="submit" class="btn-formulario sendbtn"> Enviar </button></div>
+            <div class = "centrar">
+              <button onclick="changeCompartir('compartir', 1)" type="button" class="btn btn-danger button-ver-sin-float">Cancel</button>
+              <button onclick="changeCompartir('compartir', 1)" type="submit" class="btn btn-warning button-ver-sin-float"> Enviar </button>
+            </div>
         </form>
       <!-- formulario-container -->
       </div>

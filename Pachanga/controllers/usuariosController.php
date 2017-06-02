@@ -2,6 +2,7 @@
 
 class UsuariosController extends BaseController{
 
+    private $entity;
     private $usuario;
     private $distrito;
     private $partido;
@@ -42,7 +43,7 @@ class UsuariosController extends BaseController{
       if ( $ckLogin == 0) {
         $nuevos = $this->partido->comprobarNotificaciones($username);
         foreach($nuevos as $nuevo){
-          $this->notificacion->insertNotificacion($nuevo->getId(), $username, 1);
+          $this->notificacion->insertNotificacion($nuevo->getId(), $username, 1, NULL);
         }
         header('Location:index.php?controller=Partidos&action=inicio&success=' . $ckLogin );
       } else {

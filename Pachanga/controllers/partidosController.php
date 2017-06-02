@@ -11,6 +11,7 @@ class PartidosController extends BaseController {
     private $partido;
     private $polideportivo;
     private $participante;
+    private $notificacion;
 
     function __construct() {
         parent::__construct();
@@ -20,12 +21,14 @@ class PartidosController extends BaseController {
         require_once('models/partidos.php');
         require_once('models/polideportivos.php');
         require_once('models/participantes.php');
+        require_once('models/notificaciones.php');
 
         $this->distrito = new Distritos();
         $this->usuario = new Usuarios();
         $this->partido = new Partidos();
         $this->polideportivo = new Polideportivos();
         $this->participante = new Participantes();
+        $this->notificacion = new Notificaciones();
     }
 
     public function inicio(){
@@ -41,7 +44,6 @@ class PartidosController extends BaseController {
       ));
     }
 
-
     public function crear(){
       session_start();
       $data = $this->usuario->getBy("id", $_SESSION["username"]);
@@ -51,7 +53,6 @@ class PartidosController extends BaseController {
         "data" => $data
       ));
     }
-
 
     public function filtro() {
         session_start();
