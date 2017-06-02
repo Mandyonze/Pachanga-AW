@@ -37,9 +37,14 @@ class Participantes extends EntityBase
     $this->setEquipo($equipo);
 
     $this->create();
-
   }
 
+  public function deleteParticipante($partido, $usuario){
+
+    $sql = "DELETE FROM $this->table WHERE partido = '$partido' and usuario = '$usuario'";
+    $stmt =  $this->db()->prepare($sql);
+    $stmt->execute();
+  }
 
   public function getEquipo1($id){
     $query=$this->db()->query("SELECT * FROM $this->table WHERE partido = '$id' and equipo = '1'"); //ORDER BY id DESC

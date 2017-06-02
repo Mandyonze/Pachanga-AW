@@ -44,6 +44,9 @@ footer a, footer a:hover  {
   Social Media buttons.
 ****************************************************************************************************************************/
 
+.button-ver-sin-float{
+  width: 90px;
+}
 
 /* Style all font awesome icons */
 .fa {

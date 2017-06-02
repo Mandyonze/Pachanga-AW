@@ -40,5 +40,18 @@ class ParticipantesController extends BaseController {
         header('Location:index.php?controller=partidos&action=inicio');
       }
     }
+
+    public function deleteParticipante(){
+
+      $partido = filter_var($_POST['partido'], FILTER_SANITIZE_STRING);
+      $usuario = filter_var($_POST['usuario'], FILTER_SANITIZE_STRING);
+
+      $this->participante->deleteParticipante($partido, $usuario);
+      $partido = $this->partidos->getById($partido);
+      $participantes = $partido[0]->getParticipantes() - 1;
+      $this->partidos->updateParticipantes($partido[0]->getId() , $participantes);
+
+      header('Location:index.php?controller=partidos&action=datos&id='. $_POST['partido']);
+    }
 }
 ?>

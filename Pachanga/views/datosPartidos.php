@@ -175,7 +175,7 @@
                  ?>
               </tbody>
             </table>
-
+            <?php if($miequipo == 0 || $partidoobj[0]->getCreador() == $_SESSION['username'] || $partidoobj[0]->getGoles1() != NULL){ ?>
             <div class="container-fluid margen_top_title">
               <form class="" action="<?php echo $helper->url('participantes', 'insertParticipante'); ?>" method="post">
                 <input name="partido" value="<?php echo $partidoobj[0]->getId(); ?>" type="text" required hidden>
@@ -191,6 +191,20 @@
               </form>
               <!-- <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-warning back-orange mouse-over" onclick="changeCompartir('compartir')" role="button">Compartir</a></div> -->
             </div>
+            <?php
+            }
+            else {
+            ?>
+            <div class="container-fluid margen_top_title">
+              <form class="" action="<?php echo $helper->url('participantes', 'deleteParticipante'); ?>" method="post">
+                <input name="partido" value="<?php echo $partidoobj[0]->getId(); ?>" type="text" required hidden>
+                <input name="usuario" value="<?php echo $_SESSION['username']; ?>" type="text" required hidden>
+                <div class="col-xs-12 col-md-12 centrar"><button type="submit" class="btn btn-warning back-orange button-ver-sin-float"> Salir </button></div>
+              </form>
+            </div>
+            <?php
+            }
+            ?>
             <div class="map-responsive margen_top_title">
               <iframe src="<?php echo $poli[0]->getUrl(); ?>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>

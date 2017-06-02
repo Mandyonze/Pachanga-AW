@@ -57,7 +57,7 @@
                     </div>
                     <br>
                     <div class="centrar">
-                      <button href="" type="submit" class="btn btn-warning"> Enviar </button>
+                      <button href="" type="submit" class="btn btn-warning button-ver-sin-float"> Enviar </button>
                     </div>
                   </form>
 
