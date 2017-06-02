@@ -2,6 +2,8 @@
 
 class BaseController {
 
+    private $notificacion;
+
     function __construct() {
         require_once ('models/entityBase.php');
     }
@@ -9,9 +11,20 @@ class BaseController {
     //Plugins y funcionalidades
 
     public function view($vista, $entity, $datos){
+
+        require_once('models/notificaciones.php');
+        $this->notificacion = new Notificaciones();
+
+
         foreach ($datos as $id_assoc => $valor) {
             ${$id_assoc} = $valor;
         }
+
+        if(isset($data)){
+          $terminados = $this->notificacion->misFinalizados($data[0]->getId());
+          $compartidos = $this->notificacion->misCompartidos($data[0]->getId());
+        }
+
         if(isset($_GET['controller'])){
           $contr = ucfirst($_GET['controller']);
         }

@@ -104,8 +104,8 @@
               </div>
               <br>
               <div class="centrar">
-                <button type="reset" class="btn btn-danger"> Borrar </button>
-                <button type="submit" class="btn btn-warning"> Enviar </button></div>
+                <button type="reset" class="btn btn-danger button-ver-sin-float"> Borrar </button>
+                <button type="submit" class="btn btn-warning button-ver-sin-float"> Enviar </button></div>
             </form>
           </div>
 

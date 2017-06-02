@@ -45,6 +45,7 @@ class PartidosController extends BaseController {
     }
 
     public function crear(){
+
       session_start();
       $data = $this->usuario->getBy("id", $_SESSION["username"]);
       $distritos = $this->distrito->getAll();
@@ -55,6 +56,7 @@ class PartidosController extends BaseController {
     }
 
     public function filtro() {
+
         session_start();
         $data = $this->usuario->getBy("id", $_SESSION["username"]);
         $distritos = $this->distrito->getAll();
@@ -99,6 +101,8 @@ class PartidosController extends BaseController {
           $id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
           $goles1 = filter_var($_POST['goles1'], FILTER_SANITIZE_NUMBER_INT);
           $goles2 = filter_var($_POST['goles2'], FILTER_SANITIZE_NUMBER_INT);
+
+          $this->notificacion->borrarNotificacion($_SESSION["username"], $id);
 
           $this->partido->valorar($id, $goles1, $goles2);
           $equipo1 = $this->participante->getEquipo1($id);
@@ -178,7 +182,12 @@ class PartidosController extends BaseController {
             if (isset($_GET['info'])) {
               $info = 0;
             }
-            $obj = $_GET['id'];
+
+            $obj = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
+            if(isset($_GET['visto'])){
+              $this->notificacion->borrarNotificacion($_SESSION["username"], $obj);
+            }
+
             $partidoobj = $this->partido->getById($obj);
             $ahora= $partidoobj[0]->getPolideportivo();
             $poli = $this->polideportivo->getBy("id", $ahora);

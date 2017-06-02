@@ -44,6 +44,27 @@ class Notificaciones extends EntityBase
     $this->create();
   }
 
+  public function misCompartidos($usuario){
+
+    $query=$this->db()->query("SELECT * FROM $this->table WHERE receptor = '$usuario' and tipo = '2'");
+    $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
+    return $resultSet;
+  }
+
+  public function misFinalizados($usuario){
+
+    $query=$this->db()->query("SELECT * FROM $this->table WHERE receptor = '$usuario' and tipo = '1'");
+    $resultSet = $query->fetchAll(PDO::FETCH_CLASS, $this->class);
+    return $resultSet;
+  }
+
+  public function borrarNotificacion($receptor, $partido){
+
+    $sql = "DELETE FROM $this->table WHERE partido = '$partido' and receptor = '$receptor'";
+    $stmt =  $this->db()->prepare($sql);
+    $stmt->execute();
+  }
+
   //GETTERS
   public function getId() {
     return $this->id;
