@@ -24,7 +24,15 @@
       <div class="col-xs-12 col-sm-12 col-md-9">
         <div class="profile-content">
 
-          <div class="container-fluid">
+          <?php if (isset($info) && $info == 0) {
+            echo "<div class='alert alert-success alert-dismissable' data-dismiss='alert'>";
+            echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
+            echo "¡<strong>Enhorabuena</strong> Has creado un partido!";
+            echo "</div>";
+          }
+          ?>
+
+          <div class="container-fluid partido_detalle">
 
             <?php //echo $miequipo; ?>
             <div class="container-fluid miperfil">

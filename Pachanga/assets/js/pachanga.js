@@ -202,3 +202,57 @@ function checkEmail(){
 $(document).ready(function(){
     $(this).scrollTop(0);
 });
+
+
+/***************************************************************************************/
+
+
+// document.getElementById("mapa").innerHTML = "";
+
+
+  function mostrarMapa(polideportivo) {
+    if(polideportivo == "") {
+      document.getElementById("mapa").innerHTML = "";
+    } else {
+      if (window.XMLHttpRequest){
+        xmlhttp = new XMLHttpRequest();
+      } else {
+        xmlhttp = new ActiveXObject(Microsoft.XMLHTTP);
+      }
+
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("mapa").innerHTML = this.responseText;
+        }
+      }
+
+      xmlhttp.open("GET","index.php?controller=partidos&action=mapa&polideportivo="+polideportivo, true);
+      xmlhttp.send();
+    }
+  }
+
+
+  function mostrarPolideportivo(distrito) {
+    if(distrito == "") {
+      document.getElementById("polideportivos").innerHTML = "";
+
+
+    } else {
+      if (window.XMLHttpRequest){
+        xmlhttp = new XMLHttpRequest();
+      } else {
+        xmlhttp = new ActiveXObject(Microsoft.XMLHTTP);
+      }
+
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("polideportivos").innerHTML = this.responseText;
+          document.getElementById("mapa").innerHTML = "";
+        }
+      }
+
+      xmlhttp.open("GET","index.php?controller=partidos&action=elegirPolideportivo&distrito="+distrito, true);
+      xmlhttp.send();
+    }
+
+  }
