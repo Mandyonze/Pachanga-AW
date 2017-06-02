@@ -5,6 +5,7 @@
   <?php require_once('layout/library.php'); ?>
   <title> PACHANGA </title>
   <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/datosPartido.css">
 </head>
 
 <body>
@@ -70,7 +71,6 @@
         </div>
 
         <a id ="info"></a>
-        <br>
         <div class="centrar">
           <h1>¿Qué es Pachanga?</h1>
         </div>
@@ -78,41 +78,12 @@
         <div class="container-fluid">
           <h4 class="centrar">
             Pachanga es una red social para unir a la gente en el deporte, en especial el fútbol.
-            Los usuarios pueden crear partidos y jugar con otras personas.
+            Los usuarios pueden crear partidos y jugar con otras personas. La aplicación tiene registrados
+            52 polideportivos en los 21 distritos de Madrid.
           </h4>
           <br><br>
-          <h4 class="centrar">
-            La aplicación tiene registrados 52 polideportivos en los 21 distritos de Madrid.
-          </h4>
-          <br><br>
-          <div class="row">
-            <div class="col-lg-4 centrar">
-              <h4>Fuencarral-El Pardo</h4>
-              <h4>Moncloa-Aravaca</h4>
-              <h4>Tetuán</h4>
-              <h4>Hortaleza</h4>
-              <h4>Chamartín</h4>
-              <h4>Ciudad Lineal</h4>
-              <h4>Chamberí</h4>
-            </div>
-            <div class="col-lg-4 centrar">
-              <h4>Barrio de Salamanca</h4>
-              <h4>San Blas</h4>
-              <h4>Barajas</h4>
-              <h4>Centro</h4>
-              <h4>Retiro</h4>
-              <h4>Arganzuela</h4>
-              <h4>Moratalaz</h4>
-            </div>
-            <div class="col-lg-4 centrar">
-              <h4>Villaverde</h4>
-              <h4>Usera</h4>
-              <h4>Latina</h4>
-              <h4>Carabanchel</h4>
-              <h4>Vicálvaro</h4>
-              <h4>Puente de Vallecas</h4>
-              <h4>Villa de Vallecas</h4>
-            </div>
+          <div class="map-responsive margen_top_title">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97173.97825985964!2d-3.749575949246259!3d40.43793316652326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid!5e0!3m2!1ses!2ses!4v1496408285824" width="1000" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
           <br><br>
         </div>
@@ -140,6 +111,9 @@
             </div>
           <!-- row -->
           </div>
+          <br><br>
+          <a href="http://www.nike.com/es/es_es/"><img class="img-responsive" src="assets/img/resources/banner1.jpg" class="img-responsive"></a>
+          <br><br>
         <!-- container-fluid 1 -->
         </div>
         <br><br>
