@@ -46,7 +46,7 @@
           <div class="container-fluid crearpartido">
 
 
-            <form action="<?php echo $helper->url('partidos', 'elegirPolideportivo') ?>" method="post">
+            <form action="<?php echo $helper->url('partidos', 'nuevoPartido') ?>" method="post">
 
               <div class="input-group">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-tags"></span></span>
@@ -75,7 +75,7 @@
 
               <div class="input-group ">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
-                <select name="distrito" class="form-control buscar-partido-distrito" required>
+                <select name="distrito" class="form-control buscar-partido-distrito" onchange="mostrarPolideportivo(this.value)" required>
                   <option selected disabled hidden requiered>Distrito</option>
                   <?php
                     foreach ($distritos as $distrito) {
@@ -87,11 +87,20 @@
                 </select>
               </div>
 
+              <!-- <br> -->
+              <div id="polideportivos">
+                <!-- Auí se pintarán los polideportivos con ajax -->
+              </div>
+
               <br>
               <div class="input-group">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-star"></span></span>
                 <input type="number" name="skill" min="0" class="form-control " placeholder="Skill minima" required>
                 <!-- <input  type="number" class="form-control "   required> -->
+              </div>
+              <br>
+              <div id="mapa">
+                <!-- Auí se pintarán el mapa con ajax -->
               </div>
               <br>
               <div class="centrar">
@@ -105,8 +114,6 @@
       </div>
     </div>
   </div>
-
-
 
   <?php require_once('layout/footer.php'); ?>
   <?php require_once('layout/script.php'); ?>

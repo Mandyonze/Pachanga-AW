@@ -129,7 +129,7 @@ class PartidosController extends BaseController {
       public function elegirPolideportivo(){
           session_start();
           $data = $this->usuario->getBy("id", $_SESSION["username"]);
-          $distrito = filter_var($_POST['distrito'], FILTER_SANITIZE_STRING);
+          $distrito = filter_var($_GET['distrito'], FILTER_SANITIZE_STRING);
           $polideportivos = $this->polideportivo->getByDistrito($distrito);
           $distrito = $this->distrito->getBy("id", $distrito);
           //Llamada a la vista para elegir el polideportivo según el distrito
@@ -142,24 +142,31 @@ class PartidosController extends BaseController {
 
         public function nuevoPartido() {
           session_start();
-          $nombre = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+          $nombre = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
           $fecha = $_POST["fecha"];
           $hora =  filter_var($_POST['hora'], FILTER_SANITIZE_NUMBER_INT);
           $minutos =  filter_var($_POST['minutos'], FILTER_SANITIZE_NUMBER_INT);
           $skill =  filter_var($_POST['skill'], FILTER_SANITIZE_NUMBER_INT);
           $polideportivo = filter_var($_POST['polideportivo'], FILTER_SANITIZE_STRING);
-          $creador = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+          $creador = filter_var($_SESSION['username'], FILTER_SANITIZE_STRING);
 
           $ckPartidos = $this->partido->ckPartidos($nombre,$fecha,$hora,$minutos,$skill,$polideportivo, $creador);
-          //'2017-05-17 10:24:33'
 
+          $id = $this->partido->getBy("nombre", $nombre);
+          // print_r($id);
           $data = $this->usuario->getBy("id", $_SESSION["username"]);
           $distritos = $this->distrito->getAll();
-          $this->view("crear", $this->entity, array(
-            "distritos" => $distritos,
-            "data" => $data,
-            "info" => $ckPartidos
-          ));
+
+          if ($ckPartidos == 0) {
+              header('Location:index.php?controller=partidos&action=datos&info=0&id='.$id[0]->getId());
+          }else {
+            $this->view("crear", $this->entity, array(
+              "distritos" => $distritos,
+              "data" => $data,
+              "info" => $ckPartidos
+            ));
+          }
+
         }
 
         public function datos(){
@@ -167,6 +174,10 @@ class PartidosController extends BaseController {
           $data = $this->usuario->getBy("id", $_SESSION["username"]);
 
           if(isset($_GET['id'])){
+            $info = -1;
+            if (isset($_GET['info'])) {
+              $info = 0;
+            }
             $obj = $_GET['id'];
             $partidoobj = $this->partido->getById($obj);
             $ahora= $partidoobj[0]->getPolideportivo();
@@ -180,7 +191,8 @@ class PartidosController extends BaseController {
               "poli" => $poli,
               "equipo1" => $equipo1,
               "equipo2" => $equipo2,
-              "miequipo" => $miequipo
+              "miequipo" => $miequipo,
+              "info" => $info
             ));
           }
           else{
@@ -205,6 +217,20 @@ class PartidosController extends BaseController {
               "data" => $data,
               "misPartidosJugados" => $misPartidosJugados,
               "misPartidosNoJugados" => $misPartidosNoJugados
+          ));
+        }
+
+        public function mapa() {
+          session_start();
+          $data = $this->usuario->getBy("id", $_SESSION["username"]);
+          $polideportivo = filter_var($_GET['polideportivo'], FILTER_SANITIZE_STRING);
+          $polideportivos = $this->polideportivo->getBy("id", $polideportivo);
+          // $distrito = $this->distrito->getBy("id", $distrito);
+          //Llamada a la vista para elegir el polideportivo según el distrito
+          $this->view("mapa", "", array(
+            "polideportivos" => $polideportivos,
+            "data" => $data
+            // "distrito" => $distrito
           ));
         }
 }
