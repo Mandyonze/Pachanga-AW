@@ -37,7 +37,9 @@
         else{
           $pendientes = sizeof($terminados);
           $udm = $data[0]->getId();
-          echo "<li><a href='index.php?controller=usuarios&action=perfil&id=$udm'> Tienes $pendientes partidos pendientes por puntuar </a></li>";
+          if($pendientes != 0){
+            echo "<li><a href='index.php?controller=usuarios&action=perfil&id=$udm'> Tienes $pendientes partidos pendientes por puntuar </a></li>";
+          }
           foreach($compartidos as $compartido){
             $idpartido = $compartido->getPartido();
             $idemisor = $compartido->getEmisor();
