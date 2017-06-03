@@ -62,7 +62,7 @@
                   </div>
 
                   <div class="col-sm-3 sin_pading">
-                    <div class='input-group date buscar-partido-date' id='datepicker' data-date-format="dd-mm-yyyy">
+                    <div class='input-group date buscar-partido-date' id='datepicker' data-date-format="yyyy-m-dd">
                       <input type='text' class="form-control" name="fecha" />
                       <span class="input-group-addon">
                                <span class="glyphicon glyphicon-calendar"></span>

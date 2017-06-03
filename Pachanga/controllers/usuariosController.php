@@ -77,7 +77,7 @@ class UsuariosController extends BaseController{
     }
 
     public function perfil() {
-      session_start();
+
 
       $usuario = $_GET["id"];
       $data = $this->usuario->getBy("id", $_SESSION["username"]);
@@ -92,7 +92,7 @@ class UsuariosController extends BaseController{
     }
 
     public function mejores(){
-      session_start();
+
 
       $data = $this->usuario->getBy("id", $_SESSION["username"]);
       $mejores = $this->usuario->mejores($data[0]->getDistrito());

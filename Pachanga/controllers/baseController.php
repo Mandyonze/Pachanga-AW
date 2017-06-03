@@ -25,14 +25,6 @@ class BaseController {
           $compartidos = $this->notificacion->misCompartidos($data[0]->getId());
         }
 
-        if(isset($_GET['controller'])){
-          $contr = ucfirst($_GET['controller']);
-        }
-
-        if(isset($_GET['controller']) && $contr != 'View' && !isset($_SESSION['username'])){
-          header('Location:index.php?controller=View&action=home');
-        }
-
         require_once 'models/helperView.php';
 
         $helper = new HelperView();

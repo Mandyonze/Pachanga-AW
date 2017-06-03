@@ -33,7 +33,7 @@ class PartidosController extends BaseController {
 
     public function inicio(){
 
-      session_start();
+
       $data = $this->usuario->getBy("id", $_SESSION["username"]);
       $partidos = $this->partido->partidosActivos();
       $distritos = $this->distrito->getAll();
@@ -46,7 +46,7 @@ class PartidosController extends BaseController {
 
     public function crear(){
 
-      session_start();
+
       $data = $this->usuario->getBy("id", $_SESSION["username"]);
       $distritos = $this->distrito->getAll();
       $this->view("crear", $this->entity, array(
@@ -57,7 +57,7 @@ class PartidosController extends BaseController {
 
     public function filtro() {
 
-        session_start();
+        
         $data = $this->usuario->getBy("id", $_SESSION["username"]);
         $distritos = $this->distrito->getAll();
 
@@ -80,7 +80,7 @@ class PartidosController extends BaseController {
 
         if(isset($_GET['id'])){
 
-          session_start();
+
           $id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
           $data = $this->usuario->getBy("id", $_SESSION["username"]);
           $partidos = $this->partido->getBy("id", $id);
@@ -96,7 +96,7 @@ class PartidosController extends BaseController {
 
       public function puntuar(){
 
-        session_start();
+
         if(isset($_GET['id']) && isset($_POST['goles1']) && isset($_POST['goles2'])){
           $id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
           $goles1 = filter_var($_POST['goles1'], FILTER_SANITIZE_NUMBER_INT);
@@ -131,7 +131,7 @@ class PartidosController extends BaseController {
       }
 
       public function elegirPolideportivo(){
-          session_start();
+
           $data = $this->usuario->getBy("id", $_SESSION["username"]);
           $distrito = filter_var($_GET['distrito'], FILTER_SANITIZE_STRING);
           $polideportivos = $this->polideportivo->getByDistrito($distrito);
@@ -145,7 +145,7 @@ class PartidosController extends BaseController {
         }
 
         public function nuevoPartido() {
-          session_start();
+
           $nombre = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
           $fecha = $_POST["fecha"];
           $hora =  filter_var($_POST['hora'], FILTER_SANITIZE_NUMBER_INT);
@@ -174,7 +174,7 @@ class PartidosController extends BaseController {
         }
 
         public function datos(){
-          session_start();
+
           $data = $this->usuario->getBy("id", $_SESSION["username"]);
 
           if(isset($_GET['id'])){
@@ -217,7 +217,7 @@ class PartidosController extends BaseController {
 
         public function mis()
         {
-          session_start();
+
 
           $data = $this->usuario->getBy("id", $_SESSION["username"]);
           $misPartidosJugados = $this->partido->misPartidosJugados($_SESSION["username"]);
@@ -230,7 +230,7 @@ class PartidosController extends BaseController {
         }
 
         public function mapa() {
-          session_start();
+
           $data = $this->usuario->getBy("id", $_SESSION["username"]);
           $polideportivo = filter_var($_GET['polideportivo'], FILTER_SANITIZE_STRING);
           $polideportivos = $this->polideportivo->getBy("id", $polideportivo);
