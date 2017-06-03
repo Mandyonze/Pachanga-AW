@@ -34,6 +34,7 @@ body, html {
 footer{
   background-color: #252525;
   color: white;
+  margin-top: 130px;
 }
 
 footer a, footer a:hover  {
