@@ -22,13 +22,18 @@
           <div class="body-formulario">
             <?php if (isset($error) && $error[0] == 1) {
               echo "<div class='alert alert-danger'>";
-              echo "<strong> ERROR! </strong> Usuario o contraseña incorrecta";
+              echo "<strong> ERROR! </strong> Usuario o contraseña incorrecta!";
+              echo "</div>";
+            }
+            if (isset($error) && $error[0] == 2) {
+              echo "<div class='alert alert-danger'>";
+              echo "<strong> ERROR! </strong> Rellene el captcha!";
               echo "</div>";
             }
             ?>
             <div class = "centrar"><h3>Iniciar Sesión</h3></div>
 
-              <form action="<?php echo $helper->url('usuarios' , 'login') ?>" method="post">
+              <form action="<?php echo $helper->url('usuarios' , 'recaptchaLogin') ?>" method="post">
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                   <input type="text" name = "username" class="form-control " placeholder="Username" autofocus required>
@@ -45,6 +50,8 @@
                   <span id="passErrorLogin" class="glyphicon glyphicon-remove"></span>
                 </div>
                 <br>
+                <div class="g-recaptcha" data-sitekey="6LdVVRsUAAAAAJ51aHWOVGeTwQ7_TzJIU_bi-fjo" data-callback="recaptcha1"></div>
+                <br>
                 <div class="links">
                     ¿Todavía no eres miembro?<br><a href="<?php echo $helper->url('view', 'register'); ?>">Regístrate ahora</a>
                 </div>
@@ -53,7 +60,11 @@
 
                 <div class="centrar">
                   <a href="<?php echo $helper->url('view', 'home'); ?>" type="button" class="btn btn-danger button-ver-sin-float">Cancel</a>
+
+                  <!-- <button type = "submit" id="submitLogin" class="btn btn-warning button-ver-sin-float mouse-over"> Entrar </button> -->
+
                   <button type = "submit" id="submitLogin" class="btn btn-warning button-ver-sin-float mouse-over"> Entrar </button>
+
                 </div>
             </form>
           <!-- formulario-container -->
@@ -65,5 +76,7 @@
 
 
   <?php require_once('layout/script.php'); ?>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
   </body>
 </html>

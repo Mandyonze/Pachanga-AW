@@ -208,9 +208,9 @@
                     <br>
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-tag"></span></span>
-                      <input type="text" class="form-control" name="nombre" placeholder="Nombre Completo" onchange="checkNombre(this, 'Register')" required>
-                      <span id="nombreSuccesRegister" class="glyphicon glyphicon-ok"></span>
-                      <span id="nombreErrorRegister" class="glyphicon glyphicon-remove"></span>
+                      <input type="text" class="form-control" name="nombre" placeholder="Nombre Completo" onchange="checkName(this, 'Register')" required>
+                      <span id="nameSuccesRegister" class="glyphicon glyphicon-ok"></span>
+                      <span id="nameErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
                     <br>
                     <div class="input-group ">
@@ -268,8 +268,8 @@
                     <br>
 
                     <div class="centrar">
-                      <button  onclick="changeFormulario('signUp')" type="button" class="btn btn-danger button-ver-sin-float">Cancel</button>
-                      <button type = "submit" class="btn btn-warning button-ver-sin-float"> Entrar </button>
+                      <button  type="reset" onclick="changeFormulario('signUp')" type="button" class="btn btn-danger button-ver-sin-float">Cancel</button>
+                      <button id = "submit"  type = "submit" class="btn btn-warning button-ver-sin-float"> Entrar </button>
                     </div>
 
                 </form>

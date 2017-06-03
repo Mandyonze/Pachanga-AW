@@ -91,8 +91,25 @@ function cerrar(id) {
   Login
 ****************************************************************************************************************************/
 
-var username = false;
 
+document.getElementById("submit").disabled = true;
+var username = 0;
+var name = 0;
+var email = 0;
+var pass = 0;
+var repass = 0;
+
+function checkButton() {
+
+  if (username == 1 && name == 1 && email == 1 && pass == 1 && repass == 1) {
+    document.getElementById("submit").disabled = false;
+  } else {
+    // alert("Her");
+      document.getElementById("submit").disabled = true;
+  }
+
+
+}
 
 function checkUser(x, aux){
 	// var x = document.getElementById("username");
@@ -101,34 +118,42 @@ function checkUser(x, aux){
     $("#usernameErrorRegister").css({"display" : "inline"});
     $("#usernameSuccesRegister").css({"display" : "none"});
     x.classList.remove('form-control-ok');
-    x.classList.add('form-control-error')
+    x.classList.add('form-control-error');
+    username = 0;
   } else {
     $("#usernameErrorRegister").css({"display" : "none"});
     $("#usernameSuccesRegister").css({"display" : "inline"});
     x.classList.remove('form-control-error');
     x.classList.add('form-control-ok');
+    username = 1;
   }
-
+    // alert("caca1");
+    checkButton();
 }
 
-function checkNombre(x, aux){
+
+function checkName(x, aux){
 	// var x = document.getElementById("username");
 
   if (x.value.length < 5) {
-    $("#nombreErrorRegister").css({"display" : "inline"});
-    $("#nombreSuccesRegister").css({"display" : "none"});
+    $("#nameErrorRegister").css({"display" : "inline"});
+    $("#nameSuccesRegister").css({"display" : "none"});
     x.classList.remove('form-control-ok');
-    x.classList.add('form-control-error')
+    x.classList.add('form-control-error');
+    name = 0;
   } else {
-    $("#nombreErrorRegister").css({"display" : "none"});
-    $("#nombreSuccesRegister").css({"display" : "inline"});
+    $("#nameErrorRegister").css({"display" : "none"});
+    $("#nameSuccesRegister").css({"display" : "inline"});
     x.classList.remove('form-control-error');
     x.classList.add('form-control-ok');
+    name = 1;
   }
+
+  checkButton();
 
 }
 
-var pass = false;
+
 
 function checkPass(x, aux){
 
@@ -137,15 +162,16 @@ function checkPass(x, aux){
       $("#passSuccesRegister").css({"display" : "none"});
       x.classList.remove('form-control-ok');
       x.classList.add('form-control-error')
-      pass = false;
-      } else {
+      pass = 0;
+    } else {
       $("#passErrorRegister").css({"display" : "none"});
       $("#passSuccesRegister").css({"display" : "inline"});
       x.classList.remove('form-control-error');
       x.classList.add('form-control-ok');
-      pass = true;
+      pass = 1;
     }
 
+    checkButton();
 }
 
 
@@ -158,20 +184,24 @@ function checkPass2(){
 	var x = document.getElementById("pass2");
   var y = document.getElementById("pass");
 
-	if (x.value != y.value || !pass) {
+	if (x.value != y.value || pass == 0) {
     $("#pass2Error").css({"display" : "inline"});
     $("#pass2Succes").css({"display" : "none"});
 
 		x.classList.remove('form-control-ok');
-		x.classList.add('form-control-error')
+		x.classList.add('form-control-error');
+    repass = 0;
 	} else {
 
     $("#pass2Succes").css({"display" : "inline"});
     $("#pass2Error").css({"display" : "none"});
 		x.classList.remove('form-control-error');
 		x.classList.add('form-control-ok');
+    repass = 1;
 	}
 
+
+    checkButton();
 }
 
 
@@ -185,14 +215,19 @@ function checkEmail(){
     $("#emailSucces").css({"display" : "none"});
     x.classList.remove('form-control-ok');
     x.classList.add('form-control-error');
+    email = 0;
 	} else {
 
     $("#emailSucces").css({"display" : "inline"});
     $("#emailError").css({"display" : "none"});
     x.classList.remove('form-control-error');
     x.classList.add('form-control-ok');
+    email = 1;
 
 	}
+
+
+  checkButton();
 
 }
 

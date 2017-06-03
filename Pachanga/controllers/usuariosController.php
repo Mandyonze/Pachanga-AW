@@ -105,6 +105,40 @@ class UsuariosController extends BaseController{
     }
 
 
+    public function recaptchaLogin()
+    {
+      # code...
+      $recaptcha = $_POST["g-recaptcha-response"];
+
+      if ($recaptcha == "") {
+        header('Location:index.php?controller=View&action=login&error=2');
+      } else {
+        $secret = "6LdVVRsUAAAAABeoFjd4KPujUS598jXeDHHPmIfQ";
+        $ip = $_SERVER["REMOTE_ADDR"];
+        $var =file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$recaptcha&remoteip=$ip");
+        $array = json_decode($var, true);
+        if ($array['success']){
+          $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+          $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+          $ckLogin = $this->usuario->ckLogin($username, $password);
+
+          if ( $ckLogin == 0) {
+            $nuevos = $this->partido->comprobarNotificaciones($username);
+            foreach($nuevos as $nuevo){
+              $this->notificacion->insertNotificacion($nuevo->getId(), $username, 1, NULL);
+            }
+            header('Location:index.php?controller=Partidos&action=inicio&success=' . $ckLogin );
+          } else {
+            header('Location:index.php?controller=View&action=login&error=' . $ckLogin);
+          }
+        }else {
+          header('Location:index.php?controller=View&action=login&error=2');
+        }
+      }
+
+    }
+
+
 }
 
 ?>

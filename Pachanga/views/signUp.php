@@ -37,18 +37,18 @@
 
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                  <input type="text" class="form-control " name="username" id ="username" placeholder="Username" onchange="checkUser()" required autofocus>
-                  <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
-                  <span id="usernameError" class="glyphicon glyphicon-remove"></span>
+                  <input type="text" class="form-control " name="username" id ="username" placeholder="Username" onchange="checkUser(this, 'Register')" required autofocus>
+                  <span id="usernameSuccesRegister" class="glyphicon glyphicon-ok"></span>
+                  <span id="usernameErrorRegister" class="glyphicon glyphicon-remove"></span>
                 </div>
 
                 <br>
 
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-tag"></span></span>
-                  <input type="text" class="form-control " name="nombre" id ="nombre" placeholder="Nombre Completo" onchange="checkUser()" required>
-                  <span id="usernameSucces" class="glyphicon glyphicon-ok"></span>
-                  <span id="usernameError" class="glyphicon glyphicon-remove"></span>
+                  <input type="text" class="form-control " name="nombre" id ="nombre" placeholder="Nombre Completo" onchange="checkName(this, 'Register')" required>
+                  <span id="nameSuccesRegister" class="glyphicon glyphicon-ok"></span>
+                  <span id="nameErrorRegister" class="glyphicon glyphicon-remove"></span>
                 </div>
 
                 <br>
@@ -73,7 +73,7 @@
 
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                  <input type="text" class="form-control" name="mail" id ="email" placeholder="Correo electrónico" onchange="checkEmail()" required>
+                  <input type="text" class="form-control" name="mail" id ="email" placeholder="Correo electrónico" onchange="checkEmail(this, 'Register')" required>
                   <span id="emailSucces" class="glyphicon glyphicon-ok"></span>
                   <span id="emailError" class="glyphicon glyphicon-remove"></span>
                 </div>
@@ -83,16 +83,16 @@
 
       					<div class="input-group">
       						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-      						<input type="password" class="form-control" name="password" id ="pass" placeholder="Contraseña" onchange="checkPass()" required>
-                  <span id="passSucces" class="glyphicon glyphicon-ok"></span>
-                  <span id="passError" class="glyphicon glyphicon-remove"></span>
+      						<input type="password" class="form-control" name="password" id ="pass" placeholder="Contraseña" onchange="checkPass(this, 'Register')" required>
+                  <span id="passSuccesRegister" class="glyphicon glyphicon-ok"></span>
+                  <span id="passErrorRegister" class="glyphicon glyphicon-remove"></span>
                 </div>
 
                 <br>
 
       					<div class="input-group">
       						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-      						<input type="password" class="form-control" name="password2" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2()" required>
+      						<input type="password" class="form-control" name="password2" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2(this, 'Register')" required>
                   <span id="pass2Succes" class="glyphicon glyphicon-ok"></span>
                   <span id="pass2Error" class="glyphicon glyphicon-remove"></span>
                 </div>
@@ -110,7 +110,7 @@
                 <br>
 
                 <div class = "centrar"><a type="button" href="<?php echo $helper->url('view', 'home'); ?>'" class="btn btn-danger button-ver-sin-float">Cancel</a>
-                <button type="submit" class="btn btn-warning button-ver-sin-float mouse-over"> Entrar </button></div>
+                <button  id = "submit"  type="submit" class="btn btn-warning button-ver-sin-float mouse-over"> Entrar </button></div>
             </form>
           <!-- formulario-container -->
           </div>

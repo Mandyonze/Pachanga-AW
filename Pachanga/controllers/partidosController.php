@@ -242,4 +242,6 @@ class PartidosController extends BaseController {
             // "distrito" => $distrito
           ));
         }
+
+
 }
