@@ -16,7 +16,7 @@ class NotificacionesController extends BaseController{
 
     public function partidoCompartido(){
 
-      session_start();
+
       $receptor = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
       $partido = filter_var($_POST['idpar'], FILTER_SANITIZE_NUMBER_INT);
       $emisor = $_SESSION['username'];

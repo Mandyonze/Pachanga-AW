@@ -20,7 +20,7 @@ class ParticipantesController extends BaseController {
 
     public function insertParticipante(){
 
-      session_start();
+
 
       if(isset($_POST['partido']) && isset($_POST['usuario']) && isset($_POST['equipo'])){
 

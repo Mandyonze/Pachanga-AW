@@ -25,3 +25,30 @@ function execAction($controllerObj){
         loadAction($controllerObj, ACCION_DEFECTO);
     }
 }
+
+function urlSinSesion(){
+
+  session_start();
+  if(isset($_SESSION['username'])){
+    return false;
+  }
+  if(isset($_GET['controller'])){
+    $contr = ucfirst($_GET['controller']);
+  }else {
+    return true;
+  }
+  if(isset($_GET['action'])){
+    $act = ucfirst($_GET['action']);
+  }else {
+    return true;
+  }
+  if($_GET['action'] == 'login' || $_GET['action'] == 'register'){
+    return false;
+  }
+  if($contr == 'View'){
+    return false;
+  }
+  return true;
+}
+
+?>

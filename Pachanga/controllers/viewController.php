@@ -35,7 +35,7 @@ class ViewController extends BaseController {
 
     public function login() {
 
-      session_start();
+
       $error = isset($_GET['error']) ? filter_var($_GET['error'], FILTER_SANITIZE_NUMBER_INT) : 0;
       $this->view("login", $this->entity, array(
         "error" => $error
@@ -44,7 +44,7 @@ class ViewController extends BaseController {
 
     public function register() {
 
-      session_start();
+
       $distritos = $this->distrito->getAll();
 
       $this->view("signUp", $this->entity, array(
@@ -60,7 +60,7 @@ class ViewController extends BaseController {
     }
 
     public function contacto(){
-      session_start();
+
       if(isset($_SESSION['loggedin'])){
         $usuario = $_SESSION['username'];
         $data = $this->usuarios->getBy("id", $usuario);
@@ -78,7 +78,7 @@ class ViewController extends BaseController {
     }
 
     public function about(){
-      session_start();
+
       if(isset($_SESSION['loggedin'])){
         $usuario = $_SESSION['username'];
         $data = $this->usuarios->getBy("id", $usuario);
@@ -96,7 +96,7 @@ class ViewController extends BaseController {
     }
 
     public function faq(){
-      session_start();
+
       if(isset($_SESSION['loggedin'])){
         $usuario = $_SESSION['username'];
         $data = $this->usuarios->getBy("id", $usuario);
@@ -114,7 +114,7 @@ class ViewController extends BaseController {
     }
 
     public function legal(){
-      session_start();
+
       if(isset($_SESSION['loggedin'])){
         $usuario = $_SESSION['username'];
         $data = $this->usuarios->getBy("id", $usuario);

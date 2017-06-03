@@ -99,7 +99,7 @@ public function filtro($name, $distrito, $fecha){
     $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito FROM $this->table p inner join polideportivos d WHERE p.polideportivo = d.id and cast(fecha as date) >= '$fecha' and d.distrito = '$distrito'");
   }
   elseif($name != "" && $fecha != ""){
-    $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito FROM $this->table p inner join polideportivos d WHERE p.polideportivo = d.id and nombre like '%$name%' and cast(fecha as date) >= '$fecha'");
+    $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito FROM $this->table p inner join polideportivos d WHERE p.polideportivo = d.id and nombre like '%$name%'");
   }
   else{
     $query=$this->db()->query("SELECT p.id, p.nombre, d.id as polideportivo, p.fecha, p.creador, p.goles1, p.goles2, p.participantes, p.skill, d.distrito FROM $this->table p inner join polideportivos d WHERE p.polideportivo = d.id and fecha > '$fecha' ORDER BY fecha"); //ORDER BY id DESC
