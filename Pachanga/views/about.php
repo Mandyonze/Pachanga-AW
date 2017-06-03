@@ -52,24 +52,28 @@
           <div class="row ">
             <div class="col-sm-6 col-md-3">
               <img src="assets/img/miembros/andres.jpg"  class="img-responsive img-circle imagen" alt=""> <br>
+              <h3 class="centrar">Andrés Herranz</h3><br>
               <p class = "justificar">Apasionado de la seguridad informática y el pentesting, obsesionado con la seguridad:
               ¡Nos están vigilando!. Me gustan los juegos de mesa y los juegos de rol.
               En mis ratos libres juego al baloncesto. Me gusta ayudar a la gente.</p>
             </div>
             <div class="col-sm-6 col-md-3">
               <img src="assets/img/miembros/axel.jpg"  class="img-responsive img-circle imagen" alt=""> <br>
+              <h3 class="centrar">Axel Junestrand</h3><br>
               <p class = "justificar">Me gusta recorrer el mundo en barco, he visitado más de 100 paises diferentes.
               Me gusta conocer gente y descubir culturas. Me apasiona la programación web sobre todo el diseño front end
               y el desarrollo de aplicaciones web y móvil.</p>
             </div>
             <div class="col-sm-6 col-md-3">
               <img src="assets/img/miembros/borja.jpg"  class="img-responsive img-circle imagen" alt=""> <br>
+              <h3 class="centrar">Borja Lorenzo</h3><br>
               <p class = "justificar"> Diseñador gráfico, apasionado por la programación en todo tipo de lenguajes, me encanta diseñar
               y arreglar mis propias cosas. En mi tiempo libres me dedico a aprender, investigar y leer.
               Me encanta viajar, conocer gente y hacer nuevos amigos.</p>
             </div>
             <div class="col-sm-6 col-md-3">
               <img src="assets/img/miembros/guille.jpg"  class="img-responsive img-circle imagen" alt=""> <br>
+              <h3 class="centrar">Guillermo Rius</h3><br>
               <p class = "justificar">Interesado en la BIG DATA y el machine learning, dedico mis horas al desarrollo de algoritmos inteligentes,
               me gusta el internet de las cosas (IOT) sobretodo si la puedo relacionar con los coches: Mi gran pasión.
               Amante de la velocidad y los coches rápidos.</p>
