@@ -112,7 +112,7 @@
           <!-- row -->
           </div>
           <br><br>
-          <a href="http://www.nike.com/es/es_es/"><img class="img-responsive" src="assets/img/resources/banner1.jpg" class="img-responsive"></a>
+          <a href="http://www.newbalance.es"><img class="img-responsive" src="assets/img/resources/banner1.jpg" class="img-responsive"></a>
           <br><br>
         <!-- container-fluid 1 -->
         </div>
