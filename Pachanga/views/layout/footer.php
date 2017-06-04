@@ -43,8 +43,8 @@
         <br>
         <a href="<?php echo $helper->url('view', 'contacto') ?>">Contacto</a>
         <br><br>
-        <a href="https://twitter.com" class="fa fa-facebook"></a> &nbsp;
-        <a href="https://www.facebook.com" class="fa fa-twitter"></a> &nbsp;
+        <a href="https://www.facebook.com" class="fa fa-facebook"></a> &nbsp;
+        <a href="https://twitter.com" class="fa fa-twitter"></a> &nbsp;
 
       </div>
 

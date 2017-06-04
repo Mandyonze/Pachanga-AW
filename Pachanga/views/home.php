@@ -150,7 +150,7 @@
 
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                  <input type="text" title="" name = "username" class="form-control " placeholder="Username" autofocus required>
+                  <input type="text" title="" name="username" class="form-control" placeholder="Username" autofocus required>
                   <span id="usernameSuccesLogin" class="glyphicon glyphicon-ok"></span>
                   <span id="usernameErrorLogin" class="glyphicon glyphicon-remove"></span>
                 </div>
@@ -202,7 +202,7 @@
 
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                      <input type="text" class="form-control" title="" name="username" placeholder="Username" onchange="checkUser(this, 'Register')" required>
+                      <input type="text" class="form-control" title="El nombre de usuario debe tener más de 4 caracteres" name="username" placeholder="Username" onchange="checkUser(this, 'Register')" required>
                       <span id="usernameSuccesRegister" class="glyphicon glyphicon-ok"></span>
                       <span id="usernameErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
@@ -242,7 +242,7 @@
 
           					<div class="input-group">
           						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-          						<input type="password" title="" class="form-control" name = "password" id = "pass" placeholder="Contraseña" onchange="checkPass(this, 'Register')" required>
+          						<input type="password" title="La contraseña debe tener más de 4 caracteres" class="form-control" name = "password" id = "pass" placeholder="Contraseña" onchange="checkPass(this, 'Register')" required>
                       <span id="passSuccesRegister" class="glyphicon glyphicon-ok"></span>
                       <span id="passErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
@@ -251,7 +251,7 @@
 
           					<div class="input-group">
           						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-          						<input type="password" title="" class="form-control" name = "password2" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2()">
+          						<input type="password" title="La contraseña debe tener más de 4 caracteres" class="form-control" name = "password2" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2()">
                       <span id="pass2Succes" class="glyphicon glyphicon-ok"></span>
                       <span id="pass2Error" class="glyphicon glyphicon-remove"></span>
                     </div>

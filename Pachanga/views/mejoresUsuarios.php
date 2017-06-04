@@ -55,8 +55,8 @@
                         <div class="panel panel-default back-orange2">
                             <div class="panel-heading back-orange2">
                               <div class="row white">
-                                  <div class="col-xs-6 col-md-4">Jugador</div>
-                                  <div class="col-xs-6 col-md-4">Skill</div>
+                                  <div class="col-xs-3 col-md-4">Jugador</div>
+                                  <div class="col-xs-4 col-md-4">Skill</div>
                         </div>
                         </div>
                       </div>

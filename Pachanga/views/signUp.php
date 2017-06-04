@@ -37,7 +37,7 @@
 
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                  <input type="text" class="form-control " name="username" id ="username" placeholder="Username" onchange="checkUser(this, 'Register')" required autofocus>
+                  <input type="text" title="El nombre de usuario debe tener más de 4 caracteres" class="form-control " name="username" id ="username" placeholder="Username" onchange="checkUser(this, 'Register')" required autofocus>
                   <span id="usernameSuccesRegister" class="glyphicon glyphicon-ok"></span>
                   <span id="usernameErrorRegister" class="glyphicon glyphicon-remove"></span>
                 </div>
@@ -83,7 +83,7 @@
 
       					<div class="input-group">
       						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-      						<input type="password" class="form-control" name="password" id ="pass" placeholder="Contraseña" onchange="checkPass(this, 'Register')" required>
+      						<input type="password" title="La contraseña debe tener más de 4 caracteres" class="form-control" name="password" id ="pass" placeholder="Contraseña" onchange="checkPass(this, 'Register')" required>
                   <span id="passSuccesRegister" class="glyphicon glyphicon-ok"></span>
                   <span id="passErrorRegister" class="glyphicon glyphicon-remove"></span>
                 </div>
@@ -92,7 +92,7 @@
 
       					<div class="input-group">
       						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-      						<input type="password" class="form-control" name="password2" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2(this, 'Register')" required>
+      						<input type="password" title="La contraseña debe tener más de 4 caracteres" class="form-control" name="password2" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2(this, 'Register')" required>
                   <span id="pass2Succes" class="glyphicon glyphicon-ok"></span>
                   <span id="pass2Error" class="glyphicon glyphicon-remove"></span>
                 </div>
