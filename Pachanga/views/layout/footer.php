@@ -43,7 +43,7 @@
         <br>
         <a href="<?php echo $helper->url('view', 'contacto') ?>">Contacto</a>
         <br><br>
-        <a href="#" class="fa fa-facebook" alt></a> &nbsp;
+        <a href="#" class="fa fa-facebook"></a> &nbsp;
         <a href="#" class="fa fa-twitter"></a> &nbsp;
 
       </div>

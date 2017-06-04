@@ -113,7 +113,7 @@
           <!-- row -->
           </div>
           <br><br>
-          <a href="http://www.newbalance.es"><img class="img-responsive" src="assets/img/resources/banner1.jpg" class="img-responsive" alt="Banner"></a>
+          <a href="http://www.newbalance.es"><img class="img-responsive" src="assets/img/resources/banner1.jpg" alt="Banner"></a>
           <br><br>
         <!-- container-fluid 1 -->
         </div>
@@ -171,7 +171,7 @@
                 <br>
 
                 <div class="centrar">
-                  <button onclick="changeFormulario('login')" onkeypress="changeFormulario('login')" type="button" class="btn btn-danger button-ver-sin-float">Cancel</button>
+                  <button type="reset" onclick="changeFormulario('login')" onkeypress="changeFormulario('login')" class="btn btn-danger button-ver-sin-float">Cancel</button>
                   <button type = "submit" class="btn btn-warning button-ver-sin-float"> Entrar </button>
                 </div>
 
@@ -217,7 +217,7 @@
                     <div class="input-group ">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
                       <select name="distrito" class="form-control buscar-partido-distrito" required>
-                        <option selected disabled hidden required>Distrito</option>
+                        <option selected disabled hidden value="">Distrito</option>
                         <?php
                           foreach ($distritos as $distrito) {
                             echo "<option>";
@@ -269,7 +269,7 @@
                     <br>
 
                     <div class="centrar">
-                      <button  type="reset" onclick="changeFormulario('signUp')" type="button" class="btn btn-danger button-ver-sin-float">Cancel</button>
+                      <button  type="reset" onclick="changeFormulario('signUp')" class="btn btn-danger button-ver-sin-float">Cancel</button>
                       <button id = "submit"  type = "submit" class="btn btn-warning button-ver-sin-float"> Entrar </button>
                     </div>
 
