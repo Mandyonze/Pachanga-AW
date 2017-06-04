@@ -84,7 +84,7 @@
           </h4>
           <br><br>
           <div class="map-responsive margen_top_title">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97173.97825985964!2d-3.749575949246259!3d40.43793316652326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid!5e0!3m2!1ses!2ses!4v1496408285824" width="1000" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe title="Mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97173.97825985964!2d-3.749575949246259!3d40.43793316652326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid!5e0!3m2!1ses!2ses!4v1496408285824" width="1000" height="450" style="border:0" allowfullscreen></iframe>
           </div>
           <br><br>
         </div>
@@ -113,7 +113,7 @@
           <!-- row -->
           </div>
           <br><br>
-          <a href="http://www.newbalance.es"><img class="img-responsive" src="assets/img/resources/banner1.jpg" class="img-responsive"></a>
+          <a href="http://www.newbalance.es"><img class="img-responsive" src="assets/img/resources/banner1.jpg" class="img-responsive" alt="Banner"></a>
           <br><br>
         <!-- container-fluid 1 -->
         </div>
@@ -137,7 +137,7 @@
               <a href="index.html"><img class="logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"></a>
             </div>
 
-                  <span onclick="changeFormulario('login')" class="closeFormulario" title="Close">&times;</span>
+                  <span onclick="changeFormulario('login')" onkeypress="changeFormulario('login')" class="closeFormulario" title="Close">&times;</span>
           </div>
 
           <div class="body-formulario">
@@ -171,7 +171,7 @@
                 <br>
 
                 <div class="centrar">
-                  <button onclick="changeFormulario('login')" type="button" class="btn btn-danger button-ver-sin-float">Cancel</button>
+                  <button onclick="changeFormulario('login')" onkeypress="changeFormulario('login')" type="button" class="btn btn-danger button-ver-sin-float">Cancel</button>
                   <button type = "submit" class="btn btn-warning button-ver-sin-float"> Entrar </button>
                 </div>
 
@@ -190,7 +190,7 @@
                   <a href="index.html"><img class = "logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a>
                 </div>
 
-                <span onclick="changeFormulario('signUp')" class ="closeFormulario" title="Close">&times;</span>
+                <span onclick="changeFormulario('signUp')" onkeypress="changeFormulario('login')" class ="closeFormulario" title="Close">&times;</span>
               </div>
 
               <div class="body-formulario">
@@ -202,7 +202,7 @@
 
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                      <input type="text" class="form-control" name="username" placeholder="Username" onchange="checkUser(this, 'Register')" autofocus required>
+                      <input type="text" class="form-control" name="username" placeholder="Username" onchange="checkUser(this, 'Register')" required>
                       <span id="usernameSuccesRegister" class="glyphicon glyphicon-ok"></span>
                       <span id="usernameErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
@@ -217,7 +217,7 @@
                     <div class="input-group ">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
                       <select name="distrito" class="form-control buscar-partido-distrito" required>
-                        <option selected disabled hidden requiered>Distrito</option>
+                        <option selected disabled hidden required>Distrito</option>
                         <?php
                           foreach ($distritos as $distrito) {
                             echo "<option>";

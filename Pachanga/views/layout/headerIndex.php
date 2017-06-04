@@ -17,10 +17,10 @@
     <div class="collapse navbar-collapse centrar" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right centrar">
           <li>
-            <button id = "register1" type="button" onclick="changeFormulario('signUp')" class="btn btn-default btn-header btn-register">Registrarse</button>
+            <button id = "register1" type="button" onclick="changeFormulario('signUp')" onkeypress="changeFormulario('signUp')" class="btn btn-default btn-header btn-register">Registrarse</button>
           </li>
           <li>
-            <button type="button" onclick="changeFormulario('login')" class="btn btn-default btn-header btn-login">Iniciar Sesión</button>
+            <button type="button" onclick="changeFormulario('login')"  onkeypress="changeFormulario('login')" class="btn btn-default btn-header btn-login">Iniciar Sesión</button>
           </li>
         </ul>
     </div>
