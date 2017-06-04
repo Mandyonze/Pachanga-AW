@@ -95,7 +95,7 @@
               <br>
               <div class="input-group">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-star"></span></span>
-                <input type="number" name="skill" min="0" class="form-control " placeholder="Skill minima" required>
+                <input type="number" name="skill" min="0" class="form-control " placeholder="Skill recomendado" required>
                 <!-- <input  type="number" class="form-control "   required> -->
               </div>
               <br>

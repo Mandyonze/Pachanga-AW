@@ -59,6 +59,24 @@ class ViewController extends BaseController {
         ));
     }
 
+    public function teacher(){
+
+      if(isset($_SESSION['loggedin'])){
+        $usuario = $_SESSION['username'];
+        $data = $this->usuarios->getBy("id", $usuario);
+        $user = $this->usuarios->getBy("id", $usuario);
+
+        $this->view("teacher", "", array(
+            "data" => $data,
+            "user" => $user
+        ));
+      }
+      else{
+        $this->view("teacher", "", array(
+        ));
+      }
+    }
+
     public function contacto(){
 
       if(isset($_SESSION['loggedin'])){

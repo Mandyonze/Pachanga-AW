@@ -30,6 +30,8 @@
         <a href="<?php echo $helper->url('view', 'faq') ?>">Preguntas Frecuentes</a>
         <br>
         <a href="<?php echo $helper->url('view', 'legal') ?>">Aviso Legal</a>
+        <br>
+        <a href="<?php echo $helper->url('view', 'teacher') . "#cabecera" ?>">Documentación para el profesor</a>
       </div>
 
       <div class="col-sm-<?php echo $columns; ?>">
