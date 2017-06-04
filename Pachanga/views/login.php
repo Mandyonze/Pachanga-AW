@@ -59,7 +59,7 @@
                 <br>
 
                 <div class="centrar">
-                  <a href="<?php echo $helper->url('view', 'home'); ?>" type="button" class="btn btn-danger button-ver-sin-float">Cancel</a>
+                  <a href="<?php echo $helper->url('view', 'home'); ?>" type="reset" class="btn btn-danger button-ver-sin-float">Cancel</a>
 
                   <!-- <button type = "submit" id="submitLogin" class="btn btn-warning button-ver-sin-float mouse-over"> Entrar </button> -->
 

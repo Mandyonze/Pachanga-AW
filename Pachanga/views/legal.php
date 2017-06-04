@@ -53,21 +53,16 @@
                 <h3>La web de PACHANGA ha sido diseñada y creada por los integrantes de "Grupo Pachanga":
                 Guillermo Rius, Borja Lorenzo, Andrés Herranz y Axel Junestrand.</h3>
               </li>
-              <br>
               <li>
                 <h3>Todos los derechos de la web pertenecen a las personas mencionadas anteriormente.</h3>
               </li>
-              <br>
-
               <li>
                 <h3>Cualquier copia tanto total como parcial de esta página está totalmente prohibido.</h3>
               </li>
-              <br>
               <li>
                 <h3>Toda la responsabilidad ante caídas del servicio de Pachanga recae total y directamente sobre los
                 integrantes de "Grupo Pachanga".</h3>
               </li>
-              <br><br>
             </ul>
         </div>
         <br>
@@ -146,10 +141,9 @@
                 </div>
 
                 <form action="<?php echo $helper->url('usuarios' , 'register') ?>" method="post">
-
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                      <input type="text" class="form-control" name="username" placeholder="Username" onchange="checkUser(this, 'Register')" autofocus required>
+                      <input type="text" class="form-control" name="username" placeholder="Username" onchange="checkUser(this, 'Register')" required>
                       <span id="usernameSuccesRegister" class="glyphicon glyphicon-ok"></span>
                       <span id="usernameErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
@@ -164,7 +158,7 @@
                     <div class="input-group ">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
                       <select name="distrito" class="form-control buscar-partido-distrito" required>
-                        <option selected disabled hidden requiered>Distrito</option>
+                        <option selected disabled hidden value="">Distrito</option>
                         <?php
                           foreach ($distritos as $distrito) {
                             echo "<option>";

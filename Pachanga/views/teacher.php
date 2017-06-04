@@ -56,7 +56,7 @@
             <br><br>
             <h4>La imagen mostrada a continuación es un mapa de navegación de la página ("sitemap"):</h4>
             <br>
-            <img class="img-responsive" src="assets/img/resources/sitemap.PNG">
+            <img class="img-responsive" src="assets/img/resources/sitemap.PNG" alt="Sitemap">
             <br><br>
         </div>
         <br>
@@ -138,7 +138,7 @@
 
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                      <input type="text" class="form-control" name="username" placeholder="Username" onchange="checkUser(this, 'Register')" autofocus required>
+                      <input type="text" class="form-control" name="username" placeholder="Username" onchange="checkUser(this, 'Register')" required>
                       <span id="usernameSuccesRegister" class="glyphicon glyphicon-ok"></span>
                       <span id="usernameErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
@@ -153,7 +153,7 @@
                     <div class="input-group ">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
                       <select name="distrito" class="form-control buscar-partido-distrito" required>
-                        <option selected disabled hidden requiered>Distrito</option>
+                        <option selected disabled hidden value="">Distrito</option>
                         <?php
                           foreach ($distritos as $distrito) {
                             echo "<option>";

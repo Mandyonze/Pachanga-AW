@@ -109,7 +109,7 @@
 
                 <br>
 
-                <div class = "centrar"><a type="reset" href="<?php echo $helper->url('view', 'home'); ?>'" class="btn btn-danger button-ver-sin-float">Cancel</a>
+                <div class = "centrar"><a href="<?php echo $helper->url('view', 'home'); ?>'" class="btn btn-danger button-ver-sin-float">Cancel</a>
                 <button  id = "submit"  type="submit" class="btn btn-warning button-ver-sin-float mouse-over"> Entrar </button></div>
             </form>
           <!-- formulario-container -->
