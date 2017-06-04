@@ -80,8 +80,8 @@
                 nuestros términos y condiciones del servicio.  <br /><br />
 
                 <div class="centrar">
-                  <input type="reset" class="btn-formulario cancelbtn" value="Borrar">
-                  <input type="submit" class="btn-formulario sendbtn" value="Enviar">
+                  <input type="reset" class="btn btn-danger button-ver-sin-float" value="Borrar">
+                  <input type="submit" class="btn btn-warning button-ver-sin-float" value="Enviar">
                 </div>
 
                 </fieldset>

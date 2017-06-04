@@ -281,3 +281,8 @@ img#logo {
   color: orange;
   margin-right: 10px;
 }
+
+.apartado > .glyphicon-star {
+  color: #504b4b;
+  margin-right: 0px;
+}

@@ -67,11 +67,17 @@
                           <div class="panel panel-default">
                             <div class="panel-heading">
                                 <div class="row" >
-                                  <div class="col-xs-3 col-md-4"><?php echo $mejor->getId(); ?></div>
-                                  <div class="col-xs-4 col-md-4 ">
+                                  <div class="col-xs-12 col-md-4">
+                                    <p class="apartado">
+                                    <span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-tag'></span>
+                                    <?php echo $mejor->getId(); ?></div>
+                                    </p>
+                                  <div class="col-xs-12 col-md-4 ">
                                     <div class="flotante_izq" >
-
+                                      <p class="apartado">
+                                      <span class='hidden-md hidden-lg hidden-xl glyphicon glyphicon-fire'></span>
                                         <?php $skill = $mejor->getSkill();
+                                        echo $skill . " ";
                                         echo "<span class='glyphicon glyphicon-star'></span>";
                                         if ($skill > 100 && $skill < 100) {
                                           echo "<span class='glyphicon glyphicon-star'></span>";
@@ -79,11 +85,12 @@
                                           echo "<span class='glyphicon glyphicon-star'></span>";
                                           echo "<span class='glyphicon glyphicon-star'></span>";
                                         }
-                                        echo $skill; ?>
+                                        ?>
+                                      </p>
                                  </div>
                               </div>
-                              <div class="hidden-xs col-md-1"></div>
-                              <div class="col-xs-5 col-md-3"><a href="<?php  echo $helper->url('usuarios' , 'perfil')?>&id=<?php echo $mejor->getId();?>" class="btn button-ver mouse-over white" role="button">Ver Perfil</a></div>
+                              <div class="col-xs-12 col-md-1"></div>
+                              <div class="col-xs-12 col-md-3 centrar"><a href="<?php  echo $helper->url('usuarios' , 'perfil')?>&id=<?php echo $mejor->getId();?>" class="btn button-less mouse-over white" role="button">Ver Perfil</a></div>
                                 </div>
                             </div>
                           </div>

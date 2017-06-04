@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>http://pachangafutbol.esy.es/index.php?controller=View&amp;action=home</loc>
+  </url>
+  <url>
+    <loc>http://pachangafutbol.esy.es/index.php?controller=view&amp;action=contacto</loc>
+  </url>
+  <url>
+    <loc>http://pachangafutbol.esy.es/index.php?controller=view&amp;action=register</loc>
+  </url>
+  <url>
+    <loc>http://pachangafutbol.esy.es/index.php?controller=view&amp;action=home'</loc>
+  </url>
+  <url>
+    <loc>http://pachangafutbol.esy.es/index.php?controller=view&amp;action=about</loc>
+  </url>
+  <url>
+    <loc>http://pachangafutbol.esy.es/index.php?controller=view&amp;action=legal</loc>
+  </url>
+  <url>
+    <loc>http://pachangafutbol.esy.es/index.php?controller=view&amp;action=faq</loc>
+  </url>
+  <url>
+    <loc>http://pachangafutbol.esy.es/index.php?controller=view&amp;action=login</loc>
+  </url>
+</urlset>
+<!--<guid value="02730005-ddba-4519-9011-82f4b5e292c6" />-->
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->

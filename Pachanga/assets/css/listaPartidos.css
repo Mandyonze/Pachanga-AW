@@ -43,3 +43,20 @@
 .back-white{
 	background-color: white;
 }
+
+.button-less{
+	float: right;
+	width: 90px;
+	background-color: orange;
+	border-color: orange;
+}
+
+@media (max-width: 400px) {
+	.button-less{
+		float: none;
+		width: 70px;
+		background-color: orange;
+		border-color: orange;
+		padding-left: 6px;
+	}
+}
