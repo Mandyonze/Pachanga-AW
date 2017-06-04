@@ -134,7 +134,7 @@
         <div class="formulario formulario-container animateFormulario">
           <div class="header-formulario">
             <div class="centrar">
-              <a href="index.html"><img class="logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"></a>
+              <a href="<?php echo $helper->url('view', 'home'); ?>"><img class="logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"></a>
             </div>
 
                   <span onclick="changeFormulario('login')" onkeypress="changeFormulario('login')" class="closeFormulario" title="Close">&times;</span>
@@ -187,7 +187,7 @@
             <div class="formulario formulario-container animateFormulario">
               <div class="header-formulario">
                 <div class="centrar">
-                  <a href="index.html"><img class = "logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a>
+                  <a href="<?php echo $helper->url('view', 'home'); ?>"><img class = "logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a>
                 </div>
 
                 <span onclick="changeFormulario('signUp')" onkeypress="changeFormulario('login')" class ="closeFormulario" title="Close">&times;</span>

@@ -62,26 +62,34 @@
 
 
                 <br />Nombre:<br />
-                <input type="text" name="name" placeholder="Nombre Completo" required><br>
+                <label for="username"></label>
+                <input type="text" id="username" name="name" placeholder="Nombre Completo" required><br>
                 <br />E-mail:<br />
                 <input type="text" name="mail" placeholder="Email de contacto" required><br>
 
                 <br />Tipo de consulta:<br />
-                <input type="radio" name="consulta" value="evaluacion" required> Evaluación <br />
-                <input type="radio" name="consulta" value="sugerencias" required> Sugerencias <br />
-                <input type="radio" name="consulta" value="criticas" required> Críticas <br />
+                <label for="evaluacion"></label>
+                <input type="radio" id="evaluacion" name="consulta" value="evaluacion" required> Evaluación <br />
+                <label for="sugerencias"></label>
+                <input type="radio" id="sugerencias" name="consulta" value="sugerencias" required> Sugerencias <br />
+                <label for="criticas"></label>
+                <input type="radio" id="criticas" name="consulta" value="criticas" required> Críticas <br />
 
 
 
                 <br />Consulta<br />
-                <input type="text" name="comment" placeholder="Escriba aquí su consulta." ><br /><br />
+                <label for="comment"></label>
+                <input type="text" id="comment" name="comment" placeholder="Escriba aquí su consulta." ><br /><br />
 
-                <input name="java" type="checkbox" value="on" required> Marque esta casilla para verificar que ha leído
+                <label for="verify"></label>
+                <input name="java" id="verify" type="checkbox" value="on" required> Marque esta casilla para verificar que ha leído
                 nuestros términos y condiciones del servicio.  <br /><br />
 
                 <div class="centrar">
-                  <input type="reset" class="btn btn-danger button-ver-sin-float" value="Borrar">
-                  <input type="submit" class="btn btn-warning button-ver-sin-float" value="Enviar">
+                  <label for="borrar"></label>
+                  <input type="reset" id="borrar" class="btn btn-danger button-ver-sin-float" value="Borrar">
+                  <label for="enviar"></label>
+                  <input type="submit" id="enviar" class="btn btn-warning button-ver-sin-float" value="Enviar">
                 </div>
 
                 </fieldset>
@@ -103,7 +111,7 @@
         <div class="formulario formulario-container animateFormulario">
           <div class="header-formulario">
             <div class="centrar">
-              <a href="index.html"><img class="logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"></a>
+              <a href="<?php echo $helper->url('view', 'home'); ?>"><img class="logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"></a>
             </div>
 
                   <span onclick="changeFormulario('login')" class="closeFormulario" title="Close">&times;</span>
@@ -156,7 +164,7 @@
             <div class="formulario formulario-container animateFormulario">
               <div class="header-formulario">
                 <div class="centrar">
-                  <a href="index.html"><img class = "logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a>
+                  <a href="<?php echo $helper->url('view', 'home'); ?>"><img class = "logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a>
                 </div>
 
                 <span onclick="changeFormulario('signUp')" class ="closeFormulario" title="Close">&times;</span>

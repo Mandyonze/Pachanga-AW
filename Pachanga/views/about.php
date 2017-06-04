@@ -92,7 +92,7 @@
         <div class="formulario formulario-container animateFormulario">
           <div class="header-formulario">
             <div class="centrar">
-              <a href="index.html"><img class="logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"></a>
+              <a href="<?php echo $helper->url('view', 'home'); ?>"><img class="logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"></a>
             </div>
 
                   <span onclick="changeFormulario('login')" class="closeFormulario" title="Close">&times;</span>
@@ -145,7 +145,7 @@
             <div class="formulario formulario-container animateFormulario">
               <div class="header-formulario">
                 <div class="centrar">
-                  <a href="index.html"><img class = "logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a>
+                  <a href="<?php echo $helper->url('view', 'home'); ?>"><img class = "logo-formulario" src="assets/img/logos/Logo-blanco.png" alt="Logo Pachanga"> </a>
                 </div>
 
                 <span onclick="changeFormulario('signUp')" class ="closeFormulario" title="Close">&times;</span>
@@ -160,21 +160,24 @@
 
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                      <input type="text" class="form-control" name="username" placeholder="Username" onchange="checkUser(this, 'Register')" required>
+                      <label for="username"></label>
+                      <input type="text" class="form-control" id="username" name="username" placeholder="Username" onchange="checkUser(this, 'Register')" required>
                       <span id="usernameSuccesRegister" class="glyphicon glyphicon-ok"></span>
                       <span id="usernameErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
                     <br>
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-tag"></span></span>
-                      <input type="text" class="form-control" name="nombre" placeholder="Nombre Completo" onchange="checkNombre(this, 'Register')" required>
+                      <label for="password"></label>
+                      <input type="text" class="form-control" id="passwrod" name="nombre" placeholder="Nombre Completo" onchange="checkNombre(this, 'Register')" required>
                       <span id="nombreSuccesRegister" class="glyphicon glyphicon-ok"></span>
                       <span id="nombreErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
                     <br>
                     <div class="input-group ">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
-                      <select name="distrito" class="form-control buscar-partido-distrito" required>
+                      <label for="distrito"></label>
+                      <select name="distrito" id="distrito" class="form-control buscar-partido-distrito" required>
                         <option selected disabled hidden value="">Distrito</option>
                         <?php
                           foreach ($distritos as $distrito) {
@@ -191,6 +194,7 @@
 
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                      <label for="email"></label>
                       <input type="text" class="form-control" id ="email" name="mail" placeholder="Correo electrónico" onchange="checkEmail()" required>
                       <span id="emailSucces" class="glyphicon glyphicon-ok"></span>
                       <span id="emailError" class="glyphicon glyphicon-remove"></span>
@@ -200,6 +204,7 @@
 
           					<div class="input-group">
           						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                      <label for="pass"></label>
           						<input type="password" class="form-control" name = "password" id = "pass" placeholder="Contraseña" onchange="checkPass(this, 'Register')" required>
                       <span id="passSuccesRegister" class="glyphicon glyphicon-ok"></span>
                       <span id="passErrorRegister" class="glyphicon glyphicon-remove"></span>
@@ -209,6 +214,7 @@
 
           					<div class="input-group">
           						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                      <label for="pass2"></label>
           						<input type="password" class="form-control" name = "password2" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2()">
                       <span id="pass2Succes" class="glyphicon glyphicon-ok"></span>
                       <span id="pass2Error" class="glyphicon glyphicon-remove"></span>
