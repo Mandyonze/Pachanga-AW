@@ -7,4 +7,7 @@ define("FORMAT_DATE_DB",        "Y-m-d");
 define("CONTROLADOR_DEFECTO", "view");
 define("ACCION_DEFECTO", "home");
 
+//Default timezone 
+date_default_timezone_set('Europe/Madrid');
+
 ?>

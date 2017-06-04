@@ -52,11 +52,11 @@
             <br>
             <h4>Para ver la memoria, hacer click <a href="assets/memoria/memoria.pdf" target="_blank">aquí</a>.</h4>
             <br>
-            <h4>Para acceder al código fuente ir a <a href="#">Github</a>.</h4>
+            <h4>Para acceder al código fuente, ir a <a href="#">Github</a>.</h4>
             <br><br>
             <h4>La imagen mostrada a continuación es un mapa de navegación de la página ("sitemap"):</h4>
             <br>
-            <img class="img-responsive" src="assets/img/resources/sitemap.png">
+            <img class="img-responsive" src="assets/img/resources/sitemap.PNG">
             <br><br>
         </div>
         <br>
