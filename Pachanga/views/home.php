@@ -4,7 +4,7 @@
 <head>
   <?php require_once('layout/library.php'); ?>
   <meta name="google-site-verification" content="taAz-qIoH9i4z1K32g29Quxdz_u6LqyTWc1MaJmHpvs" />
-  <title> PACHANGA </title>
+  <title>Pachanga</title>
   <link rel="stylesheet" href="assets/css/index.css">
   <link rel="stylesheet" href="assets/css/datosPartido.css">
 </head>

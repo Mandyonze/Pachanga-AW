@@ -3,7 +3,7 @@
 
 <head>
   <?php require_once('layout/library.php'); ?>
-  <title> PACHANGA </title>
+  <title>Datos Partido</title>
   <link rel="stylesheet" href="assets/css/inicio.css">
   <link rel="stylesheet" href="assets/css/miPerfil.css">
   <link rel="stylesheet" href="assets/css/datosPartido.css">

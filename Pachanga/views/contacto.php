@@ -3,7 +3,7 @@
 
 <head>
   <?php require_once('layout/library.php'); ?>
-  <title> Contacto</title>
+  <title>Contacto</title>
 
 
   <?php

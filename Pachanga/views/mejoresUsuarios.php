@@ -4,7 +4,7 @@
 
 <head>
   <?php require_once('layout/library.php'); ?>
-  <title> PACHANGA </title>
+  <title>Mejores jugadores</title>
   <link rel="stylesheet" href="assets/css/listaPartidos.css">
   <link rel="stylesheet" href="assets/css/miPerfil.css">
 </head>
@@ -13,7 +13,6 @@
   <header>
     <?php require_once('layout/header.php'); ?>
   </header>
-
 
   <div class="container  profile-container">
     <div class="row profile">

@@ -64,7 +64,6 @@
                 <h3>¿Cómo realizo las donaciones mencionadas en la página de inicio?</h3>
                 <h4>Contacta con nosotros mediante el formulario de contacto y te daremos las instrucciones necesarias</h4>
               </li>
-              <br>
             </ul>
         </div>
         <br>

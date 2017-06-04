@@ -4,7 +4,7 @@
 
 <head>
   <?php require_once('layout/library.php'); ?>
-  <title> PACHANGA </title>
+  <title>Perfil</title>
   <link rel="stylesheet" href="assets/css/listaPartidos.css">
   <link rel="stylesheet" href="assets/css/miPerfil.css">
 </head>
