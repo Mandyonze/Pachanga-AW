@@ -150,7 +150,7 @@
 
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                  <input type="text" name = "username" class="form-control " placeholder="Username" autofocus required>
+                  <input type="text" title="" name = "username" class="form-control " placeholder="Username" autofocus required>
                   <span id="usernameSuccesLogin" class="glyphicon glyphicon-ok"></span>
                   <span id="usernameErrorLogin" class="glyphicon glyphicon-remove"></span>
                 </div>
@@ -159,7 +159,7 @@
 
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                  <input type="password" name = "password" class="form-control" placeholder="Contraseña" required>
+                  <input type="password" title="" name = "password" class="form-control" placeholder="Contraseña" required>
                   <span id="passSuccesLogin" class="glyphicon glyphicon-ok"></span>
                   <span id="passErrorLogin" class="glyphicon glyphicon-remove"></span>
                 </div>
@@ -202,21 +202,21 @@
 
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                      <input type="text" class="form-control" name="username" placeholder="Username" onchange="checkUser(this, 'Register')" required>
+                      <input type="text" class="form-control" title="" name="username" placeholder="Username" onchange="checkUser(this, 'Register')" required>
                       <span id="usernameSuccesRegister" class="glyphicon glyphicon-ok"></span>
                       <span id="usernameErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
                     <br>
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-tag"></span></span>
-                      <input type="text" class="form-control" name="nombre" placeholder="Nombre Completo" onchange="checkName(this, 'Register')" required>
+                      <input type="text" class="form-control" title="" name="nombre" placeholder="Nombre Completo" onchange="checkName(this, 'Register')" required>
                       <span id="nameSuccesRegister" class="glyphicon glyphicon-ok"></span>
                       <span id="nameErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
                     <br>
                     <div class="input-group ">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
-                      <select name="distrito" class="form-control buscar-partido-distrito" required>
+                      <select title="" name="distrito" class="form-control buscar-partido-distrito" required>
                         <option selected disabled hidden value="">Distrito</option>
                         <?php
                           foreach ($distritos as $distrito) {
@@ -233,7 +233,7 @@
 
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                      <input type="text" class="form-control" id ="email" name="mail" placeholder="Correo electrónico" onchange="checkEmail()" required>
+                      <input type="text" title="" class="form-control" id ="email" name="mail" placeholder="Correo electrónico" onchange="checkEmail()" required>
                       <span id="emailSucces" class="glyphicon glyphicon-ok"></span>
                       <span id="emailError" class="glyphicon glyphicon-remove"></span>
                     </div>
@@ -242,7 +242,7 @@
 
           					<div class="input-group">
           						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-          						<input type="password" class="form-control" name = "password" id = "pass" placeholder="Contraseña" onchange="checkPass(this, 'Register')" required>
+          						<input type="password" title="" class="form-control" name = "password" id = "pass" placeholder="Contraseña" onchange="checkPass(this, 'Register')" required>
                       <span id="passSuccesRegister" class="glyphicon glyphicon-ok"></span>
                       <span id="passErrorRegister" class="glyphicon glyphicon-remove"></span>
                     </div>
@@ -251,7 +251,7 @@
 
           					<div class="input-group">
           						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-          						<input type="password" class="form-control" name = "password2" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2()">
+          						<input type="password" title="" class="form-control" name = "password2" id ="pass2" placeholder="Repetir Contraseña" onchange="checkPass2()">
                       <span id="pass2Succes" class="glyphicon glyphicon-ok"></span>
                       <span id="pass2Error" class="glyphicon glyphicon-remove"></span>
                     </div>

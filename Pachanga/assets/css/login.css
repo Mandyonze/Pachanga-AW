@@ -8,7 +8,6 @@
 
 body, html {
     height: 100%;
-
 }
 
 .back{
@@ -56,7 +55,6 @@ body, html {
 ****************************************************************************************************************************/
 
 .header-formulario{
-  max-width: 290px;
   background-color: orange;
   padding-top: 10px;
   padding-bottom: 10px;
