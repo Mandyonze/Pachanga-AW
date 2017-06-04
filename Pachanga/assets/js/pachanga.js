@@ -8,9 +8,6 @@
 
 
 $(document).ready(function(){
-
-
-
   var flag = false;
   var scroll;
 
@@ -40,7 +37,6 @@ $(document).ready(function(){
   Change the visibility of formulario according to the action.
 ****************************************************************************************************************************/
 function changeFormulario(id){
-
   if (id == "login") {
     document.getElementById("signUp").style.display = "none";
   } else {
@@ -74,8 +70,6 @@ function changeCompartir(id, partido){
 /***************************************************************************************************************************
   When the user clicks anywhere outside of the login/register, close it
 ****************************************************************************************************************************/
-
-
 function cerrar(id) {
   var cerrar = document.getElementById(id);
 
@@ -90,8 +84,6 @@ function cerrar(id) {
 /***************************************************************************************************************************
   Login
 ****************************************************************************************************************************/
-
-
 document.getElementById("submit").disabled = true;
 var username = 0;
 var name = 0;
@@ -104,7 +96,6 @@ function checkButton() {
   if (username == 1 && name == 1 && email == 1 && pass == 1 && repass == 1) {
     document.getElementById("submit").disabled = false;
   } else {
-    // alert("Her");
       document.getElementById("submit").disabled = true;
   }
 
@@ -112,7 +103,6 @@ function checkButton() {
 }
 
 function checkUser(x, aux){
-	// var x = document.getElementById("username");
 
   if (x.value.length < 5) {
     $("#usernameErrorRegister").css({"display" : "inline"});
@@ -127,13 +117,11 @@ function checkUser(x, aux){
     x.classList.add('form-control-ok');
     username = 1;
   }
-    // alert("caca1");
     checkButton();
 }
 
 
 function checkName(x, aux){
-	// var x = document.getElementById("username");
 
   if (x.value.length < 5) {
     $("#nameErrorRegister").css({"display" : "inline"});
@@ -156,7 +144,6 @@ function checkName(x, aux){
 
 
 function checkPass(x, aux){
-
     if (x.value.length < 5) {
       $("#passErrorRegister").css({"display" : "inline"});
       $("#passSuccesRegister").css({"display" : "none"});
@@ -242,10 +229,6 @@ $(document).ready(function(){
 
 /***************************************************************************************/
 
-
-// document.getElementById("mapa").innerHTML = "";
-
-
   function mostrarMapa(polideportivo) {
     if(polideportivo == "") {
       document.getElementById("mapa").innerHTML = "";
@@ -271,8 +254,6 @@ $(document).ready(function(){
   function mostrarPolideportivo(distrito) {
     if(distrito == "") {
       document.getElementById("polideportivos").innerHTML = "";
-
-
     } else {
       if (window.XMLHttpRequest){
         xmlhttp = new XMLHttpRequest();

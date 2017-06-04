@@ -34,8 +34,6 @@ function cerrar(id) {
 function checkUser(){
   var x = document.getElementById("username");
 
-
-
   if (x.value.length < 5) {
     $("#usernameError").css({"display" : "inline"});
     $("#usernameSucces").css({"display" : "none"});
