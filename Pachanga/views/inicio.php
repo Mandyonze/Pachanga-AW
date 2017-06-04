@@ -22,9 +22,12 @@
       <div class = "col-xs-12 col-sm-12 col-md-9">
         <div class="profile-content">
 
-          <?php if (isset($error)) {
-            echo "<div class='alert alert-danger'>";
-            echo "<strong>ERROR!</strong> $error";
+          <?php if (isset($_GET["error"])) {
+            echo "<div class='alert alert-danger alert-dismissable' data-dismiss='alert'>";
+            echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
+            if ($_GET["error"] == 0) {
+              echo "¡<strong>Error</strong>  el usuario no existe!";
+            }
             echo "</div>";
           }
           ?>
@@ -33,6 +36,9 @@
             echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
             if ($_GET["success"] == 0) {
               echo "¡<strong>Bienvenido</strong>  a pachanga!";
+            }
+            if ($_GET["success"] == 1) {
+              echo "¡Partido compartido con exito!";
             }
             echo "</div>";
           }

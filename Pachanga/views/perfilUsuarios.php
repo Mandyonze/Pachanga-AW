@@ -99,7 +99,7 @@
                   <div class="col-xs-12">
                       <div class="container details-titulo" >
                         <?php
-                        if(isset($_GET['id']) && $_GET['id']==$_SESSION['username'])
+                        if(isset($_GET['id']) && strtoupper($_GET['id']) == strtoupper($_SESSION['username']))
                           echo "<h2> Mis partidos</h2>";
                         else {
                           echo "<h2> Sus partidos</h2>";
