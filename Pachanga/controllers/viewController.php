@@ -72,7 +72,9 @@ class ViewController extends BaseController {
         ));
       }
       else{
+        $distritos = $this->distrito->getAll();
         $this->view("teacher", "", array(
+          "distritos" => $distritos
         ));
       }
     }
@@ -90,7 +92,9 @@ class ViewController extends BaseController {
         ));
       }
       else{
+        $distritos = $this->distrito->getAll();
         $this->view("contacto", "", array(
+          "distritos" => $distritos
         ));
       }
     }
@@ -108,7 +112,9 @@ class ViewController extends BaseController {
         ));
       }
       else{
+        $distritos = $this->distrito->getAll();
         $this->view("about", "", array(
+          "distritos" => $distritos
         ));
       }
     }
@@ -126,7 +132,9 @@ class ViewController extends BaseController {
         ));
       }
       else{
+        $distritos = $this->distrito->getAll();
         $this->view("faq", "", array(
+          "distritos" => $distritos
         ));
       }
     }
@@ -144,7 +152,9 @@ class ViewController extends BaseController {
         ));
       }
       else{
+        $distritos = $this->distrito->getAll();
         $this->view("legal", "", array(
+          "distritos" => $distritos
         ));
       }
     }
