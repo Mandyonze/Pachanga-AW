@@ -1,18 +1,11 @@
 .details li {
 	list-style: none;
 }
-li {
-		/*margin-bottom:10px;*/
-
-}
 
 .details span {
-	/*width:50px;*/
 	color: orange;
 	font-weight: bold;
 	margin-bottom: 10px;
-	/*border-bottom: 1px solid orange;*/
-	/*padding: 10px;*/
 	margin-right: 10px;
 }
 
@@ -24,21 +17,20 @@ li {
 .details-text {
 	color: orange;
 }
+
 .miperfil-informacion {
 		overflow: hidden;
 }
+
 .miperfil {
 	background: url("../img/backgrounds/login.jpg") no-repeat ;
 	background-size:cover;
 	background-position: center;
-	/*background-attachment: fixed;*/
 	height: 50px;
 	overflow: hidden;
-	/*padding: 40px;*/
 	margin: 0, auto;
 	text-align: center;
 	padding-top: 10px;
-
 }
 
 .miperfil > .profile-name{
@@ -48,7 +40,6 @@ li {
 .grey{
 	color: grey
 }
-
 
 @media (max-width: 600px) {
 	.cuadro_negro, .cuadro_naranja {

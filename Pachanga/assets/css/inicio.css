@@ -15,9 +15,7 @@ body {
 img#logo {
   float: none;
   width: 184.92px;
-  /*1541x0.12*/
   height: 42.24px;
-  /*352x0.12*/
   margin-top: 3px;
 }
 
@@ -133,11 +131,8 @@ img#logo {
 
 .profile-usermenu ul li.active a {
   color: orange;
-  /*border-radius: 3px;*/
   background-color: #f6f9fb;
   border-left: 2px solid orange;
-  /*border-top: 2px solid orange;
-  border-bottom:   2px solid orange;*/
   margin-left: -5px;
 }
 
@@ -175,7 +170,6 @@ img#logo {
 
 .buscar-partido-date>.form-control, .buscar-partido-date>.input-group-addon {
   border-radius: 0px;
-  /*margin-left: -11px;*/
 }
 
 .buscar-partido-submit {
@@ -191,9 +185,7 @@ img#logo {
   border-color: orange;
   outline: 0;
   -webkit-box-shadow: none;
-  /*inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 171, 44, 0.4);*/
   box-shadow: none;
-  /*inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 171, 44, 0.4);*/
 }
 
 .buscar-partido-submit:hover, .buscar-partido-submit:focus, .buscar-partido-date>.input-group-addon:focus, .buscar-partido-date>.input-group-addon:hover {
@@ -202,19 +194,16 @@ img#logo {
   border-color: orange;
   outline: 0;
   -webkit-box-shadow: none;
-  /*inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 171, 44, 0.4);*/
   box-shadow: none;
-  /*inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 171, 44, 0.4);*/
 }
 
 
 /***************************************************************************************************************************
-  burguer-menu changes.
+  burger-menu changes.
 ****************************************************************************************************************************/
 
 .burguer-menu {
   float: left;
-  /*display: none;*/
 }
 
 .burguer-menu>.dropdown-toggle {

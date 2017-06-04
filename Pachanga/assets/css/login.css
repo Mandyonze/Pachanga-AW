@@ -36,19 +36,13 @@ body, html {
 ****************************************************************************************************************************/
 .formulario-container.formulario {
     max-width: 400px;
-
-    /*padding: 40px 40px;*/
 }
 
 
 .formulario {
     background-color: white;
-    /* just in case there no content*/
-    /*padding: 20px 25px 30px;*/
     margin: 0 auto 25px;
-    /*margin-top: 50px;*/
     margin-top: 10%;
-    /* shadows and rounded borders */
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
@@ -63,18 +57,14 @@ body, html {
 
 .header-formulario{#f44336
   max-width: 290px;
-  /*height: 100px;*/
   background-color: orange;
-/*margin: 0 auto;*/
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
 .logo-formulario{
-  width: 184.92px; /*1541x0.12*/
-  height: 42.24px; /*352x0.12*/
-  /*margin-left: 40px;*/
-  /*margin: 0 auto;*/
+  width: 184.92px;
+  height: 42.24px;
   margin: 0 auto;
 }
 
@@ -85,7 +75,6 @@ body, html {
 .body-formulario{
   margin: 0 auto;
   width: 290px;
-  /*height: 200px;*/
   background-color: white;
   padding: 10px;
   padding-top: 5px;
@@ -105,16 +94,12 @@ body, html {
 
 .btn-formulario:hover {
     opacity: 0.7;
-
 }
 
 .cancelbtn {
-    /*margin-left: 21%;*/
     width: auto;
     padding: 10px 18px;
     background-color: #f44336;
-    /*background-color: red;*/
-
 }
 
 .sendbtn {
@@ -148,8 +133,6 @@ body, html {
   color: green;
   margin-left: -22px;
   margin-top: 10px;
-  /*margin-top: 3px;
-  margin-left: 235px;*/
   position: absolute;
   z-index: 32;
 }
@@ -171,8 +154,6 @@ body, html {
   color: red;
   margin-left: -22px;
   margin-top: 10px;
-  /*margin-top: 3px;
-  margin-left: 235px;*/
   position: absolute;
   z-index: 32;
 
@@ -181,7 +162,6 @@ body, html {
 
 /***************************************************************************************************************************
 ****************************************************************************************************************************/
-
 
 .centrar{
   text-align:center;

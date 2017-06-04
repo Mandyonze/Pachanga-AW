@@ -7,7 +7,6 @@
 div#cabecera {
   width: 100%;
   height: 198px;
-  /*background-image: url(../img/backgrounds/login.jpg);*/
   background-image: url(../img/backgrounds/1.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -21,7 +20,6 @@ div#cabecera {
 }
 
 .topnav {
-  /*background-color: #E76003;*/
   background-color: transparent;
   border: none;
   font-size: 14px;
@@ -41,9 +39,7 @@ div#cabecera {
 img#logo {
   float: left;
   width: 184.92px;
-  /*1541x0.12*/
   height: 42.24px;
-  /*352x0.12*/
   margin-top: 3px;
 }
 
@@ -116,7 +112,6 @@ img#logo {
 div#contendor {
   float: right;
   width: 100%;
-  /*height: 1000px;*/
   background-color: white;
 }
 
@@ -152,23 +147,15 @@ div#body .imagen-info {
 
 .backgroundFormulario {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 2000;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
   padding-top: 60px;
 }
 
@@ -178,9 +165,7 @@ div#body .imagen-info {
 ****************************************************************************************************************************/
 
 .closeFormulario {
-  /*position: absolute;*/
   float: right;
-  /*margin-left: 150px;*/
   margin: 5px;
   margin-top: -60px;
   color: white;
